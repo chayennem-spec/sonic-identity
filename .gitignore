@@ -35,5 +35,3 @@ src/tailwind.config.vibe.json
 # Redesign handoff working folder (not shipped)
 _handoff/
 
-# Licensed font: personal-use only until a commercial web license is bought
-public/fonts/style-your-lipstick.woff2

@@ -18,8 +18,7 @@
 @font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:300 700;font-display:swap;src:url('/fonts/plus-jakarta-sans-latin-wght-normal.woff2') format('woff2');}
 /* Tagline font: Syne 500, self-hosted (SIL Open Font License, via @fontsource/syne). Latin subset. */
 @font-face{font-family:'Syne';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/syne-latin-500-normal.woff2') format('woff2');}
-/* Accent "lipstick" script.
-   Style your Lipstick (CAT.B) is personal-use only: its file is NOT committed (see .gitignore) until a
-   commercial web license is bought. Without the file, the free Mr Dafoe (SIL OFL) is used instead. */
+/* Accent "lipstick" script: Style your Lipstick (CAT.B), web use licensed by Chayenne (Oct 2026).
+   Mr Dafoe (SIL OFL) stays as a fallback while the main file loads. */
 @font-face{font-family:'Style your Lipstick';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/style-your-lipstick.woff2') format('woff2');}
 @font-face{font-family:'Mr Dafoe';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/mr-dafoe-latin-400-normal.woff2') format('woff2');size-adjust:140%;}

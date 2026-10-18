@@ -83,6 +83,14 @@ export function HeroSound() {
         <audio ref={audioRef} src={HERO_MEDIA.audioLogo} preload="auto" onEnded={stop} />
       )}
 
+      <div className="sia-filmedge" aria-hidden="true">
+        <i>Rec</i>
+        <span>
+          Reel 01 · <b>SIA</b>
+        </span>
+        <span>35mm · 24 fps</span>
+      </div>
+
       <div className="sia-wrap sia-hero__inner">
         <p className="sia-mono sia-kicker">Sonic Identity Architect · Chayenne Mallari</p>
         <h1 className="sia-display">

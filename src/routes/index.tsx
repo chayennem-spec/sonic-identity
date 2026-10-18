@@ -40,6 +40,7 @@ function HomePage() {
   useReveal();
   return (
     <div className="min-h-screen" style={{ background: "#000" }}>
+      <div className="sia-film-grain" aria-hidden="true" />
       <Intro />
       <SiteHeader />
       <main>
@@ -62,6 +63,9 @@ function HomePage() {
       </main>
       <SiteFooter />
       <StickyCta />
+      {/* Vintage film finish: grain + vignette over everything */}
+      <div className="sia-film" aria-hidden="true" />
+      <div className="sia-vignette" aria-hidden="true" />
     </div>
   );
 }
