@@ -107,7 +107,7 @@ export function HeroSound() {
       <div className="sia-wrap sia-hero__inner">
         <p className="sia-mono sia-kicker">Sonic Identity Architect · Chayenne Mallari</p>
         <h1 className="sia-display">
-          Be heard before you’re <em>seen</em>.
+          Be heard before you’re <span className="sia-nw"><em>seen</em>.</span>
         </h1>
         <p className="sia-hero__sub">
           I compose the signature sound for founders, coaches and personal brands. One listen and

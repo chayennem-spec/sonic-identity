@@ -727,3 +727,27 @@
   .si-lab__right--photo { min-height: 120vw; }
   .si-lab__photo { -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 22%); mask-image: linear-gradient(0deg, transparent 0%, #000 22%); }
 }
+
+/* Final CTA with the red-headphones still life */
+.sia-final--split { text-align: left; padding: 120px 0; overflow: hidden; }
+.sia-final__grid { display: grid; grid-template-columns: 6fr 6fr; gap: 40px; align-items: center; }
+.sia-final--split h2 { font-size: clamp(54px, 7.4vw, 120px); }
+.sia-final--split .sia-hero__ctas { justify-content: flex-start; }
+.sia-final__line { margin-top: 26px; }
+.sia-final__photo { margin: 0; position: relative; aspect-ratio: 1233 / 1276; }
+.sia-final__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  -webkit-mask-image: radial-gradient(ellipse 54% 54% at 55% 52%, #000 45%, transparent 100%);
+  mask-image: radial-gradient(ellipse 54% 54% at 55% 52%, #000 45%, transparent 100%);
+  transition: transform 1.6s ease;
+}
+.sia-final__photo:hover img { transform: scale(1.03) rotate(-0.6deg); }
+@media (max-width: 860px) {
+  .sia-final__grid { grid-template-columns: 1fr; gap: 10px; }
+  .sia-final__photo { order: -1; width: 100%; margin: -20px auto 0; max-width: 460px; }
+}
+
+.sia-nw { white-space: nowrap; }

@@ -18,7 +18,7 @@ export function SiteHeader() {
         </nav>
         <a href="#top" className="sia-brand sia-brand--center" aria-label="Sonic Identity Architect, home">
           <Wordmark />
-          <span className="sia-tagline">by Chayenne Mallari</span>
+          <span className="sia-tagline">Chayenne Mallari</span>
         </a>
         <div className="sia-header__side sia-header__side--right sia-mono">
           <a href="#about" className="sia-hide-sm">About</a>
@@ -78,7 +78,7 @@ export function StickyCta() {
   const [shown, setShown] = useState(false);
   useEffect(() => {
     const onScroll = () => {
-      const nearEnd = window.innerHeight + window.scrollY > document.body.scrollHeight - 900;
+      const nearEnd = window.innerHeight + window.scrollY > document.body.scrollHeight - 1900;
       setShown(window.scrollY > window.innerHeight * 0.9 && !nearEnd);
     };
     onScroll();
@@ -107,7 +107,7 @@ export function SiteFooter() {
         <div className="sia-footer__grid">
           <div>
             <Wordmark as="div" />
-            <span className="sia-tagline">by Chayenne Mallari</span>
+            <span className="sia-tagline">Chayenne Mallari</span>
             <p className="sia-footer__line">
               Signature sound for founders, coaches and personal brands. Recognized, remembered and
               felt, without being seen.

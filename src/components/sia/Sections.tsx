@@ -27,7 +27,7 @@ export function TheGap() {
         <div className="sia-reveal">
           <p className="sia-mono sia-kicker">01 · The gap</p>
           <h2 className="sia-display">
-            Your brand has a face. It doesn’t have a <em>voice</em>.
+            Your brand has a face. It doesn’t have a <span className="sia-nw"><em>voice</em>.</span>
           </h2>
         </div>
         <div className="sia-gap__side sia-reveal">
@@ -65,7 +65,7 @@ export function Method() {
           <div>
             <p className="sia-mono sia-kicker">02 · The S.O.U.N.D. Framework</p>
             <h2 className="sia-display">
-              How a signature sound is <em>built</em>.
+              How a signature sound is <span className="sia-nw"><em>built</em>.</span>
             </h2>
           </div>
           <p>
@@ -98,7 +98,7 @@ export function Offers() {
         <div className="sia-offers__head sia-reveal">
           <p className="sia-mono sia-kicker">03 · Work with me</p>
           <h2 className="sia-display">
-            Own your <em>sound</em>.
+            Own your <span className="sia-nw"><em>sound</em>.</span>
           </h2>
         </div>
         <div className="sia-offers__grid">
@@ -184,7 +184,7 @@ export function Proof() {
       <div className="sia-wrap">
         <p className="sia-mono sia-kicker sia-reveal">04 · Heard in the wild</p>
         <h2 className="sia-display sia-reveal">
-          Their sound, <em>out loud</em>.
+          Their sound, <span className="sia-nw"><em>out loud</em>.</span>
         </h2>
         <div className="sia-proof__grid">
           {PROOF.map((p) => (
@@ -217,7 +217,7 @@ export function About() {
         <div className="sia-reveal">
           <p className="sia-mono sia-kicker">05 · The ear behind it</p>
           <h2 className="sia-display">
-            I read people for a <em>living</em>.
+            I read people for a <span className="sia-nw"><em>living</em>.</span>
           </h2>
           <div className="sia-body">
             <p className="sia-lead">Hi, I’m Chayenne.</p>
@@ -310,7 +310,7 @@ export function Faq() {
         <div className="sia-reveal">
           <p className="sia-mono sia-kicker">06 · Questions</p>
           <h2 className="sia-display">
-            Before you <em>press play</em>.
+            Before you <span className="sia-nw"><em>press play</em>.</span>
           </h2>
         </div>
         <div className="sia-reveal">
@@ -328,24 +328,30 @@ export function Faq() {
 
 export function FinalCta() {
   return (
-    <section className="sia sia-final sia-rule">
-      <div className="sia-wrap sia-reveal">
-        <p className="sia-mono sia-kicker" style={{ justifyContent: "center" }}>
-          Your move
-        </p>
-        <h2 className="sia-display">
-          Stop renting
-          <br />
-          your <em>sound</em>.
-        </h2>
-        <div className="sia-hero__ctas">
-          <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
-            Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a className="sia-btn sia-btn--ghost" href="#inquiry">
-            Ask about the Atelier
-          </a>
+    <section className="sia sia-final sia-final--split sia-rule">
+      <div className="sia-wrap sia-final__grid">
+        <div className="sia-reveal">
+          <p className="sia-mono sia-kicker">Your move</p>
+          <h2 className="sia-display">
+            Stop renting
+            <br />
+            your <span className="sia-nw"><em>sound</em>.</span>
+          </h2>
+          <p className="sia-body sia-final__line">
+            The trending audio was never yours. Your signature sound will be.
+          </p>
+          <div className="sia-hero__ctas">
+            <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
+              Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
+            </a>
+            <a className="sia-btn sia-btn--ghost" href="#inquiry">
+              Ask about the Atelier
+            </a>
+          </div>
         </div>
+        <figure className="sia-final__photo sia-reveal" aria-hidden="true">
+          <img src="/images/red-headphones-marble.webp" alt="" loading="lazy" />
+        </figure>
       </div>
     </section>
   );
