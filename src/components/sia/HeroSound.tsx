@@ -35,6 +35,19 @@ export function HeroSound() {
     };
   }, []);
 
+  useEffect(() => {
+    // If another player on the page starts (the full song in Listen), stop the hero clip.
+    const onOther = (e: Event) => {
+      if (e.target instanceof HTMLAudioElement && e.target !== audioRef.current) {
+        audioRef.current?.pause();
+        window.clearTimeout(timer.current);
+        setSounding(false);
+      }
+    };
+    document.addEventListener("play", onOther, true);
+    return () => document.removeEventListener("play", onOther, true);
+  }, []);
+
   const stop = () => {
     window.clearTimeout(timer.current);
     audioRef.current?.pause();
@@ -58,7 +71,8 @@ export function HeroSound() {
     if (window.matchMedia("(max-width: 860px)").matches && window.scrollY > 80) {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-    timer.current = window.setTimeout(() => setSounding(false), 9000);
+    // With the real clip, the sound stops when the clip ends (onEnded); otherwise a short visual moment.
+    if (!a) timer.current = window.setTimeout(() => setSounding(false), 9000);
   };
 
   return (
@@ -114,7 +128,7 @@ export function HeroSound() {
       <div className="sia-wrap sia-hero__inner">
         <p className="sia-mono sia-kicker">Sonic Identity Architect · Chayenne Mallari</p>
         <h1 className="sia-display">
-          Be heard before you’re <span className="sia-nw"><em>seen</em>.</span>
+          Be heard before <span className="sia-nw">you’re <em>seen</em>.</span>
         </h1>
         <p className="sia-hero__sub">
           Your photos are styled. Your brand is polished. And your sound? A trending clip half of
@@ -133,7 +147,7 @@ export function HeroSound() {
               <i />
               <i />
             </span>
-            {sounding ? "Sound on" : "Turn your sound on"}
+            {sounding ? "Pause" : "Turn your sound on"}
           </button>
           <a className="sia-btn sia-btn--ghost" href={LINKS.blueprint} target="_blank" rel="noreferrer">
             Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>

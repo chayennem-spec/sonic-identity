@@ -32,7 +32,7 @@ export function TheGap() {
         <div className="sia-reveal">
           <p className="sia-mono sia-kicker">01 · The gap</p>
           <h2 className="sia-display">
-            Everything about you is custom. Except your <span className="sia-nw"><em>sound</em>.</span>
+            Everything about you is custom. Except <span className="sia-nw">your <em>sound</em>.</span>
           </h2>
         </div>
         <div className="sia-gap__side sia-reveal">
@@ -46,6 +46,10 @@ export function TheGap() {
               <strong>A borrowed song can’t make anyone remember you.</strong> Sound is the part of
               your brand that follows people out of the room, into the car, and into their head at
               2am.
+            </p>
+            <p>
+              Your brand guide covers everything people see.{" "}
+              <strong>So who’s directing what they hear?</strong>
             </p>
           </div>
           <p className="sia-hand">Make it yours.</p>
@@ -70,7 +74,7 @@ export function ForHer() {
         <div className="sia-reveal">
           <p className="sia-mono sia-kicker">This is for the female founder who…</p>
           <h2 className="sia-display">
-            Isn’t starting. She’s <span className="sia-nw"><em>arriving</em>.</span>
+            Isn’t starting. <span className="sia-nw">She’s <em>arriving</em>.</span>
           </h2>
         </div>
         <div className="sia-reveal">
@@ -105,7 +109,7 @@ export function Method() {
           <div>
             <p className="sia-mono sia-kicker">02 · The S.O.U.N.D. Framework</p>
             <h2 className="sia-display">
-              How a signature sound is <span className="sia-nw"><em>built</em>.</span>
+              How a signature sound <span className="sia-nw">is <em>built</em>.</span>
             </h2>
           </div>
           <p>
@@ -131,6 +135,50 @@ export function Method() {
   );
 }
 
+const MONDAY = [
+  { who: "Your ads manager", need: "needs a cleared 15-second cut. By noon." },
+  { who: "Your event producer", need: "needs a walk-on. Not the one the last speaker used." },
+  { who: "Your podcast editor", need: "needs an intro that sounds like you, not the stock library." },
+];
+
+export function Rights() {
+  return (
+    <section className="sia sia-rights sia-rule" id="usage-rights">
+      <div className="sia-wrap">
+        <div className="sia-rights__head sia-reveal">
+          <p className="sia-mono sia-kicker">The fine print, out loud</p>
+          <h2 className="sia-display">
+            Can we use it? Does it sound <span className="sia-nw">like <em>us</em>?</span>
+          </h2>
+          <p className="sia-rights__lead">
+            Two different questions. Your team is asking both every week. They’re just not asking
+            them out loud.
+          </p>
+        </div>
+        <ol className="sia-rights__grid sia-reveal">
+          {MONDAY.map((m, i) => (
+            <li key={m.who}>
+              <span className="sia-mono">Monday · 0{i + 1}</span>
+              <p>
+                <strong>{m.who}</strong> {m.need}
+              </p>
+            </li>
+          ))}
+        </ol>
+        <div className="sia-rights__close sia-reveal">
+          <p>
+            A trending track answers neither. A personal streaming account doesn’t license a song
+            for your business, and a song everyone uses can’t sound like you. Your signature sound
+            answers both: made for your brand, licensed only to you, with{" "}
+            <strong>exclusive usage rights in writing. No expiry. No renewals.</strong>
+          </p>
+          <p className="sia-hand">Your sound. Only yours.</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function Offers() {
   return (
     <section className="sia sia-offers sia-rule" id="offers">
@@ -138,7 +186,7 @@ export function Offers() {
         <div className="sia-offers__head sia-reveal">
           <p className="sia-mono sia-kicker">03 · Work with me</p>
           <h2 className="sia-display">
-            Own your <span className="sia-nw"><em>sound</em>.</span>
+            Claim <span className="sia-nw">your <em>sound</em>.</span>
           </h2>
         </div>
         <div className="sia-offers__grid">
@@ -170,8 +218,8 @@ export function Offers() {
             <p className="sia-mono sia-offer__line">One song that walks in before you do</p>
             <p className="sia-offer__desc">
               Your walk-on. Your launch. Your podcast open. One signature song made around your
-              story, your archetype and the room you plan to own. Comes with full usage rights for
-              your content, launches, events and stage.
+              story, your archetype and the room you plan to own. Licensed to your brand alone, with
+              exclusive usage rights for your content, launches, events and stage.
             </p>
             <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
               Request an invitation <span className="sia-arrow" aria-hidden="true">↗</span>
@@ -188,8 +236,8 @@ export function Offers() {
             <p className="sia-mono sia-offer__line">For the woman who doesn’t do homework</p>
             <p className="sia-offer__desc">
               Your entire sound family, made and finished for you, start to finish. No program to
-              learn. No calls to sit through. You say yes. I build. You walk in sounding
-              like the brand you already are.
+              learn. No calls to sit through. You say yes. I build. Exclusive to your brand, and
+              you walk in sounding like the brand you already are.
             </p>
             <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
               Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
@@ -226,7 +274,7 @@ export function Proof() {
       <div className="sia-wrap">
         <p className="sia-mono sia-kicker sia-reveal">04 · Heard in the wild</p>
         <h2 className="sia-display sia-reveal">
-          Their sound, <span className="sia-nw"><em>out loud</em>.</span>
+          Their <span className="sia-nw">sound, <em>out loud</em>.</span>
         </h2>
         <div className="sia-proof__grid">
           {PROOF.map((p) => (
@@ -259,7 +307,7 @@ export function About() {
         <div className="sia-reveal">
           <p className="sia-mono sia-kicker">05 · The ear behind it</p>
           <h2 className="sia-display">
-            I read people for a <span className="sia-nw"><em>living</em>.</span>
+            I read people for <span className="sia-nw">a <em>living</em>.</span>
           </h2>
           <div className="sia-body">
             <p className="sia-lead">Hi, I’m Chayenne.</p>
@@ -333,7 +381,7 @@ export function Apply() {
         <h2 className="sia-display">
           Tell me about
           <br />
-          your <span className="sia-nw"><em>brand</em>.</span>
+          <span className="sia-nw">your <em>brand</em>.</span>
         </h2>
         <p className="sia-body">
           The Anthem and the Atelier are made for one brand at a time. Five minutes, in writing, no
@@ -386,12 +434,12 @@ const FAQ = [
     a: "Reels, stories, your podcast intro and outro, launch and sales videos, webinars, ads, your walk-on at events, your retreat playlist. Anywhere people meet your brand, it can sound like you.",
   },
   {
-    q: "Can I use my sound everywhere?",
-    a: "Your Anthem comes with full usage rights for your brand: content, launches, events and ads. The exact terms are written into your agreement before we start.",
+    q: "Is my sound really mine?",
+    a: "It’s yours to use, and only yours. Your Anthem or Atelier comes with exclusive usage rights in a written agreement: content, ads, launches, events, podcast and programs. No expiry, no renewals, and I never license your sound to anyone else. Need a use that isn’t listed? Tell me before we sign and we’ll add it.",
   },
   {
     q: "Do I have to get on calls?",
-    a: "Not for the Atelier. You have enough meetings. You approve each stage, I do the building.",
+    a: "Not for the Anthem or the Atelier. You have enough meetings. Everything happens in writing and voice notes: you approve each stage, I do the building.",
   },
   {
     q: "How much is it?",
@@ -410,7 +458,7 @@ export function Faq() {
         <div className="sia-reveal">
           <p className="sia-mono sia-kicker">06 · Questions</p>
           <h2 className="sia-display">
-            Before you <span className="sia-nw"><em>press play</em>.</span>
+            Before <span className="sia-nw">you <em>press play</em>.</span>
           </h2>
         </div>
         <div className="sia-reveal">
@@ -435,11 +483,11 @@ export function FinalCta() {
           <h2 className="sia-display">
             Stop renting
             <br />
-            your <span className="sia-nw"><em>sound</em>.</span>
+            <span className="sia-nw">your <em>sound</em>.</span>
           </h2>
           <p className="sia-body sia-final__line">
-            Picture it: your launch video opens, and before your face is even on screen, they
-            already know it’s you. That’s the brief.
+            Picture it: three minutes before your masterclass, the waiting room filling up, and
+            the music playing is already unmistakably yours. That’s the brief.
           </p>
           <div className="sia-hero__ctas">
             <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">

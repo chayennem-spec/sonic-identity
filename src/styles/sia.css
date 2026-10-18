@@ -819,3 +819,63 @@
 .si-lab .sia-btn { margin-top: 8px; }
 @media (min-width: 861px) { .sia-wave--behind { left: 8%; width: 92%; } }
 .sia-apply h2.sia-display { font-size: clamp(44px, 6.2vw, 96px); margin-bottom: 36px; }
+
+/* ---------- Listen: full-song player ---------- */
+.sia-song {
+  display: flex; align-items: center; gap: 18px;
+  margin: 26px 0 6px; padding: 18px 20px;
+  border: 1px solid var(--sia-line); background: rgba(239, 233, 220, 0.03);
+  max-width: 520px;
+}
+.sia-song__btn {
+  flex: none; width: 56px; height: 56px; border-radius: 50%;
+  display: grid; place-items: center; cursor: pointer;
+  background: var(--sia-red); color: #0b0b0b; border: 0;
+  transition: transform var(--sia-ease), background-color var(--sia-ease);
+}
+.sia-song__btn:hover { transform: scale(1.05); }
+.sia-song.is-playing .sia-song__btn { background: var(--sia-bone); }
+.sia-song__body { flex: 1; min-width: 0; position: relative; }
+.sia-song__meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.sia-song__title { font-family: var(--sia-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; font-size: 15px; color: var(--sia-bone); }
+.sia-song__time { font-size: 11px; color: var(--sia-dim); }
+.sia-song__bar { margin-top: 12px; height: 3px; background: rgba(239, 233, 220, 0.15); cursor: pointer; position: relative; z-index: 2; }
+.sia-song__bar i { display: block; height: 100%; background: var(--sia-red); }
+.sia-wave--song { position: absolute; left: 0; right: 0; width: 100%; bottom: -20px; height: 40px; opacity: 0.6; pointer-events: none; }
+.si-lab .si-lab__note { margin-top: 18px; }
+.sia-song__title, .sia-song__time { white-space: nowrap; }
+@media (max-width: 480px) {
+  .sia-song { gap: 14px; padding: 14px 16px; }
+  .sia-song__btn { width: 48px; height: 48px; }
+  .sia-song__title { font-size: 13px; }
+  .sia-song__time { font-size: 10px; }
+}
+
+/* Lipstick accent words tuck into the last Helvetica word, just kissing its edge */
+.sia-display em,
+.si-lab .si-lab__title em {
+  position: relative;
+  z-index: 1;
+  margin-left: -0.12em;
+}
+.sia-song { max-width: min(520px, 100%); box-sizing: border-box; }
+.sia-song__meta { flex-wrap: wrap; row-gap: 2px; }
+.si-lab__left { min-width: 0; }
+
+/* ---------- Usage rights: two questions ---------- */
+.sia-rights { padding: 120px 0; }
+.sia-rights__head { max-width: 900px; margin-bottom: 56px; }
+.sia-rights h2 { font-size: clamp(40px, 5.4vw, 82px); }
+.sia-rights__lead { margin-top: 26px; font-size: clamp(18px, 1.5vw, 21px); line-height: 1.5; color: var(--sia-dim); max-width: 34em; }
+.sia-rights__grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--sia-line); border-left: 1px solid var(--sia-line); }
+.sia-rights__grid li { padding: 30px 28px 34px; border-right: 1px solid var(--sia-line); border-bottom: 1px solid var(--sia-line); }
+.sia-rights__grid li span { color: var(--sia-red); font-size: 11px; }
+.sia-rights__grid li p { margin: 16px 0 0; font-size: clamp(18px, 1.5vw, 21px); line-height: 1.45; color: var(--sia-bone); }
+.sia-rights__close { margin-top: 48px; max-width: 760px; }
+.sia-rights__close p:first-child { font-size: 17px; line-height: 1.65; color: var(--sia-dim); }
+.sia-rights__close strong { color: var(--sia-bone); }
+.sia-rights__close .sia-hand { margin-top: 24px; }
+@media (max-width: 860px) {
+  .sia-rights { padding: 88px 0; }
+  .sia-rights__grid { grid-template-columns: 1fr; }
+}

@@ -1,5 +1,6 @@
 // Production origin, used where a full URL is required (og:image / twitter:image).
-export const SITE_URL = "https://thesonicidentity.com";
+// Switch to https://www.sonicidentityarchitect.com once the domain is connected.
+export const SITE_URL = "https://sonicidentityarchitect.pages.dev";
 
 // All images are self-hosted from /public/images (moved off the GoHighLevel CDN).
 export const ASSETS = {
@@ -40,7 +41,8 @@ export const HERO_MEDIA = {
   cutout: "/images/chayenne-editorial-cutout.webp",
   video: "/media/hero-headphones.mp4",
   poster: "/media/hero-poster.jpg",
-  audioLogo: "",
+  audioLogo: "/audio/signature-clip.mp3",
+  fullSong: "/audio/instant-recognition.mp3",
 };
 
 export const CONTACT = {

@@ -12,6 +12,7 @@ import {
   Method,
   Offers,
   // Proof,
+  Rights,
   TheGap,
   ForHer,
   Ticker,
@@ -29,9 +30,9 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: `${SITE_URL}/media/hero-poster.jpg` },
+      { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: `${SITE_URL}/media/hero-poster.jpg` },
+      { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
     ],
   }),
   component: HomePage,
@@ -50,6 +51,7 @@ function HomePage() {
         <TheGap />
         <ForHer />
         <Method />
+        <Rights />
         <Offers />
         {/* Proof hidden until real testimonials arrive: <Proof /> */}
         <MeetTheLab />
