@@ -15,7 +15,7 @@ export const ASSETS = {
   brandCollateral: "/images/brand-board-typography.png",
   editorialPortrait: "/images/brand-board-color-palette.jpg",
   // Same portrait cut onto plain black (Oct 2026)
-  portraitBlack: "/images/chayenne-portrait-black.png",
+  portraitBlack: "/images/chayenne-leather-bw.webp",
 };
 
 // Shown only in the inquiry form's error state, so the visitor still has a way to reach Chayenne.
@@ -31,6 +31,9 @@ export const LINKS = {
 // Hero media. Drop the audio logo file into /public/media and set its path here;
 // until then the "Turn your sound on" button replays the video and its sound rings.
 export const HERO_MEDIA = {
+  // Front image: leather-jacket portrait, background removed, dark film grade (Oct 2026).
+  // Leave `video` set but `image` filled to show the still; clear `image` to go back to the video.
+  image: "/images/chayenne-leather-dark.webp",
   video: "/media/hero-headphones.mp4",
   poster: "/media/hero-poster.jpg",
   audioLogo: "",

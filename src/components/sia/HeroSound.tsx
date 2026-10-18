@@ -58,27 +58,44 @@ export function HeroSound() {
 
   return (
     <section id="top" className={`sia sia-hero${sounding ? " is-sounding" : ""}`}>
-      <div className="sia-hero__media" aria-hidden="true">
-        <video
-          ref={videoRef}
-          src={HERO_MEDIA.video}
-          poster={HERO_MEDIA.poster}
-          muted
-          playsInline
-          preload="auto"
-          onTimeUpdate={(e) => {
-            // Rest on the 6.2s frame (headphones on, rings starting) instead of the tight close-up ending.
-            if (e.currentTarget.currentTime >= REST_AT) e.currentTarget.pause();
-          }}
-        />
-        <div className="sia-hero__shade" />
-      </div>
-      <div className="sia-rings" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-        <span />
-      </div>
+      {HERO_MEDIA.image ? (
+        <div className="sia-hero__media sia-hero__media--still" aria-hidden="true">
+          <figure className="sia-hero__figure">
+            <div className="sia-rings sia-rings--figure">
+              <span />
+              <span />
+              <span />
+              <span />
+            </div>
+            <img src={HERO_MEDIA.image} alt="Chayenne Mallari in a black leather jacket and sunglasses" />
+          </figure>
+          <div className="sia-hero__shade" />
+        </div>
+      ) : (
+        <>
+          <div className="sia-hero__media" aria-hidden="true">
+            <video
+              ref={videoRef}
+              src={HERO_MEDIA.video}
+              poster={HERO_MEDIA.poster}
+              muted
+              playsInline
+              preload="auto"
+              onTimeUpdate={(e) => {
+                // Rest on the 6.2s frame (headphones on, rings starting) instead of the tight close-up ending.
+                if (e.currentTarget.currentTime >= REST_AT) e.currentTarget.pause();
+              }}
+            />
+            <div className="sia-hero__shade" />
+          </div>
+          <div className="sia-rings" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+            <span />
+          </div>
+        </>
+      )}
       {HERO_MEDIA.audioLogo && (
         <audio ref={audioRef} src={HERO_MEDIA.audioLogo} preload="auto" onEnded={stop} />
       )}
