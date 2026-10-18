@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { HERO_MEDIA, LINKS } from "../../lib/constants";
+import { Waveform } from "./Waveform";
 
 const REST_AT = 6.2;
 
@@ -60,13 +61,7 @@ export function HeroSound() {
     <section id="top" className={`sia sia-hero${sounding ? " is-sounding" : ""}`}>
       {HERO_MEDIA.image ? (
         <div className="sia-hero__media sia-hero__media--still" aria-hidden="true">
-          <figure className="sia-hero__figure">
-            <div className="sia-rings sia-rings--figure">
-              <span />
-              <span />
-              <span />
-              <span />
-            </div>
+          <figure className="sia-hero__figure sia-hero__figure--photo">
             <img src={HERO_MEDIA.image} alt="Chayenne Mallari in a black leather jacket and sunglasses" />
           </figure>
           <div className="sia-hero__shade" />
@@ -96,6 +91,7 @@ export function HeroSound() {
           </div>
         </>
       )}
+      <Waveform active={sounding} className="sia-wave--hero" />
       {HERO_MEDIA.audioLogo && (
         <audio ref={audioRef} src={HERO_MEDIA.audioLogo} preload="auto" onEnded={stop} />
       )}

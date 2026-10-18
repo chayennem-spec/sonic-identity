@@ -681,3 +681,49 @@
   .sia-hero__media--still .sia-hero__shade { background: linear-gradient(0deg, #000 0%, #000 34%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0) 70%); }
 }
 @media (prefers-reduced-motion: reduce) { .sia-hero__figure img { animation: none; } }
+
+/* ---------- Editorial photo (full frame, edges fade into the page) ---------- */
+.sia-hero__figure--photo { aspect-ratio: 1233 / 1275; height: min(100svh, 1040px); right: max(0px, calc((100vw - 1440px) / 2)); }
+.sia-hero__figure--photo img {
+  object-fit: cover;
+  -webkit-mask-image: radial-gradient(ellipse 70% 72% at 54% 44%, #000 52%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 72% at 54% 44%, #000 52%, transparent 100%);
+}
+/* Sound-frequency waveform */
+.sia-wave { display: block; pointer-events: none; }
+.sia-wave--hero {
+  position: absolute;
+  z-index: 3;
+  left: 55%;
+  top: 60%;
+  width: 42%;
+  height: 130px;
+  opacity: 0.9;
+  mix-blend-mode: screen;
+}
+@media (max-width: 860px) {
+  .sia-hero__figure--photo { height: 66svh; right: 50%; transform: translateX(50%); bottom: 34%; }
+  .sia-wave--hero { left: 0; top: 24%; width: 100%; height: 90px; }
+}
+
+/* Listen section: headphones portrait instead of the vinyl */
+.si-lab__right--photo { padding: 0; justify-content: flex-end; min-height: 620px; }
+.si-lab__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 22%), linear-gradient(0deg, transparent 0%, #000 18%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 22%), linear-gradient(0deg, transparent 0%, #000 18%);
+  mask-composite: intersect;
+  transition: transform 1.4s ease;
+}
+.si-lab__right--photo:hover .si-lab__photo { transform: scale(1.025); }
+.si-lab__right--photo .si-lab__cap { position: relative; z-index: 1; margin: 0 0 28px; }
+@media (max-width: 960px) {
+  .si-lab__right--photo { min-height: 120vw; }
+  .si-lab__photo { -webkit-mask-image: linear-gradient(0deg, transparent 0%, #000 22%); mask-image: linear-gradient(0deg, transparent 0%, #000 22%); }
+}
