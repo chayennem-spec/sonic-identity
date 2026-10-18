@@ -43,7 +43,7 @@ export function TheGap() {
               plays the same Spotify track a nineteen-year-old used for her coffee haul this morning.
             </p>
             <p>
-              <strong>A borrowed song can’t make anyone remember you.</strong> Sound is the part of
+              <strong>A borrowed song makes people remember someone else.</strong> Sound is the part of
               your brand that follows people out of the room, into the car, and into their head at
               2am.
             </p>
@@ -167,12 +167,60 @@ export function Rights() {
         </ol>
         <div className="sia-rights__close sia-reveal">
           <p>
-            A trending track answers neither. A personal streaming account doesn’t license a song
+            A trending track can’t answer both. A personal streaming account doesn’t license a song
             for your business, and a song everyone uses can’t sound like you. Your signature sound
             answers both: made for your brand, licensed only to you, with{" "}
             <strong>exclusive usage rights in writing. No expiry. No renewals.</strong>
           </p>
           <p className="sia-hand">Your sound. Only yours.</p>
+        </div>
+
+        <div className="sia-ig sia-reveal">
+          <div className="sia-ig__copy">
+            <p className="sia-mono sia-kicker">Look at the corner of your last reel</p>
+            <h3>Whose name is on your audio?</h3>
+            <p>
+              That little line under your handle. If you used a trending song, it’s someone else’s
+              name. On your content. On the reel you paid an editor to cut. Someone loves it, taps
+              the sound, and lands on a page full of strangers using the same song.
+            </p>
+            <p>
+              With your own sound, it says <strong>your</strong> name. “Original audio” with your
+              handle, in the corner of every reel. Tap it and you land on your own audio page, with
+              your name at the top. Even when someone else uses it.
+            </p>
+            <p className="sia-ig__punch">
+              Every time someone taps it or uses it, your name goes with it.
+            </p>
+          </div>
+          <div className="sia-ig__chips" aria-hidden="true">
+            <div className="sia-chip sia-chip--them">
+              <span className="sia-chip__note">♫</span>
+              <span>
+                <b>Someone Else</b> · That Song Everyone Used
+              </span>
+            </div>
+            <p className="sia-mono sia-ig__vs">Now</p>
+            <div className="sia-chip sia-chip--you">
+              <span className="sia-chip__note">♫</span>
+              <span>
+                <b>@yourbrand</b> · Original audio
+              </span>
+            </div>
+            <div className="sia-sticker">
+              <span className="sia-sticker__bars">
+                <i />
+                <i />
+                <i />
+                <i />
+              </span>
+              <span>
+                <b>Original audio</b>
+                <br />
+                @yourbrand · your reels
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -200,8 +248,8 @@ export function Offers() {
             <p className="sia-mono sia-offer__line">Hear your brand before you invest</p>
             <p className="sia-offer__desc">
               Curious, not ready to commit? Fair. In one sitting, your brand’s energy is read straight
-              from your feed, your sonic archetype is named, and you get three sound directions, each
-              with a first sketch you can actually press play on.
+              from your feed, your sonic archetype is named, and you get three sound directions, plus
+              prompts so you can hear a first sketch of each the same day.
             </p>
             <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
               Start the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
@@ -219,7 +267,7 @@ export function Offers() {
             <p className="sia-offer__desc">
               Your walk-on. Your launch. Your podcast open. One signature song made around your
               story, your archetype and the room you plan to own. Licensed to your brand alone, with
-              exclusive usage rights for your content, launches, events and stage.
+              exclusive usage rights for your content, ads, launches, events and podcast.
             </p>
             <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
               Request an invitation <span className="sia-arrow" aria-hidden="true">↗</span>
@@ -305,7 +353,7 @@ export function About() {
           </figcaption>
         </figure>
         <div className="sia-reveal">
-          <p className="sia-mono sia-kicker">05 · The ear behind it</p>
+          <p className="sia-mono sia-kicker">04 · The ear behind it</p>
           <h2 className="sia-display">
             I read people for <span className="sia-nw">a <em>living</em>.</span>
           </h2>
@@ -320,7 +368,7 @@ export function About() {
               I’m a certified hypnotherapist and NLP trainer. I wrote{" "}
               <strong>The Sonic Imprint</strong>. I built a ten-archetype Sonic Identity system. I map
               your archetype first, then make the music. So your sound sounds like you. Not like
-              somebody’s coffee haul.
+              whatever was trending on Tuesday.
             </p>
           </div>
           <dl className="sia-facts">
@@ -423,11 +471,11 @@ const FAQ = [
   },
   {
     q: "What if I don’t love it?",
-    a: "That’s exactly why the Blueprint exists: you hear three directions before you commit to anything bigger. In the Anthem and the Atelier, you approve each stage before I move on, so nothing gets finished without your yes.",
+    a: "That’s exactly why the Blueprint exists: you hear three directions before you commit to anything bigger. In the Atelier, your Signature Anthem and Sonic Signature land first, before the other tracks are built. In the Anthem, you hear your first listen before any changes. Either way you get refinement rounds to shape it (one for the Anthem, two for the Atelier), with a guide that helps you say what you feel even without music words.",
   },
   {
     q: "Do you use AI? Will it sound like AI?",
-    a: "Yes, it’s one of my instruments. No, it won’t sound like it. The direction, the taste and every final call are mine. AI is in the room. It just doesn’t get a vote.",
+    a: "Yes, it’s one of my instruments, the way a producer uses software. The direction, the lyrics, the taste and every final call are mine, so what you hear is your brand, not a prompt. AI is in the room. It just doesn’t get a vote.",
   },
   {
     q: "Where would I actually use it?",
@@ -436,6 +484,10 @@ const FAQ = [
   {
     q: "Is my sound really mine?",
     a: "It’s yours to use, and only yours. Your Anthem or Atelier comes with exclusive usage rights in a written agreement: content, ads, launches, events, podcast and programs. No expiry, no renewals, and I never license your sound to anyone else. Need a use that isn’t listed? Tell me before we sign and we’ll add it.",
+  },
+  {
+    q: "Will my name show up on Instagram?",
+    a: "Yes. Post a reel with your own sound and Instagram labels it “Original audio” with your handle, so anyone who taps it lands on your audio page, not a stranger’s. Want your anthem streaming too? Ask me. A public release is planned separately in your agreement, so the rights are clear before anything goes live. I can’t promise it trends. I can promise your name is on it, every time someone taps it.",
   },
   {
     q: "Do I have to get on calls?",
@@ -447,7 +499,7 @@ const FAQ = [
   },
   {
     q: "Where do I start?",
-    a: "With the Sonic Blueprint. It reads your brand, finds your archetype and gives you three sound directions with a first sketch of each, so you hear the possibilities before you invest in the full thing.",
+    a: "Want to hear it first? Start with the Sonic Blueprint: it reads your brand, names your archetype and gives you three sound directions plus prompts to hear a first sketch of each. Already know you want it done for you? Skip ahead and apply for the Anthem or the Atelier.",
   },
 ];
 
@@ -456,7 +508,7 @@ export function Faq() {
     <section className="sia sia-faq sia-rule" id="faq">
       <div className="sia-wrap sia-faq__grid">
         <div className="sia-reveal">
-          <p className="sia-mono sia-kicker">06 · Questions</p>
+          <p className="sia-mono sia-kicker">05 · Questions</p>
           <h2 className="sia-display">
             Before <span className="sia-nw">you <em>press play</em>.</span>
           </h2>

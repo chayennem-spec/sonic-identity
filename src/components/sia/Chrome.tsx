@@ -118,7 +118,7 @@ export function SiteFooter() {
             <ul className="sia-mono">
               <li><a href="#method">The method</a></li>
               <li><a href="#offers">Offers</a></li>
-              <li><a href="#audio-lab">Audio lab</a></li>
+              <li><a href="#audio-lab">Listen</a></li>
               <li><a href="#about">About Chayenne</a></li>
               <li><a href="#faq">FAQ</a></li>
             </ul>

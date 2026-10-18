@@ -879,3 +879,28 @@
   .sia-rights { padding: 88px 0; }
   .sia-rights__grid { grid-template-columns: 1fr; }
 }
+
+/* ---------- Usage rights: whose name is on your audio ---------- */
+.sia-ig { margin-top: 80px; padding-top: 56px; border-top: 1px solid var(--sia-line); display: grid; grid-template-columns: 7fr 5fr; gap: 64px; align-items: center; }
+.sia-ig h3 { font-family: var(--sia-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.03em; line-height: 0.95; font-size: clamp(32px, 3.6vw, 54px); margin: 6px 0 24px; color: var(--sia-bone); }
+.sia-ig__copy p { font-size: 17px; line-height: 1.65; color: var(--sia-dim); max-width: 36em; }
+.sia-ig__copy strong { color: var(--sia-bone); }
+.sia-ig__punch { color: var(--sia-bone) !important; font-weight: 600; font-size: 19px !important; margin-top: 18px; }
+.sia-ig__chips { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.sia-chip { display: inline-flex; align-items: center; gap: 10px; padding: 10px 16px 10px 12px; border-radius: 999px; font-size: 14px; background: rgba(239, 233, 220, 0.08); color: var(--sia-dim); border: 1px solid rgba(239, 233, 220, 0.12); }
+.sia-chip b { color: var(--sia-bone); font-weight: 600; }
+.sia-chip__note { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: rgba(239, 233, 220, 0.14); font-size: 13px; }
+.sia-chip--them { opacity: 0.55; text-decoration: line-through; text-decoration-color: var(--sia-red); }
+.sia-chip--you { background: rgba(255, 74, 28, 0.14); border-color: rgba(255, 74, 28, 0.5); color: var(--sia-bone); font-size: 16px; }
+.sia-chip--you .sia-chip__note { background: var(--sia-red); color: #000; }
+.sia-ig__vs { color: var(--sia-red); font-size: 11px; margin: 4px 0 -2px 6px; }
+.sia-sticker { margin-top: 18px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 20px 14px 16px; border-radius: 14px; background: var(--sia-bone); color: #111; transform: rotate(-3deg); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); font-size: 14px; line-height: 1.25; }
+.sia-sticker b { font-size: 16px; }
+.sia-sticker__bars { display: inline-flex; align-items: flex-end; gap: 3px; height: 22px; }
+.sia-sticker__bars i { width: 4px; background: var(--sia-red); border-radius: 2px; }
+.sia-sticker__bars i:nth-child(1) { height: 40%; } .sia-sticker__bars i:nth-child(2) { height: 100%; } .sia-sticker__bars i:nth-child(3) { height: 65%; } .sia-sticker__bars i:nth-child(4) { height: 85%; }
+@media (max-width: 860px) {
+  .sia-ig { grid-template-columns: 1fr; gap: 36px; margin-top: 56px; padding-top: 40px; }
+}
+.sia-ig__copy p { margin: 0 0 16px; }
+.sia-ig__chips { padding: 6px 0 18px; }
