@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { SonicPlayer } from "../SonicPlayer";
 
-// Brand-kit homepage section, ported from the approved redesign handoff (sections.html).
-// Copy is word for word from the handoff; styles live in src/styles/brand-kit.css.
+// Audio lab. Testimonials moved to the Proof section (Oct 2026); styles in brand-kit.css + sia.css.
 export function MeetTheLab() {
   // Starts closed so the prerendered HTML and the hydrated page match.
   const [open, setOpen] = useState(false);
@@ -15,38 +14,17 @@ export function MeetTheLab() {
   return (
     <>
       <section className={`si si-lab${open ? " is-open" : ""}`} id="audio-lab">
-        <div className="si-lab__left si-paper si-grain">
+        <div className="si-lab__left">
           <div>
-            <p className="si-mono si-kicker">(05) The Audio Lab</p>
+            <p className="si-mono si-kicker">Listen</p>
             <h2 className="si-display si-lab__title">
-              Meet the <em>Lab</em>.
+              Press <em>play</em>.
             </h2>
             <p className="si-lab__sub">
-              Four signature sounds you can play right here in your browser. Press play and feel it
-              before you read a word.
+              Four signature sounds, right here in your browser. Feel it before you read another
+              word.
             </p>
             <p className="si-mono si-lab__note">Best with headphones</p>
-            <div className="si-dms">
-              <p className="si-mono si-dms__label">Don’t take our word for it</p>
-              <blockquote className="si-dm si-dm--1">
-                “When our audio logo plays at the start of our podcast and live masterminds, our
-                attendees literally get goosebumps. Chayenne translated our brand into four pure
-                notes.”
-                <cite className="si-mono">Sienna R. Delacroix · Delacroix Haute Perfumery</cite>
-              </blockquote>
-              <blockquote className="si-dm si-dm--2">
-                “We had spent hundreds of thousands on our visual rebrand, yet our events and media
-                still sounded generic. Working with Chayenne gave our company an acoustic footprint
-                that feels undeniably sovereign.”
-                <cite className="si-mono">Victoria Kensington · Astraea Ventures</cite>
-              </blockquote>
-              <blockquote className="si-dm si-dm--3">
-                “Chayenne engineered the spatial soundscape for our 3 flagship spa sanctuaries.
-                Guests constantly inquire about the music—it immediately slows their breathing and
-                elevates our brand value.”
-                <cite className="si-mono">Elena Thorne · Thorne Botanicals</cite>
-              </blockquote>
-            </div>
             <button
               type="button"
               className="si-btn si-btn--onyx"

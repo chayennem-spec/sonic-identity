@@ -11,8 +11,8 @@ export function SonicInquiryForm() {
     phone: "",
     organization: "",
     website: "",
-    package: "The Signature Sonic Identity (Bespoke Suite)",
-    industry: "Luxury & High Fashion",
+    package: "The Instant Recognition Atelier",
+    industry: "Coaching & Personal Brand",
     brandStory: "",
   });
 
@@ -99,7 +99,7 @@ export function SonicInquiryForm() {
             fill="currentColor"
           />
         </svg>
-        <span className="text-xs font-mono uppercase tracking-[0.25em]">Consultation & Audit</span>
+        <span className="text-xs font-mono uppercase tracking-[0.25em]">Inquiries</span>
       </div>
 
       {status === "success" ? (
@@ -108,11 +108,11 @@ export function SonicInquiryForm() {
             <CheckCircle2 className="h-6 w-6" />
           </div>
           <h3 className="font-serif-luxury text-3xl sm:text-4xl text-foreground font-normal">
-            Your Sonic Transmission Has Been Received
+            Received. I’ll be in touch.
           </h3>
           <p className="max-w-md mx-auto text-muted-foreground text-sm leading-relaxed font-light">
-            Thank you, {formData.firstName}. Chayenne Mallari personally reviews every brand inquiry
-            and will prepare your acoustic profile within 24 to 48 business hours.
+            Thank you, {formData.firstName}. Chayenne reads every inquiry herself
+            and will get back to you soon.
           </p>
           <div className="pt-4">
             <button
@@ -125,14 +125,14 @@ export function SonicInquiryForm() {
                   phone: "",
                   organization: "",
                   website: "",
-                  package: "The Signature Sonic Identity (Bespoke Suite)",
-                  industry: "Luxury & High Fashion",
+                  package: "The Instant Recognition Atelier",
+                  industry: "Coaching & Personal Brand",
                   brandStory: "",
                 });
               }}
               className="text-xs font-mono uppercase tracking-[0.25em] text-primary border-b border-primary pb-1 hover:text-foreground hover:border-foreground transition-colors"
             >
-              Submit Another Transmission
+              Send another message
             </button>
           </div>
         </div>
@@ -140,11 +140,11 @@ export function SonicInquiryForm() {
         <form method="post" onSubmit={handleSubmit} className="space-y-8">
           <div className="space-y-3">
             <h3 className="font-serif-luxury text-3xl sm:text-5xl text-foreground font-normal tracking-tight">
-              Initiate Your Acoustic Authority
+              Tell me about your brand
             </h3>
             <p className="text-sm text-muted-foreground font-light max-w-2xl leading-relaxed">
-              We accept four signature brand retainers per calendar quarter to preserve
-              uncompromising sound engineering standards. Please outline your brand resonance below.
+              A few details and I’ll come back to you personally with the right next step for your
+              sound.
             </p>
           </div>
 
@@ -156,7 +156,7 @@ export function SonicInquiryForm() {
               <input
                 required
                 type="text"
-                placeholder="Eleanor"
+                placeholder="First name"
                 name="first_name"
                 value={formData.firstName}
                 onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
@@ -169,7 +169,7 @@ export function SonicInquiryForm() {
               </label>
               <input
                 type="text"
-                placeholder="Vance"
+                placeholder="Last name"
                 name="last_name"
                 value={formData.lastName}
                 onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
@@ -186,7 +186,7 @@ export function SonicInquiryForm() {
               <input
                 required
                 type="email"
-                placeholder="founder@maison.com"
+                placeholder="you@yourbrand.com"
                 name="email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -199,7 +199,7 @@ export function SonicInquiryForm() {
               </label>
               <input
                 type="tel"
-                placeholder="+1 (555) 019-2834"
+                placeholder="Optional"
                 name="phone"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -215,7 +215,7 @@ export function SonicInquiryForm() {
               </label>
               <input
                 type="text"
-                placeholder="Maison Aurelia"
+                placeholder="Your brand"
                 name="organization"
                 value={formData.organization}
                 onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
@@ -228,7 +228,7 @@ export function SonicInquiryForm() {
               </label>
               <input
                 type="text"
-                placeholder="https://maisonaurelia.com"
+                placeholder="yourbrand.com or @handle"
                 name="website"
                 value={formData.website}
                 onChange={(e) => setFormData({ ...formData, website: e.target.value })}
@@ -240,7 +240,7 @@ export function SonicInquiryForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted-foreground block">
-                Acoustic Architecture Scope
+                What you’re interested in
               </label>
               <select
                 name="package"
@@ -248,33 +248,23 @@ export function SonicInquiryForm() {
                 onChange={(e) => setFormData({ ...formData, package: e.target.value })}
                 className="w-full border-b border-border bg-transparent py-3 text-sm text-foreground focus:border-primary focus:outline-none transition-colors"
               >
-                <option
-                  value="The Signature Sonic Identity (Bespoke Suite)"
-                  className="bg-card text-foreground"
-                >
-                  The Signature <span className="text-brand-red">Sonic Identity</span> (Bespoke
-                  Suite)
+                <option value="The Instant Recognition Atelier" className="bg-card text-foreground">
+                  The Instant Recognition Atelier (done for you)
                 </option>
-                <option
-                  value="Sonic Brand Audit & Acoustic Refresh"
-                  className="bg-card text-foreground"
-                >
-                  Sonic Brand Audit & Acoustic Refresh
+                <option value="The Instant Recognition Anthem" className="bg-card text-foreground">
+                  The Instant Recognition Anthem (signature song)
                 </option>
-                <option
-                  value="Sensory Soundscape & Event Resonance"
-                  className="bg-card text-foreground"
-                >
-                  Sensory Soundscape & Event Resonance
+                <option value="The Sonic Imprint guide" className="bg-card text-foreground">
+                  The Sonic Imprint guide
                 </option>
-                <option value="VIP 1:1 Sonic Direction Day" className="bg-card text-foreground">
-                  VIP 1:1 Sonic Direction Day
+                <option value="Not sure yet" className="bg-card text-foreground">
+                  Not sure yet
                 </option>
               </select>
             </div>
             <div className="space-y-2">
               <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted-foreground block">
-                Industry Sector
+                Your world
               </label>
               <select
                 name="industry"
@@ -282,20 +272,23 @@ export function SonicInquiryForm() {
                 onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
                 className="w-full border-b border-border bg-transparent py-3 text-sm text-foreground focus:border-primary focus:outline-none transition-colors"
               >
-                <option value="Luxury & High Fashion" className="bg-card text-foreground">
-                  Luxury & High Fashion
+                <option value="Coaching &amp; Personal Brand" className="bg-card text-foreground">
+                  Coaching &amp; Personal Brand
                 </option>
-                <option value="Beauty & Wellness Rituals" className="bg-card text-foreground">
-                  Beauty & Wellness Rituals
+                <option value="Founder-Led Business" className="bg-card text-foreground">
+                  Founder-Led Business
                 </option>
-                <option value="Executive Coaching & Leadership" className="bg-card text-foreground">
-                  Executive Coaching & Leadership
+                <option value="Speaker, Stage &amp; Events" className="bg-card text-foreground">
+                  Speaker, Stage &amp; Events
                 </option>
-                <option value="Hospitality & Boutique Spaces" className="bg-card text-foreground">
-                  Hospitality & Boutique Spaces
+                <option value="Beauty &amp; Wellness" className="bg-card text-foreground">
+                  Beauty &amp; Wellness
                 </option>
-                <option value="FinTech & Sovereign Media" className="bg-card text-foreground">
-                  FinTech & Sovereign Media
+                <option value="Podcast &amp; Media" className="bg-card text-foreground">
+                  Podcast &amp; Media
+                </option>
+                <option value="Other" className="bg-card text-foreground">
+                  Other
                 </option>
               </select>
             </div>
@@ -303,11 +296,11 @@ export function SonicInquiryForm() {
 
           <div className="space-y-2">
             <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted-foreground block">
-              Brand Frequency & Vision (Optional)
+              What should your brand feel like? (Optional)
             </label>
             <textarea
               rows={3}
-              placeholder="Describe your desired sensory presence, acoustic feelings, or upcoming brand milestones..."
+              placeholder="The feeling, the room, the launch coming up..."
               name="brand_story"
               value={formData.brandStory}
               onChange={(e) => setFormData({ ...formData, brandStory: e.target.value })}
@@ -335,8 +328,7 @@ export function SonicInquiryForm() {
 
           <div className="pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <p className="text-[11px] font-mono text-muted-foreground/80">
-              * Confidential client data protected under{" "}
-              <span className="text-brand-red">Sonic Identity</span> Atelier NDA standards.
+              Your details stay private and are only used to reply to you.
             </p>
 
             <button
@@ -347,11 +339,11 @@ export function SonicInquiryForm() {
               {status === "submitting" ? (
                 <>
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  <span>Transmitting...</span>
+                  <span>Sending...</span>
                 </>
               ) : (
                 <>
-                  <span>Transmit Inquiry</span>
+                  <span>Send inquiry</span>
                   <ArrowUpRight className="h-3.5 w-3.5" />
                 </>
               )}

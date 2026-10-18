@@ -4,6 +4,7 @@
 /* Self-hosted fonts and the brand-kit (.si-) styles for the redesigned sections */
 @import "./styles/brand-fonts.css";
 @import "./styles/brand-kit.css";
+@import "./styles/sia.css";
 
 @custom-variant dark (&:is(.dark *));
 

@@ -77,18 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Sonic Identity | Chayenne Mallari — Sound Architect for Women-Led Brands" },
+      { title: "Sonic Identity Architect | Chayenne Mallari" },
       {
         name: "description",
         content:
-          "Transform your brand resonance through bespoke sonic architecture, frequency branding, audio logos, and curated atmospheric soundscapes designed for visionary women founders.",
+          "Signature sound for founders, coaches and personal brands, composed by Chayenne Mallari.",
       },
       { name: "author", content: "Chayenne Mallari" },
-      { property: "og:title", content: "Sonic Identity | Chayenne Mallari" },
+      { property: "og:title", content: "Sonic Identity Architect | Chayenne Mallari" },
       {
         property: "og:description",
         content:
-          "Bespoke sound architecture for women-led brands. Acoustic authority, sensory resonance, and sonic logos.",
+          "Be heard before you're seen. Signature sound for founders, coaches and personal brands.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

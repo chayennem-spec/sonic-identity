@@ -14,9 +14,28 @@ export const ASSETS = {
   acousticAtmosphere: "/images/brand-board-logo-wordmark.png",
   brandCollateral: "/images/brand-board-typography.png",
   editorialPortrait: "/images/brand-board-color-palette.jpg",
+  // Same portrait cut onto plain black (Oct 2026)
+  portraitBlack: "/images/chayenne-portrait-black.png",
 };
 
 // Shown only in the inquiry form's error state, so the visitor still has a way to reach Chayenne.
+// Offer links. The Sonic Blueprint sells through Eden's checkout; Anthem and Atelier
+// are drafts in Eden, so their buttons go to the inquiry form until they're published.
+export const LINKS = {
+  blueprint: "https://chayennemallari.eden.so/",
+  instagram: "https://instagram.com/chayennemallari",
+  substack: "https://chayennemallari.substack.com",
+  linkedin: "https://linkedin.com/in/chayennemallari",
+};
+
+// Hero media. Drop the audio logo file into /public/media and set its path here;
+// until then the "Turn your sound on" button replays the video and its sound rings.
+export const HERO_MEDIA = {
+  video: "/media/hero-headphones.mp4",
+  poster: "/media/hero-poster.jpg",
+  audioLogo: "",
+};
+
 export const CONTACT = {
   email: "chayennemallari@gmail.com",
 };
