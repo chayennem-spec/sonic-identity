@@ -68,7 +68,7 @@ const TRACKS: Track[] = [
 ];
 
 export function SonicPlayer() {
-  const [activeTrack, setActiveTrack] = useState<Track>(TRACKS[0]);
+  const [activeTrack, setActiveTrack] = useState<Track>(TRACKS[0]!);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [playbackProgress, setPlaybackProgress] = useState(32);

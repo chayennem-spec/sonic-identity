@@ -34,6 +34,7 @@ export const HERO_MEDIA = {
   // Front image: leather-jacket portrait, background removed, dark film grade (Oct 2026).
   // Leave `video` set but `image` filled to show the still; clear `image` to go back to the video.
   image: "/images/chayenne-editorial.webp",
+  cutout: "/images/chayenne-editorial-cutout.webp",
   video: "/media/hero-headphones.mp4",
   poster: "/media/hero-poster.jpg",
   audioLogo: "",

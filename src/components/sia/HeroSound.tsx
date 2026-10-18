@@ -54,6 +54,10 @@ export function HeroSound() {
       a.play().catch(() => {});
     }
     setSounding(true);
+    // On phones the photo (and its frequency bars) sits above the button: bring it into view.
+    if (window.matchMedia("(max-width: 860px)").matches && window.scrollY > 80) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
     timer.current = window.setTimeout(() => setSounding(false), 9000);
   };
 
@@ -63,6 +67,9 @@ export function HeroSound() {
         <div className="sia-hero__media sia-hero__media--still" aria-hidden="true">
           <figure className="sia-hero__figure sia-hero__figure--photo">
             <img src={HERO_MEDIA.image} alt="Chayenne Mallari in a black leather jacket and sunglasses" />
+            {/* Frequency bars sit between the room and Chayenne: photo, then waveform, then her cut-out. */}
+            <Waveform active={sounding} className="sia-wave--behind" />
+            {HERO_MEDIA.cutout && <img className="sia-hero__cutout" src={HERO_MEDIA.cutout} alt="" />}
           </figure>
           <div className="sia-hero__shade" />
         </div>
@@ -91,7 +98,7 @@ export function HeroSound() {
           </div>
         </>
       )}
-      <Waveform active={sounding} className="sia-wave--hero" />
+      {!HERO_MEDIA.image && <Waveform active={sounding} className="sia-wave--hero" />}
       {HERO_MEDIA.audioLogo && (
         <audio ref={audioRef} src={HERO_MEDIA.audioLogo} preload="auto" onEnded={stop} />
       )}

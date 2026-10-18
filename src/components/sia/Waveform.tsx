@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Sound-frequency waveform: thin layered lines drifting like a voice on an oscilloscope.
- * Quiet at rest; swells (and one line turns red-orange) while `active` is true.
+ * Audio frequency display: dense, mirrored bars (like a voice memo / spectrum analyzer)
+ * over a thin carrier line. Breathes quietly at rest; surges, and runs hotter in the
+ * centre (red-orange), while `active` is true.
  */
 export function Waveform({ active, className = "" }: { active: boolean; className?: string }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -17,8 +18,9 @@ export function Waveform({ active, className = "" }: { active: boolean; classNam
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     let raf = 0;
-    let level = 0.18; // eased amplitude
+    let level = 0.45; // eased loudness
     let t = 0;
+    let smooth: number[] = [];
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -28,45 +30,56 @@ export function Waveform({ active, className = "" }: { active: boolean; classNam
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
     resize();
-    // Re-measure whenever the canvas's laid-out size changes (fonts/CSS loading, rotation, resize).
     const ro = new ResizeObserver(resize);
     ro.observe(canvas);
 
-    const lines = [
-      { f: 1.6, s: 0.9, p: 0, a: 1, w: 1.1, c: "rgba(239,233,220,0.85)" },
-      { f: 2.3, s: 1.3, p: 1.7, a: 0.7, w: 1, c: "rgba(239,233,220,0.45)" },
-      { f: 3.1, s: 0.7, p: 3.1, a: 0.55, w: 1, c: "rgba(239,233,220,0.28)" },
-      { f: 1.2, s: 1.7, p: 4.4, a: 0.85, w: 1.2, c: "red" },
-    ];
-
     const draw = () => {
       const { width: W, height: H } = canvas.getBoundingClientRect();
-      const target = activeRef.current ? 1 : 0.18;
-      level += (target - level) * 0.04;
+      const target = activeRef.current ? 1 : 0.45;
+      level += (target - level) * 0.05;
       t += reduce ? 0 : 0.016;
       ctx.clearRect(0, 0, W, H);
       const mid = H / 2;
-      for (const ln of lines) {
-        const isRed = ln.c === "red";
-        const alpha = isRed ? Math.max(0, (level - 0.25) / 0.75) : 1;
-        if (alpha <= 0.01) continue;
-        ctx.beginPath();
-        ctx.lineWidth = ln.w;
-        ctx.strokeStyle = isRed ? `rgba(255,74,28,${0.9 * alpha})` : ln.c;
-        for (let x = 0; x <= W; x += 2) {
-          const u = x / W;
-          // taper to flat at both ends, like a recorded phrase
-          const env = Math.pow(Math.sin(Math.PI * u), 1.6);
-          const y =
-            Math.sin(u * Math.PI * 2 * ln.f * 3 + t * ln.s * 3 + ln.p) * 0.6 +
-            Math.sin(u * Math.PI * 2 * ln.f * 7.3 - t * ln.s * 4.1 + ln.p * 2) * 0.3 +
-            Math.sin(u * Math.PI * 2 * 17 + t * 6 + ln.p) * 0.1 * level;
-          const py = mid + y * env * ln.a * level * (H * 0.46);
-          if (x === 0) ctx.moveTo(x, py);
-          else ctx.lineTo(x, py);
-        }
-        ctx.stroke();
+
+      // bars
+      const gap = 4;
+      const n = Math.max(8, Math.floor(W / gap));
+      if (smooth.length !== n) smooth = new Array(n).fill(0);
+      for (let i = 0; i < n; i++) {
+        const u = i / (n - 1);
+        const env = Math.pow(Math.sin(Math.PI * u), 1.3); // taper at both ends
+        // layered "frequencies": a slow phrase, a mid pulse and a fast shimmer
+        const raw =
+          0.5 + 0.5 * Math.sin(u * 9 + t * 2.1) * Math.sin(u * 23 - t * 3.3) +
+          0.35 * Math.abs(Math.sin(u * 61 + t * 7.7)) +
+          0.25 * Math.abs(Math.sin(u * 137 - t * 11.3 + Math.sin(t * 1.3)));
+        const v = Math.min(1, raw * 0.62) * env;
+        const prev = smooth[i] ?? 0;
+        const sv = prev + (v - prev) * 0.35;
+        smooth[i] = sv;
+        const h = Math.max(1, sv * level * (H * 0.48));
+        const x = i * gap + 1;
+        const hot = activeRef.current ? Math.max(0, 1 - Math.abs(u - 0.5) * 3.2) * (level - 0.45) / 0.55 : 0;
+        ctx.fillStyle =
+          hot > 0.05
+            ? `rgba(255,74,28,${0.45 + 0.5 * hot})`
+            : `rgba(239,233,220,${0.28 + 0.5 * sv})`;
+        ctx.fillRect(x, mid - h, 1.5, h * 2);
       }
+
+      // carrier line
+      ctx.beginPath();
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = "rgba(239,233,220,0.35)";
+      for (let x = 0; x <= W; x += 2) {
+        const u = x / W;
+        const env = Math.pow(Math.sin(Math.PI * u), 1.6);
+        const y = mid + Math.sin(u * Math.PI * 2 * 14 + t * 5) * env * level * H * 0.12;
+        if (x === 0) ctx.moveTo(x, y);
+        else ctx.lineTo(x, y);
+      }
+      ctx.stroke();
+
       raf = requestAnimationFrame(draw);
     };
     raf = requestAnimationFrame(draw);

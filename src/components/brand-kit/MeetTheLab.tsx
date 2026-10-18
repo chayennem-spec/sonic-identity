@@ -1,65 +1,35 @@
-import { useEffect, useRef, useState } from "react";
-import { SonicPlayer } from "../SonicPlayer";
+import { LINKS } from "../../lib/constants";
 
-// Audio lab. Testimonials moved to the Proof section (Oct 2026); styles in brand-kit.css + sia.css.
+// Listen section. The old synthesizer "Audio Lab" (SonicPlayer) was retired in Oct 2026: it showed
+// sample brands that weren't real clients. Real client songs will be added here once approved.
 export function MeetTheLab() {
-  // Starts closed so the prerendered HTML and the hydrated page match.
-  const [open, setOpen] = useState(false);
-  const panelRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (open) panelRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [open]);
-
   return (
-    <>
-      <section className={`si si-lab${open ? " is-open" : ""}`} id="audio-lab">
-        <div className="si-lab__left">
-          <div>
-            <p className="si-mono si-kicker">Listen</p>
-            <h2 className="si-display si-lab__title">
-              Press <span style={{ whiteSpace: "nowrap" }}><em>play</em>.</span>
-            </h2>
-            <p className="si-lab__sub">
-              Four signature sounds, right here in your browser. Feel it before you read another
-              word.
-            </p>
-            <p className="si-mono si-lab__note">Best with headphones</p>
-            <button
-              type="button"
-              className="si-btn si-btn--onyx"
-              id="si-lab-toggle"
-              aria-expanded={open}
-              aria-controls="atelier"
-              onClick={() => setOpen((o) => !o)}
-            >
-              <span className="si-ico" aria-hidden="true">
-                {open ? "■" : "▶"}
-              </span>
-              <span className="si-lbl">{open ? "Close the Audio Lab" : "Enter the Audio Lab"}</span>
-            </button>
-          </div>
+    <section className="si si-lab" id="audio-lab">
+      <div className="si-lab__left">
+        <div>
+          <p className="si-mono si-kicker">Listen</p>
+          <h2 className="si-display si-lab__title">
+            Press <span style={{ whiteSpace: "nowrap" }}><em>play</em>.</span>
+          </h2>
+          <p className="si-lab__sub">
+            Reading about sound is like reading about perfume. The Blueprint gives you three sound
+            directions for your brand, each with a first sketch you can actually press play on.
+          </p>
+          <p className="si-mono si-lab__note">Best with headphones</p>
+          <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
+            Hear your brand <span className="sia-arrow" aria-hidden="true">↗</span>
+          </a>
         </div>
-        <div className="si-lab__right si-lab__right--photo">
-          <img
-            className="si-lab__photo"
-            src="/images/chayenne-headphones.webp"
-            alt="Chayenne Mallari wearing red headphones"
-            loading="lazy"
-          />
-          <p className="si-mono si-lab__cap">Side A · 4 tracks · plays in your browser</p>
-        </div>
-      </section>
-      {/* The original interactive Audio Lab, revealed by the button above. Mounted only while
-        open, so closing the lab also stops any sound that is playing. */}
-      <div
-        id="atelier"
-        ref={panelRef}
-        hidden={!open}
-        className="py-24 sm:py-32 border-b border-border"
-      >
-        <div className="max-w-[1440px] mx-auto px-6 sm:px-10">{open && <SonicPlayer />}</div>
       </div>
-    </>
+      <div className="si-lab__right si-lab__right--photo">
+        <img
+          className="si-lab__photo"
+          src="/images/chayenne-headphones.webp"
+          alt="Chayenne Mallari wearing red headphones"
+          loading="lazy"
+        />
+        <p className="si-mono si-lab__cap">Side A · Your sound, first listen</p>
+      </div>
+    </section>
   );
 }

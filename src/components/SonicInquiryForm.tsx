@@ -181,7 +181,7 @@ export function SonicInquiryForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted-foreground block">
-                Corporate / Brand Email *
+                Email *
               </label>
               <input
                 required
@@ -195,7 +195,7 @@ export function SonicInquiryForm() {
             </div>
             <div className="space-y-2">
               <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted-foreground block">
-                Direct Contact Phone
+                Phone
               </label>
               <input
                 type="tel"
@@ -211,7 +211,7 @@ export function SonicInquiryForm() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label className="text-[11px] font-mono uppercase tracking-[0.2em] text-muted-foreground block">
-                Brand / Venture Name
+                Brand name
               </label>
               <input
                 type="text"

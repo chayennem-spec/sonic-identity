@@ -149,7 +149,7 @@ export function Offers() {
             </div>
             <div className="sia-offer__num" aria-hidden="true">01</div>
             <h3>The Sonic Blueprint</h3>
-            <p className="sia-mono sia-offer__line">Hear your brand before you invest in it</p>
+            <p className="sia-mono sia-offer__line">Hear your brand before you invest</p>
             <p className="sia-offer__desc">
               Curious, not ready to commit? Fair. In one sitting, your brand’s energy is read straight
               from your feed, your sonic archetype is named, and you get three sound directions, each
