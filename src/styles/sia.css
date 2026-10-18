@@ -487,3 +487,29 @@
   .sia-offer__top { flex-wrap: wrap; gap: 10px; }
   .sia-hero h1 { font-size: clamp(46px, 13vw, 64px); }
 }
+
+/* Lipstick accent words (seen, built, sound...) */
+:root { --sia-lipstick: "Style your Lipstick", "Mr Dafoe", cursive; }
+.sia-display em,
+.si-lab .si-lab__title em {
+  font-family: var(--sia-lipstick);
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--sia-red);
+  font-size: 1.12em;
+  line-height: 0.8;
+  display: inline-block;
+  transform: rotate(-4deg) translateY(0.04em);
+  padding: 0 0.06em;
+}
+.sia-hand { font-family: var(--sia-lipstick); font-size: clamp(34px, 3.2vw, 48px); }
+
+@media (max-width: 860px) {
+  .sia-hero__media { bottom: 30%; }
+  .sia-hero__media video,
+  .sia-hero__media img { object-position: 52% 22%; }
+  .sia-hero__shade { background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.55) 30%, rgba(0, 0, 0, 0) 60%); }
+  .sia-rings { top: 22%; left: 52%; }
+}

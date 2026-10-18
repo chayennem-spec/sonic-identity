@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { HERO_MEDIA, LINKS } from "../../lib/constants";
 
+const REST_AT = 6.2;
+
 /**
  * Opening scene: Chayenne puts on her headphones against plain black.
  * The video plays once on load (muted, as browsers require) and rests on its last frame.
@@ -64,6 +66,10 @@ export function HeroSound() {
           muted
           playsInline
           preload="auto"
+          onTimeUpdate={(e) => {
+            // Rest on the 6.2s frame (headphones on, rings starting) instead of the tight close-up ending.
+            if (e.currentTarget.currentTime >= REST_AT) e.currentTarget.pause();
+          }}
         />
         <div className="sia-hero__shade" />
       </div>
