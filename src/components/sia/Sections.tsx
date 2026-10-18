@@ -173,7 +173,7 @@ export function Offers() {
               story, your archetype and the room you plan to own. Comes with full usage rights for
               your content, launches, events and stage.
             </p>
-            <a className="sia-btn sia-btn--ghost" href="#inquiry">
+            <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
               Request an invitation <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
           </article>
@@ -191,7 +191,7 @@ export function Offers() {
               learn. No calls to sit through. You say yes. I build. You walk in sounding
               like the brand you already are.
             </p>
-            <a className="sia-btn sia-btn--ghost" href="#inquiry">
+            <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
               Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
           </article>
@@ -300,24 +300,53 @@ export function About() {
 
 export function Guide() {
   return (
-    <section className="sia sia-guide sia-rule" id="free-guide">
+    <section className="sia sia-guide sia-rule" id="free-audit">
       <div className="sia-wrap sia-reveal">
         <p className="sia-mono sia-kicker" style={{ justifyContent: "center" }}>
-          The book
+          Free · 3 minutes
         </p>
         <h2 className="sia-display">
           The Sonic
           <br />
-          Imprint
+          Identity Audit
         </h2>
-        <p className="sia-hand">(it’s already yours.)</p>
+        <p className="sia-hand">(be honest. it’s just us.)</p>
         <p className="sia-body">
-          The thinking behind every sound I make: why the ear remembers what the eye forgets, and
-          how to stop borrowing a sound that was never yours.
+          Nine questions. Find out what your brand sounds like right now, and meet your Sonic
+          Archetype: the energy your sound was built to carry.
         </p>
-        <a className="sia-btn sia-btn--bone" href="#inquiry">
-          Send me the guide <span className="sia-arrow" aria-hidden="true">↗</span>
+        <a className="sia-btn sia-btn--bone" href={LINKS.audit} target="_blank" rel="noreferrer">
+          Take the free audit <span className="sia-arrow" aria-hidden="true">↗</span>
         </a>
+      </div>
+    </section>
+  );
+}
+
+export function Apply() {
+  return (
+    <section className="sia sia-guide sia-apply sia-rule" id="inquiry">
+      <div className="sia-wrap sia-reveal">
+        <p className="sia-mono sia-kicker" style={{ justifyContent: "center" }}>
+          By application
+        </p>
+        <h2 className="sia-display">
+          Tell me about
+          <br />
+          your <span className="sia-nw"><em>brand</em>.</span>
+        </h2>
+        <p className="sia-body">
+          The Anthem and the Atelier are made for one brand at a time. Five minutes, in writing, no
+          calls. I read every application myself and reply within 2 business days.
+        </p>
+        <div className="sia-hero__ctas" style={{ justifyContent: "center" }}>
+          <a className="sia-btn sia-btn--red" href={LINKS.apply} target="_blank" rel="noreferrer">
+            Start my application <span className="sia-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a className="sia-btn sia-btn--ghost" href={LINKS.audit} target="_blank" rel="noreferrer">
+            Not sure yet? Take the free audit
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -366,7 +395,7 @@ const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "The Blueprint is ready when you are, right from this page. The Anthem and the Atelier are made for one brand at a time, so you’ll get the investment once I know what you need. Send an inquiry and I’ll come back with it.",
+    a: "The Blueprint is ready when you are, right from this page. The Anthem and the Atelier are made for one brand at a time, so you’ll get the investment once I know what you need. Apply and I’ll come back with it.",
   },
   {
     q: "Where do I start?",
@@ -416,8 +445,8 @@ export function FinalCta() {
             <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
               Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
-            <a className="sia-btn sia-btn--ghost" href="#inquiry">
-              Ask about the Atelier
+            <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
+              Apply for the Atelier
             </a>
           </div>
         </div>

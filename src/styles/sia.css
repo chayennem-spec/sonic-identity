@@ -817,3 +817,5 @@
   .sia-offer .sia-btn { letter-spacing: 0.14em; padding-left: 18px; padding-right: 18px; }
 }
 .si-lab .sia-btn { margin-top: 8px; }
+@media (min-width: 861px) { .sia-wave--behind { left: 8%; width: 92%; } }
+.sia-apply h2.sia-display { font-size: clamp(44px, 6.2vw, 96px); margin-bottom: 36px; }

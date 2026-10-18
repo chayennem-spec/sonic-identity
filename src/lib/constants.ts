@@ -22,7 +22,10 @@ export const ASSETS = {
 // Offer links. The Sonic Blueprint sells through Eden's checkout; Anthem and Atelier
 // are drafts in Eden, so their buttons go to the inquiry form until they're published.
 export const LINKS = {
-  blueprint: "https://chayennemallari.eden.so/",
+  blueprint: "https://chayennemallari.eden.so/sonic-blueprint",
+  apply: "https://chayennemallari.eden.so/form/apply",
+  audit: "https://chayennemallari.eden.so/form/sonic-audit",
+  eden: "https://chayennemallari.eden.so/",
   instagram: "https://instagram.com/chayennemallari",
   substack: "https://chayennemallari.substack.com",
   linkedin: "https://linkedin.com/in/chayennemallari",

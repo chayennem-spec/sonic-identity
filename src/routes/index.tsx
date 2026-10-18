@@ -1,11 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SITE_URL } from "../lib/constants";
-import { SonicInquiryForm } from "../components/SonicInquiryForm";
 import { MeetTheLab } from "../components/brand-kit/MeetTheLab";
 import { HeroSound } from "../components/sia/HeroSound";
 import { Intro, SiteFooter, SiteHeader, StickyCta, useReveal } from "../components/sia/Chrome";
 import {
   About,
+  Apply,
   Faq,
   FinalCta,
   Guide,
@@ -56,11 +56,7 @@ function HomePage() {
         <About />
         <Guide />
         <Faq />
-        <section className="sia sia-rule" style={{ padding: "110px 0" }}>
-          <div className="sia-wrap" style={{ maxWidth: 1100 }}>
-            <SonicInquiryForm />
-          </div>
-        </section>
+        <Apply />
         <FinalCta />
       </main>
       <SiteFooter />
