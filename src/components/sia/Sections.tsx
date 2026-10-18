@@ -345,10 +345,6 @@ const FAQ = [
     a: "Need? No. You also didn’t need the photographer or the brand designer, and you hired them anyway, because the details are what make people remember you. Sound is the detail most brands at your level haven’t touched yet. That’s the point.",
   },
   {
-    q: "I’m not musical. Do I need to know what I want?",
-    a: "Not even a little. You bring the brand, the story and the room you want to own. I translate that into sound. If you can say “that feels like me” or “absolutely not,” you’re qualified.",
-  },
-  {
     q: "What if I don’t love it?",
     a: "That’s exactly why the Blueprint exists: you hear three directions before you commit to anything bigger. In the Anthem and the Atelier, you approve each stage before I move on, so nothing gets finished without your yes.",
   },
