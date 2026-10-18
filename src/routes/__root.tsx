@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Signature sound for founders, coaches and personal brands, composed by Chayenne Mallari.",
+          "Signature sound for founders, coaches and personal brands, made by Chayenne Mallari.",
       },
       { name: "author", content: "Chayenne Mallari" },
       { property: "og:title", content: "Sonic Identity Architect | Chayenne Mallari" },

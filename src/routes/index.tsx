@@ -11,14 +11,15 @@ import {
   Guide,
   Method,
   Offers,
-  Proof,
+  // Proof,
   TheGap,
+  ForHer,
   Ticker,
 } from "../components/sia/Sections";
 
 const TITLE = "Sonic Identity Architect | Chayenne Mallari";
 const DESCRIPTION =
-  "Signature sound for founders, coaches and personal brands. Chayenne Mallari composes the song, audio logo and sound family that make your brand recognized, remembered and felt, without being seen.";
+  "Signature sound for female founders, coaches and personal brands. Chayenne Mallari creates the song, audio logo and sound family that make your brand recognized, remembered and felt, without being seen.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -47,9 +48,10 @@ function HomePage() {
         <HeroSound />
         <Ticker />
         <TheGap />
+        <ForHer />
         <Method />
         <Offers />
-        <Proof />
+        {/* Proof hidden until real testimonials arrive: <Proof /> */}
         <MeetTheLab />
         <About />
         <Guide />

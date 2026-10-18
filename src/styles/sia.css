@@ -202,6 +202,24 @@
 .sia-gap__side { border-left: 1px solid var(--sia-line); padding-left: 40px; }
 .sia-gap .sia-hand { margin-top: 30px; }
 
+/* ---------- For her (identity) ---------- */
+.sia-forher { padding: 120px 0; }
+.sia-forher__grid { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: start; }
+.sia-forher h2 { font-size: clamp(42px, 5.2vw, 78px); }
+.sia-forher__list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--sia-line); }
+.sia-forher__list li {
+  display: grid; grid-template-columns: 48px 1fr; gap: 12px;
+  padding: 22px 0; border-bottom: 1px solid var(--sia-line);
+  font-size: clamp(18px, 1.6vw, 22px); line-height: 1.45; color: var(--sia-bone, #EFE9DC);
+}
+.sia-forher__list li span { color: var(--sia-red); font-size: 12px; padding-top: 6px; }
+.sia-forher .sia-hand { margin-top: 34px; }
+@media (max-width: 900px) {
+  .sia-forher { padding: 88px 0; }
+  .sia-forher__grid { grid-template-columns: 1fr; gap: 36px; }
+  .sia-forher__list li { grid-template-columns: 34px 1fr; }
+}
+
 /* ---------- S.O.U.N.D. ---------- */
 .sia-sound { padding: 120px 0 140px; }
 .sia-sound__head { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 64px; flex-wrap: wrap; }

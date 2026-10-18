@@ -109,7 +109,7 @@ export function SiteFooter() {
             <Wordmark as="div" />
             <span className="sia-tagline">Chayenne Mallari</span>
             <p className="sia-footer__line">
-              Signature sound for founders, coaches and personal brands. Recognized, remembered and
+              Signature sound for female founders, coaches and personal brands. Recognized, remembered and
               felt, without being seen.
             </p>
           </div>

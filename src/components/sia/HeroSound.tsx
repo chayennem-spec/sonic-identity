@@ -110,8 +110,9 @@ export function HeroSound() {
           Be heard before you’re <span className="sia-nw"><em>seen</em>.</span>
         </h1>
         <p className="sia-hero__sub">
-          I compose the signature sound for founders, coaches and personal brands. One listen and
-          they know it’s you, before they ever see your face.
+          Your photos are styled. Your brand is polished. And your sound? A trending clip half of
+          Instagram used before breakfast. I make signature songs for female founders, so the room
+          knows it’s you before you say a word.
         </p>
         <div className="sia-hero__ctas">
           <button
