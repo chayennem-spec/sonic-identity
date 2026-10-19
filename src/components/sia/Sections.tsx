@@ -471,7 +471,7 @@ export const FAQ = [
   },
   {
     q: "What if I don’t love it?",
-    a: "That’s exactly why the Blueprint exists: you hear three directions before you commit to anything bigger. In the Atelier, your Signature Anthem and Sonic Signature land first, before the other tracks are built. In the Anthem, you hear your first listen before any changes. Either way you get refinement rounds to shape it (one for the Anthem, two for the Atelier), with a guide that helps you say what you feel even without music words.",
+    a: "That’s exactly why the Blueprint exists: you hear three directions before you commit to anything bigger. In the Atelier, your first track and your Sonic Signature land first, before the other four are built. In the Anthem, you hear your first listen before any changes. Either way you get refinement rounds to shape it (one for the Anthem, two for the Atelier), with a guide that helps you say what you feel even without music words.",
   },
   {
     q: "Do you use AI? Will it sound like AI?",
