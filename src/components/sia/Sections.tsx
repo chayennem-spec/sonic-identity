@@ -366,7 +366,7 @@ export function About() {
             </p>
             <p>
               I’m a certified hypnotherapist and NLP trainer. I wrote{" "}
-              <strong>The Sonic Imprint</strong>. I built a ten-archetype Sonic Identity system. I map
+              <strong>The Sonic Imprint</strong>. I built an eight-archetype Sonic Identity system. I map
               your archetype first, then make the music. So your sound sounds like you. Not like
               whatever was trending on Tuesday.
             </p>
@@ -377,7 +377,7 @@ export function About() {
               <dd className="sia-mono">Years reading identity</dd>
             </div>
             <div>
-              <dt>10</dt>
+              <dt>8</dt>
               <dd className="sia-mono">Sonic archetypes</dd>
             </div>
             <div>
