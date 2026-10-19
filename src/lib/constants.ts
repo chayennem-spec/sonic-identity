@@ -1,6 +1,5 @@
-// Production origin, used where a full URL is required (og:image / twitter:image).
-// Switch to https://www.sonicidentityarchitect.com once the domain is connected.
-export const SITE_URL = "https://sonicidentityarchitect.pages.dev";
+// Production origin, used for canonical URLs, og:image, sitemap and structured data.
+export const SITE_URL = "https://www.sonicidentityarchitect.com";
 
 // All images are self-hosted from /public/images (moved off the GoHighLevel CDN).
 export const ASSETS = {

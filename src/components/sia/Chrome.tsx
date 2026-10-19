@@ -12,17 +12,17 @@ export function SiteHeader() {
     <header className="sia sia-header">
       <div className="sia-wrap sia-header__bar">
         <nav className="sia-header__side sia-header__side--left sia-mono" aria-label="Main">
-          <a href="#method">Method</a>
-          <a href="#offers">Offers</a>
-          <a href="#audio-lab" className="sia-hide-sm">Listen</a>
+          <a href="/#method">Method</a>
+          <a href="/#offers">Offers</a>
+          <a href="/#audio-lab" className="sia-hide-sm">Listen</a>
         </nav>
-        <a href="#top" className="sia-brand sia-brand--center" aria-label="Sonic Identity Architect, home">
+        <a href="/" className="sia-brand sia-brand--center" aria-label="Sonic Identity Architect, home">
           <Wordmark />
           <span className="sia-tagline">Chayenne Mallari</span>
         </a>
         <div className="sia-header__side sia-header__side--right sia-mono">
-          <a href="#about" className="sia-hide-sm">About</a>
-          <a href="#faq" className="sia-hide-sm">FAQ</a>
+          <a href="/#about" className="sia-hide-sm">About</a>
+          <a href="/#faq" className="sia-hide-sm">FAQ</a>
           <a className="sia-btn sia-btn--bone" href={LINKS.blueprint} target="_blank" rel="noreferrer">
             Start here <span className="sia-arrow" aria-hidden="true">↗</span>
           </a>
@@ -116,11 +116,19 @@ export function SiteFooter() {
           <div>
             <p className="sia-mono sia-footer__h">Explore</p>
             <ul className="sia-mono">
-              <li><a href="#method">The method</a></li>
-              <li><a href="#offers">Offers</a></li>
-              <li><a href="#audio-lab">Listen</a></li>
-              <li><a href="#about">About Chayenne</a></li>
-              <li><a href="#faq">FAQ</a></li>
+              <li><a href="/#method">The method</a></li>
+              <li><a href="/#offers">Offers</a></li>
+              <li><a href="/#audio-lab">Listen</a></li>
+              <li><a href="/#about">About Chayenne</a></li>
+              <li><a href="/#faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <p className="sia-mono sia-footer__h">Guides</p>
+            <ul className="sia-mono">
+              <li><a href="/what-is-a-sonic-identity">What is a sonic identity?</a></li>
+              <li><a href="/sound-branding-for-female-founders">Sound branding for female founders</a></li>
+              <li><a href="/sonic-identity-for-coaches">Sonic identity for coaches</a></li>
             </ul>
           </div>
           <div>
@@ -129,7 +137,7 @@ export function SiteFooter() {
               <li><a href={LINKS.instagram} target="_blank" rel="noreferrer">Instagram</a></li>
               <li><a href={LINKS.substack} target="_blank" rel="noreferrer">Substack</a></li>
               <li><a href={LINKS.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></li>
-              <li><a href="#inquiry">Get in touch</a></li>
+              <li><a href="/#inquiry">Get in touch</a></li>
             </ul>
           </div>
         </div>

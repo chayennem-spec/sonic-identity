@@ -1,11 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SITE_URL } from "../lib/constants";
+import { faqBlock, ldScripts, pageHead } from "../lib/seo";
 import { MeetTheLab } from "../components/brand-kit/MeetTheLab";
 import { HeroSound } from "../components/sia/HeroSound";
 import { Intro, SiteFooter, SiteHeader, StickyCta, useReveal } from "../components/sia/Chrome";
 import {
   About,
   Faq,
+  FAQ,
   FinalCta,
   Guide,
   Method,
@@ -17,22 +19,17 @@ import {
   Ticker,
 } from "../components/sia/Sections";
 
-const TITLE = "Sonic Identity Architect | Chayenne Mallari";
+const TITLE = "Sonic Identity & Sound Branding for Female Founders | Chayenne Mallari";
 const DESCRIPTION =
-  "Signature sound for female founders, coaches and personal brands. Chayenne Mallari creates the song, audio logo and sound family that make your brand recognized, remembered and felt, without being seen.";
+  "Sonic Identity Architect Chayenne Mallari makes signature songs and sound branding for female founders, coaches and personal brands, so people know it's you before you say a word. Done for you, exclusive to your brand.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { property: "og:image", content: `${SITE_URL}/og-image.jpg` },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: `${SITE_URL}/og-image.jpg` },
-    ],
+    ...pageHead({ path: "/", title: TITLE, description: DESCRIPTION }),
+    scripts: ldScripts(
+      { "@type": "WebSite", "@id": `${SITE_URL}/#website`, name: "Sonic Identity Architect", url: SITE_URL },
+      faqBlock(FAQ),
+    ),
   }),
   component: HomePage,
 });

@@ -448,7 +448,7 @@ export function Apply() {
   );
 }
 
-const FAQ = [
+export const FAQ = [
   {
     q: "What is a sonic identity?",
     a: "It’s the sound of your brand: the signature song, audio logo and family of sounds that play across your reels, podcast, launches and stage, so people know it’s you by ear. Like a signature scent, but for your brand.",
