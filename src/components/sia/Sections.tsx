@@ -267,7 +267,7 @@ export function Offers() {
             <p className="sia-offer__desc">
               Your walk-on. Your launch. Your podcast open. One signature song made around your
               story, your archetype and the room you plan to own. Licensed to your brand alone, with
-              exclusive usage rights for your content, ads, launches, events and podcast.
+              exclusive usage rights for your content, ads, launches, events, podcast and programs.
             </p>
             <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
               Request an invitation <span className="sia-arrow" aria-hidden="true">↗</span>
@@ -277,15 +277,15 @@ export function Offers() {
           <article className="sia-offer sia-reveal">
             <div className="sia-offer__top sia-mono">
               <span className="sia-offer__tag sia-offer__tag--quiet sia-mono">Done for you</span>
-              <span>Full sound family</span>
+              <span>Your brand’s soundtrack</span>
             </div>
             <div className="sia-offer__num" aria-hidden="true">03</div>
             <h3>The Instant Recognition Atelier</h3>
             <p className="sia-mono sia-offer__line">For the woman who doesn’t do homework</p>
             <p className="sia-offer__desc">
-              Your entire sound family, made and finished for you, start to finish. No program to
-              learn. No calls to sit through. You say yes. I build. Exclusive to your brand, and
-              you walk in sounding like the brand you already are.
+              Five original tracks, spent your way: a song for each of your offers, your anthem, a
+              walk-on for your stage, a beat under your everyday reels. No program to learn. No
+              calls to sit through. You say yes. I build. Exclusive to your brand.
             </p>
             <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
               Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
@@ -421,7 +421,7 @@ export function Guide() {
 
 export function Apply() {
   return (
-    <section className="sia sia-guide sia-apply sia-rule" id="inquiry">
+    <section className="sia sia-guide sia-apply sia-rule" id="apply">
       <div className="sia-wrap sia-reveal">
         <p className="sia-mono sia-kicker" style={{ justifyContent: "center" }}>
           By application
@@ -528,7 +528,7 @@ export function Faq() {
 
 export function FinalCta() {
   return (
-    <section className="sia sia-final sia-final--split sia-rule">
+    <section className="sia sia-final sia-final--split sia-rule" id="inquiry">
       <div className="sia-wrap sia-final__grid">
         <div className="sia-reveal">
           <p className="sia-mono sia-kicker">Your move</p>
@@ -541,14 +541,26 @@ export function FinalCta() {
             Picture it: three minutes before your masterclass, the waiting room filling up, and
             the music playing is already unmistakably yours. That’s the brief.
           </p>
+          <p className="sia-body sia-final__line">
+            Hear it first with the Blueprint, tonight. Or apply for the Anthem or the Atelier: five
+            minutes, in writing, no calls. I read every application myself and reply within 2
+            business days.
+          </p>
           <div className="sia-hero__ctas">
             <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
               Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
             <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
-              Apply for the Atelier
+              Start my application <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
           </div>
+          <p className="sia-final__alt">
+            Not sure yet?{" "}
+            <a href={LINKS.audit} target="_blank" rel="noreferrer">
+              Take the free three-minute audit
+            </a>
+            .
+          </p>
         </div>
         <figure className="sia-final__photo sia-reveal" aria-hidden="true">
           <img src="/images/red-headphones-marble.webp" alt="" loading="lazy" />

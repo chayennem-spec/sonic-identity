@@ -52,7 +52,7 @@ export function Intro() {
       /* storage blocked: just play it */
     }
     if (seen) setState("gone");
-    const t = window.setTimeout(() => setState("gone"), 4200);
+    const t = window.setTimeout(() => setState("gone"), 2700);
     return () => window.clearTimeout(t);
   }, []);
   if (state === "gone") return null;
@@ -114,7 +114,7 @@ export function SiteFooter() {
             </p>
           </div>
           <div>
-            <h4 className="sia-mono">Explore</h4>
+            <p className="sia-mono sia-footer__h">Explore</p>
             <ul className="sia-mono">
               <li><a href="#method">The method</a></li>
               <li><a href="#offers">Offers</a></li>
@@ -124,7 +124,7 @@ export function SiteFooter() {
             </ul>
           </div>
           <div>
-            <h4 className="sia-mono">Follow the sound</h4>
+            <p className="sia-mono sia-footer__h">Follow the sound</p>
             <ul className="sia-mono">
               <li><a href={LINKS.instagram} target="_blank" rel="noreferrer">Instagram</a></li>
               <li><a href={LINKS.substack} target="_blank" rel="noreferrer">Substack</a></li>

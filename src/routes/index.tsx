@@ -5,7 +5,6 @@ import { HeroSound } from "../components/sia/HeroSound";
 import { Intro, SiteFooter, SiteHeader, StickyCta, useReveal } from "../components/sia/Chrome";
 import {
   About,
-  Apply,
   Faq,
   FinalCta,
   Guide,
@@ -58,7 +57,6 @@ function HomePage() {
         <About />
         <Guide />
         <Faq />
-        <Apply />
         <FinalCta />
       </main>
       <SiteFooter />
