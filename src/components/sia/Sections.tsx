@@ -323,6 +323,65 @@ export function Rights() {
   );
 }
 
+/**
+ * Offers, with pricing psychology built in (no prices on the site; they live on Eden):
+ * high-to-low order, an "If it were mine..." tag on the Atelier, a "because" line and a short
+ * what's-included list per offer, a real founding deadline and the First Listen Promise.
+ * Take the founding note down on Dec 1 (the Atelier price goes up then).
+ */
+const OFFERS = [
+  {
+    featured: true,
+    tag: "If it were mine...",
+    label: "The whole brand world...",
+    name: "The Instant Recognition Atelier",
+    line: "For the woman who doesn’t do homework",
+    desc: "You’ve already invested in how your brand looks. This is the part people actually remember. No homework, no calls. You say yes, I build it, and it’s made for your brand alone.",
+    includes: [
+      "5 original tracks, spent your way: offers, anthem, walk-on, reels",
+      "Your Sonic Signature, built around one real sound from your world",
+      "A sound guide, so your team never guesses",
+      "Exclusive brand-use rights, in writing",
+    ],
+    because: "it’s a whole brand soundtrack, built for one brand at a time and never licensed to another brand.",
+    plan: "3-payment plan available",
+    cta: "Apply for the Atelier",
+    href: LINKS.apply,
+  },
+  {
+    tag: "By invitation",
+    label: "Signature song",
+    name: "The Instant Recognition Anthem",
+    line: "One song that walks in before you do",
+    desc: "Want to start with one song? Your walk-on, your launch video, your podcast open: one song made around your story and your archetype.",
+    includes: [
+      "One signature song",
+      "One refinement round",
+      "Exclusive brand-use rights in writing",
+      "Credits toward the Atelier",
+    ],
+    because: "it’s made around your story and your archetype, and it’s never licensed to another brand.",
+    cta: "Request an invitation",
+    href: LINKS.apply,
+  },
+  {
+    tag: "Start here",
+    label: "Same day",
+    name: "The Sonic Blueprint",
+    line: "Hear your brand before you invest",
+    desc: "Curious but not ready to commit? Fair. In one sitting, the Blueprint reads your brand’s energy straight from your feed.",
+    includes: [
+      "Your Sonic Archetype",
+      "Three sound directions",
+      "Prompts to hear a first sketch of each",
+      "Credits toward the Atelier",
+    ],
+    because: "you do it yourself, tonight, and it counts toward the Atelier if you go all in.",
+    cta: "Start the Blueprint",
+    href: LINKS.blueprint,
+  },
+];
+
 export function Offers() {
   return (
     <section className="sia sia-offers sia-rule" id="offers">
@@ -332,87 +391,75 @@ export function Offers() {
           <h2 className="sia-display">
             Claim <span className="sia-nw">your <em>sound</em>.</span>
           </h2>
+          <p className="sia-offers__lead">
+            Every launch you wait is one more that opens with somebody else’s song. Three ways in,
+            depending on how much you want done for you.
+          </p>
         </div>
+        <p className="sia-offers__note sia-mono sia-reveal">
+          <span>
+            Founding spots for the Atelier close <b>Nov 30</b>
+          </span>
+        </p>
         <div className="sia-offers__grid">
-          <article className="sia-offer sia-offer--lead sia-reveal">
-            <div className="sia-offer__top sia-mono">
-              <span className="sia-offer__tag sia-mono">If it were mine…</span>
-              <span>The whole world…</span>
-            </div>
-            <div className="sia-offer__num" aria-hidden="true">01</div>
-            <h3>The Instant Recognition Atelier</h3>
-            <p className="sia-mono sia-offer__line">For the woman who doesn’t do homework</p>
-            <p className="sia-offer__desc">
-              You’ve already invested in how your brand looks. This is the part people actually
-              remember. No homework, no calls. You say yes, I build it, and it’s made for your brand
-              alone.
-            </p>
-            <ul className="sia-offer__list">
-              <li>5 original tracks, spent your way: offers, anthem, walk-on, reels</li>
-              <li>Your Sonic Signature, built around one real sound from your world</li>
-              <li>A sound guide, so your team never guesses</li>
-              <li>Exclusive brand-use rights, in writing</li>
-            </ul>
-            <p className="sia-offer__promise">
-              Covered by my First Listen Promise: your first track and Signature land first.
-            </p>
-            <a className="sia-btn sia-btn--red" href={LINKS.apply} target="_blank" rel="noreferrer">
-              Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <article className="sia-offer sia-reveal">
-            <div className="sia-offer__top sia-mono">
-              <span className="sia-offer__tag sia-offer__tag--quiet sia-mono">By invitation</span>
-              <span>Signature song</span>
-            </div>
-            <div className="sia-offer__num" aria-hidden="true">02</div>
-            <h3>The Instant Recognition Anthem</h3>
-            <p className="sia-mono sia-offer__line">One song that walks in before you do</p>
-            <p className="sia-offer__desc">
-              Want to start with one song? Your walk-on, your launch video, your podcast open: one
-              song made around your story and your archetype.
-            </p>
-            <ul className="sia-offer__list">
-              <li>One full signature song</li>
-              <li>30- and 15-second cuts for reels, ads and your podcast</li>
-              <li>Exclusive brand-use rights, in writing</li>
-            </ul>
-            <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
-              Request an invitation <span className="sia-arrow" aria-hidden="true">↗</span>
-            </a>
-          </article>
-
-          <article className="sia-offer sia-reveal">
-            <div className="sia-offer__top sia-mono">
-              <span className="sia-offer__tag sia-offer__tag--quiet sia-mono">Start here</span>
-              <span>Same day</span>
-            </div>
-            <div className="sia-offer__num" aria-hidden="true">03</div>
-            <h3>The Sonic Blueprint</h3>
-            <p className="sia-mono sia-offer__line">Hear your brand before you invest</p>
-            <p className="sia-offer__desc">
-              Curious but not ready to commit? Fair. In one sitting, the Blueprint reads your brand’s
-              energy straight from your feed.
-            </p>
-            <ul className="sia-offer__list">
-              <li>Your Sonic Archetype, named</li>
-              <li>Three sound directions for your brand</li>
-              <li>Prompts to hear a first sketch of each, today</li>
-            </ul>
-            <a className="sia-btn sia-btn--ghost" href={LINKS.blueprint} target="_blank" rel="noreferrer">
-              Start the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
-            </a>
-          </article>
+          {OFFERS.map((o, i) => (
+            <article className={`sia-offer${o.featured ? " sia-offer--featured" : ""} sia-reveal`} key={o.name}>
+              <div className="sia-offer__top sia-mono">
+                <span className={`sia-offer__tag${o.featured ? "" : " sia-offer__tag--quiet"} sia-mono`}>{o.tag}</span>
+                <span>{o.label}</span>
+              </div>
+              <div className="sia-offer__num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</div>
+              <h3>{o.name}</h3>
+              <p className="sia-mono sia-offer__line">{o.line}</p>
+              <p className="sia-offer__desc">{o.desc}</p>
+              <ul className="sia-offer__list">
+                {o.includes.map((x) => (
+                  <li key={x}>{x}</li>
+                ))}
+              </ul>
+              <p className="sia-offer__because">
+                <b>Why it’s worth it:</b> because {o.because}
+              </p>
+              {o.plan && <p className="sia-mono sia-offer__plan">{o.plan}</p>}
+              <a
+                className={`sia-btn ${o.featured ? "sia-btn--red" : "sia-btn--ghost"}`}
+                href={o.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {o.cta} <span className="sia-arrow" aria-hidden="true">↗</span>
+              </a>
+            </article>
+          ))}
         </div>
-        <p className="sia-offers__note sia-reveal">
+        <div className="sia-promise sia-reveal">
+          <div className="sia-promise__seal" aria-hidden="true">
+            <span>
+              First
+              <br />
+              <b>Listen</b>
+              Promise
+            </span>
+          </div>
+          <div>
+            <h3>Hear it before you’re all in.</h3>
+            <p>
+              In the Atelier, your first track and your Sonic Signature land first. If, after refining
+              them, they don’t feel like your brand, tell me in writing within 7 days and we end there.
+              You pay only for that first stage, and the rest is refunded or cancelled. Full details are
+              in the{" "}
+              <a href="/terms">Terms of Purchase</a>.
+            </p>
+          </div>
+          <p className="sia-hand">Hear it first.</p>
+        </div>
+        <p className="sia-offers__apply-note sia-reveal">
           One short application covers both the Atelier and the Anthem.
         </p>
       </div>
     </section>
   );
 }
-
 
 /**
  * Heard in the wild: client songs out in the world. Add a link and its button appears;
