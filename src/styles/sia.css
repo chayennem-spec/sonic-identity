@@ -104,7 +104,7 @@
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 60;
-  background: rgba(0, 0, 0, 0.94);
+  background: rgba(0, 0, 0, 0.98);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--sia-line);
@@ -1002,4 +1002,25 @@
 @media (prefers-reduced-motion: reduce) {
   [data-drift] img, .sia-hero__figure[data-drift] { translate: none; }
   .sia-reveal .sia-display, .sia-reveal.sia-display { clip-path: none; transition: none; }
+}
+
+/* ---------- On set film strip ---------- */
+.sia-onset { padding: 120px 0 130px; overflow: hidden; }
+.sia-onset__head { margin-bottom: 56px; }
+.sia-onset h2 { font-size: clamp(42px, 5.4vw, 80px); }
+.sia-onset__viewport { overflow: hidden; padding-left: max(24px, calc((100vw - 1240px) / 2)); }
+.sia-onset__track { display: flex; gap: 18px; width: max-content; will-change: transform; transition: transform 120ms linear; }
+.sia-onset__frame { position: relative; margin: 0; height: min(64vh, 560px); overflow: hidden; border: 1px solid var(--sia-line); background: #0d0d0d; }
+.sia-onset__frame img { display: block; height: 100%; width: 100%; object-fit: cover; transition: transform 1.4s cubic-bezier(0.2, 0.7, 0.2, 1), filter 600ms ease; filter: brightness(0.92); }
+.sia-onset__frame:hover img { transform: scale(1.045); filter: brightness(1); }
+.sia-onset__frame figcaption { position: absolute; left: 12px; bottom: 10px; font-size: 10px; letter-spacing: 0.2em; color: rgba(239, 233, 220, 0.7); }
+@media (max-width: 860px) {
+  .sia-onset { padding: 80px 0 90px; }
+  .sia-onset__frame { height: 52vh; }
+  .sia-onset__viewport { padding-left: 20px; }
+}
+.sia-btn { transition: background-color var(--sia-ease), color var(--sia-ease), border-color var(--sia-ease), transform var(--sia-ease), translate 260ms cubic-bezier(0.2, 0.7, 0.2, 1); }
+@media (prefers-reduced-motion: reduce) {
+  .sia-onset__viewport { overflow-x: auto; }
+  .sia-onset__track { transform: none !important; }
 }

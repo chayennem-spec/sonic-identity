@@ -147,6 +147,42 @@ export function ForHer() {
   );
 }
 
+
+const ON_SET = [
+  { src: "/images/chayenne-set-01.webp", alt: "Chayenne Mallari leaning forward on a sculptural white chair, black leather and red lips", w: 1100, h: 1650 },
+  { src: "/images/chayenne-set-03.webp", alt: "Chayenne Mallari standing in a raw plaster archway in black leather", w: 1600, h: 1067 },
+  { src: "/images/chayenne-set-02.webp", alt: "Chayenne Mallari seated facing the camera on a white stool", w: 1100, h: 1650 },
+  { src: "/images/chayenne-set-04.webp", alt: "Chayenne Mallari kneeling on a faux fur block inside a plaster archway", w: 1100, h: 1650 },
+  { src: "/images/chayenne-set-06.webp", alt: "Chayenne Mallari seated on a white chair, looking away from the camera", w: 1100, h: 1650 },
+  { src: "/images/chayenne-set-05.webp", alt: "Chayenne Mallari seated with her hand resting on a white stool", w: 1100, h: 1650 },
+];
+
+/** Editorial film strip that slides sideways as you scroll (still for reduced motion). */
+export function OnSet() {
+  return (
+    <section className="sia sia-onset sia-rule" id="on-set" aria-label="Chayenne Mallari, on set">
+      <div className="sia-wrap sia-onset__head sia-reveal">
+        <p className="sia-mono sia-kicker">On set</p>
+        <h2 className="sia-display">
+          The woman behind <span className="sia-nw">the <em>sound</em>.</span>
+        </h2>
+      </div>
+      <div className="sia-onset__viewport">
+        <div className="sia-onset__track" data-scrollx="0.35">
+          {ON_SET.map((p, i) => (
+            <figure className="sia-onset__frame" key={p.src} style={{ aspectRatio: `${p.w} / ${p.h}` }}>
+              <img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy" />
+              <figcaption className="sia-mono" aria-hidden="true">
+                SIA · {String(i + 1).padStart(2, "0")}
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const SOUND = [
   { l: "S", t: "Style", d: "The genre, era and vibe that fit who you actually are. Not whatever’s on someone’s For You page." },
   { l: "O", t: "Outcome", d: "What they feel the second it plays. Calm. Power. Desire. A little “wait, who is that?”" },
@@ -455,11 +491,11 @@ export function About() {
           </div>
           <dl className="sia-facts">
             <div>
-              <dt>20+</dt>
+              <dt><span data-count="20">20</span>+</dt>
               <dd className="sia-mono">Years reading identity</dd>
             </div>
             <div>
-              <dt>8</dt>
+              <dt><span data-count="8">8</span></dt>
               <dd className="sia-mono">Sonic archetypes</dd>
             </div>
             <div>

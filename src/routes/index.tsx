@@ -17,6 +17,7 @@ import {
   TheGap,
   WhySound,
   ForHer,
+  OnSet,
   Ticker,
 } from "../components/sia/Sections";
 
@@ -48,6 +49,7 @@ function HomePage() {
         <TheGap />
         <WhySound />
         <ForHer />
+        <OnSet />
         <Method />
         <Rights />
         <Offers />

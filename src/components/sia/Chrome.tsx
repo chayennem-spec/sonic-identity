@@ -155,6 +155,7 @@ export function SiteFooter() {
 /** Fades sections up as they scroll into view. */
 export function useReveal() {
   useDrift();
+  useScrollMotion();
   useEffect(() => {
     const els = Array.from(document.querySelectorAll<HTMLElement>(".sia-reveal"));
     if (!("IntersectionObserver" in window)) {
@@ -207,6 +208,103 @@ export function useDrift() {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", onScroll);
       cancelAnimationFrame(raf);
+    };
+  }, []);
+}
+
+/**
+ * Scroll-linked extras, all skipped for reduced motion:
+ * - [data-scrollx]: slides a track sideways as its section passes through the screen.
+ * - the ticker speeds up while you scroll, then settles back.
+ * - [data-count]: numbers count up the first time they come into view.
+ * - big buttons lean a few pixels toward the cursor (desktop only).
+ */
+export function useScrollMotion() {
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const tracks = Array.from(document.querySelectorAll<HTMLElement>("[data-scrollx]"));
+    const ticker = document.querySelector<HTMLElement>(".sia-ticker__track");
+    const tickerAnim = ticker?.getAnimations?.()[0];
+    let lastY = window.scrollY;
+    let boost = 1;
+    let raf = 0;
+
+    const frame = () => {
+      raf = 0;
+      const vh = window.innerHeight;
+      for (const el of tracks) {
+        const box = el.parentElement?.getBoundingClientRect();
+        if (!box || box.bottom < 0 || box.top > vh) continue;
+        const k = parseFloat(el.dataset["scrollx"] || "0.3");
+        const progress = (vh - box.top) / (vh + box.height); // 0 entering, 1 leaving
+        const travel = Math.max(0, el.scrollWidth - (el.parentElement?.clientWidth || 0));
+        el.style.transform = `translate3d(${(-progress * travel * (k / 0.35)).toFixed(1)}px,0,0)`;
+      }
+    };
+    const onScroll = () => {
+      const dy = Math.abs(window.scrollY - lastY);
+      lastY = window.scrollY;
+      boost = Math.min(4, 1 + dy / 30);
+      if (tickerAnim) tickerAnim.playbackRate = boost;
+      if (!raf) raf = requestAnimationFrame(frame);
+    };
+    const settle = window.setInterval(() => {
+      if (boost > 1.01 && tickerAnim) {
+        boost += (1 - boost) * 0.15;
+        tickerAnim.playbackRate = boost;
+      }
+    }, 60);
+    frame();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    // Count-up numbers
+    const counters = Array.from(document.querySelectorAll<HTMLElement>("[data-count]"));
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (!e.isIntersecting) continue;
+        const el = e.target as HTMLElement;
+        io.unobserve(el);
+        const end = parseInt(el.dataset["count"] || "0", 10);
+        const start = performance.now();
+        const tick = (now: number) => {
+          const p = Math.min(1, (now - start) / 1400);
+          el.textContent = String(Math.round(end * (1 - Math.pow(1 - p, 3))));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        el.textContent = "0";
+        requestAnimationFrame(tick);
+      }
+    }, { threshold: 0.6 });
+    counters.forEach((el) => io.observe(el));
+
+    // Magnetic buttons (fine pointer only)
+    const cleanups: (() => void)[] = [];
+    if (window.matchMedia("(pointer: fine)").matches) {
+      document.querySelectorAll<HTMLElement>(".sia-btn--red, .sia-header .sia-btn").forEach((btn) => {
+        const move = (ev: PointerEvent) => {
+          const r = btn.getBoundingClientRect();
+          const x = (ev.clientX - (r.left + r.width / 2)) * 0.18;
+          const y = (ev.clientY - (r.top + r.height / 2)) * 0.28;
+          btn.style.translate = `${x.toFixed(1)}px ${y.toFixed(1)}px`;
+        };
+        const leave = () => (btn.style.translate = "0 0");
+        btn.addEventListener("pointermove", move);
+        btn.addEventListener("pointerleave", leave);
+        cleanups.push(() => {
+          btn.removeEventListener("pointermove", move);
+          btn.removeEventListener("pointerleave", leave);
+        });
+      });
+    }
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      window.clearInterval(settle);
+      cancelAnimationFrame(raf);
+      io.disconnect();
+      cleanups.forEach((f) => f());
     };
   }, []);
 }
