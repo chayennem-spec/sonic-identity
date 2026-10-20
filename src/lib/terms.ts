@@ -89,7 +89,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "**First Listen Promise (Instant Recognition Atelier).** Client's first track and Sonic Signature are delivered first. If, after their refinement, Client feels they do not fit Client's brand, Client may end the project by notifying Studio in writing within 7 days. Client then pays only for that first stage: Client's first installment, or $3,333.34 if Client paid in full, with the balance refunded or remaining installments cancelled. No license is granted in music from an ended project. Otherwise, payments are non-refundable once Client's intake is submitted and work begins."
+        "text": "**First Listen Promise (Instant Recognition Atelier).** Client's first track and Sonic Signature are delivered first. If, after their refinement, Client feels they do not fit Client's brand, Client may end the project by notifying Studio in writing within 7 days. Client then pays only for that first stage: Client's first installment, or $3,500 if Client paid in full, with the balance refunded or remaining installments cancelled. No license is granted in music from an ended project. Otherwise, payments are non-refundable once Client's intake is submitted and work begins."
       }
     ]
   },
