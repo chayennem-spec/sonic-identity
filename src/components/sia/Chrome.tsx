@@ -154,6 +154,7 @@ export function SiteFooter() {
 
 /** Fades sections up as they scroll into view. */
 export function useReveal() {
+  useDrift();
   useEffect(() => {
     const els = Array.from(document.querySelectorAll<HTMLElement>(".sia-reveal"));
     if (!("IntersectionObserver" in window)) {
@@ -172,5 +173,40 @@ export function useReveal() {
     );
     els.forEach((el) => io.observe(el));
     return () => io.disconnect();
+  }, []);
+}
+
+/**
+ * Slow film-camera drift: any element with data-drift="0.1" moves a little against the scroll.
+ * Uses the CSS `translate` property via --drift, so hover transforms still work. Off for reduced motion.
+ */
+export function useDrift() {
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const els = Array.from(document.querySelectorAll<HTMLElement>("[data-drift]"));
+    if (!els.length) return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const vh = window.innerHeight;
+      for (const el of els) {
+        const r = el.getBoundingClientRect();
+        if (r.bottom < -200 || r.top > vh + 200) continue;
+        const k = parseFloat(el.dataset["drift"] || "0.1");
+        const offset = (r.top + r.height / 2 - vh / 2) * -k;
+        el.style.setProperty("--drift", `${offset.toFixed(1)}px`);
+      }
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      cancelAnimationFrame(raf);
+    };
   }, []);
 }

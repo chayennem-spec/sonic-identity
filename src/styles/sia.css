@@ -104,7 +104,7 @@
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 60;
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(0, 0, 0, 0.94);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--sia-line);
@@ -226,6 +226,7 @@
 .sia-sound h2 { font-size: clamp(42px, 5.4vw, 80px); max-width: 12ch; }
 .sia-sound__head p { max-width: 26em; color: var(--sia-dim); font-size: 17px; line-height: 1.6; }
 .sia-sound__grid { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--sia-line); border-left: 1px solid var(--sia-line); }
+.sia-sound__grid--three { grid-template-columns: repeat(3, 1fr); }
 .sia-letter {
   border-right: 1px solid var(--sia-line);
   border-bottom: 1px solid var(--sia-line);
@@ -381,7 +382,7 @@
   .sia-gap, .sia-sound, .sia-offers, .sia-proof, .sia-about, .sia-guide, .sia-faq, .sia-final { padding: 80px 0; }
   .sia-gap__grid, .sia-about__grid, .sia-faq__grid { grid-template-columns: 1fr; gap: 44px; }
   .sia-gap__side { border-left: 0; padding-left: 0; border-top: 1px solid var(--sia-line); padding-top: 32px; }
-  .sia-sound__grid { grid-template-columns: 1fr; }
+  .sia-sound__grid, .sia-sound__grid--three { grid-template-columns: 1fr; }
   .sia-letter { min-height: 0; flex-direction: row; align-items: flex-start; gap: 22px; padding: 26px 20px; }
   .sia-letter__l { font-size: 64px; width: 56px; flex: none; }
   .sia-letter h3 { margin-top: 0; padding-top: 4px; }
@@ -981,3 +982,24 @@
 .sia-heard__links { margin-top: auto; padding-top: 14px; display: flex; flex-wrap: wrap; gap: 12px; }
 .sia-heard__links:empty { display: none; }
 @media (max-width: 860px) { .sia-heard__grid { grid-template-columns: 1fr; } .sia-heard { padding: 30px 24px; } }
+
+/* ---------- Motion pass (Oct 2026): photo drift, headline reveal, offer glow ---------- */
+[data-drift] img { translate: 0 var(--drift, 0px); will-change: translate; }
+.sia-about__photo[data-drift] img { scale: 1.1; }
+.sia-hero__figure[data-drift] { translate: 0 var(--drift, 0px); }
+
+.sia-reveal .sia-display,
+.sia-reveal.sia-display {
+  clip-path: inset(-40% -12% 140% -12%);
+  transition: clip-path 1200ms cubic-bezier(0.2, 0.7, 0.2, 1) 150ms;
+}
+.sia-reveal.is-in .sia-display,
+.sia-reveal.sia-display.is-in { clip-path: inset(-40% -12% -40% -12%); }
+
+.sia-offer { transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1), border-color 300ms ease, background 300ms ease, box-shadow 450ms ease; }
+.sia-offer:hover { box-shadow: 0 0 0 1px rgba(255, 74, 28, 0.35), 0 24px 60px -24px rgba(255, 74, 28, 0.45); }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-drift] img, .sia-hero__figure[data-drift] { translate: none; }
+  .sia-reveal .sia-display, .sia-reveal.sia-display { clip-path: none; transition: none; }
+}

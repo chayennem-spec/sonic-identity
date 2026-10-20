@@ -15,6 +15,7 @@ import {
   Proof,
   Rights,
   TheGap,
+  WhySound,
   ForHer,
   Ticker,
 } from "../components/sia/Sections";
@@ -45,6 +46,7 @@ function HomePage() {
         <HeroSound />
         <Ticker />
         <TheGap />
+        <WhySound />
         <ForHer />
         <Method />
         <Rights />

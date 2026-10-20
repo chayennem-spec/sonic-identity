@@ -4,10 +4,21 @@ import { useEffect, useRef } from "react";
  * Sound-frequency waveform: thin layered lines drifting like a voice on an oscilloscope.
  * Quiet at rest; swells (and one line turns red-orange) while `active` is true.
  */
-export function Waveform({ active, className = "" }: { active: boolean; className?: string }) {
+export function Waveform({
+  active,
+  className = "",
+  analyser,
+}: {
+  active: boolean;
+  className?: string;
+  /** Optional live analyser on the playing song: when present, the lines move with the music. */
+  analyser?: React.RefObject<AnalyserNode | null>;
+}) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const activeRef = useRef(active);
   activeRef.current = active;
+  const analyserRef = useRef(analyser);
+  analyserRef.current = analyser;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -19,6 +30,7 @@ export function Waveform({ active, className = "" }: { active: boolean; classNam
     let raf = 0;
     let level = 0.28; // eased amplitude
     let t = 0;
+    let buf: Uint8Array<ArrayBuffer> | null = null;
 
     const resize = () => {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -41,8 +53,23 @@ export function Waveform({ active, className = "" }: { active: boolean; classNam
 
     const draw = () => {
       const { width: W, height: H } = canvas.getBoundingClientRect();
-      const target = activeRef.current ? 1 : 0.28;
-      level += (target - level) * 0.04;
+      let target = activeRef.current ? 1 : 0.28;
+      let ease = 0.04;
+      const an = analyserRef.current?.current;
+      if (activeRef.current && an && !reduce) {
+        // Loudness of the song right now (RMS), so the lines breathe with the music.
+        if (!buf || buf.length !== an.fftSize) buf = new Uint8Array(new ArrayBuffer(an.fftSize));
+        an.getByteTimeDomainData(buf);
+        let sum = 0;
+        for (let i = 0; i < buf.length; i++) {
+          const v = ((buf[i] ?? 128) - 128) / 128;
+          sum += v * v;
+        }
+        const rms = Math.sqrt(sum / buf.length);
+        target = Math.min(1.35, 0.35 + rms * 4.2);
+        ease = 0.22;
+      }
+      level += (target - level) * ease;
       t += reduce ? 0 : 0.016;
       ctx.clearRect(0, 0, W, H);
       const mid = H / 2;

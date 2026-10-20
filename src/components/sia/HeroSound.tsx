@@ -15,6 +15,29 @@ export function HeroSound() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const timer = useRef<number | undefined>(undefined);
   const [sounding, setSounding] = useState(false);
+  const analyserRef = useRef<AnalyserNode | null>(null);
+  const audioCtxRef = useRef<AudioContext | null>(null);
+
+  const connectAnalyser = () => {
+    const a = audioRef.current;
+    if (!a || analyserRef.current) {
+      audioCtxRef.current?.resume().catch(() => {});
+      return;
+    }
+    try {
+      const Ctx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+      const ctx = new Ctx();
+      const src = ctx.createMediaElementSource(a);
+      const an = ctx.createAnalyser();
+      an.fftSize = 1024;
+      src.connect(an);
+      an.connect(ctx.destination);
+      audioCtxRef.current = ctx;
+      analyserRef.current = an;
+    } catch {
+      /* the song still plays; the lines just use their resting motion */
+    }
+  };
 
   useEffect(() => {
     const v = videoRef.current;
@@ -63,6 +86,7 @@ export function HeroSound() {
     }
     const a = audioRef.current;
     if (a) {
+      connectAnalyser();
       a.currentTime = 0;
       a.play().catch(() => {});
     }
@@ -79,10 +103,10 @@ export function HeroSound() {
     <section id="top" className={`sia sia-hero${sounding ? " is-sounding" : ""}`}>
       {HERO_MEDIA.image ? (
         <div className="sia-hero__media sia-hero__media--still" aria-hidden="true">
-          <figure className="sia-hero__figure sia-hero__figure--photo">
+          <figure className="sia-hero__figure sia-hero__figure--photo" data-drift="0.12">
             <img src={HERO_MEDIA.image} alt="Chayenne Mallari in a black leather jacket and sunglasses" />
             {/* Frequency bars sit between the room and Chayenne: photo, then waveform, then her cut-out. */}
-            <Waveform active={sounding} className="sia-wave--behind" />
+            <Waveform active={sounding} analyser={analyserRef} className="sia-wave--behind" />
             {HERO_MEDIA.cutout && <img className="sia-hero__cutout" src={HERO_MEDIA.cutout} alt="" />}
           </figure>
           <div className="sia-hero__shade" />
@@ -112,7 +136,7 @@ export function HeroSound() {
           </div>
         </>
       )}
-      {!HERO_MEDIA.image && <Waveform active={sounding} className="sia-wave--hero" />}
+      {!HERO_MEDIA.image && <Waveform active={sounding} analyser={analyserRef} className="sia-wave--hero" />}
       {HERO_MEDIA.audioLogo && (
         <audio ref={audioRef} src={HERO_MEDIA.audioLogo} preload="auto" onEnded={stop} />
       )}
@@ -154,6 +178,13 @@ export function HeroSound() {
             Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
           </a>
         </div>
+        <p className="sia-final__alt">
+          Not sure yet?{" "}
+          <a href={LINKS.audit} target="_blank" rel="noreferrer">
+            Take the free three-minute audit
+          </a>
+          .
+        </p>
         <div className="sia-hero__foot sia-mono">
           <span>Recognized · Remembered · Felt</span>
           <span>Best with headphones</span>

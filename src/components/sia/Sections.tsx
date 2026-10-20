@@ -59,6 +59,60 @@ export function TheGap() {
   );
 }
 
+const WHY = [
+  {
+    l: "R",
+    t: "Recognized",
+    d: "You know Netflix from two notes. Before the logo. Before the show. That is what a sound does when it is used on purpose.",
+  },
+  {
+    l: "R",
+    t: "Remembered",
+    d: "One sound on your reels, your podcast open, your walk-on. Same sound, every time, until people hear it and think of you. A different trending track every week teaches them nothing.",
+  },
+  {
+    l: "F",
+    t: "Felt",
+    d: "Sound lands before words do. Calm. Power. Desire. Your audience feels your brand before you say a thing.",
+  },
+];
+
+export function WhySound() {
+  return (
+    <section className="sia sia-sound sia-rule" id="why-sound">
+      <div className="sia-wrap">
+        <div className="sia-sound__head sia-reveal">
+          <div>
+            <p className="sia-mono sia-kicker">Why sound works</p>
+            <h2 className="sia-display">
+              Your visuals get you noticed. Your sound gets you{" "}
+              <span className="sia-nw"><em>remembered</em>.</span>
+            </h2>
+          </div>
+          <p>
+            The biggest brands in the world speak in three languages: what you see, what you read
+            and what you hear. Most personal brands have the first two handled. Almost none have
+            built the third.
+          </p>
+        </div>
+        <div className="sia-sound__grid sia-sound__grid--three sia-reveal">
+          {WHY.map((s) => (
+            <article className="sia-letter" key={s.t}>
+              <span className="sia-letter__l" aria-hidden="true">
+                {s.l}
+              </span>
+              <div>
+                <h3>{s.t}</h3>
+                <p>{s.d}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const FOR_HER = [
   "Built the business. Has the team. Books the stage.",
   "Wears the tailored piece, not the trending one, and wants her brand to do the same.",
@@ -115,6 +169,11 @@ export function Method() {
           <p>
             You don’t need to know what a minor key is. That’s my job. Every sound starts from your
             archetype and goes through five decisions. No stock library. No “well, it’s trending.”
+            <br />
+            <br />
+            It is the heart of my Sonic Subconscious Selling™ method: I find the belief your buyer
+            needs, build it into your sound, then use it the same way every time until they feel
+            it before you say a word.
           </p>
         </div>
         <div className="sia-sound__grid sia-reveal">
@@ -136,9 +195,12 @@ export function Method() {
 }
 
 const MONDAY = [
-  { who: "Your ads manager", need: "needs a cleared 15-second cut. By noon." },
-  { who: "Your event producer", need: "needs a walk-on. Not the one the last speaker used." },
-  { who: "Your podcast editor", need: "needs an intro that sounds like you, not the stock library." },
+  { tag: "Ads", who: "Your ads manager", need: "needs a cleared 15-second cut. By noon. Most trending songs aren’t cleared for paid ads." },
+  { tag: "Zoom", who: "Your masterclass replay", need: "is about to go into a paid program. With whatever song was playing in the waiting room." },
+  { tag: "Programs", who: "Your course", need: "needs music inside every module. Your personal Spotify doesn’t cover that." },
+  { tag: "Stage", who: "Your event producer", need: "needs a walk-on. Not the one the last speaker used." },
+  { tag: "Podcast", who: "Your podcast editor", need: "needs an intro that sounds like you and won’t get flagged." },
+  { tag: "Content", who: "Your social manager", need: "needs a sound for this week’s reels that says your name, not a stranger’s." },
 ];
 
 export function Rights() {
@@ -151,14 +213,16 @@ export function Rights() {
             Can we use it? Does it sound <span className="sia-nw">like <em>us</em>?</span>
           </h2>
           <p className="sia-rights__lead">
-            Two different questions. Your team is asking both every week. They’re just not asking
-            them out loud.
+            Two different questions. Your team is asking both every week, in every room your brand
+            shows up in. They’re just not asking them out loud.
           </p>
         </div>
         <ol className="sia-rights__grid sia-reveal">
           {MONDAY.map((m, i) => (
             <li key={m.who}>
-              <span className="sia-mono">Monday · 0{i + 1}</span>
+              <span className="sia-mono">
+                0{i + 1} · {m.tag}
+              </span>
               <p>
                 <strong>{m.who}</strong> {m.need}
               </p>
@@ -363,7 +427,7 @@ export function About() {
   return (
     <section className="sia sia-about sia-rule" id="about">
       <div className="sia-wrap sia-about__grid">
-        <figure className="sia-about__photo sia-reveal">
+        <figure className="sia-about__photo sia-reveal" data-drift="0.08">
           <img src={ASSETS.portraitBlack} alt="Chayenne Mallari" loading="lazy" />
           <figcaption className="sia-mono">
             <span>Chayenne Mallari</span>
@@ -580,7 +644,7 @@ export function FinalCta() {
             .
           </p>
         </div>
-        <figure className="sia-final__photo sia-reveal" aria-hidden="true">
+        <figure className="sia-final__photo sia-reveal" aria-hidden="true" data-drift="0.1">
           <img src="/images/red-headphones-marble.webp" alt="" loading="lazy" />
         </figure>
       </div>
