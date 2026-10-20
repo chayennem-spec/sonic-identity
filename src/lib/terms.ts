@@ -6,7 +6,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Studio will create the custom music and related deliverables identified in the applicable proposal, order form, or statement of work (\"Project Schedule\")."
+        "text": "Studio will create the custom music and related deliverables identified in the applicable proposal, order form, or statement of work (“Project Schedule”)."
       },
       {
         "t": "p",
@@ -62,7 +62,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "Client's commercial license begins when Studio receives Client's first payment. If Client pays in installments and a scheduled payment fails and isn't resolved within 14 days, Studio may pause work and suspend the license until the account is current."
+        "text": "Client’s commercial license begins when Studio receives Client’s first payment. If Client pays in installments and a scheduled payment fails and isn’t resolved within 14 days, Studio may pause work and suspend the license until the account is current."
       },
       {
         "t": "p",
@@ -89,7 +89,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "**First Listen Promise (Instant Recognition Atelier).** Client's first track and Sonic Signature are delivered first. If, after their refinement, Client feels they do not fit Client's brand, Client may end the project by notifying Studio in writing within 7 days. Client then pays only for that first stage: Client's first installment, or $3,500 if Client paid in full, with the balance refunded or remaining installments cancelled. No license is granted in music from an ended project. Otherwise, payments are non-refundable once Client's intake is submitted and work begins."
+        "text": "**First Listen Promise (Instant Recognition Atelier).** Client’s first track and Sonic Signature are delivered first. If, after their refinement, Client feels they do not fit Client’s brand, Client may end the project by notifying Studio in writing within 7 days. Client then pays only for that first stage: Client’s first installment, or $3,500 if Client paid in full, with the balance refunded or remaining installments cancelled. No license is granted in music from an ended project. Otherwise, payments are non-refundable once Client’s intake is submitted and work begins."
       }
     ]
   },
@@ -98,7 +98,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Subject to full payment and the limitations of rights lawfully available to Studio, Studio grants Client a perpetual, worldwide, fully paid commercial license to use, reproduce, synchronize, publicly perform, communicate, and incorporate the delivered music into Client's own brand activities."
+        "text": "Subject to the payment terms in Section 3 and the limitations of rights lawfully available to Studio, Studio grants Client a perpetual, worldwide, fully paid commercial license to use, reproduce, synchronize, publicly perform, communicate, and incorporate the delivered music into Client’s own brand activities."
       },
       {
         "t": "p",
@@ -128,7 +128,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "Client may authorize its employees, contractors, editors, production companies, and marketing agencies to use the music solely on Client's behalf within the authorized scope."
+        "text": "Client may authorize its employees, contractors, editors, production companies, and marketing agencies to use the music solely on Client’s behalf within the authorized scope."
       },
       {
         "t": "p",
@@ -157,7 +157,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "Studio does not claim ownership of Client's preexisting trademarks, brand identity, confidential information, or independently owned materials."
+        "text": "Studio does not claim ownership of Client’s preexisting trademarks, brand identity, confidential information, or independently owned materials."
       },
       {
         "t": "p",
@@ -181,13 +181,13 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
         "items": [
           "A public streaming release, if Client chooses one under Section 7",
           "Public listening, saving or sharing of a released track through approved platforms",
-          "Use by Client's authorized production partners",
+          "Use by Client’s authorized production partners",
           "Incidental similarities arising from independent music creation"
         ]
       },
       {
         "t": "p",
-        "text": "Musical styles, genres and common chord progressions belong to everyone, and certain AI-assisted elements may not be legally exclusive. This commitment covers Client's delivered music, not a style or genre."
+        "text": "Musical styles, genres and common chord progressions belong to everyone, and certain AI-assisted elements may not be legally exclusive. This commitment covers Client’s delivered music, not a style or genre."
       },
       {
         "t": "p",
@@ -200,7 +200,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "A public release is optional. Client's music is never released to streaming services, music libraries or other public platforms unless Client chooses a release and approves it in writing under Section 8."
+        "text": "A public release is optional. Client’s music is never released to streaming services, music libraries or other public platforms unless Client chooses a release and approves it in writing under Section 8."
       },
       {
         "t": "p",
@@ -208,11 +208,11 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "In exchange, Studio keeps **100% of the streaming and download payouts** the distributor pays to Studio for that release. For brand music these payouts are usually modest (streaming services typically pay a fraction of a cent per play), and they have nothing to do with Client's own business income."
+        "text": "In exchange, Studio keeps **100% of the streaming and download payouts** the distributor pays to Studio for that release. For brand music these payouts are usually modest (streaming services typically pay a fraction of a cent per play), and they have nothing to do with Client’s own business income."
       },
       {
         "t": "p",
-        "text": "Client's creative fee covers Client's commercial brand-use license. It does not include a share of those payouts."
+        "text": "Client’s creative fee covers Client’s commercial brand-use license. It does not include a share of those payouts."
       },
       {
         "t": "p",
@@ -220,7 +220,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "Studio does not acquire any interest in Client's unrelated business income, course sales, event ticket sales, coaching revenue, product revenue, or other commercial proceeds merely because Client uses the music."
+        "text": "Studio does not acquire any interest in Client’s unrelated business income, course sales, event ticket sales, coaching revenue, product revenue, or other commercial proceeds merely because Client uses the music."
       },
       {
         "t": "p",
@@ -228,7 +228,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "Studio will not authorize unrelated third-party commercial brand endorsements or advertising uses of Client-specific music, name, trademarks, or confidential brand materials without Client's written consent."
+        "text": "Studio will not authorize unrelated third-party commercial brand endorsements or advertising uses of Client-specific music, name, trademarks, or confidential brand materials without Client’s written consent."
       }
     ]
   },
@@ -237,7 +237,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Before the first public distribution of a Client-specific recording, Studio will obtain Client's written approval of the proposed release. Client may give that approval by completing Studio's Release Request form (chayennemallari.eden.so/form/release) or by email; either counts as written approval."
+        "text": "Before the first public distribution of a Client-specific recording, Studio will obtain Client’s written approval of the proposed release. Client may give that approval by completing Studio’s Release Request form (chayennemallari.eden.so/form/release) or by email; either counts as written approval."
       },
       {
         "t": "p",
@@ -258,7 +258,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "Studio will not imply that Client endorses Studio or a third-party product beyond the scope of Client's written authorization."
+        "text": "Studio will not imply that Client endorses Studio or a third-party product beyond the scope of Client’s written authorization."
       },
       {
         "t": "p",
@@ -275,7 +275,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Studio will not enroll Client-specific music in YouTube Content ID or an equivalent automated claiming program without first verifying eligibility and obtaining a separate written arrangement addressing Client's authorized channels and videos."
+        "text": "Studio will not enroll Client-specific music in YouTube Content ID or an equivalent automated claiming program without first verifying eligibility and obtaining a separate written arrangement addressing Client’s authorized channels and videos."
       },
       {
         "t": "p",
@@ -294,7 +294,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "Studio will use commercially reasonable efforts to resolve claims initiated through its own distribution arrangements against Client's authorized uses."
+        "text": "Studio will use commercially reasonable efforts to resolve claims initiated through its own distribution arrangements against Client’s authorized uses."
       },
       {
         "t": "p",
@@ -345,7 +345,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Client may not, without Studio's written permission:"
+        "text": "Client may not, without Studio’s written permission:"
       },
       {
         "t": "ul",
@@ -353,13 +353,13 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
           "Sell or license the delivered music as a standalone music product",
           "Transfer the brand-use license to an unrelated third party, except as permitted in a business succession provision",
           "Represent itself as the exclusive copyright owner of rights it has not acquired",
-          "Release or register the music with a distributor, music library or rights-collection service without Studio's written agreement",
+          "Release or register the music with a distributor, music library or rights-collection service without Studio’s written agreement",
           "Authorize another unrelated business to adopt the music as its signature brand anthem"
         ]
       },
       {
         "t": "p",
-        "text": "These restrictions do not prevent ordinary permitted use in Client's own commercial content or by its authorized contractors."
+        "text": "These restrictions do not prevent ordinary permitted use in Client’s own commercial content or by its authorized contractors."
       }
     ]
   },
@@ -368,15 +368,15 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Client's license transfers to a successor that acquires all or substantially all of Client's business, or the brand that uses the music, as long as Client tells Studio in writing."
+        "text": "Client’s license transfers to a successor that acquires all or substantially all of Client’s business, or the brand that uses the music, as long as Client tells Studio in writing."
       },
       {
         "t": "p",
-        "text": "If Studio closes or stops operating, Client's license continues, and Studio will provide Client with final copies of all delivered files."
+        "text": "If Studio closes or stops operating, Client’s license continues, and Studio will provide Client with final copies of all delivered files."
       },
       {
         "t": "p",
-        "text": "Termination of Studio's distribution activity will not, by itself, terminate Client's fully paid, perpetual brand-use license."
+        "text": "Termination of Studio’s distribution activity will not, by itself, terminate Client’s fully paid, perpetual brand-use license."
       }
     ]
   },
@@ -397,7 +397,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "Each party is responsible for claims arising from the materials it supplied: for Client, the trademarks, recordings, lyrics, voice samples or other materials Client provides; for Studio, the materials Studio incorporates. Apart from those responsibilities, each party's total liability under this Agreement is limited to the fees Client paid for the project."
+        "text": "Each party is responsible for claims arising from the materials it supplied: for Client, the trademarks, recordings, lyrics, voice samples or other materials Client provides; for Studio, the materials Studio incorporates. Apart from those responsibilities, each party’s total liability under this Agreement is limited to the fees Client paid for the project."
       },
       {
         "t": "p",
@@ -431,15 +431,15 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "**Dispute Resolution:** Before any formal claim, the parties will try to resolve any dispute in good faith by email for 30 days. If it isn't resolved, it will be decided in the state or federal courts located in California."
+        "text": "**Dispute Resolution:** Before any formal claim, the parties will try to resolve any dispute in good faith by email for 30 days. If it isn’t resolved, it will be decided in the state or federal courts located in California."
       },
       {
         "t": "p",
-        "text": "**Notices:** hello@sonicidentityarchitect.com, or the email Client used to apply."
+        "text": "**Notices:** hello@sonicidentityarchitect.com, or the email Client used to apply or buy."
       },
       {
         "t": "p",
-        "text": "**Acceptance:** You accept these Terms by checking \"I agree to the Terms of Purchase\" in your application and completing payment. No separate signature is required."
+        "text": "**Acceptance:** You accept these Terms by checking “I agree to the Terms of Purchase” in your application and completing payment, or, for an offer you buy directly, by completing your purchase. No separate signature is required."
       }
     ]
   },
@@ -448,7 +448,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "This Agreement, together with the applicable Project Schedule and any written amendments, constitutes the parties' complete agreement concerning the commissioned music."
+        "text": "This Agreement, together with the applicable Project Schedule and any written amendments, constitutes the parties’ complete agreement concerning the commissioned music."
       },
       {
         "t": "p",

@@ -24,7 +24,7 @@ import {
 
 const TITLE = "Sonic Identity & Sound Branding for Female Founders | Chayenne Mallari";
 const DESCRIPTION =
-  "Sonic Identity Architect Chayenne Mallari makes signature songs and sound branding for female founders, coaches and personal brands, so people know it's you before you say a word. Done for you, exclusive to your brand.";
+  "Sonic Identity Architect Chayenne Mallari makes signature songs and sound branding for female founders, coaches and personal brands, so people know it’s you before you say a word. Done for you, exclusive to your brand.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

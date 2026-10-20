@@ -7,7 +7,7 @@ import { pageHead } from "../lib/seo";
 const PATH = "/terms";
 const TITLE = "Terms of Purchase | Sonic Identity Architect";
 const DESCRIPTION =
-  "Terms of Purchase for the Instant Recognition Anthem and the Instant Recognition Atelier by Sonic Identity Architect: your commercial brand-use license, what's included and how releases work.";
+  "Terms of Purchase for the Instant Recognition Anthem and the Instant Recognition Atelier by Sonic Identity Architect: your commercial brand-use license, what’s included and how releases work.";
 
 // Legal business name and state, to be filled in before going live.
 const STUDIO_NAME = "Chayenne Mallari";
@@ -43,8 +43,8 @@ function TermsPage() {
             </h1>
             <p className="sia-article__lead">
               The agreement behind the Instant Recognition Anthem and the Instant Recognition Atelier. Please
-              read it before you apply. You don't sign anything: checking "I agree to the Terms of Purchase" in
-              your application and completing payment is your acceptance.
+              read it before you apply or buy. You don’t sign anything: checking “I agree to the Terms of
+              Purchase” in your Atelier application, or completing your Anthem purchase, is your acceptance.
             </p>
           </header>
 
@@ -63,7 +63,7 @@ function TermsPage() {
             <p>
               <strong>Project Schedule:</strong> the offer Client purchased (the Instant Recognition Anthem or the
               Instant Recognition Atelier) as described on its product page at the time of purchase, together with
-              Client's application and approval email. It sets out the deliverables, revision rounds, fee, payment
+              Client’s application and approval email. It sets out the deliverables, revision rounds, fee, payment
               plan, timeline and refund terms.
             </p>
             <p>
@@ -91,7 +91,7 @@ function TermsPage() {
             <h3>Questions</h3>
             <p>
               Email <a href="mailto:hello@sonicidentityarchitect.com">hello@sonicidentityarchitect.com</a> before
-              you apply. I'm happy to walk you through anything here, in writing.
+              you apply. I’m happy to walk you through anything here, in writing.
             </p>
           </div>
         </article>

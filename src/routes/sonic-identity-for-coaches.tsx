@@ -14,15 +14,15 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "Can I have a song for my signature program?",
-    a: "Yes. In the Atelier you spend your five tracks your way, and many coaches choose a song for each offer, so the people buying your program can hear what it feels like to be inside it.",
+    a: "Yes. In the Atelier you spend your five tracks your way, and a song for each offer is a beautiful use of them, so the people buying your program can hear what it feels like to be inside it.",
   },
   {
     q: "I talk in most of my content. Will a song compete with my voice?",
-    a: "It doesn't have to. One of your tracks can be a beat with no vocals that sits under your voice on talking reels, lives and webinars, so your content sounds like you without fighting you.",
+    a: "It doesn’t have to. One of your tracks can be a beat with no vocals that sits under your voice on talking reels, lives and webinars, so your content sounds like you without fighting you.",
   },
   {
     q: "Can I play it in my Zoom calls and group programs?",
-    a: "Yes. Your exclusive brand-use rights cover your programs and courses, webinars, livestreams and replays, as well as content, ads, events and your podcast. They're written into your agreement.",
+    a: "Yes. Your exclusive brand-use rights cover your programs and courses, webinars, livestreams and replays, as well as content, ads, events and your podcast. They’re written into your agreement.",
   },
   {
     q: "Is this AI music?",
@@ -58,7 +58,7 @@ function Page() {
         far as their ears know.
       </p>
       <p>
-        You'd never use three different logos in one week. A sonic identity is how you stop doing it with
+        You’d never use three different logos in one week. A sonic identity is how you stop doing it with
         sound.
       </p>
 
@@ -74,11 +74,11 @@ function Page() {
         </li>
         <li>
           <strong>A walk-on.</strong> For your retreat, your summit, your stage. The moment your room realizes
-          you're here.
+          you’re here.
         </li>
         <li>
-          <strong>Your sonic signature.</strong> The two to five seconds that open every episode and every reel,
-          until your people know it's you with their eyes closed.
+          <strong>Your Sonic Signature.</strong> The two to five seconds that open every episode and every reel,
+          until your people know it’s you with their eyes closed.
         </li>
         <li>
           <strong>A sound guide.</strong> So your podcast editor, your launch manager and your event producer all
@@ -92,7 +92,7 @@ function Page() {
       <h3>The masterclass waiting room</h3>
       <p>
         Three minutes before you go live, the room is filling up and the music is setting the tone for the next
-        hour. That music should already be unmistakably yours, not a playlist that isn't licensed for your
+        hour. That music should already be unmistakably yours, not a playlist that isn’t licensed for your
         business anyway.
       </p>
       <h3>The launch</h3>
@@ -107,7 +107,7 @@ function Page() {
         sound that feels like the inside of your world.
       </p>
 
-      <InlineCta line="Hear your coaching brand's sound directions the same day." />
+      <InlineCta line="Hear your coaching brand’s sound directions the same day." />
 
       <h2>How it works (no calls, promise)</h2>
       <p>
@@ -116,16 +116,16 @@ function Page() {
         your Sonic Archetype first, then make the music, using my S.O.U.N.D. Framework.
       </p>
       <p>
-        When it's delivered, you get exclusive brand-use rights in writing for your content, ads, launches, events,
+        When it’s delivered, you get exclusive brand-use rights in writing for your content, ads, launches, events,
         podcast and programs. No expiry, no renewals, and I never license your sound to another brand.
       </p>
 
       <h2>Where to start</h2>
       <p>
-        If you're curious, take the <a href="https://chayennemallari.eden.so/form/sonic-audit">free Sonic
+        If you’re curious, take the <a href="https://chayennemallari.eden.so/form/sonic-audit" target="_blank" rel="noreferrer">free Sonic
         Identity Audit</a> and meet your Sonic Archetype. If you want to hear it first, start with the Sonic
-        Blueprint. And if you already know you want it built for you, apply for the Anthem or the Atelier. I read
-        every application myself.
+        Blueprint. Want one song now? Get the Anthem. And if you want the whole brand world built for you, apply
+        for the Atelier. I read every application myself.
       </p>
     </ArticlePage>
   );

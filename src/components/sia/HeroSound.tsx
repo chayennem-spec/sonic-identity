@@ -169,14 +169,13 @@ export function HeroSound() {
             type="button"
             className={`sia-btn sia-btn--red sia-sound-btn${sounding ? " is-on" : ""}`}
             onClick={turnOn}
-            aria-pressed={sounding}
           >
             <span className="sia-eq" aria-hidden="true">
               <i />
               <i />
               <i />
             </span>
-            {sounding ? "Pause" : "Turn your sound on"}
+            {sounding ? "Pause" : "Hear my signature sound"}
           </button>
           <a className="sia-btn sia-btn--ghost" href={LINKS.blueprint} target="_blank" rel="noreferrer">
             Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>

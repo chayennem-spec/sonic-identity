@@ -5,19 +5,19 @@ import { articleBlock, faqBlock, ldScripts, pageHead } from "../lib/seo";
 const PATH = "/what-is-a-sonic-identity";
 const TITLE = "What Is a Sonic Identity? Sound for Personal Brands, Explained";
 const DESCRIPTION =
-  "What a sonic identity is, what's inside one, how it differs from a jingle or a playlist, and why personal brands, founders and coaches need one now. A plain-English guide from Sonic Identity Architect Chayenne Mallari.";
+  "What a sonic identity is, what’s inside one, how it differs from a jingle or a playlist, and why personal brands, founders and coaches need one now. A plain-English guide from Sonic Identity Architect Chayenne Mallari.";
 
 const FAQ_ITEMS: QA[] = [
   {
     q: "What is a sonic identity in simple terms?",
-    a: "It's what your brand sounds like, on purpose. A signature song, a short sound people learn to recognize as you, and a set of rules for where each one plays. Like a logo, but for the ear.",
+    a: "It’s what your brand sounds like, on purpose. A signature song, a short sound people learn to recognize as you, and a set of rules for where each one plays. Like a logo, but for the ear.",
   },
   {
     q: "Is a sonic identity the same as sonic branding or sound branding?",
     a: "Close cousins. Sonic branding or sound branding is the practice; your sonic identity is the result: the specific sounds that belong to your brand.",
   },
   {
-    q: "Isn't that just a jingle?",
+    q: "Isn’t that just a jingle?",
     a: "No. A jingle is one catchy line about your product. A sonic identity is a whole sound world built from who you are: songs, a signature, cuts for every platform and a guide for your team.",
   },
   {
@@ -45,7 +45,7 @@ function Page() {
       title="What is a sonic"
       em="identity"
       punct="?"
-      lead="A sonic identity is what your brand sounds like, on purpose. It's the reason you know it's Netflix before the logo shows up. And it's the one layer most personal brands have never designed."
+      lead="A sonic identity is what your brand sounds like, on purpose. It’s the reason you know it’s Netflix before the logo shows up. And it’s the one layer most personal brands have never designed."
       faq={FAQ_ITEMS}
       related={[
         { href: "/sound-branding-for-female-founders", label: "Sound branding for female founders" },
@@ -58,17 +58,17 @@ function Page() {
         brands have the first two handled. A sonic identity is the third: a set of sounds made from your brand,
         so people recognize you by ear.
       </p>
-      <Pull>Be heard before you're seen.</Pull>
+      <Pull>Be heard before you’re seen.</Pull>
 
-      <h2>What's inside a sonic identity</h2>
+      <h2>What’s inside a sonic identity</h2>
       <ul>
         <li>
           <strong>A signature song or anthem.</strong> Your message, your energy and your movement in one piece
           of music, with lyrics pulled from the words you already say.
         </li>
         <li>
-          <strong>A sonic signature.</strong> Sometimes called an audio logo: two to five seconds people learn to
-          recognize as you. Your version of the Netflix "ta-dum."
+          <strong>A Sonic Signature.</strong> Sometimes called an audio logo: two to five seconds people learn to
+          recognize as you. Your version of the Netflix “ta-dum.”
         </li>
         <li>
           <strong>A sound family.</strong> Tracks for different moments that still sound like the same brand: a
@@ -83,12 +83,12 @@ function Page() {
       <h2>Sonic identity vs. a jingle vs. a playlist</h2>
       <p>
         <strong>A jingle</strong> is one catchy line about a product. <strong>A playlist</strong> is other
-        people's music, chosen by taste, and usually not licensed for your business. <strong>A sonic
-        identity</strong> is built from who you are, it's licensed to your brand alone, and it works across
+        people’s music, chosen by taste, and usually not licensed for your business. <strong>A sonic
+        identity</strong> is built from who you are, it’s licensed to your brand alone, and it works across
         every place you show up.
       </p>
       <p>
-        And trending audio? It's borrowed. Great for a week of reach, but it puts someone else's name on your
+        And trending audio? It’s borrowed. Great for a week of reach, but it puts someone else’s name on your
         content, and it changes every week, so nothing builds.
       </p>
 
@@ -96,11 +96,11 @@ function Page() {
       <p>
         Personal branding used to be about how you looked: the headshot, the colors, the website. Now most of
         your audience meets you through video, and video has sound. Every reel, podcast episode, launch and live
-        is already telling people how to feel about you. A sonic identity makes sure it's telling them the right
+        is already telling people how to feel about you. A sonic identity makes sure it’s telling them the right
         thing, the same way, every time.
       </p>
       <p>
-        That's especially true for female founders and coaches, whose brand is the person. When the sound is
+        That’s especially true for female founders and coaches, whose brand is the person. When the sound is
         borrowed, the feeling people attach to you is borrowed too.
       </p>
 
@@ -108,9 +108,9 @@ function Page() {
 
       <h2>How a sonic identity gets made</h2>
       <p>
-        I'm Chayenne Mallari, a Sonic Identity Architect. I map your Sonic Archetype first, from your photos,
+        I’m Chayenne Mallari, a Sonic Identity Architect. I map your Sonic Archetype first, from your photos,
         your copy and the way you talk, then run every sound through my S.O.U.N.D. Framework: style, outcome,
-        undertone, narrative and delivery. Then I make the music. It's done for you, with no calls, and it
+        undertone, narrative and delivery. Then I make the music. It’s done for you, with no calls, and it
         comes with exclusive brand-use rights in writing.
       </p>
       <p>
@@ -121,8 +121,8 @@ function Page() {
 
       <h2>Find out what yours should sound like</h2>
       <p>
-        Start with the <a href="https://chayennemallari.eden.so/form/sonic-audit">free Sonic Identity Audit</a>:
-        nine questions, about three minutes, and you'll meet your Sonic Archetype.
+        Start with the <a href="https://chayennemallari.eden.so/form/sonic-audit" target="_blank" rel="noreferrer">free Sonic Identity Audit</a>:
+        nine questions, about three minutes, and you’ll meet your Sonic Archetype.
       </p>
     </ArticlePage>
   );

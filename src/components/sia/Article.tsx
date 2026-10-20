@@ -5,7 +5,7 @@ import { FinalCta } from "./Sections";
 
 export type QA = { q: string; a: string };
 
-/** Long-form guide page in the site's editorial style. */
+/** Long-form guide page in the site’s editorial style. */
 export function ArticlePage({
   kicker,
   title,
@@ -108,7 +108,7 @@ export function InlineCta({ line }: { line: string }) {
           Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
         </a>
         <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
-          Apply for the Anthem or Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
+          Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
         </a>
       </div>
     </aside>

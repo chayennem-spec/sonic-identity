@@ -24,6 +24,7 @@ export const ASSETS = {
 export const LINKS = {
   blueprint: "https://chayennemallari.eden.so/sonic-blueprint",
   apply: "https://chayennemallari.eden.so/form/apply",
+  anthem: "https://chayennemallari.eden.so/signature-anthem",
   audit: "https://chayennemallari.eden.so/form/sonic-audit",
   eden: "https://chayennemallari.eden.so/",
   instagram: "https://instagram.com/chayennemallari",

@@ -72,7 +72,22 @@ function SongPlayer() {
             {fmt(time)} / {fmt(dur)}
           </span>
         </div>
-        <div className="sia-song__bar" onClick={seek} role="presentation">
+        <div
+          className="sia-song__bar"
+          onClick={seek}
+          role="slider"
+          tabIndex={0}
+          aria-label="Song position"
+          aria-valuemin={0}
+          aria-valuemax={Math.round(dur || 0)}
+          aria-valuenow={Math.round(time)}
+          onKeyDown={(e) => {
+            const a = ref.current;
+            if (!a || !dur) return;
+            if (e.key === "ArrowRight") a.currentTime = Math.min(dur, a.currentTime + 5);
+            if (e.key === "ArrowLeft") a.currentTime = Math.max(0, a.currentTime - 5);
+          }}
+        >
           <i style={{ width: dur ? `${(time / dur) * 100}%` : "0%" }} />
         </div>
         <Waveform active={playing} className="sia-wave--song" />

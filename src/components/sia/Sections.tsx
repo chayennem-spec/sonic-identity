@@ -127,7 +127,7 @@ export function ForHer() {
     <section className="sia sia-forher sia-rule" id="for-her">
       <div className="sia-wrap sia-forher__grid">
         <div className="sia-reveal">
-          <p className="sia-mono sia-kicker">This is for the female founder who…</p>
+          <p className="sia-mono sia-kicker">This is for the female founder who...</p>
           <h2 className="sia-display">
             You built the brand. Now let them <span className="sia-nw"><em>hear</em> it.</span>
           </h2>
@@ -246,8 +246,8 @@ export function Rights() {
             Can we use it? Does it sound <span className="sia-nw">like <em>us</em>?</span>
           </h2>
           <p className="sia-rights__lead">
-            Two different questions. Your team is asking both every week, in every room your brand
-            shows up in. They’re just not asking them out loud.
+            Two different questions. Your team is asking both every week. They’re just not asking
+            them out loud. Here’s what it sounds like:
           </p>
         </div>
         <ol className="sia-rights__grid sia-reveal">
@@ -339,9 +339,10 @@ const OFFERS = [
     desc: "You’ve already invested in how your brand looks. This is the part people actually remember. No homework, no calls. You say yes, I build it, and it’s made for your brand alone.",
     includes: [
       "5 original tracks, spent your way: offers, anthem, walk-on, reels",
-      "Your Sonic Signature, built around one real sound from your world",
+      "Your Sonic Signature, built around your Sonic Fingerprint: one real sound from your world",
+      "Two refinement rounds, no calls",
       "A sound guide, so your team never guesses",
-      "Exclusive brand-use rights, in writing",
+      "Exclusive brand-use rights in writing",
     ],
     because: "it’s a whole brand soundtrack, built for one brand at a time and never licensed to another brand.",
     plan: "3-payment plan available",
@@ -349,8 +350,8 @@ const OFFERS = [
     href: LINKS.apply,
   },
   {
-    tag: "By invitation",
-    label: "Signature song",
+    tag: "Start with the song",
+    label: "One song",
     name: "The Instant Recognition Anthem",
     line: "One song that walks in before you do",
     desc: "Want to start with one song? Your walk-on, your launch video, your podcast open: one song made around your story and your archetype.",
@@ -361,8 +362,8 @@ const OFFERS = [
       "Credits toward the Atelier",
     ],
     because: "it’s made around your story and your archetype, and it’s never licensed to another brand.",
-    cta: "Request an invitation",
-    href: LINKS.apply,
+    cta: "Get your Anthem",
+    href: LINKS.anthem,
   },
   {
     tag: "Start here",
@@ -442,7 +443,7 @@ export function Offers() {
             </span>
           </div>
           <div>
-            <h3>Hear it before you’re all in.</h3>
+            <h3>Hear it before you’re <span className="sia-nw">all in.</span></h3>
             <p>
               In the Atelier, your first track and your Sonic Signature land first. If, after refining
               them, they don’t feel like your brand, tell me in writing within 7 days and we end there.
@@ -454,7 +455,7 @@ export function Offers() {
           <p className="sia-hand">Hear it first.</p>
         </div>
         <p className="sia-offers__apply-note sia-reveal">
-          One short application covers both the Atelier and the Anthem.
+          The Atelier is by application. The Anthem and the Blueprint, you can start today.
         </p>
       </div>
     </section>
@@ -474,7 +475,7 @@ const HEARD: {
   {
     song: "Soft Girl Millions",
     who: "Leanne Lopez-Mosley",
-    note: "Made for Leanne's world and her Soft Girl Millions women, as a gift. She uses it and credits me publicly.",
+    note: "Made for Leanne’s world and her Soft Girl Millions women, as a gift. She uses it and credits me publicly.",
     links: [{ label: "See it in her world", href: "" }],
   },
   {
@@ -610,7 +611,7 @@ export function Apply() {
           <span className="sia-nw">your <em>brand</em>.</span>
         </h2>
         <p className="sia-body">
-          One short application covers the Atelier and the Anthem. Five minutes, in writing, no
+          The Atelier is made for one brand at a time. Five minutes, in writing, no
           calls. I read every application myself and reply within 2 business days, with what I’d
           recommend for your brand.
         </p>
@@ -628,7 +629,7 @@ export function Apply() {
 export const FAQ = [
   {
     q: "What is a sonic identity?",
-    a: "It’s the sound of your brand: the signature song, audio logo and family of sounds that play across your reels, podcast, launches and stage, so people know it’s you by ear. Like a signature scent, but for your brand.",
+    a: "It’s the sound of your brand: the signature song, your Sonic Signature (think audio logo) and the family of sounds that play across your reels, podcast, launches and stage, so people know it’s you by ear. Like a signature scent, but for your brand.",
   },
   {
     q: "Can’t I just use a song I love on Spotify?",
@@ -672,11 +673,11 @@ export const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "The Blueprint is ready when you are, right from this page. The Anthem and the Atelier are made for one brand at a time, so you’ll get the investment once I know what you need. Apply and I’ll come back with it.",
+    a: "The Blueprint and the Anthem are ready when you are, right from this page. The Atelier starts with a short application, and you’ll get your exact investment in my reply.",
   },
   {
     q: "Where do I start?",
-    a: "Want to hear it first? Start with the Sonic Blueprint: it reads your brand, names your archetype and gives you three sound directions plus prompts to hear a first sketch of each. Already know you want it done for you? Skip ahead and apply for the Anthem or the Atelier.",
+    a: "Want to hear it first? Start with the Sonic Blueprint: it reads your brand, names your archetype and gives you three sound directions plus prompts to hear a first sketch of each. Want one song now? Get the Anthem. Want the whole brand world done for you? Apply for the Atelier.",
   },
 ];
 
@@ -719,8 +720,8 @@ export function FinalCta() {
             the music playing is already unmistakably yours. That’s the brief.
           </p>
           <p className="sia-body sia-final__line">
-            Want to hear it first? Start with the Blueprint tonight. Ready for it done for you? Apply
-            for the Anthem or the Atelier. It takes about five minutes, there are no calls, and I read
+            Want to hear it first? Start with the Blueprint tonight. Want the whole brand world done
+            for you? Apply for the Atelier. It takes about five minutes, there are no calls, and I read
             every application myself and reply within 2 business days.
           </p>
           <div className="sia-hero__ctas">
