@@ -1029,3 +1029,7 @@
 .sia-hero__tag { margin-top: 18px; font-family: var(--sia-display); font-weight: 600; font-size: clamp(18px, 1.7vw, 24px); letter-spacing: -0.01em; color: var(--sia-bone); }
 .sia-hero__tag + .sia-hero__sub { margin-top: 14px; }
 @media (max-width: 860px) { .sia-hero__tag { font-size: 18px; margin-top: 14px; } }
+
+/* Offer card top row: keep the tag on one line and let the label wrap underneath */
+.sia-offer__top { flex-wrap: wrap; gap: 10px 14px; }
+.sia-offer__tag { white-space: nowrap; }

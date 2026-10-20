@@ -4,10 +4,10 @@ import { ASSETS, LINKS } from "../../lib/constants";
 
 const TICKER = [
   "Be heard before you’re even seen",
+  "Sound as expensive as you look",
   "Stop renting your sound",
   "Recognized. Remembered. Felt.",
-  "Tailored down to the soundtrack",
-  "Your launch deserves its own song",
+  "Don’t borrow the vibe. Create it.",
 ];
 
 export function Ticker() {
@@ -38,10 +38,12 @@ export function TheGap() {
         </div>
         <div className="sia-gap__side sia-reveal">
           <div className="sia-body">
-            <p className="sia-lead">The photographer. The stylist. The designer with the waitlist.</p>
+            <p className="sia-lead">The photographer. The stylist. The polished feed you check twice before anything goes up.</p>
             <p>
               You don’t do off the rack. Then the launch you spent months building goes live, and it
-              plays the same Spotify track a nineteen-year-old used for her coffee haul this morning.
+              opens with the same trending sound every other masterclass on your feed is using. A
+              song nobody licensed for your business, that can get your video muted right when it
+              finally starts working.
             </p>
             <p>
               <strong>A borrowed song makes people remember someone else.</strong> Sound is the part of
@@ -378,13 +380,13 @@ export function Offers() {
           <article className="sia-offer sia-reveal">
             <div className="sia-offer__top sia-mono">
               <span className="sia-offer__tag sia-offer__tag--quiet sia-mono">Done for you</span>
-              <span>Your brand’s soundtrack</span>
+              <span>Five tracks</span>
             </div>
             <div className="sia-offer__num" aria-hidden="true">03</div>
             <h3>The Instant Recognition Atelier</h3>
             <p className="sia-mono sia-offer__line">For the woman who doesn’t do homework</p>
             <p className="sia-offer__desc">
-              Five original tracks, spent your way: a song for each of your offers, your anthem, a
+              Every brand world needs a soundtrack. Five original tracks, spent your way: a song for each of your offers, your anthem, a
               walk-on for your stage, a beat under your everyday reels. No program to learn. No
               calls to sit through. You say yes. I build. Exclusive to your brand.
             </p>
