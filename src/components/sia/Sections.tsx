@@ -336,8 +336,8 @@ export function Offers() {
         <div className="sia-offers__grid">
           <article className="sia-offer sia-offer--lead sia-reveal">
             <div className="sia-offer__top sia-mono">
-              <span className="sia-offer__tag sia-mono">If it were mine</span>
-              <span>The whole world</span>
+              <span className="sia-offer__tag sia-mono">If it were mine…</span>
+              <span>The whole world…</span>
             </div>
             <div className="sia-offer__num" aria-hidden="true">01</div>
             <h3>The Instant Recognition Atelier</h3>
