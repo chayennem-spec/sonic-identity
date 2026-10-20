@@ -351,10 +351,11 @@ export function Offers() {
             <p className="sia-mono sia-offer__line">For the woman who doesn’t do homework</p>
             <p className="sia-offer__desc">
               You’ve already invested in how your brand looks. This is the part people actually
-              remember. Every brand world needs a soundtrack, and you get five original tracks to spend
-              however your brand needs them: a song for each offer, your anthem, a walk-on for your
-              stage or a beat under your everyday reels. There’s nothing to learn and no calls to sit
-              through. You say yes, I build it, and it’s made for your brand alone.
+              remember. Five original tracks to spend however your brand needs them: a song for each
+              offer, your anthem, a walk-on for your stage or a beat under your everyday reels. Plus
+              your Sonic Signature, built around one real sound from your world, like your laugh or
+              your heels on your studio floor. No homework, no calls. You say yes, I build it, and
+              it’s made for your brand alone.
             </p>
             <a className="sia-btn sia-btn--red" href={LINKS.apply} target="_blank" rel="noreferrer">
               Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
