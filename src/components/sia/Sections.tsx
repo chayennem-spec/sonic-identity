@@ -343,19 +343,21 @@ export function Offers() {
         <div className="sia-offers__grid">
           <article className="sia-offer sia-offer--lead sia-reveal">
             <div className="sia-offer__top sia-mono">
-              <span className="sia-offer__tag sia-mono">Start here</span>
-              <span>Same day</span>
+              <span className="sia-offer__tag sia-mono">Done for you</span>
+              <span>Five tracks</span>
             </div>
             <div className="sia-offer__num" aria-hidden="true">01</div>
-            <h3>The Sonic Blueprint</h3>
-            <p className="sia-mono sia-offer__line">Hear your brand before you invest</p>
+            <h3>The Instant Recognition Atelier</h3>
+            <p className="sia-mono sia-offer__line">For the woman who doesn’t do homework</p>
             <p className="sia-offer__desc">
-              Curious but not ready to commit? Fair. In one sitting, the Blueprint reads your brand’s
-              energy straight from your feed, names your Sonic Archetype and gives you three sound
-              directions, with prompts so you can hear a first sketch of each the same day.
+              You’ve already invested in how your brand looks. This is the part people actually
+              remember. Every brand world needs a soundtrack, and you get five original tracks to spend
+              however your brand needs them: a song for each offer, your anthem, a walk-on for your
+              stage or a beat under your everyday reels. There’s nothing to learn and no calls to sit
+              through. You say yes, I build it, and it’s made for your brand alone.
             </p>
-            <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
-              Start the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
+            <a className="sia-btn sia-btn--red" href={LINKS.apply} target="_blank" rel="noreferrer">
+              Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
           </article>
 
@@ -368,9 +370,10 @@ export function Offers() {
             <h3>The Instant Recognition Anthem</h3>
             <p className="sia-mono sia-offer__line">One song that walks in before you do</p>
             <p className="sia-offer__desc">
-              One signature song for your walk-on, your launch and your podcast open, made around your
-              story, your archetype and the room you plan to own. It comes with exclusive brand-use
-              rights for your content, ads, launches, events, podcast and programs.
+              Not ready for the whole world yet? Start with the song. One signature song for your
+              walk-on, your launch and your podcast open, made around your story, your archetype and
+              the room you plan to own. It comes with exclusive brand-use rights for your content, ads,
+              launches, events, podcast and programs.
             </p>
             <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
               Request an invitation <span className="sia-arrow" aria-hidden="true">↗</span>
@@ -379,20 +382,19 @@ export function Offers() {
 
           <article className="sia-offer sia-reveal">
             <div className="sia-offer__top sia-mono">
-              <span className="sia-offer__tag sia-offer__tag--quiet sia-mono">Done for you</span>
-              <span>Five tracks</span>
+              <span className="sia-offer__tag sia-offer__tag--quiet sia-mono">Start here</span>
+              <span>Same day</span>
             </div>
             <div className="sia-offer__num" aria-hidden="true">03</div>
-            <h3>The Instant Recognition Atelier</h3>
-            <p className="sia-mono sia-offer__line">For the woman who doesn’t do homework</p>
+            <h3>The Sonic Blueprint</h3>
+            <p className="sia-mono sia-offer__line">Hear your brand before you invest</p>
             <p className="sia-offer__desc">
-              Every brand world needs a soundtrack. You get five original tracks to spend however your
-              brand needs them: a song for each offer, your anthem, a walk-on for your stage or a beat
-              under your everyday reels. There’s nothing to learn and no calls to sit through. You say
-              yes, I build it, and it’s made for your brand alone.
+              Curious but not ready to commit? Fair. In one sitting, the Blueprint reads your brand’s
+              energy straight from your feed, names your Sonic Archetype and gives you three sound
+              directions, with prompts so you can hear a first sketch of each the same day.
             </p>
-            <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
-              Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
+            <a className="sia-btn sia-btn--ghost" href={LINKS.blueprint} target="_blank" rel="noreferrer">
+              Start the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
           </article>
         </div>
