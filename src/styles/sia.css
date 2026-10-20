@@ -1040,3 +1040,42 @@
 
 /* Hero eyebrow lives inside the H1 for SEO but keeps the small mono kicker look */
 .sia-hero__eyebrow { display: flex; }
+
+/* ---------- Offers: pricing psychology (no prices on the site) ---------- */
+.sia-offers__lead { margin: 44px auto 0; max-width: 38em; color: var(--sia-dim); font-size: 18px; line-height: 1.6; }
+.sia-offers__note { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; margin: -40px auto 60px; color: var(--sia-bone); text-align: center; }
+.sia-offers__note::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--sia-red); flex: none; animation: sia-rec 1.6s steps(1) infinite; }
+.sia-offers__note b { color: var(--sia-red); font-weight: 400; white-space: nowrap; }
+.sia-offer--featured { border-color: var(--sia-red); background: var(--sia-off); }
+.sia-offer__badge {
+  position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); z-index: 2;
+  background: var(--sia-red); color: #000; white-space: nowrap;
+  font-family: "Space Mono", ui-monospace, monospace; font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase;
+  padding: 7px 14px;
+}
+.sia-offer--featured .sia-offer__num { color: #2a1410; }
+.sia-offer .sia-offer__desc { flex: 0 0 auto; }
+.sia-offer__list { list-style: none; margin: 22px 0 0; padding: 0; border-top: 1px solid var(--sia-line); }
+.sia-offer__list li { position: relative; padding: 10px 0 10px 22px; border-bottom: 1px solid var(--sia-line); color: var(--sia-bone); font-size: 14.5px; line-height: 1.45; }
+.sia-offer__list li::before { content: ""; position: absolute; left: 0; top: 19px; width: 10px; height: 1px; background: var(--sia-red); }
+.sia-offer__because { margin-top: 18px; color: var(--sia-dim); font-size: 14px; line-height: 1.55; flex: 1; }
+.sia-offer__because b { color: var(--sia-bone); font-weight: 600; }
+.sia-offer__plan { margin-top: 16px; color: var(--sia-bone); font-size: 11px; }
+.sia-offer__plan::before { content: "· "; color: var(--sia-red); }
+.sia-promise { margin-top: 56px; display: grid; grid-template-columns: auto 1fr auto; gap: 34px; align-items: center; border: 1px solid var(--sia-line); padding: 32px 38px; }
+.sia-promise__seal {
+  width: 104px; height: 104px; border-radius: 50%; border: 1px solid var(--sia-red); display: grid; place-items: center; text-align: center;
+  color: var(--sia-red); font-family: "Space Mono", ui-monospace, monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; line-height: 1.5;
+}
+.sia-promise__seal b { display: block; font-family: var(--sia-display); font-weight: 700; font-size: 19px; letter-spacing: -0.03em; color: var(--sia-bone); }
+.sia-promise h3 { font-family: var(--sia-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; font-size: clamp(22px, 2.1vw, 30px); line-height: 1; }
+.sia-promise p:not(.sia-hand) { margin-top: 10px; color: var(--sia-dim); font-size: 16px; line-height: 1.6; max-width: 46em; }
+.sia-promise a { color: var(--sia-bone); text-decoration: underline; text-underline-offset: 3px; }
+.sia-promise .sia-hand { font-size: clamp(28px, 2.4vw, 38px); white-space: nowrap; }
+@media (max-width: 860px) {
+  .sia-offers__note { margin: -20px auto 44px; font-size: 11px; }
+  .sia-offers__grid { gap: 34px; }
+  .sia-promise { grid-template-columns: 1fr; gap: 18px; padding: 26px 22px; }
+  .sia-promise__seal { width: 88px; height: 88px; }
+}
+@media (prefers-reduced-motion: reduce) { .sia-offers__note::before { animation: none; } }
