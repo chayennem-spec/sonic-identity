@@ -12,7 +12,7 @@ import {
   Guide,
   Method,
   Offers,
-  // Proof,
+  Proof,
   Rights,
   TheGap,
   ForHer,
@@ -49,7 +49,7 @@ function HomePage() {
         <Method />
         <Rights />
         <Offers />
-        {/* Proof hidden until real testimonials arrive: <Proof /> */}
+        <Proof />
         <MeetTheLab />
         <About />
         <Guide />

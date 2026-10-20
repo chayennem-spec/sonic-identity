@@ -117,7 +117,7 @@ function Page() {
       </p>
       <p>
         When it's delivered, you get exclusive usage rights in writing for your content, ads, launches, events,
-        podcast and programs. No expiry, no renewals, and I never license your sound to another coach.
+        podcast and programs. No expiry, no renewals, and I never license your sound to another brand.
       </p>
 
       <h2>Where to start</h2>

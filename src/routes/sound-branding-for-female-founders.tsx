@@ -18,7 +18,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "Can I use my sound in paid ads?",
-    a: "Yes. Your signature sound comes with exclusive usage rights in writing, and paid ads are on the list, along with content, launches, events, your podcast and your programs. No expiry, no renewals, and I never license your sound to anyone else.",
+    a: "Yes. Your signature sound comes with exclusive usage rights in writing, and paid ads are on the list, along with content, launches, events, your podcast and your programs. No expiry, no renewals, and I never license your sound to another brand.",
   },
   {
     q: "Do I have to get on calls?",
@@ -135,7 +135,7 @@ function Page() {
       </ul>
       <p>
         No calls for any of them. A written intake, voice notes on your time, and exclusive usage rights in
-        writing when it's delivered. I never license your sound to anyone else.
+        writing. I never license your sound to another brand.
       </p>
 
       <h2>The founder this is for</h2>

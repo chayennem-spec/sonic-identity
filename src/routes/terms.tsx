@@ -10,7 +10,7 @@ const DESCRIPTION =
   "Terms of Purchase for the Instant Recognition Anthem and the Instant Recognition Atelier by Sonic Identity Architect: your commercial brand-use license, what's included and how releases work.";
 
 // Legal business name and state, to be filled in before going live.
-const STUDIO_NAME = "[YOUR LEGAL BUSINESS NAME]";
+const STUDIO_NAME = "Chayenne Mallari";
 const LAST_UPDATED = "October 2026";
 
 export const Route = createFileRoute("/terms")({

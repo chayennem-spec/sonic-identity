@@ -169,10 +169,10 @@ export function Rights() {
           <p>
             A trending track can’t answer both. A personal streaming account doesn’t license a song
             for your business, and a song everyone uses can’t sound like you. Your signature sound
-            answers both: made for your brand, licensed only to you, with{" "}
+            answers both: made for your brand, never licensed to another brand, with{" "}
             <strong>exclusive usage rights in writing. No expiry. No renewals.</strong>
           </p>
-          <p className="sia-hand">Your sound. Only yours.</p>
+          <p className="sia-hand">Your sound. Made for your brand alone.</p>
         </div>
 
         <div className="sia-ig sia-reveal">
@@ -297,42 +297,60 @@ export function Offers() {
   );
 }
 
-// PLACEHOLDERS: swap in real words from Chayenne's screenshots before this goes live.
-const PROOF = [
+
+/**
+ * Heard in the wild: client songs out in the world. Add a link and its button appears;
+ * leave it empty and the button stays hidden.
+ */
+const HEARD: {
+  song: string;
+  who: string;
+  note: string;
+  links: { label: string; href: string }[];
+}[] = [
   {
+    song: "Soft Girl Millions",
     who: "Leanne Lopez-Mosley",
-    what: "“Soft Girl Millions” · signature song",
-    quote: "Leanne’s words go here, taken from her screenshot.",
+    note: "Made for Leanne's world and her Soft Girl Millions women, as a gift. She uses it and credits me publicly.",
+    links: [{ label: "See it in her world", href: "" }],
   },
   {
+    song: "The Money Medium",
     who: "Lou Clark",
-    what: "Money song for her program · on Spotify",
-    quote: "Lou’s words go here, taken from her screenshot.",
-  },
-  {
-    who: "Client name",
-    what: "Project · format",
-    quote: "Third client’s words go here.",
+    note: "Made to sound the way her brand feels. It lives on Spotify.",
+    links: [{ label: "Listen on Spotify", href: "" }],
   },
 ];
 
 export function Proof() {
   return (
-    <section className="sia sia-proof sia-rule" id="proof">
+    <section className="sia sia-proof sia-rule" id="heard">
       <div className="sia-wrap">
-        <p className="sia-mono sia-kicker sia-reveal">04 · Heard in the wild</p>
+        <p className="sia-mono sia-kicker sia-reveal">Heard in the wild</p>
         <h2 className="sia-display sia-reveal">
           Their <span className="sia-nw">sound, <em>out loud</em>.</span>
         </h2>
-        <div className="sia-proof__grid">
-          {PROOF.map((p) => (
-            <figure className="sia-quote sia-reveal" key={p.who}>
-              <span className="sia-quote__flag sia-mono">Placeholder</span>
-              <blockquote>{p.quote}</blockquote>
-              <cite className="sia-mono">
-                {p.who}
-                <span>{p.what}</span>
-              </cite>
+        <div className="sia-heard__grid">
+          {HEARD.map((h) => (
+            <figure className="sia-heard sia-reveal" key={h.song}>
+              <span className="sia-heard__eq" aria-hidden="true">
+                <i />
+                <i />
+                <i />
+                <i />
+              </span>
+              <p className="sia-heard__song">{h.song}</p>
+              <cite className="sia-mono">For {h.who}</cite>
+              <p className="sia-heard__note">{h.note}</p>
+              <div className="sia-heard__links">
+                {h.links
+                  .filter((l) => l.href)
+                  .map((l) => (
+                    <a key={l.label} className="sia-btn sia-btn--ghost" href={l.href} target="_blank" rel="noreferrer">
+                      {l.label} <span className="sia-arrow" aria-hidden="true">↗</span>
+                    </a>
+                  ))}
+              </div>
             </figure>
           ))}
         </div>
@@ -482,8 +500,8 @@ export const FAQ = [
     a: "Reels, stories, your podcast intro and outro, launch and sales videos, webinars, ads, your walk-on at events, your retreat playlist. Anywhere people meet your brand, it can sound like you.",
   },
   {
-    q: "Is my sound really mine?",
-    a: "It’s yours to use, and only yours. Your Anthem or Atelier comes with exclusive usage rights in a written agreement: content, ads, launches, events, podcast and programs. No expiry, no renewals, and I never license your sound to anyone else. Need a use that isn’t listed? Tell me before we sign and we’ll add it.",
+    q: "Is my sound only mine to use?",
+    a: "Yes. Your Anthem or Atelier comes with exclusive brand-use rights, in writing: content, ads, launches, events, livestreams, your podcast and your programs. No expiry, no renewals, and I never license your sound to another brand. Streaming release is always your choice, never a default. Need a use that isn’t listed? Tell me in your application and we’ll add it. Full details are in the Terms of Purchase.",
   },
   {
     q: "Will my name show up on Instagram?",

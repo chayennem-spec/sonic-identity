@@ -1,4 +1,4 @@
-/* Generated from the Creative Commission & Commercial Music License Agreement. Edit text here. */
+/* Generated from the Creative Commission & Commercial Music License Agreement (aligned with the sales pages, Oct 2026). Edit text here. */
 export type Block = { t: "p"; text: string } | { t: "ul"; items: string[] };
 export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
   {
@@ -62,11 +62,11 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "Unless otherwise agreed, the final commercial license becomes effective after Studio receives payment in full."
+        "text": "Client's commercial license begins when Studio receives Client's first payment. If Client pays in installments and a scheduled payment fails and isn't resolved within 14 days, Studio may pause work and suspend the license until the account is current."
       },
       {
         "t": "p",
-        "text": "Studio will deliver the agreed final files following completion of the creative process and receipt of outstanding payment."
+        "text": "Studio will deliver the agreed final files when the creative process is complete. On a payment plan, final files are delivered on schedule as long as payments are current."
       },
       {
         "t": "p",
@@ -109,6 +109,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
           "Websites and sales pages",
           "Online courses and educational programs",
           "Webinars, masterclasses, and recorded replays",
+          "Livestreams",
           "Podcasts, including intros and outros",
           "Product and service launches",
           "Live events, retreats, and stage entrances",
@@ -165,7 +166,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Studio agrees not to knowingly license the same final delivered recording to another unrelated company or personal brand for use as that company's signature brand anthem or identifying soundtrack."
+        "text": "Studio will not license the delivered recordings, the Sonic Signature, or any cut, loop or edit of them to any other company or personal brand for use in its business, marketing or brand identity."
       },
       {
         "t": "p",
@@ -174,41 +175,44 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       {
         "t": "ul",
         "items": [
-          "Authorized streaming distribution of Client's anthem",
-          "Public listening, saving, or sharing through approved platforms",
-          "Permitted audience and fan uses under applicable platform licenses",
+          "A public streaming release, if Client chooses one under Section 7",
+          "Public listening, saving or sharing of a released track through approved platforms",
           "Use by Client's authorized production partners",
           "Incidental similarities arising from independent music creation"
         ]
       },
       {
         "t": "p",
-        "text": "This provision does not guarantee that every melody, chord progression, musical style, or AI-generated element is legally exclusive."
+        "text": "Musical styles, genres and common chord progressions belong to everyone, and certain AI-assisted elements may not be legally exclusive. This commitment covers Client's delivered music, not a style or genre."
       },
       {
         "t": "p",
-        "text": "Any broader exclusivity involving compositions, stems, musical motifs, derivative works, or competing brands must be expressly defined in the Project Schedule."
+        "text": "Any broader exclusivity, such as stems or alternate formats, can be added in the Project Schedule."
       }
     ]
   },
   {
-    "title": "7. Studio-Retained Distribution and Monetization",
+    "title": "7. Optional Streaming Release",
     "blocks": [
       {
         "t": "p",
-        "text": "Unless otherwise agreed in writing, Studio retains the exclusive contractual right, as between Studio and Client, to administer the commercial distribution of the delivered recording through approved music distribution services."
+        "text": "A public release is optional. Client's music is never released to streaming services, music libraries or other public platforms unless Client chooses a release and approves it in writing under Section 8."
       },
       {
         "t": "p",
-        "text": "Subject to the rights actually available and applicable platform requirements, Studio may distribute the recording to Spotify, Apple Music, YouTube Music, and other agreed music services."
+        "text": "If Client chooses a release, Studio handles distribution through its distributor, including setup, metadata, delivery and ongoing administration, at no extra cost to Client."
       },
       {
         "t": "p",
-        "text": "Studio will retain **100% of eligible music-distribution revenue payable to Studio** from those releases, after applicable distributor or platform deductions."
+        "text": "In exchange, Studio keeps **100% of the streaming and download payouts** the distributor pays to Studio for that release. For brand music these payouts are usually modest (streaming services typically pay a fraction of a cent per play), and they have nothing to do with Client's own business income."
       },
       {
         "t": "p",
-        "text": "Client acknowledges that the creative fee does not purchase an interest in these distribution proceeds."
+        "text": "Client's creative fee covers Client's commercial brand-use license. It does not include a share of those payouts."
+      },
+      {
+        "t": "p",
+        "text": "Instagram, Facebook and TikTok music libraries are a separate choice. Studio will only make a track available in those libraries if Client asks for it in writing, because a track in a public library can be used by anyone on that platform."
       },
       {
         "t": "p",
@@ -299,7 +303,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Studio may use AI-assisted composition, production, editing, and sound-design tools as part of its creative process."
+        "text": "Studio may use AI-assisted music creation, production, editing, and sound-design tools as part of its creative process, the way a producer uses software. Every creative decision is made by Studio."
       },
       {
         "t": "p",
@@ -345,7 +349,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
           "Sell or license the delivered music as a standalone music product",
           "Transfer the brand-use license to an unrelated third party, except as permitted in a business succession provision",
           "Represent itself as the exclusive copyright owner of rights it has not acquired",
-          "Register the music with a distributor or rights-collection service in a manner that conflicts with Studio's agreed administration rights",
+          "Release or register the music with a distributor, music library or rights-collection service without Studio's written agreement",
           "Authorize another unrelated business to adopt the music as its signature brand anthem"
         ]
       },
@@ -360,11 +364,11 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "The parties will specify whether Client's license may transfer to a successor acquiring Client's business or brand."
+        "text": "Client's license transfers to a successor that acquires all or substantially all of Client's business, or the brand that uses the music, as long as Client tells Studio in writing."
       },
       {
         "t": "p",
-        "text": "The parties will also establish a continuity procedure if Studio closes, becomes unable to administer distribution, or ceases operating."
+        "text": "If Studio closes or stops operating, Client's license continues, and Studio will provide Client with final copies of all delivered files."
       },
       {
         "t": "p",
@@ -389,7 +393,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "The parties will agree on appropriate intellectual-property remedies, indemnification obligations, liability limitations, and dispute procedures following legal review."
+        "text": "Each party is responsible for claims arising from the materials it supplied: for Client, the trademarks, recordings, lyrics, voice samples or other materials Client provides; for Studio, the materials Studio incorporates. Apart from those responsibilities, each party's total liability under this Agreement is limited to the fees Client paid for the project."
       },
       {
         "t": "p",
@@ -419,15 +423,15 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "**Governing Law:** The laws of the State of [STATE]."
+        "text": "**Governing Law:** The laws of the State of California."
       },
       {
         "t": "p",
-        "text": "**Dispute Resolution:** [ATTORNEY-APPROVED PROCEDURE]"
+        "text": "**Dispute Resolution:** Before any formal claim, the parties will try to resolve any dispute in good faith by email for 30 days. If it isn't resolved, it will be decided in the state or federal courts located in California."
       },
       {
         "t": "p",
-        "text": "**Notices:** hello@sonicidentityarchitect.com"
+        "text": "**Notices:** hello@sonicidentityarchitect.com, or the email Client used to apply."
       },
       {
         "t": "p",
@@ -440,7 +444,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "This Agreement, together with the applicable Project Schedule and any signed amendments, constitutes the parties' complete agreement concerning the commissioned music."
+        "text": "This Agreement, together with the applicable Project Schedule and any written amendments, constitutes the parties' complete agreement concerning the commissioned music."
       },
       {
         "t": "p",

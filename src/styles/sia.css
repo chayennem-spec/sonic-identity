@@ -963,3 +963,21 @@
 .sia-terms__section { padding-top: 8px; }
 .sia-terms .sia-article__body h3 { font-family: Inter, system-ui, sans-serif; }
 .sia-footer__base a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+/* Heard in the wild */
+.sia-heard__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.sia-heard { margin: 0; padding: 40px 36px; border: 1px solid var(--sia-line); background: rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 12px; }
+.sia-heard__eq { display: inline-flex; gap: 4px; align-items: flex-end; height: 22px; margin-bottom: 8px; }
+.sia-heard__eq i { width: 4px; background: var(--sia-red); animation: sia-heard-eq 1.2s ease-in-out infinite; }
+.sia-heard__eq i:nth-child(1) { height: 40%; }
+.sia-heard__eq i:nth-child(2) { height: 90%; animation-delay: .2s; }
+.sia-heard__eq i:nth-child(3) { height: 60%; animation-delay: .4s; }
+.sia-heard__eq i:nth-child(4) { height: 75%; animation-delay: .6s; }
+@keyframes sia-heard-eq { 0%,100% { transform: scaleY(.5); } 50% { transform: scaleY(1); } }
+@media (prefers-reduced-motion: reduce) { .sia-heard__eq i { animation: none; } }
+.sia-heard__song { font-size: clamp(28px, 3vw, 40px); font-weight: 700; color: var(--sia-bone); line-height: 1.1; }
+.sia-heard cite { font-style: normal; color: var(--sia-red); letter-spacing: .14em; text-transform: uppercase; font-size: 12px; }
+.sia-heard__note { color: var(--sia-dim); font-size: 17px; line-height: 1.6; }
+.sia-heard__links { margin-top: auto; padding-top: 14px; display: flex; flex-wrap: wrap; gap: 12px; }
+.sia-heard__links:empty { display: none; }
+@media (max-width: 860px) { .sia-heard__grid { grid-template-columns: 1fr; } .sia-heard { padding: 30px 24px; } }
