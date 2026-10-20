@@ -336,7 +336,7 @@ export function Offers() {
         <div className="sia-offers__grid">
           <article className="sia-offer sia-offer--lead sia-reveal">
             <div className="sia-offer__top sia-mono">
-              <span className="sia-offer__tag sia-mono">Done for you</span>
+              <span className="sia-offer__tag sia-mono">My pick</span>
               <span>Five tracks</span>
             </div>
             <div className="sia-offer__num" aria-hidden="true">01</div>
@@ -353,6 +353,9 @@ export function Offers() {
               <li>A sound guide, so your team never guesses</li>
               <li>Exclusive brand-use rights, in writing</li>
             </ul>
+            <p className="sia-offer__promise">
+              Covered by my First Listen Promise: your first track and Signature land first.
+            </p>
             <a className="sia-btn sia-btn--red" href={LINKS.apply} target="_blank" rel="noreferrer">
               Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
@@ -564,6 +567,7 @@ export function Apply() {
           calls. I read every application myself and reply within 2 business days, with what I’d
           recommend for your brand.
         </p>
+        <p className="sia-mono sia-apply__from">Done-for-you work begins at $3,000</p>
         <div className="sia-hero__ctas" style={{ justifyContent: "center" }}>
           <a className="sia-btn sia-btn--red" href={LINKS.apply} target="_blank" rel="noreferrer">
             Start my application <span className="sia-arrow" aria-hidden="true">↗</span>

@@ -1086,3 +1086,5 @@
   .sia-hero__figure[data-drift], .sia-hero__figure[data-drift] img { translate: none; }
   .sia-hero { padding-top: 65px; }
 }
+.sia-offer__promise { margin-top: 18px; padding: 12px 14px; border: 1px dashed rgba(255, 74, 28, 0.55); color: var(--sia-bone); font-size: 14px; line-height: 1.45; }
+.sia-apply__from { margin: -8px 0 28px; color: var(--sia-dim); text-align: center; }
