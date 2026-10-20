@@ -3,10 +3,11 @@ import { ASSETS, LINKS } from "../../lib/constants";
 // Homepage sections, Oct 2026 redesign. Copy written for Chayenne; edit freely.
 
 const TICKER = [
+  "Be heard before you’re even seen",
   "Stop renting your sound",
-  "Custom everything. Including the soundtrack",
-  "Be heard before you’re seen",
-  "Recognized by ear",
+  "Recognized. Remembered. Felt.",
+  "Tailored down to the soundtrack",
+  "Your launch deserves its own song",
 ];
 
 export function Ticker() {

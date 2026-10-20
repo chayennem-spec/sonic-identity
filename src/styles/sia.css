@@ -797,11 +797,11 @@
 .sia-hero__figure--photo .sia-hero__cutout { position: absolute; inset: 0; z-index: 3; }
 .sia-wave--behind {
   position: absolute; z-index: 2;
-  left: 0; width: 100%; top: 30%; height: 30%;
+  left: 0; width: 100%; top: 9%; height: 24%;
   opacity: 0.95;
 }
 @media (max-width: 860px) {
-  .sia-wave--behind { top: 26%; height: 28%; }
+  .sia-wave--behind { top: 7%; height: 24%; }
 }
 
 /* QA: footer fits small phones (360px) */
@@ -1024,3 +1024,8 @@
   .sia-onset__viewport { overflow-x: auto; }
   .sia-onset__track { transform: none !important; }
 }
+
+/* Hero line under the headline */
+.sia-hero__tag { margin-top: 18px; font-family: var(--sia-display); font-weight: 600; font-size: clamp(18px, 1.7vw, 24px); letter-spacing: -0.01em; color: var(--sia-bone); }
+.sia-hero__tag + .sia-hero__sub { margin-top: 14px; }
+@media (max-width: 860px) { .sia-hero__tag { font-size: 18px; margin-top: 14px; } }

@@ -152,8 +152,9 @@ export function HeroSound() {
       <div className="sia-wrap sia-hero__inner">
         <p className="sia-mono sia-kicker">Sonic Identity Architect · Chayenne Mallari</p>
         <h1 className="sia-display">
-          Be heard before <span className="sia-nw">you’re <em>seen</em>.</span>
+          Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
         </h1>
+        <p className="sia-hero__tag">Become recognized, remembered and felt.</p>
         <p className="sia-hero__sub">
           Your visuals are curated. Your brand is polished. And your sound? Borrowed from whoever
           was trending this morning. I make signature songs for female founders. Audio that
@@ -186,7 +187,7 @@ export function HeroSound() {
           .
         </p>
         <div className="sia-hero__foot sia-mono">
-          <span>Recognized · Remembered · Felt</span>
+          <span>Signature sound for female founders</span>
           <span>Best with headphones</span>
         </div>
       </div>
