@@ -114,8 +114,8 @@ export function SiteFooter() {
             <span className="sia-tagline">Chayenne Mallari</span>
             <p className="sia-footer__line">
               Chayenne Mallari is the Sonic Identity Architect: sonic identity and sound branding for
-              female founders, coaches and personal brands. Recognized, remembered and felt, without
-              being seen.
+              female founders, coaches and personal brands. Recognized, remembered and felt
+              before you’re even seen.
             </p>
           </div>
           <div>

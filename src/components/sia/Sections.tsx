@@ -360,7 +360,7 @@ const OFFERS = [
       "30- and 15-second cuts for reels, ads and your podcast",
       "One refinement round",
       "Exclusive brand-use rights in writing",
-      "Credits toward the Atelier",
+      "Its full price credits toward the Atelier",
     ],
     because: "it’s made around your story and your archetype, and it’s never licensed to another brand.",
     cta: "Get your Anthem",
@@ -376,7 +376,7 @@ const OFFERS = [
       "Your Sonic Archetype",
       "Three sound directions",
       "Prompts to hear a first sketch of each",
-      "Credits toward the Atelier",
+      "Its full price credits toward the Atelier",
     ],
     because: "you do it yourself, tonight, and it counts toward the Atelier if you go all in.",
     cta: "Start the Blueprint",
@@ -674,7 +674,7 @@ export const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "The Blueprint and the Anthem are ready when you are, right from this page. The Atelier starts with a short application, and you’ll get your exact investment in my reply. Done-for-you work begins at $3,000.",
+    a: "The Blueprint and the Anthem are ready when you are, right from this page. The Atelier starts with a short application that walks you through the investment. Done-for-you work begins at $3,000.",
   },
   {
     q: "Where do I start?",
