@@ -20,11 +20,24 @@ export const Route = createFileRoute("/terms")({
   component: TermsPage,
 });
 
-/** Renders **bold** spans inside a line of agreement text. */
+/** Renders **bold** spans, plain Eden form links and email addresses inside a line of agreement text. */
 function rich(text: string): ReactNode[] {
-  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
-    part.startsWith("**") && part.endsWith("**") ? <strong key={i}>{part.slice(2, -2)}</strong> : part,
-  );
+  return text.split(/(\*\*[^*]+\*\*|chayennemallari\.eden\.so\/form\/[a-z-]+|hello@sonicidentityarchitect\.com)/g).map((part, i) => {
+    if (part.startsWith("**") && part.endsWith("**")) return <strong key={i}>{part.slice(2, -2)}</strong>;
+    if (part.startsWith("chayennemallari.eden.so/"))
+      return (
+        <a key={i} href={`https://${part}`} target="_blank" rel="noreferrer">
+          {part}
+        </a>
+      );
+    if (part === "hello@sonicidentityarchitect.com")
+      return (
+        <a key={i} href={`mailto:${part}`}>
+          {part}
+        </a>
+      );
+    return part;
+  });
 }
 
 function TermsPage() {

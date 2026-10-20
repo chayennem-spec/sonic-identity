@@ -357,6 +357,7 @@ const OFFERS = [
     desc: "Want to start with one song? Your walk-on, your launch video, your podcast open: one song made around your story and your archetype.",
     includes: [
       "One signature song",
+      "30- and 15-second cuts for reels, ads and your podcast",
       "One refinement round",
       "Exclusive brand-use rights in writing",
       "Credits toward the Atelier",
@@ -673,7 +674,7 @@ export const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "The Blueprint and the Anthem are ready when you are, right from this page. The Atelier starts with a short application, and you’ll get your exact investment in my reply.",
+    a: "The Blueprint and the Anthem are ready when you are, right from this page. The Atelier starts with a short application, and you’ll get your exact investment in my reply. Done-for-you work begins at $3,000.",
   },
   {
     q: "Where do I start?",
@@ -720,16 +721,19 @@ export function FinalCta() {
             the music playing is already unmistakably yours. That’s the brief.
           </p>
           <p className="sia-body sia-final__line">
-            Want to hear it first? Start with the Blueprint tonight. Want the whole brand world done
-            for you? Apply for the Atelier. It takes about five minutes, there are no calls, and I read
+            Want to hear it first? Start with the Blueprint tonight. Want one song now? Get the Anthem.
+            Want the whole brand world done for you? Apply for the Atelier. It takes about five minutes, there are no calls, and I read
             every application myself and reply within 2 business days.
           </p>
           <div className="sia-hero__ctas">
             <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
               Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
+            <a className="sia-btn sia-btn--ghost" href={LINKS.anthem} target="_blank" rel="noreferrer">
+              Get the Anthem <span className="sia-arrow" aria-hidden="true">↗</span>
+            </a>
             <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
-              Start my application <span className="sia-arrow" aria-hidden="true">↗</span>
+              Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
           </div>
         </div>

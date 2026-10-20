@@ -70,7 +70,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "The parties will specify in the Project Schedule:"
+        "text": "Where applicable, the Project Schedule will specify:"
       },
       {
         "t": "ul",
