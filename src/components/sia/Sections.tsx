@@ -5,7 +5,7 @@ import { ASSETS, LINKS } from "../../lib/constants";
 const TICKER = [
   "Be heard before you’re even seen",
   "Sound as expensive as you look",
-  "Stop renting your sound",
+  "Your name on every reel",
   "Recognized. Remembered. Felt.",
   "Don’t borrow the vibe. Create it.",
 ];
@@ -93,9 +93,8 @@ export function WhySound() {
             </h2>
           </div>
           <p>
-            The biggest brands in the world speak in three languages: what you see, what you read
-            and what you hear. You’ve already nailed the first two. The third is the one almost
-            nobody has built yet, and that’s exactly why it stands out.
+            Your launch video opens. Before your face even loads, they already know it’s you. That’s
+            not luck. It’s the same sound, used on purpose, every single time.
           </p>
         </div>
         <div className="sia-sound__grid sia-sound__grid--three sia-reveal">
@@ -121,7 +120,6 @@ const FOR_HER = [
   "Wears the tailored piece, not the trending one, and wants her brand to do the same.",
   "Doesn’t have time for another course, another call or another login (and honestly shouldn’t have to).",
   "Walks into rooms where people already know her name. Now she wants them to know her sound.",
-  "Is a little tired of hearing her launch set to someone else’s song.",
 ];
 
 export function ForHer() {
@@ -131,7 +129,7 @@ export function ForHer() {
         <div className="sia-reveal">
           <p className="sia-mono sia-kicker">This is for the female founder who…</p>
           <h2 className="sia-display">
-            Isn’t starting. <span className="sia-nw">She’s <em>arriving</em>.</span>
+            You built the brand. Now let them <span className="sia-nw"><em>hear</em> it.</span>
           </h2>
         </div>
         <div className="sia-reveal">
@@ -210,9 +208,8 @@ export function Method() {
             archetype and goes through five decisions. No stock library. No “well, it’s trending.”
             <br />
             <br />
-            It is the heart of my Sonic Subconscious Selling™ method: I find the belief your buyer
-            needs, build it into your sound, then use it the same way every time until they feel
-            it before you say a word.
+            That’s my Sonic Subconscious Selling™ method: find the belief your buyer needs, build it
+            into your sound, and repeat it until they feel it before you say a word.
           </p>
         </div>
         <div className="sia-sound__grid sia-reveal">
@@ -235,11 +232,8 @@ export function Method() {
 
 const MONDAY = [
   { tag: "Ads", who: "Your ads manager", need: "needs a cleared 15-second cut. By noon. Most trending songs aren’t cleared for paid ads." },
-  { tag: "Zoom", who: "Your masterclass replay", need: "is about to go into a paid program. With whatever song was playing in the waiting room." },
-  { tag: "Programs", who: "Your course", need: "needs music inside every module. Your personal Spotify doesn’t cover that." },
   { tag: "Stage", who: "Your event producer", need: "needs a walk-on. Not the one the last speaker used." },
   { tag: "Podcast", who: "Your podcast editor", need: "needs an intro that sounds like you and won’t get flagged." },
-  { tag: "Content", who: "Your social manager", need: "needs a sound for this week’s reels that says your name, not a stranger’s." },
 ];
 
 export function Rights() {
@@ -270,8 +264,7 @@ export function Rights() {
         </ol>
         <div className="sia-rights__close sia-reveal">
           <p>
-            A trending track can’t answer either one. Your personal Spotify doesn’t cover business
-            use, and a song everyone’s using can’t sound like you. A signature sound answers both:
+            A trending track can’t answer either one. A signature sound answers both:
             it’s made for your brand, it’s never licensed to another brand, and it comes with{" "}
             <strong>exclusive brand-use rights in writing, with no expiry and no renewals.</strong>
           </p>
@@ -351,12 +344,15 @@ export function Offers() {
             <p className="sia-mono sia-offer__line">For the woman who doesn’t do homework</p>
             <p className="sia-offer__desc">
               You’ve already invested in how your brand looks. This is the part people actually
-              remember. Five original tracks to spend however your brand needs them: a song for each
-              offer, your anthem, a walk-on for your stage or a beat under your everyday reels. Plus
-              your Sonic Signature, built around one real sound from your world, like your laugh or
-              your heels on your studio floor. No homework, no calls. You say yes, I build it, and
-              it’s made for your brand alone.
+              remember. No homework, no calls. You say yes, I build it, and it’s made for your brand
+              alone.
             </p>
+            <ul className="sia-offer__list">
+              <li>5 original tracks, spent your way: offers, anthem, walk-on, reels</li>
+              <li>Your Sonic Signature, built around one real sound from your world</li>
+              <li>A sound guide, so your team never guesses</li>
+              <li>Exclusive brand-use rights, in writing</li>
+            </ul>
             <a className="sia-btn sia-btn--red" href={LINKS.apply} target="_blank" rel="noreferrer">
               Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
@@ -371,11 +367,14 @@ export function Offers() {
             <h3>The Instant Recognition Anthem</h3>
             <p className="sia-mono sia-offer__line">One song that walks in before you do</p>
             <p className="sia-offer__desc">
-              Not ready for the whole world yet? Start with the song. One signature song for your
-              walk-on, your launch and your podcast open, made around your story, your archetype and
-              the room you plan to own. It comes with exclusive brand-use rights for your content, ads,
-              launches, events, podcast and programs.
+              Want to start with one song? Your walk-on, your launch video, your podcast open: one
+              song made around your story and your archetype.
             </p>
+            <ul className="sia-offer__list">
+              <li>One full signature song</li>
+              <li>30- and 15-second cuts for reels, ads and your podcast</li>
+              <li>Exclusive brand-use rights, in writing</li>
+            </ul>
             <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
               Request an invitation <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
@@ -391,14 +390,21 @@ export function Offers() {
             <p className="sia-mono sia-offer__line">Hear your brand before you invest</p>
             <p className="sia-offer__desc">
               Curious but not ready to commit? Fair. In one sitting, the Blueprint reads your brand’s
-              energy straight from your feed, names your Sonic Archetype and gives you three sound
-              directions, with prompts so you can hear a first sketch of each the same day.
+              energy straight from your feed.
             </p>
+            <ul className="sia-offer__list">
+              <li>Your Sonic Archetype, named</li>
+              <li>Three sound directions for your brand</li>
+              <li>Prompts to hear a first sketch of each, today</li>
+            </ul>
             <a className="sia-btn sia-btn--ghost" href={LINKS.blueprint} target="_blank" rel="noreferrer">
               Start the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
           </article>
         </div>
+        <p className="sia-offers__note sia-reveal">
+          One short application covers both the Atelier and the Anthem.
+        </p>
       </div>
     </section>
   );
@@ -510,9 +516,6 @@ export function About() {
               <dd className="sia-mono">Trainer &amp; hypnotherapist</dd>
             </div>
           </dl>
-          <a className="sia-btn sia-btn--bone" href={LINKS.blueprint} target="_blank" rel="noreferrer">
-            Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
-          </a>
         </div>
       </div>
     </section>
@@ -557,15 +560,13 @@ export function Apply() {
           <span className="sia-nw">your <em>brand</em>.</span>
         </h2>
         <p className="sia-body">
-          The Anthem and the Atelier are made for one brand at a time. Five minutes, in writing, no
-          calls. I read every application myself and reply within 2 business days.
+          One short application covers the Atelier and the Anthem. Five minutes, in writing, no
+          calls. I read every application myself and reply within 2 business days, with what I’d
+          recommend for your brand.
         </p>
         <div className="sia-hero__ctas" style={{ justifyContent: "center" }}>
           <a className="sia-btn sia-btn--red" href={LINKS.apply} target="_blank" rel="noreferrer">
             Start my application <span className="sia-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a className="sia-btn sia-btn--ghost" href={LINKS.audit} target="_blank" rel="noreferrer">
-            Not sure yet? Take the free audit
           </a>
         </div>
       </div>
@@ -596,7 +597,7 @@ export const FAQ = [
   },
   {
     q: "What if I don’t love it?",
-    a: "That’s exactly why the Blueprint exists: you hear three directions before you commit to anything bigger. In the Atelier, your first track and your Sonic Signature land first, before the other four are built. In the Anthem, you hear your first listen before any changes. Either way you get refinement rounds to shape it (one for the Anthem, two for the Atelier), with a guide that helps you say what you feel even without music words.",
+    a: "You tell me, honestly. You get refinement rounds (one for the Anthem, two for the Atelier) and a guide that helps you say what you feel without music words. In the Atelier, your first track and Sonic Signature land first, before the other four are built.",
   },
   {
     q: "Do you use AI? Will it sound like AI?",
@@ -604,7 +605,7 @@ export const FAQ = [
   },
   {
     q: "Where would I actually use it?",
-    a: "Reels, stories, your podcast intro and outro, launch and sales videos, webinars, ads, your walk-on at events, your retreat playlist. Anywhere people meet your brand, it can sound like you.",
+    a: "Reels, stories, your podcast intro, launch videos, webinars, ads, your walk-on, your retreat. Anywhere people meet your brand.",
   },
   {
     q: "Is my sound only mine to use?",
@@ -612,7 +613,7 @@ export const FAQ = [
   },
   {
     q: "Will my name show up on Instagram?",
-    a: "Yes. Post a reel with your own sound and Instagram labels it “Original audio” with your handle, so anyone who taps it lands on your audio page, not a stranger’s. Want your anthem streaming too? Ask me. A public release is planned separately in your agreement, so the rights are clear before anything goes live. I can’t promise it trends. I can promise your name is on it, every time someone taps it.",
+    a: "Yes. Post a reel with your own sound and Instagram labels it “Original audio” with your handle. Want it on Spotify too? That’s your call, planned separately so the rights are clear first. I can’t promise it trends. I can promise your name is on it.",
   },
   {
     q: "Do I have to get on calls?",
@@ -679,13 +680,6 @@ export function FinalCta() {
               Start my application <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
           </div>
-          <p className="sia-final__alt">
-            Not sure yet?{" "}
-            <a href={LINKS.audit} target="_blank" rel="noreferrer">
-              Take the free three-minute audit
-            </a>
-            .
-          </p>
         </div>
         <figure className="sia-final__photo sia-reveal" aria-hidden="true" data-drift="0.1">
           <img src="/images/red-headphones-marble.webp" alt="" loading="lazy" />

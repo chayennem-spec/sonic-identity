@@ -23,8 +23,11 @@ export function SiteHeader() {
         <div className="sia-header__side sia-header__side--right sia-mono">
           <a href="/#about" className="sia-hide-sm">About</a>
           <a href="/#faq" className="sia-hide-sm">FAQ</a>
-          <a className="sia-btn sia-btn--bone" href={LINKS.blueprint} target="_blank" rel="noreferrer">
+          <a className="sia-btn sia-btn--bone sia-hide-phone" href={LINKS.blueprint} target="_blank" rel="noreferrer">
             Start here <span className="sia-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a className="sia-btn sia-btn--bone sia-show-phone" href="/#offers">
+            Offers <span className="sia-arrow" aria-hidden="true">↓</span>
           </a>
         </div>
       </div>
@@ -51,7 +54,8 @@ export function Intro() {
     } catch {
       /* storage blocked: just play it */
     }
-    if (seen) setState("gone");
+    // Phones go straight to the page: no opening screen between Instagram and the hero.
+    if (seen || window.matchMedia("(max-width: 860px)").matches) setState("gone");
     const t = window.setTimeout(() => setState("gone"), 2700);
     return () => window.clearTimeout(t);
   }, []);

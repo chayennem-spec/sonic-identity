@@ -1040,3 +1040,49 @@
 
 /* Hero eyebrow lives inside the H1 for SEO but keeps the small mono kicker look */
 .sia-hero__eyebrow { display: flex; }
+
+/* ---------- Oct 20 audit fixes ---------- */
+/* Offer cards: scannable "what you get" lines + one-application note */
+.sia-offer__list { list-style: none; margin: 18px 0 0; padding: 16px 0 0; border-top: 1px solid var(--sia-line); display: grid; gap: 10px; }
+.sia-offer__list li { position: relative; padding-left: 20px; color: var(--sia-bone); font-size: 15px; line-height: 1.45; }
+.sia-offer__list li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 8px; height: 2px; background: var(--sia-red); }
+.sia-offer__desc { flex: 0 0 auto; }
+.sia-offer__list { flex: 1; align-content: start; }
+.sia-offer { min-height: 0; }
+.sia-offers__note { margin-top: 28px; text-align: center; color: var(--sia-dim); font-size: 15px; }
+
+/* Header: phones get "Offers", desktop keeps "Start here"; 44px tap targets */
+.sia-show-phone { display: none !important; }
+.sia-header .sia-btn { min-height: 44px; }
+@media (max-width: 860px) {
+  .sia-hide-phone { display: none !important; }
+  .sia-show-phone { display: inline-flex !important; }
+  .sia-intro { display: none; }
+}
+
+/* Phone first screen: shorter photo, who it's for, and buttons without scrolling */
+@media (max-width: 860px) {
+  .sia-hero .sia-hero__eyebrow { display: flex; margin-bottom: 14px; font-size: 12px; color: var(--sia-bone); }
+  .sia-hero { padding-top: 58px; }
+  .sia-hero__media.sia-hero__media--still { height: min(40svh, 340px); }
+  .sia-hero__inner { margin-top: -36px; }
+  .sia-hero__big { font-size: clamp(40px, 11vw, 54px); }
+  .sia-hero h1 { font-size: inherit; }
+  .sia-hero__sub { margin-top: 16px; font-size: 16px; }
+  .sia-hero__ctas { margin-top: 22px; }
+}
+
+/* Tap targets and readable small labels */
+.sia-footer ul { gap: 2px; }
+.sia-footer ul a { display: inline-flex; align-items: center; min-height: 44px; }
+.sia-footer__base a { display: inline-flex; align-items: center; min-height: 44px; }
+.sia-final__alt a { display: inline-block; padding: 12px 0; }
+@media (max-width: 860px) {
+  .sia-mono { font-size: 13px; }
+  .sia-offer__line, .sia-kicker { letter-spacing: 0.12em; }
+}
+@media (max-width: 860px) {
+  /* No drift on the phone hero: it pushed the photo down and left a black band under the header */
+  .sia-hero__figure[data-drift], .sia-hero__figure[data-drift] img { translate: none; }
+  .sia-hero { padding-top: 65px; }
+}
