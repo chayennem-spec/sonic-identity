@@ -957,3 +957,9 @@
 .sia-article .sia-article__faq h2.sia-article__h2 { font-size: clamp(30px, 3.4vw, 46px); }
 .sia-article__body h3 { font-family: Inter, system-ui, sans-serif; letter-spacing: 0; text-transform: none; }
 @media (max-width: 860px) { .sia.sia-article .sia-article__faq { padding: 16px 20px 32px; } }
+
+/* Terms of Purchase */
+.sia-terms .sia-article__body h2 { margin-bottom: 24px; }
+.sia-terms__section { padding-top: 8px; }
+.sia-terms .sia-article__body h3 { font-family: Inter, system-ui, sans-serif; }
+.sia-footer__base a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }

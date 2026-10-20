@@ -143,7 +143,9 @@ export function SiteFooter() {
         </div>
         <div className="sia-footer__base sia-mono">
           <span>© {new Date().getFullYear()} Sonic Identity Architect · Chayenne Mallari</span>
-          <span>All rights reserved</span>
+          <span>
+            <a href="/terms">Terms of Purchase</a> · All rights reserved
+          </span>
         </div>
       </div>
     </footer>
