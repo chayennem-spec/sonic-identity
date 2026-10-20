@@ -351,7 +351,7 @@ const OFFERS = [
   },
   {
     tag: "Start with the song",
-    label: "One song",
+    label: "Done for you",
     name: "The Instant Recognition Anthem",
     line: "One song that walks in before you do",
     desc: "Want to start with one song? Your walk-on, your launch video, your podcast open: one song made around your story and your archetype.",
@@ -447,7 +447,7 @@ export function Offers() {
             <h3>Hear it before you’re <span className="sia-nw">all in.</span></h3>
             <p>
               In the Atelier, your first track and your Sonic Signature land first. If, after refining
-              them, they don’t feel like your brand, tell me in writing within 7 days and we end there.
+              them, they don’t feel like your brand, tell me in writing within 7 days of hearing the refined version and we end there.
               You pay only for that first stage, and the rest is refunded or cancelled. Full details are
               in the{" "}
               <a href="/terms">Terms of Purchase</a>.

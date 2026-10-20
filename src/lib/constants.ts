@@ -46,7 +46,7 @@ export const HERO_MEDIA = {
 };
 
 export const CONTACT = {
-  email: "chayennemallari@gmail.com",
+  email: "hello@sonicidentityarchitect.com",
 };
 
 export const CRM_CONFIG = {

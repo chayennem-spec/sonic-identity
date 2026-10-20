@@ -7,7 +7,7 @@ import { pageHead } from "../lib/seo";
 const PATH = "/terms";
 const TITLE = "Terms of Purchase | Sonic Identity Architect";
 const DESCRIPTION =
-  "Terms of Purchase for the Instant Recognition Anthem and the Instant Recognition Atelier by Sonic Identity Architect: your commercial brand-use license, what’s included and how releases work.";
+  "Terms of Purchase for the Instant Recognition Anthem and Atelier: your brand-use license, what’s included, payments and how releases work.";
 
 // Legal business name and state, to be filled in before going live.
 const STUDIO_NAME = "Chayenne Mallari";

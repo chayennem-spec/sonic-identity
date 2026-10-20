@@ -142,7 +142,7 @@ export function SiteFooter() {
               <li><a href={LINKS.instagram} target="_blank" rel="noreferrer">Instagram</a></li>
               <li><a href={LINKS.substack} target="_blank" rel="noreferrer">Substack</a></li>
               <li><a href={LINKS.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></li>
-              <li><a href="/#inquiry">Get in touch</a></li>
+              <li><a href="mailto:hello@sonicidentityarchitect.com">Email me</a></li>
             </ul>
           </div>
         </div>

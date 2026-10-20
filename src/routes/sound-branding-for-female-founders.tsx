@@ -5,7 +5,7 @@ import { articleBlock, faqBlock, ldScripts, pageHead } from "../lib/seo";
 const PATH = "/sound-branding-for-female-founders";
 const TITLE = "Sound Branding for Female Founders | Sonic Identity Architect";
 const DESCRIPTION =
-  "Sound branding for female founders: a signature song, a Sonic Signature and a sound guide, made for your brand and licensed only to you. Here’s what it is, where it plays, and how Chayenne Mallari builds it.";
+  "Sound branding for female founders: a signature song, a Sonic Signature and a sound guide, made for your brand alone. What it is and how it’s built.";
 
 const FAQ_ITEMS: QA[] = [
   {

@@ -5,7 +5,7 @@ import { articleBlock, faqBlock, ldScripts, pageHead } from "../lib/seo";
 const PATH = "/what-is-a-sonic-identity";
 const TITLE = "What Is a Sonic Identity? Sound for Personal Brands, Explained";
 const DESCRIPTION =
-  "What a sonic identity is, what’s inside one, how it differs from a jingle or a playlist, and why personal brands, founders and coaches need one now. A plain-English guide from Sonic Identity Architect Chayenne Mallari.";
+  "What a sonic identity is, what’s inside one, and how it differs from a jingle or a playlist. A plain-English guide for founders, coaches and personal brands.";
 
 const FAQ_ITEMS: QA[] = [
   {
