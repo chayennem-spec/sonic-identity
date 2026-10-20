@@ -473,18 +473,21 @@ const HEARD: {
   who: string;
   note: string;
   links: { label: string; href: string }[];
+  /** Optional Spotify track id: shows Spotify's own player on the card. */
+  spotify?: string;
 }[] = [
   {
     song: "Soft Girl Millions",
     who: "Leanne Lopez-Mosley",
     note: "Made for Leanne’s world and her Soft Girl Millions women, as a gift. She uses it and credits me publicly.",
-    links: [{ label: "See it in her world", href: "" }],
+    links: [{ label: "Watch it in her world", href: "https://www.instagram.com/reel/Db6DWFxtdi9/" }],
   },
   {
     song: "The Money Medium",
     who: "Lou Clark",
     note: "Made to sound the way her brand feels. It lives on Spotify.",
-    links: [{ label: "Listen on Spotify", href: "" }],
+    links: [{ label: "Listen on Spotify", href: "https://open.spotify.com/track/1F6C3FXTLZZCQdLEDrK4Cn" }],
+    spotify: "1F6C3FXTLZZCQdLEDrK4Cn",
   },
 ];
 
@@ -508,6 +511,16 @@ export function Proof() {
               <p className="sia-heard__song">{h.song}</p>
               <cite className="sia-mono">For {h.who}</cite>
               <p className="sia-heard__note">{h.note}</p>
+              {h.spotify && (
+                <iframe
+                  className="sia-heard__player"
+                  title={`${h.song} on Spotify`}
+                  src={`https://open.spotify.com/embed/track/${h.spotify}?utm_source=generator&theme=0`}
+                  height="152"
+                  loading="lazy"
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                />
+              )}
               <div className="sia-heard__links">
                 {h.links
                   .filter((l) => l.href)
