@@ -111,7 +111,7 @@ function Page() {
         I'm Chayenne Mallari, a Sonic Identity Architect. I map your Sonic Archetype first, from your photos,
         your copy and the way you talk, then run every sound through my S.O.U.N.D. Framework: style, outcome,
         undertone, narrative and delivery. Then I make the music. It's done for you, with no calls, and it
-        comes with exclusive usage rights in writing.
+        comes with exclusive brand-use rights in writing.
       </p>
       <p>
         I made <em>Soft Girl Millions</em> for Leanne Lopez-Mosley as a gift, and she uses it and credits me

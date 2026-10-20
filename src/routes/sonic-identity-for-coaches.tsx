@@ -22,7 +22,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "Can I play it in my Zoom calls and group programs?",
-    a: "Yes. Your exclusive usage rights cover your programs and courses, webinars, livestreams and replays, as well as content, ads, events and your podcast. They're written into your agreement.",
+    a: "Yes. Your exclusive brand-use rights cover your programs and courses, webinars, livestreams and replays, as well as content, ads, events and your podcast. They're written into your agreement.",
   },
   {
     q: "Is this AI music?",
@@ -116,7 +116,7 @@ function Page() {
         your Sonic Archetype first, then make the music, using my S.O.U.N.D. Framework.
       </p>
       <p>
-        When it's delivered, you get exclusive usage rights in writing for your content, ads, launches, events,
+        When it's delivered, you get exclusive brand-use rights in writing for your content, ads, launches, events,
         podcast and programs. No expiry, no renewals, and I never license your sound to another brand.
       </p>
 
