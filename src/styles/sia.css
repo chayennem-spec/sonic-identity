@@ -152,6 +152,8 @@
 }
 .sia-hero__inner { position: relative; z-index: 2; width: 100%; padding-top: 140px; padding-bottom: 72px; }
 .sia-hero h1 { font-size: clamp(54px, 8.4vw, 132px); max-width: 9.5ch; }
+.sia-hero h1.sia-hero__h1 { font-size: inherit; max-width: none; margin: 0; font-weight: inherit; }
+.sia-hero__big { display: block; font-size: clamp(54px, 8.4vw, 132px); max-width: 9.5ch; }
 .sia-hero__sub { margin-top: 30px; font-size: clamp(18px, 1.5vw, 21px); line-height: 1.5; color: var(--sia-bone); max-width: 30em; opacity: 0.9; }
 .sia-hero__ctas { margin-top: 40px; display: flex; flex-wrap: wrap; gap: 14px; }
 .sia-hero__foot { margin-top: 64px; display: flex; justify-content: space-between; gap: 24px; color: var(--sia-dim); flex-wrap: wrap; }
@@ -505,6 +507,8 @@
   .sia-header .sia-btn { white-space: nowrap; }
   .sia-offer__top { flex-wrap: wrap; gap: 10px; }
   .sia-hero h1 { font-size: clamp(46px, 13vw, 64px); }
+  .sia-hero h1.sia-hero__h1 { font-size: inherit; }
+  .sia-hero__big { font-size: clamp(46px, 13vw, 64px); }
 }
 
 /* Lipstick accent words (seen, built, sound...) */
@@ -1033,3 +1037,6 @@
 /* Offer card top row: keep the tag on one line and let the label wrap underneath */
 .sia-offer__top { flex-wrap: wrap; gap: 10px 14px; }
 .sia-offer__tag { white-space: nowrap; }
+
+/* Hero eyebrow lives inside the H1 for SEO but keeps the small mono kicker look */
+.sia-hero__eyebrow { display: flex; }

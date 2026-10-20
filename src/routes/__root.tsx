@@ -96,6 +96,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       // Fonts are self-hosted from /fonts (see src/styles/brand-fonts.css).
       { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/favicon-48x48.png", type: "image/png", sizes: "48x48" },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
       {
         rel: "stylesheet",
         href: appCss,

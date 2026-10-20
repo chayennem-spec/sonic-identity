@@ -480,7 +480,7 @@ export function About() {
             I read people for <span className="sia-nw">a <em>living</em>.</span>
           </h2>
           <div className="sia-body">
-            <p className="sia-lead">Hi, I’m Chayenne.</p>
+            <p className="sia-lead">Hi, I’m Chayenne Mallari, the Sonic Identity Architect.</p>
             <p>
               For more than twenty years I stood behind the chair for high-net-worth clients. I
               learned who someone was before they said a word: how they wanted to walk out, and what

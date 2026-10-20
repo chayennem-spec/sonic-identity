@@ -150,9 +150,13 @@ export function HeroSound() {
       </div>
 
       <div className="sia-wrap sia-hero__inner">
-        <p className="sia-mono sia-kicker">Sonic Identity Architect · Chayenne Mallari</p>
-        <h1 className="sia-display">
-          Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
+        <h1 className="sia-hero__h1">
+          <span className="sia-mono sia-kicker sia-hero__eyebrow">
+            Sonic identity &amp; sound branding for female founders
+          </span>
+          <span className="sia-display sia-hero__big">
+            Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
+          </span>
         </h1>
         <p className="sia-hero__tag">Become recognized, remembered and felt.</p>
         <p className="sia-hero__sub">
