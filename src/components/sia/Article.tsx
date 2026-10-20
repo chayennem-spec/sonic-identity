@@ -107,6 +107,9 @@ export function InlineCta({ line }: { line: string }) {
         <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
           Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
         </a>
+        <a className="sia-btn sia-btn--ghost" href={LINKS.anthem} target="_blank" rel="noreferrer">
+          Get the Anthem <span className="sia-arrow" aria-hidden="true">↗</span>
+        </a>
         <a className="sia-btn sia-btn--ghost" href={LINKS.apply} target="_blank" rel="noreferrer">
           Apply for the Atelier <span className="sia-arrow" aria-hidden="true">↗</span>
         </a>

@@ -457,6 +457,7 @@ export function Offers() {
         <p className="sia-offers__apply-note sia-reveal">
           The Atelier is by application. The Anthem and the Blueprint, you can start today.
         </p>
+        <p className="sia-mono sia-apply__from sia-reveal">Done-for-you work begins at $3,000</p>
       </div>
     </section>
   );
@@ -615,7 +616,6 @@ export function Apply() {
           calls. I read every application myself and reply within 2 business days, with what I’d
           recommend for your brand.
         </p>
-        <p className="sia-mono sia-apply__from">Done-for-you work begins at $3,000</p>
         <div className="sia-hero__ctas" style={{ justifyContent: "center" }}>
           <a className="sia-btn sia-btn--red" href={LINKS.apply} target="_blank" rel="noreferrer">
             Start my application <span className="sia-arrow" aria-hidden="true">↗</span>

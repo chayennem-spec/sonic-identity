@@ -19,8 +19,8 @@ export const ASSETS = {
 };
 
 // Shown only in the inquiry form's error state, so the visitor still has a way to reach Chayenne.
-// Offer links. The Sonic Blueprint sells through Eden's checkout; Anthem and Atelier
-// are drafts in Eden, so their buttons go to the inquiry form until they're published.
+// Offer links (all live on Eden): the Blueprint and the Anthem are bought directly;
+// the Atelier is apply-first through the application form.
 export const LINKS = {
   blueprint: "https://chayennemallari.eden.so/sonic-blueprint",
   apply: "https://chayennemallari.eden.so/form/apply",

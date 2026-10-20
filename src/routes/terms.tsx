@@ -54,7 +54,7 @@ function TermsPage() {
               <strong>Studio:</strong> {STUDIO_NAME}, doing business as Sonic Identity Architect™ ("Studio").
             </p>
             <p>
-              <strong>Client:</strong> the person or business named in the application and payment
+              <strong>Client:</strong> the person or business named at checkout
               ("Client").
             </p>
             <p>
@@ -62,8 +62,8 @@ function TermsPage() {
             </p>
             <p>
               <strong>Project Schedule:</strong> the offer Client purchased (the Instant Recognition Anthem or the
-              Instant Recognition Atelier) as described on its product page at the time of purchase, together with
-              Client’s application and approval email. It sets out the deliverables, revision rounds, fee, payment
+              Instant Recognition Atelier) as described on its product page at the time of purchase, together with,
+              for the Atelier, Client’s application and approval email. It sets out the deliverables, revision rounds, fee, payment
               plan, timeline and refund terms.
             </p>
             <p>

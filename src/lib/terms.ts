@@ -6,7 +6,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Studio will create the custom music and related deliverables identified in the applicable proposal, order form, or statement of work (“Project Schedule”)."
+        "text": "Studio will create the custom music and related deliverables described on the product page of the offer Client purchased (the “Project Schedule”)."
       },
       {
         "t": "p",
@@ -75,8 +75,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       {
         "t": "ul",
         "items": [
-          "Deposit and final-payment requirements",
-          "Whether deposits are refundable",
+          "Payment options (in full or in installments)",
           "Revision fees",
           "Project pauses and rescheduling",
           "Cancellation terms",
@@ -89,7 +88,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "**First Listen Promise (Instant Recognition Atelier).** Client’s first track and Sonic Signature are delivered first. If, after their refinement, Client feels they do not fit Client’s brand, Client may end the project by notifying Studio in writing within 7 days. Client then pays only for that first stage: Client’s first installment, or $3,500 if Client paid in full, with the balance refunded or remaining installments cancelled. No license is granted in music from an ended project. Otherwise, payments are non-refundable once Client’s intake is submitted and work begins."
+        "text": "**First Listen Promise (Instant Recognition Atelier).** Client’s first track and Sonic Signature are delivered first. If, after their refinement, Client feels they do not fit Client’s brand, Client may end the project by notifying Studio in writing within 7 days. Client then pays only for that first stage: the amount of Client’s first installment (whether Client paid in full or in installments), with the balance refunded or remaining installments cancelled. No license is granted in music from an ended project. Otherwise, payments are non-refundable once Client’s intake is submitted and work begins."
       }
     ]
   },

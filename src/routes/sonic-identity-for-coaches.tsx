@@ -22,7 +22,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "Can I play it in my Zoom calls and group programs?",
-    a: "Yes. Your exclusive brand-use rights cover your programs and courses, webinars, livestreams and replays, as well as content, ads, events and your podcast. They’re written into your agreement.",
+    a: "Yes. Your exclusive brand-use rights cover your programs and courses, webinars, livestreams and replays, as well as content, ads, events and your podcast. They’re written into my Terms of Purchase.",
   },
   {
     q: "Is this AI music?",
