@@ -114,6 +114,13 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
+        {/* Send the bare domain and pages.dev to www (backup for the Cloudflare middleware). */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var h=location.hostname;if(h==='sonicidentityarchitect.com'||h==='sonicidentityarchitect.pages.dev'){location.replace('https://www.sonicidentityarchitect.com'+location.pathname+location.search+location.hash);}})();",
+          }}
+        />
         <HeadContent />
       </head>
       <body>
