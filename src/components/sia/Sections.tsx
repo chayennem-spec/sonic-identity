@@ -41,7 +41,7 @@ export function TheGap() {
             <p className="sia-lead">The photographer. The stylist. The polished feed you check twice before anything goes up.</p>
             <p>
               You don’t do off the rack. Then the launch you spent months building goes live, and it
-              opens with the same trending sound every other masterclass on your feed is using. A
+              opens up with the same trending sound every other masterclass in your niche is using. A
               song nobody licensed for your business, that can get your video muted right when it
               finally starts working.
             </p>
