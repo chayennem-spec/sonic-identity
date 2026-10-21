@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { ASSETS, LINKS } from "../../lib/constants";
 
 // Homepage sections, Oct 2026 redesign. Copy written for Chayenne; edit freely.
@@ -282,12 +283,12 @@ export function Rights() {
               the sound… and lands on a page full of strangers using the same song. Oof.
             </p>
             <p>
-              With your own sound, it says <strong>your</strong> name. “Original audio” with your
-              handle, in the corner of every reel. Tap it and you land on your own audio page, with
-              your name at the top. Even when someone else uses it.
+              With a sound made for your brand, it says <strong>your</strong> name. “Original audio”
+              with your handle, in the corner of every reel. Tap it and you land on your own audio
+              page, with your name at the top.
             </p>
             <p className="sia-ig__punch">
-              Every time someone taps it or uses it, your name goes with it.
+              Every time someone taps it, your name goes with it.
             </p>
           </div>
           <div className="sia-ig__chips" aria-hidden="true">
@@ -336,14 +337,15 @@ const OFFERS = [
     tag: "If it were mine...",
     label: "The whole brand world...",
     name: "The Instant Recognition Atelier",
-    line: "For the woman who doesn’t do homework",
-    desc: "You’ve already invested in how your brand looks. This is the part people actually remember. No homework. No calls. You say yes, I disappear into the studio, and you get a sound made for your brand alone.",
+    line: "One intake. Then I disappear into the studio.",
+    desc: "You’ve already invested in how your brand looks. This is the part people actually remember. One written intake, a voice memo or two, zero calls. Then I build it, made for your brand alone.",
     includes: [
       "5 original tracks, spent your way: offers, anthem, walk-on, reels",
       "Your Sonic Signature, built around your Sonic Fingerprint: one real sound from your world",
       "Two refinement rounds, no calls",
       "A sound guide, so your team never guesses",
       "Exclusive brand-use rights in writing",
+      "About six to eight weeks from your intake",
     ],
     because: "it’s a whole brand soundtrack, built for one brand at a time and never licensed to another brand.",
     plan: "3-payment plan available",
@@ -360,10 +362,12 @@ const OFFERS = [
       "One signature song",
       "30- and 15-second cuts for reels, ads and your podcast",
       "One refinement round",
+      "First listen in about 7 to 10 days, finished in 2 to 4 weeks",
       "Exclusive brand-use rights in writing",
-      "Its full price credits toward the Atelier",
+      "Its full price comes off the Atelier within 30 days of delivery",
     ],
     because: "it’s made around your story and your archetype, and it’s never licensed to another brand.",
+    plan: "2-payment plan available",
     cta: "Get your Anthem",
     href: LINKS.anthem,
   },
@@ -376,8 +380,8 @@ const OFFERS = [
     includes: [
       "Your Sonic Archetype",
       "Three sound directions",
-      "Prompts to hear a first sketch of each",
-      "Its full price credits toward the Atelier",
+      "A first sketch of each direction, tonight",
+      "Its full price comes off the Atelier within 30 days",
     ],
     because: "you do it yourself, tonight, and it counts toward the Atelier if you go all in.",
     cta: "Start the Blueprint",
@@ -386,6 +390,11 @@ const OFFERS = [
 ];
 
 export function Offers() {
+  // The founding note hides itself once the founding rate ends (Dec 1, Pacific).
+  const [foundingOpen, setFoundingOpen] = useState(true);
+  useEffect(() => {
+    if (Date.now() >= Date.parse("2026-12-01T08:00:00Z")) setFoundingOpen(false);
+  }, []);
   return (
     <section className="sia sia-offers sia-rule" id="offers">
       <div className="sia-wrap">
@@ -399,11 +408,13 @@ export function Offers() {
             ways in, depending on how much you want me to do for you.
           </p>
         </div>
-        <p className="sia-offers__note sia-mono sia-reveal">
-          <span>
-            Founding spots for the Atelier close <b>Nov 30</b>
-          </span>
-        </p>
+        {foundingOpen && (
+          <p className="sia-offers__note sia-mono sia-reveal">
+            <span>
+              Five founding spots. Founding rate ends <b>Nov 30</b>
+            </span>
+          </p>
+        )}
         <div className="sia-offers__grid">
           {OFFERS.map((o, i) => (
             <article className={`sia-offer${o.featured ? " sia-offer--featured" : ""} sia-reveal`} key={o.name}>
@@ -688,8 +699,12 @@ export const FAQ = [
     a: "Nope. Not for the Anthem or the Atelier. You have enough meetings, love. Everything happens in writing and voice notes: you approve each stage, I do the building.",
   },
   {
+    q: "How long does it take?",
+    a: "The Anthem: your first listen in about 7 to 10 days, finished in 2 to 4 weeks. The Atelier: about six to eight weeks from your intake. Got a launch or event date? Tell me and I’ll be honest about whether we can make it.",
+  },
+  {
     q: "How much is it?",
-    a: "The Blueprint and the Anthem are ready when you are, right from this page. The Atelier starts with a short application that walks you through the investment. Done-for-you work begins at $3,000.",
+    a: "Done-for-you work begins at $3,000. Every offer’s full price and payment plan is on its own page: tap Get your Anthem or Apply for the Atelier and it’s right there. No “book a call to find out.”",
   },
   {
     q: "Where do I start?",

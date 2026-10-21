@@ -51,10 +51,10 @@ function HomePage() {
         <WhySound />
         <ForHer />
         <Method />
+        <MeetTheLab />
+        <Proof />
         <Offers />
         <Apply />
-        <Proof />
-        <MeetTheLab />
         <Rights />
         <OnSet />
         <About />

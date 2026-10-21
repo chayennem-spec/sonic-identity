@@ -116,7 +116,7 @@ function Page() {
         your Sonic Archetype first, then make the music.
       </p>
       <p>
-        When it’s delivered, you get exclusive brand-use rights in writing for your content, ads, launches, events,
+        From your first payment, you get exclusive brand-use rights in writing for your content, ads, launches, events,
         podcast and programs. No expiry, no renewals, and I never license your sound to another brand.
       </p>
 

@@ -83,7 +83,12 @@ export function StickyCta() {
   useEffect(() => {
     const onScroll = () => {
       const nearEnd = window.innerHeight + window.scrollY > document.body.scrollHeight - 1900;
-      setShown(window.scrollY > window.innerHeight * 0.9 && !nearEnd);
+      // Stay out of the way while she's reading the offers or the application.
+      const busy = ["offers", "apply"].some((id) => {
+        const r = document.getElementById(id)?.getBoundingClientRect();
+        return !!r && r.top < window.innerHeight && r.bottom > 0;
+      });
+      setShown(window.scrollY > window.innerHeight * 0.9 && !nearEnd && !busy);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
