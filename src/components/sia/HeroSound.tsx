@@ -160,9 +160,9 @@ export function HeroSound() {
         </h1>
         <p className="sia-hero__tag">Become recognized, remembered and felt.</p>
         <p className="sia-hero__sub">
-          You’ve curated every photo and polished every caption. But your sound? It’s whatever was
-          trending this morning. I make signature songs for female founders, so the second your audio
-          plays, people know it’s you.
+          Okay, real talk. You’ve curated every photo. Polished every caption. And your sound?
+          Whatever was trending this morning. I make signature songs for female founders, so the
+          second your audio plays, people go, “wait… that’s her.”
         </p>
         <div className="sia-hero__ctas">
           <button
