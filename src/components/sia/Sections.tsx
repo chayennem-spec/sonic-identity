@@ -185,11 +185,11 @@ export function OnSet() {
 }
 
 const SOUND = [
-  { l: "S", t: "Style", d: "The genre, era and vibe that fit who you actually are. Not whatever’s on someone’s For You page." },
-  { l: "O", t: "Outcome", d: "What they feel the second it plays. Calm. Power. Desire. A little “wait, who is that?”" },
-  { l: "U", t: "Undertone", d: "The texture underneath. Reverent, defiant, a little dangerous. The color under the notes." },
-  { l: "N", t: "Narrative", d: "The story your sound tells, even when there isn’t a single word in it." },
-  { l: "D", t: "Delivery", d: "Tempo, voice, mix and length, made for wherever you show up: reels, podcasts, stages." },
+  { l: "01", t: "Style", d: "The genre, era and vibe that fit who you actually are. Not whatever’s on someone’s For You page." },
+  { l: "02", t: "Outcome", d: "What they feel the second it plays. Calm. Power. Desire. A little “wait, who is that?”" },
+  { l: "03", t: "Undertone", d: "The texture underneath. Reverent, defiant, a little dangerous. The color under the notes." },
+  { l: "04", t: "Narrative", d: "The story your sound tells, even when there isn’t a single word in it." },
+  { l: "05", t: "Delivery", d: "Tempo, voice, mix and length, made for wherever you show up: reels, podcasts, stages." },
 ];
 
 export function Method() {
@@ -198,7 +198,7 @@ export function Method() {
       <div className="sia-wrap">
         <div className="sia-sound__head sia-reveal">
           <div>
-            <p className="sia-mono sia-kicker">02 · The S.O.U.N.D. Framework</p>
+            <p className="sia-mono sia-kicker">02 · The method</p>
             <h2 className="sia-display">
               How a signature sound <span className="sia-nw">is <em>built</em>.</span>
             </h2>
@@ -209,8 +209,8 @@ export function Method() {
             trending.”
             <br />
             <br />
-            That’s my Sonic Subconscious Selling™ method: find the belief your buyer needs, build it
-            into your sound, and repeat it until they feel it before you say a word.
+            And underneath all five: I find the belief your buyer needs, build it into your sound, and
+            repeat it until they feel it before you say a word.
           </p>
         </div>
         <div className="sia-sound__grid sia-reveal">
@@ -564,8 +564,8 @@ export function About() {
               wanted a room to feel when they walked in. Now? I do that with sound.
             </p>
             <p>
-              I’m a certified hypnotherapist and NLP trainer. I wrote{" "}
-              <strong>The Sonic Imprint</strong>. I built an eight-archetype Sonic Identity system. I map
+              I’m a certified hypnotherapist and NLP trainer, and I built an eight-archetype Sonic
+              Identity system. I map
               your archetype first, then make the music, so your sound actually sounds like you and not
               like whatever happened to be trending on Tuesday.
             </p>

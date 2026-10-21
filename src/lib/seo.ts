@@ -11,7 +11,7 @@ const person = {
   name: "Chayenne Mallari",
   jobTitle: "Sonic Identity Architect",
   description:
-    "Sonic Identity Architect who creates signature songs and sound branding for female founders, coaches and personal brands. Certified hypnotherapist and NLP trainer, author of The Sonic Imprint.",
+    "Sonic Identity Architect who creates signature songs and sound branding for female founders, coaches and personal brands. Certified hypnotherapist and NLP trainer.",
   url: SITE_URL,
   image: `${SITE_URL}/images/chayenne-editorial.webp`,
   sameAs: SAME_AS,

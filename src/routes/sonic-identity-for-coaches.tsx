@@ -113,7 +113,7 @@ function Page() {
       <p>
         You have enough meetings. Everything happens in writing and voice notes: a written intake, your
         favorite lines from your own copy, a voice memo or two, and your reactions to your first listen. I map
-        your Sonic Archetype first, then make the music, using my S.O.U.N.D. Framework.
+        your Sonic Archetype first, then make the music.
       </p>
       <p>
         When it’s delivered, you get exclusive brand-use rights in writing for your content, ads, launches, events,
