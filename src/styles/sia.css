@@ -386,7 +386,7 @@
   .sia-gap__side { border-left: 0; padding-left: 0; border-top: 1px solid var(--sia-line); padding-top: 32px; }
   .sia-sound__grid, .sia-sound__grid--three { grid-template-columns: 1fr; }
   .sia-letter { min-height: 0; flex-direction: row; align-items: flex-start; gap: 22px; padding: 26px 20px; }
-  .sia-letter__l { font-size: 64px; min-width: 56px; flex: none; }
+  .sia-letter__l { font-size: 56px; width: 76px; flex: none; }
   .sia-letter h3 { margin-top: 0; padding-top: 4px; }
   .sia-offers__head { margin-bottom: 48px; }
   .sia-offers__grid, .sia-proof__grid { grid-template-columns: 1fr; }
