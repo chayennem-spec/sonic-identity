@@ -8,6 +8,7 @@ const TICKER = [
   "Sound as expensive as you look",
   "Your name on every reel",
   "Recognized. Remembered. Felt.",
+  "Felt before you reach the mic",
   "Don’t borrow the vibe. Create it.",
 ];
 
@@ -95,7 +96,9 @@ export function WhySound() {
           </div>
           <p>
             Your launch video opens. Your face hasn’t even loaded yet… and they already know it’s you.
-            That’s not luck. It’s the same sound, used on purpose, every single time.
+            The lights drop at your event, your walk-on starts, and the room knows you’re coming before
+            you reach the mic. That’s not luck. It’s the same sound, used on purpose, every single
+            time. <strong>Recognized, remembered and felt before you’re even seen.</strong>
           </p>
         </div>
         <div className="sia-sound__grid sia-sound__grid--three sia-reveal">
