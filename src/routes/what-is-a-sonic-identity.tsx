@@ -115,7 +115,7 @@ function Page() {
       </p>
       <p>
         I made <em>Soft Girl Millions</em> for Leanne Lopez-Mosley as a gift, and she uses it and credits me
-        publicly. For Lou Clark I made <em>The Money Medium</em>, which lives on Spotify. And you can hear my own
+        publicly. For Lou Clarke I made <em>The Money Medium</em>, which lives on Spotify. And you can hear my own
         signature sound <a href="/#audio-lab">right here on my site</a>.
       </p>
 

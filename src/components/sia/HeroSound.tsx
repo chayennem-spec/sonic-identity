@@ -162,8 +162,8 @@ export function HeroSound() {
         <p className="sia-hero__sub">
           Okay, real talk. You’ve curated every photo. Polished every caption. And your sound?
           Whatever was trending this morning. I make signature songs for female founders, so the
-          second your audio plays (in a reel, a launch or the moment you walk on stage), people go,
-          “wait… that’s her.”
+          second your audio plays in a reel, carousel, ad, launch, or the moment you walk on stage,
+          people go, “wait… that’s her.”
         </p>
         <div className="sia-hero__ctas">
           <button

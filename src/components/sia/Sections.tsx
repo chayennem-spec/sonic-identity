@@ -8,7 +8,7 @@ const TICKER = [
   "Sound as expensive as you look",
   "Your name on every reel",
   "Recognized. Remembered. Felt.",
-  "Felt before you reach the mic",
+  "Your sound walks in first",
   "Don’t borrow the vibe. Create it.",
 ];
 
@@ -500,7 +500,7 @@ const HEARD: {
   },
   {
     song: "The Money Medium",
-    who: "Lou Clark",
+    who: "Lou Clarke",
     note: "Made to sound the way her brand feels. It lives on Spotify.",
     links: [{ label: "Listen on Spotify", href: "https://open.spotify.com/track/1F6C3FXTLZZCQdLEDrK4Cn" }],
     spotify: "1F6C3FXTLZZCQdLEDrK4Cn",
