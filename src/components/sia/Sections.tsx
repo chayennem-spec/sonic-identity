@@ -382,8 +382,8 @@ const OFFERS = [
     desc: "Curious but not ready to commit? Totally fair. In one sitting, the Blueprint reads your brand’s energy straight from your feed.",
     includes: [
       "Your Sonic Archetype",
-      "Three sound directions",
-      "A first sketch of each direction, tonight",
+      "Three sound directions, built from the music you actually love",
+      "A first sketch of each direction in Suno, tonight",
       "Its full price comes off the Atelier within 30 days",
     ],
     because: "you do it yourself, tonight, and it counts toward the Atelier if you go all in.",
