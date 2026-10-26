@@ -74,7 +74,7 @@ function TermsPage() {
               <strong>Effective date:</strong> the date Client completes payment.
             </p>
             <p>
-              <strong>Project Schedule:</strong> the offer Client purchased (the Instant Recognition Anthem or the
+              <strong>Project Schedule:</strong> the offer Client purchased (the Instant Recognition Anthem, with the Encore if added, or the
               Instant Recognition Atelier) as described on its product page at the time of purchase, together with,
               for the Atelier, Client’s application and approval email. It sets out the deliverables, revision rounds, fee, payment
               plan, timeline and refund terms.
