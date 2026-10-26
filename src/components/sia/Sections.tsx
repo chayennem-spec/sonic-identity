@@ -359,7 +359,7 @@ const OFFERS = [
     tag: "Start with the song",
     label: "Done for you",
     name: "The Instant Recognition Anthem",
-    line: "One song that walks in before you do",
+    line: "One signature song that says your name before you do",
     desc: "Want to start with one song? Your walk-on, your launch video, your podcast open: one song made around your story and your archetype.",
     includes: [
       "One signature song",
@@ -474,7 +474,7 @@ export function Offers() {
         <p className="sia-offers__apply-note sia-reveal">
           The Atelier is by application. The Anthem and the Blueprint, you can start today.
         </p>
-        <p className="sia-mono sia-apply__from sia-reveal">Done-for-you work begins at $3,000</p>
+        <p className="sia-mono sia-apply__from sia-reveal">Done-for-you work begins at $2,500</p>
       </div>
     </section>
   );
@@ -707,7 +707,7 @@ export const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "Done-for-you work begins at $3,000. Every offer’s full price and payment plan is on its own page: tap Get your Anthem or Apply for the Atelier and it’s right there. No “book a call to find out.”",
+    a: "Done-for-you work begins at $2,500. Every offer’s full price and payment plan is on its own page: tap Get your Anthem or Apply for the Atelier and it’s right there. No “book a call to find out.”",
   },
   {
     q: "Where do I start?",
