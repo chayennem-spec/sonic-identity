@@ -54,8 +54,7 @@ export function Intro() {
     } catch {
       /* storage blocked: just play it */
     }
-    // Phones go straight to the page: no opening screen between Instagram and the hero.
-    if (seen || window.matchMedia("(max-width: 860px)").matches) setState("gone");
+    if (seen) setState("gone");
     const t = window.setTimeout(() => setState("gone"), 2700);
     return () => window.clearTimeout(t);
   }, []);
@@ -71,8 +70,10 @@ export function Intro() {
     >
       <div className="sia-intro__rain" />
       <div className="sia-intro__mark">
-        <strong>Sonic Identity</strong>
-        <span>Architect</span>
+        <strong>
+          <i>Sonic</i> <i>Identity</i> <i>Architect</i>
+        </strong>
+        <span>Chayenne Mallari</span>
       </div>
     </div>
   );
