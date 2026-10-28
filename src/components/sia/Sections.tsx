@@ -346,7 +346,7 @@ const OFFERS = [
       "About six to eight weeks from your intake",
     ],
     because: "Your whole brand soundtrack, built for one brand at a time and never licensed to another.",
-    plan: "$10,000 founding rate, five spots through Nov 30 · 3-payment plan",
+    plan: "$10,000 founding rate, five spots through Nov 30 · or 3 payments of $3,500",
     cta: "Apply for the Atelier",
     href: LINKS.apply,
   },
@@ -687,7 +687,7 @@ export const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "The Blueprint is $297. The Anthem is $2,500 at its founding price through Nov 30 (then $3,000), or 2 payments of $1,300. The Atelier is $10,000 at its founding rate for five spots through Nov 30, with a 3-payment plan. No “book a call to find out.”",
+    a: "The Blueprint is $297. The Anthem is $2,500 at its founding price through Nov 30 (then $3,000), or 2 payments of $1,300. The Atelier is $10,000 at its founding rate for five spots through Nov 30 (then $12,000), or 3 payments of $3,500. No “book a call to find out.”",
   },
   {
     q: "Where do I start?",
