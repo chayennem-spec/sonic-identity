@@ -23,7 +23,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
           "Estimated production timeline",
           "Client approval requirements",
           "Intended commercial uses",
-          "Any special licensing or distribution arrangements"
+          "Any special licensing arrangements"
         ]
       },
       {
@@ -67,6 +67,10 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       {
         "t": "p",
         "text": "Studio will deliver the agreed final files when the creative process is complete. On a payment plan, final files are delivered on schedule as long as payments are current."
+      },
+      {
+        "t": "p",
+        "text": "After delivery, Client is responsible for keeping its own copies of the delivered files. Studio is not required to store, re-send or replace files after delivery."
       },
       {
         "t": "p",
@@ -178,8 +182,6 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       {
         "t": "ul",
         "items": [
-          "A public streaming release, if Client chooses one under Section 7",
-          "Public listening, saving or sharing of a released track through approved platforms",
           "Use by Client’s authorized production partners",
           "Incidental similarities arising from independent music creation"
         ]
@@ -195,66 +197,33 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     ]
   },
   {
-    "title": "7. Optional Streaming Release",
+    "title": "7. No Public Release",
     "blocks": [
       {
         "t": "p",
-        "text": "A public release is optional. Client’s music is never released to streaming services, music libraries or other public platforms unless Client chooses a release and approves it in writing under Section 8."
+        "text": "Client’s music is made for Client’s own brand use. It is not released to streaming services, download stores or music libraries (including the Instagram, Facebook and TikTok music libraries), and it is not enrolled in YouTube Content ID or any other copyright-matching or claiming program, by Studio or by Client."
       },
       {
         "t": "p",
-        "text": "If Client chooses a release, Studio handles distribution through its distributor, including setup, metadata, delivery and ongoing administration, at no extra cost to Client."
+        "text": "Keeping the music out of public libraries and claiming programs is what lets Client use it as original audio in posts, boosts and ads."
       },
       {
         "t": "p",
-        "text": "In exchange, Studio keeps **100% of the streaming and download payouts** the distributor pays to Studio for that release. For brand music these payouts are usually modest (streaming services typically pay a fraction of a cent per play), and they have nothing to do with Client’s own business income."
-      },
-      {
-        "t": "p",
-        "text": "Client’s creative fee covers Client’s commercial brand-use license. It does not include a share of those payouts."
-      },
-      {
-        "t": "p",
-        "text": "Instagram, Facebook and TikTok music libraries are a separate choice. Studio will only make a track available in those libraries if Client asks for it in writing, because a track in a public library can be used by anyone on that platform."
-      },
-      {
-        "t": "p",
-        "text": "Studio does not acquire any interest in Client’s unrelated business income, course sales, event ticket sales, coaching revenue, product revenue, or other commercial proceeds merely because Client uses the music."
-      },
-      {
-        "t": "p",
-        "text": "The parties will separately document any publishing income, songwriter shares, neighboring rights, Content ID revenue, direct third-party licensing, or other categories not expressly covered here."
+        "text": "Studio does not acquire any interest in Client’s business income, course sales, event ticket sales, coaching revenue, product revenue, or other commercial proceeds because Client uses the music."
       },
       {
         "t": "p",
         "text": "Studio will not authorize unrelated third-party commercial brand endorsements or advertising uses of Client-specific music, name, trademarks, or confidential brand materials without Client’s written consent."
+      },
+      {
+        "t": "p",
+        "text": "**Purchases made before October 28, 2026.** Clients who bought before that date keep the optional streaming-release terms they accepted at purchase."
       }
     ]
   },
   {
-    "title": "8. Release Approval and Brand Representation",
+    "title": "8. Brand Representation",
     "blocks": [
-      {
-        "t": "p",
-        "text": "Before the first public distribution of a Client-specific recording, Studio will obtain Client’s written approval of the proposed release. Client may give that approval by completing Studio’s Release Request form (chayennemallari.eden.so/form/release) or by email; either counts as written approval."
-      },
-      {
-        "t": "p",
-        "text": "Approval will include, as applicable:"
-      },
-      {
-        "t": "ul",
-        "items": [
-          "Final track and version",
-          "Public release date",
-          "Track title",
-          "Artist and contributor credits",
-          "Cover artwork",
-          "Client brand name and trademark references",
-          "Distribution destinations",
-          "Any proposed public-facing promotional material"
-        ]
-      },
       {
         "t": "p",
         "text": "Studio will not imply that Client endorses Studio or a third-party product beyond the scope of Client’s written authorization."
@@ -262,38 +231,19 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       {
         "t": "p",
         "text": "Studio may not publish confidential or unreleased Client campaign information without permission."
-      },
-      {
-        "t": "p",
-        "text": "The parties will agree on procedures for material metadata corrections, removal requests, and distribution-service changes."
       }
     ]
   },
   {
-    "title": "9. YouTube, Content ID, and Platform Claims",
+    "title": "9. Platform Rules and Claims",
     "blocks": [
       {
         "t": "p",
-        "text": "Studio will not enroll Client-specific music in YouTube Content ID or an equivalent automated claiming program without first verifying eligibility and obtaining a separate written arrangement addressing Client’s authorized channels and videos."
+        "text": "Because Client’s music is not released or enrolled in any claiming program, Studio does not administer platform claims."
       },
       {
         "t": "p",
-        "text": "Any approved arrangement must identify:"
-      },
-      {
-        "t": "ul",
-        "items": [
-          "Which party administers claims",
-          "Which channels or uses are exempt",
-          "How authorized uses will be protected",
-          "How mistaken claims will be disputed or released",
-          "Who receives eligible claim revenue",
-          "How conflicts and distributor limitations will be handled"
-        ]
-      },
-      {
-        "t": "p",
-        "text": "Studio will use commercially reasonable efforts to resolve claims initiated through its own distribution arrangements against Client’s authorized uses."
+        "text": "If a platform mutes, blocks or claims an authorized use, Client may use that platform’s own dispute or review process. Client’s purchase confirmation and these Terms are Client’s written license."
       },
       {
         "t": "p",
@@ -367,15 +317,11 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Client’s license transfers to a successor that acquires all or substantially all of Client’s business, or the brand that uses the music, as long as Client tells Studio in writing."
+        "text": "Client’s license transfers automatically to a successor that acquires all or substantially all of Client’s business, or the brand that uses the music. No notice to Studio is required."
       },
       {
         "t": "p",
-        "text": "If Studio closes or stops operating, Client’s license continues, and Studio will provide Client with final copies of all delivered files."
-      },
-      {
-        "t": "p",
-        "text": "Termination of Studio’s distribution activity will not, by itself, terminate Client’s fully paid, perpetual brand-use license."
+        "text": "If Studio closes or stops operating, Client’s fully paid, perpetual brand-use license continues."
       }
     ]
   },
@@ -414,10 +360,6 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       {
         "t": "p",
         "text": "Studio may identify Client publicly or display the commissioned music, logos, testimonials, or project materials in its portfolio only to the extent expressly authorized in writing."
-      },
-      {
-        "t": "p",
-        "text": "Public streaming-release approval does not automatically constitute approval for a case study or testimonial."
       }
     ]
   },

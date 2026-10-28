@@ -691,11 +691,11 @@ export const FAQ = [
   },
   {
     q: "Is my sound only mine to use?",
-    a: "Yes. Your Anthem or Atelier comes with exclusive brand-use rights, in writing: content, ads, launches, events, livestreams, your podcast and your programs. No expiry, no renewals, and I never license your sound to another brand. Streaming release is always your choice, never a default. Need a use that isn’t listed? Tell me in your application and we’ll add it. Full details are in the Terms of Purchase.",
+    a: "Yes. Your Anthem or Atelier comes with exclusive brand-use rights, in writing: content, ads, launches, events, livestreams, your podcast and your programs. No expiry, no renewals, and I never license your sound to another brand. It’s never released to streaming or music libraries, which keeps it clean for your ads. Need a use that isn’t listed? Tell me in your application and we’ll add it. Full details are in the Terms of Purchase.",
   },
   {
     q: "Will my name show up on Instagram?",
-    a: "Yes. Post a reel with your own sound and Instagram labels it “Original audio” with your handle. Want it on Spotify too? That’s your call, planned separately so the rights are clear first. I can’t promise it trends. I can promise your name is on it.",
+    a: "Yes. Post a reel with your own sound and Instagram labels it “Original audio” with your handle. I can’t promise it trends. I can promise your name is on it.",
   },
   {
     q: "Do I have to get on calls?",

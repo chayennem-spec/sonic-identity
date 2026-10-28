@@ -7,7 +7,7 @@ import { pageHead } from "../lib/seo";
 const PATH = "/terms";
 const TITLE = "Terms of Purchase | Sonic Identity Architect";
 const DESCRIPTION =
-  "Terms of Purchase for the Instant Recognition Anthem and Atelier: your brand-use license, what’s included, payments and how releases work.";
+  "Terms of Purchase for the Instant Recognition Anthem and Atelier: your brand-use license, what’s included, payments and platform claims.";
 
 // Legal business name and state, to be filled in before going live.
 const STUDIO_NAME = "Chayenne Mallari";
@@ -80,8 +80,7 @@ function TermsPage() {
               plan, timeline and refund terms.
             </p>
             <p>
-              This Agreement governs the commissioned creation, delivery, commercial use, and permitted
-              distribution of custom music created by Studio for Client.
+              This Agreement governs the commissioned creation, delivery, and commercial use of custom music created by Studio for Client.
             </p>
 
             {TERMS_SECTIONS.map((s) => (
