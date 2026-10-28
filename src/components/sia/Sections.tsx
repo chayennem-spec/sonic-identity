@@ -4,12 +4,13 @@ import { ASSETS, LINKS } from "../../lib/constants";
 // Homepage sections, Oct 2026 redesign. Copy written for Chayenne; edit freely.
 
 const TICKER = [
-  "Be heard before you’re even seen",
-  "Sound as expensive as you look",
-  "Your name on every reel",
-  "Recognized. Remembered. Felt.",
-  "Your sound walks in first",
-  "Don’t borrow the vibe. Create it.",
+  "Your launch video",
+  "Your walk-on",
+  "Your podcast open",
+  "Your ads",
+  "Your waiting room",
+  "Your reels",
+  "One song, everywhere",
 ];
 
 export function Ticker() {
@@ -48,9 +49,9 @@ export function TheGap() {
               muted right when it finally starts working.
             </p>
             <p>
-              Here’s the thing, love: <strong>a borrowed song makes people remember someone else.</strong>{" "}
-              And sound is the part of your brand that follows them out of the room, into the car and
-              into their head at 2am.
+              And a borrowed song makes people remember <strong>someone else.</strong> Sound is the
+              part of your brand that follows people out of the room, into the car and into their head
+              at 2am. Right now, it’s following them home with another artist’s name on it.
             </p>
             <p>
               Your brand guide covers everything people see.{" "}
@@ -68,17 +69,17 @@ const WHY = [
   {
     l: "R",
     t: "Recognized",
-    d: "You know Netflix from two notes, before the logo even shows up. That’s what a sound can do when someone uses it on purpose.",
+    d: "You know Netflix from two notes, before the logo even shows up. They didn’t get lucky. They played those two notes on everything, for years.",
   },
   {
     l: "R",
     t: "Remembered",
-    d: "When the same sound opens your reels, your podcast and your walk-on, people start connecting it to you. A different trending track every week never gives them the chance.",
+    d: "When the same song opens your reels, your podcast and your walk-on, people start to put it together. Switch to a new trending track every week and they never get the chance.",
   },
   {
     l: "F",
     t: "Felt",
-    d: "Sound reaches people before your words do. Whether you want them to feel calm, powerful or a little obsessed, they feel it before you say a thing.",
+    d: "Music sets the mood before you’ve said a word. So choose the mood on purpose: calm, powerful, a little bit obsessed.",
   },
 ];
 
@@ -97,8 +98,8 @@ export function WhySound() {
           <p>
             Your launch video opens. Your face hasn’t even loaded yet… and they already know it’s you.
             The lights drop at your event, your walk-on starts, and the room knows you’re coming before
-            you reach the mic. That’s not luck. It’s the same sound, used on purpose, every single
-            time. <strong>Recognized, remembered and felt before you’re even seen.</strong>
+            you reach the mic. There’s no trick to it. You just play the same sound so many times that
+            people can’t hear it without thinking of you.
           </p>
         </div>
         <div className="sia-sound__grid sia-sound__grid--three sia-reveal">
@@ -145,7 +146,7 @@ export function ForHer() {
               </li>
             ))}
           </ol>
-          <p className="sia-hand">Nodding? Hi. We should talk.</p>
+          <p className="sia-hand">Nodding? Hi. You’re who I make songs for.</p>
         </div>
       </div>
     </section>
@@ -190,8 +191,8 @@ export function OnSet() {
 
 const SOUND = [
   { l: "01", t: "Style", d: "The genre, era and vibe that fit who you actually are. Not whatever’s on someone’s For You page." },
-  { l: "02", t: "Outcome", d: "What they feel the second it plays. Calm. Power. Desire. A little “wait, who is that?”" },
-  { l: "03", t: "Undertone", d: "The texture underneath. Reverent, defiant, a little dangerous. The color under the notes." },
+  { l: "02", t: "Outcome", d: "What people feel the second it plays. Calm, powerful, wanted… or just “wait, who is that?”" },
+  { l: "03", t: "Undertone", d: "The texture underneath, the part people feel but couldn’t name. Soft and expensive? Or a little dangerous?" },
   { l: "04", t: "Narrative", d: "The story your sound tells, even when there isn’t a single word in it." },
   { l: "05", t: "Delivery", d: "Tempo, voice, mix and length, made for wherever you show up: reels, podcasts, stages." },
 ];
@@ -202,19 +203,16 @@ export function Method() {
       <div className="sia-wrap">
         <div className="sia-sound__head sia-reveal">
           <div>
-            <p className="sia-mono sia-kicker">02 · The method</p>
+            <p className="sia-mono sia-kicker">03 · The method</p>
             <h2 className="sia-display">
               How a signature sound <span className="sia-nw">is <em>built</em>.</span>
             </h2>
           </div>
           <p>
-            You don’t need to know what a minor key is. Honestly? That’s my job. Every sound starts
-            from your archetype and goes through five decisions. No stock library. No “well, it’s
-            trending.”
-            <br />
-            <br />
-            And underneath all five: I find the belief your buyer needs, build it into your sound, and
-            repeat it until they feel it before you say a word.
+            You don’t need to know what a minor key is. That’s my job. Your Sonic Archetype tells me
+            who you are. These five decisions turn that into a song. You tell me about your brand in
+            writing, and I take it from there. Nothing comes from a stock library, and nothing is
+            picked because it’s trending.
           </p>
         </div>
         <div className="sia-sound__grid sia-reveal">
@@ -251,8 +249,7 @@ export function Rights() {
             Can we use it? Does it sound <span className="sia-nw">like <em>us</em>?</span>
           </h2>
           <p className="sia-rights__lead">
-            Two different questions. Your team asks both every single week… just not out loud. Here’s
-            what it actually sounds like:
+            Your team asks both of these every week, just not out loud. It usually sounds like this:
           </p>
         </div>
         <ol className="sia-rights__grid sia-reveal">
@@ -269,11 +266,11 @@ export function Rights() {
         </ol>
         <div className="sia-rights__close sia-reveal">
           <p>
-            A trending track can’t answer either one. A signature sound answers both:
-            it’s made for your brand, it’s never licensed to another brand, and it comes with{" "}
+            A trending track can’t give you a yes to either one. Your own song can: I make it for your
+            brand, I never license it to another brand, and it comes with{" "}
             <strong>exclusive brand-use rights in writing, with no expiry and no renewals.</strong>
           </p>
-          <p className="sia-hand">Your sound. Made for your brand alone.</p>
+          <p className="sia-hand">Yes and yes.</p>
         </div>
 
         <div className="sia-ig sia-reveal">
@@ -283,7 +280,7 @@ export function Rights() {
             <p>
               That little line under your handle. If you used a trending song, it’s someone else’s
               name. On your content. On the reel you paid an editor to cut. Someone loves it, taps
-              the sound… and lands on a page full of strangers using the same song. Oof.
+              the sound… and ends up on a page full of strangers using the same song. Oof.
             </p>
             <p>
               With a sound made for your brand, it says <strong>your</strong> name. “Original audio”
@@ -341,16 +338,16 @@ const OFFERS = [
     label: "The whole brand world...",
     name: "The Instant Recognition Atelier",
     line: "One intake. Then I disappear into the studio.",
-    desc: "You’ve already invested in how your brand looks. This is the part people actually remember. One written intake, a voice memo or two, zero calls. Then I build it, made for your brand alone.",
+    desc: "You’ve already invested in how your brand looks. This is how it sounds, everywhere you show up. One written intake, a voice memo or two, zero calls. Then I build it for your brand alone.",
     includes: [
       "5 original tracks, spent your way: offers, anthem, walk-on, reels",
-      "Your Sonic Signature, built around your Sonic Fingerprint: one real sound from your world",
+      "Your Sonic Signature: a 2-to-5-second sound logo, built from one real sound in your world",
       "Two refinement rounds, no calls",
       "A sound guide, so your team never guesses",
       "Exclusive brand-use rights in writing",
       "About six to eight weeks from your intake",
     ],
-    because: "it’s a whole brand soundtrack, built for one brand at a time and never licensed to another brand.",
+    because: "Your whole brand soundtrack, built for one brand at a time and never licensed to another.",
     plan: "3-payment plan available",
     cta: "Apply for the Atelier",
     href: LINKS.apply,
@@ -360,7 +357,7 @@ const OFFERS = [
     label: "Done for you",
     name: "The Instant Recognition Anthem",
     line: "One signature song that says your name before you do",
-    desc: "Want to start with one song? Your walk-on, your launch video, your podcast open: one song made around your story and your archetype.",
+    desc: "Want to start with one song? One song made around your story and your archetype, for your walk-on, your launch video and your podcast open.",
     includes: [
       "One signature song",
       "30- and 15-second cuts for reels, ads and your podcast",
@@ -369,8 +366,8 @@ const OFFERS = [
       "Exclusive brand-use rights in writing",
       "Its full price comes off the Atelier within 30 days of delivery",
     ],
-    because: "it’s made around your story and your archetype, and it’s never licensed to another brand.",
-    plan: "2-payment plan available",
+    because: "Your story, in a song nobody else can use for their brand.",
+    plan: "$2,500 founding price through Nov 30 · 2-payment plan available",
     cta: "Get your Anthem",
     href: LINKS.anthem,
   },
@@ -379,14 +376,15 @@ const OFFERS = [
     label: "Same day",
     name: "The Sonic Blueprint",
     line: "Hear your brand before you invest",
-    desc: "Curious but not ready to commit? Totally fair. In one sitting, the Blueprint reads your brand’s energy straight from your feed.",
+    desc: "Curious but not ready to commit? Totally fair. In one sitting, the Blueprint reads your brand from your feed and the music you love, and you hear first sketches the same night.",
     includes: [
       "Your Sonic Archetype",
       "Three sound directions, built from the music you actually love",
       "A first sketch of each direction in Suno, tonight",
       "Its full price comes off the Atelier within 30 days",
     ],
-    because: "you do it yourself, tonight, and it counts toward the Atelier if you go all in.",
+    because: "You do it yourself, tonight, and it counts toward the Atelier if you go all in.",
+    plan: "$297 · same day",
     cta: "Start the Blueprint",
     href: LINKS.blueprint,
   },
@@ -402,13 +400,12 @@ export function Offers() {
     <section className="sia sia-offers sia-rule" id="offers">
       <div className="sia-wrap">
         <div className="sia-offers__head sia-reveal">
-          <p className="sia-mono sia-kicker">03 · Work with me</p>
+          <p className="sia-mono sia-kicker">04 · Work with me</p>
           <h2 className="sia-display">
             Claim <span className="sia-nw">your <em>sound</em>.</span>
           </h2>
           <p className="sia-offers__lead">
-            Every launch you wait is one more that opens with somebody else’s song. So here are three
-            ways in, depending on how much you want me to do for you.
+            Three ways in. Pick the one that matches how much you want off your plate.
           </p>
         </div>
         {foundingOpen && (
@@ -435,7 +432,7 @@ export function Offers() {
                 ))}
               </ul>
               <p className="sia-offer__because">
-                <b>Why it’s worth it:</b> because {o.because}
+                <b>Why it’s worth it:</b> {o.because}
               </p>
               {o.plan && <p className="sia-mono sia-offer__plan">{o.plan}</p>}
               <a
@@ -474,7 +471,6 @@ export function Offers() {
         <p className="sia-offers__apply-note sia-reveal">
           The Atelier is by application. The Anthem and the Blueprint, you can start today.
         </p>
-        <p className="sia-mono sia-apply__from sia-reveal">Done-for-you work begins at $2,500</p>
       </div>
     </section>
   );
@@ -566,7 +562,7 @@ export function About() {
           </figcaption>
         </figure>
         <div className="sia-reveal">
-          <p className="sia-mono sia-kicker">04 · The ear behind it</p>
+          <p className="sia-mono sia-kicker">02 · The ear behind it</p>
           <h2 className="sia-display">
             I read people for <span className="sia-nw">a <em>living</em>.</span>
           </h2>
@@ -707,11 +703,11 @@ export const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "Done-for-you work begins at $2,500. Every offer’s full price and payment plan is on its own page: tap Get your Anthem or Apply for the Atelier and it’s right there. No “book a call to find out.”",
+    a: "The Blueprint is $297. The Anthem is $2,500 at its founding price through Nov 30, with a 2-payment plan. The Atelier’s investment and its 3-payment plan are on its page. No “book a call to find out.”",
   },
   {
     q: "Where do I start?",
-    a: "Want to hear it first? Start with the Sonic Blueprint: it reads your brand, names your archetype and gives you three sound directions plus prompts to hear a first sketch of each. Want one song now? Get the Anthem. Want the whole brand world done for you? Apply for the Atelier.",
+    a: "Take the free Sonic Identity Audit first. It takes a few minutes and tells you your Sonic Archetype. Want to hear sketches tonight? The Blueprint. Want one song made for you? The Anthem. Want your whole brand’s sound done for you? Apply for the Atelier.",
   },
 ];
 
@@ -755,13 +751,13 @@ export function FinalCta() {
             word. That’s the whole brief.
           </p>
           <p className="sia-body sia-final__line">
-            Want to hear it first? Start with the Blueprint tonight. Want one song now? Get the Anthem.
-            Want the whole brand world done for you? Apply for the Atelier. It takes a few minutes, there are no calls, and I read
-            every application myself and reply within 2 business days.
+            Not sure yet? Take the free audit and meet your Sonic Archetype. Ready for one song? Get
+            the Anthem. Want your whole brand’s sound done for you? Apply for the Atelier. No calls, and
+            I read every application myself and reply within 2 business days.
           </p>
           <div className="sia-hero__ctas">
-            <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
-              Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
+            <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">
+              Take the free audit <span className="sia-arrow" aria-hidden="true">↗</span>
             </a>
             <a className="sia-btn sia-btn--ghost" href={LINKS.anthem} target="_blank" rel="noreferrer">
               Get the Anthem <span className="sia-arrow" aria-hidden="true">↗</span>

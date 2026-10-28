@@ -48,16 +48,16 @@ function HomePage() {
         <HeroSound />
         <Ticker />
         <TheGap />
+        <MeetTheLab />
         <WhySound />
         <ForHer />
-        <Method />
-        <MeetTheLab />
         <Proof />
+        <About />
+        <OnSet />
+        <Method />
+        <Rights />
         <Offers />
         <Apply />
-        <Rights />
-        <OnSet />
-        <About />
         <Guide />
         <Faq />
         <FinalCta />

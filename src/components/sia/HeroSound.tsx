@@ -158,16 +158,16 @@ export function HeroSound() {
             Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
           </span>
         </h1>
-        <p className="sia-hero__tag">Become recognized, remembered and felt, from your reels to the stage.</p>
+        <p className="sia-hero__tag">Your own signature song for every reel, ad and stage. Not the trending sound everyone else is using.</p>
         <p className="sia-hero__sub">
-          Okay, real talk. You’ve curated every photo. Polished every caption. And your sound?
-          Whatever was trending this morning. I make signature songs for female founders, so the
-          second your audio plays in a reel, carousel, ad, launch, or the moment you walk on stage,
-          people go, “wait… that’s her.”
+          Okay, real talk. You’ve curated every photo and polished every caption. And your sound?
+          Whatever was trending this morning. I make signature songs for female founders, so when
+          your song plays on a reel, an ad, a launch video or your walk-on, people know it’s you
+          before they see you.
         </p>
         <div className="sia-hero__ctas">
           <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">
-            Find my Sonic Archetype: free <span className="sia-arrow" aria-hidden="true">↗</span>
+            Find my Sonic Archetype <span className="sia-arrow" aria-hidden="true">↗</span>
           </a>
           <button
             type="button"
@@ -183,9 +183,9 @@ export function HeroSound() {
           </button>
         </div>
         <p className="sia-final__alt">
-          Rather hear it tonight?{" "}
+          Free, nine quick questions. Want to hear your sound tonight?{" "}
           <a href={LINKS.blueprint} target="_blank" rel="noreferrer">
-            Start with the Blueprint
+            Try the $297 Blueprint
           </a>
           .
         </p>
