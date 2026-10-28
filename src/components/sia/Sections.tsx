@@ -501,7 +501,7 @@ const HEARD: {
   {
     song: "The Money Medium",
     who: "Lou Clarke",
-    note: "Made to sound the way her brand feels. It lives on Spotify, released before October 28, 2026. New client music stays off streaming.",
+    note: "Made to sound the way her brand feels. It lives on Spotify.",
     links: [{ label: "Listen on Spotify", href: "https://open.spotify.com/track/1F6C3FXTLZZCQdLEDrK4Cn" }],
     spotify: "1F6C3FXTLZZCQdLEDrK4Cn",
   },
