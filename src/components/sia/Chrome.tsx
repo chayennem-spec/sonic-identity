@@ -23,8 +23,8 @@ export function SiteHeader() {
         <div className="sia-header__side sia-header__side--right sia-mono">
           <a href="/#about" className="sia-hide-sm">About</a>
           <a href="/#faq" className="sia-hide-sm">FAQ</a>
-          <a className="sia-btn sia-btn--bone sia-hide-phone" href={LINKS.blueprint} target="_blank" rel="noreferrer">
-            Start here <span className="sia-arrow" aria-hidden="true">↗</span>
+          <a className="sia-btn sia-btn--bone sia-hide-phone" href={LINKS.audit} target="_blank" rel="noreferrer">
+            Free audit <span className="sia-arrow" aria-hidden="true">↗</span>
           </a>
           <a className="sia-btn sia-btn--bone sia-show-phone" href="/#offers">
             Offers <span className="sia-arrow" aria-hidden="true">↓</span>
@@ -99,12 +99,12 @@ export function StickyCta() {
     <div className={`sia sia-sticky${shown ? " is-shown" : ""}`} aria-hidden={!shown}>
       <a
         className="sia-btn sia-btn--red"
-        href={LINKS.blueprint}
+        href={LINKS.audit}
         target="_blank"
         rel="noreferrer"
         tabIndex={shown ? 0 : -1}
       >
-        Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
+        Find my Sonic Archetype <span className="sia-arrow" aria-hidden="true">↗</span>
       </a>
     </div>
   );

@@ -146,7 +146,7 @@ function Page() {
       </p>
       <p>
         Nodding? Start with the <a href="https://chayennemallari.eden.so/form/sonic-audit" target="_blank" rel="noreferrer">free Sonic Identity
-        Audit</a>. Nine questions, three minutes, and you’ll know exactly where your sound stands.
+        Audit</a>. Nine quick questions, and you’ll know exactly where your sound stands.
       </p>
     </ArticlePage>
   );

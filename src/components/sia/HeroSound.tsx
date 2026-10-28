@@ -166,9 +166,12 @@ export function HeroSound() {
           people go, “wait… that’s her.”
         </p>
         <div className="sia-hero__ctas">
+          <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">
+            Find my Sonic Archetype: free <span className="sia-arrow" aria-hidden="true">↗</span>
+          </a>
           <button
             type="button"
-            className={`sia-btn sia-btn--red sia-sound-btn${sounding ? " is-on" : ""}`}
+            className={`sia-btn sia-btn--ghost sia-sound-btn${sounding ? " is-on" : ""}`}
             onClick={turnOn}
           >
             <span className="sia-eq" aria-hidden="true">
@@ -178,14 +181,11 @@ export function HeroSound() {
             </span>
             {sounding ? "Pause" : "Hear my signature sound"}
           </button>
-          <a className="sia-btn sia-btn--ghost" href={LINKS.blueprint} target="_blank" rel="noreferrer">
-            Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
-          </a>
         </div>
         <p className="sia-final__alt">
-          Not sure yet?{" "}
-          <a href={LINKS.audit} target="_blank" rel="noreferrer">
-            Take the free three-minute audit
+          Rather hear it tonight?{" "}
+          <a href={LINKS.blueprint} target="_blank" rel="noreferrer">
+            Start with the Blueprint
           </a>
           .
         </p>

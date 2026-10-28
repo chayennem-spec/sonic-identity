@@ -501,7 +501,7 @@ const HEARD: {
   {
     song: "The Money Medium",
     who: "Lou Clarke",
-    note: "Made to sound the way her brand feels. It lives on Spotify.",
+    note: "Made to sound the way her brand feels. It lives on Spotify, released before October 28, 2026. New client music stays off streaming.",
     links: [{ label: "Listen on Spotify", href: "https://open.spotify.com/track/1F6C3FXTLZZCQdLEDrK4Cn" }],
     spotify: "1F6C3FXTLZZCQdLEDrK4Cn",
   },
@@ -609,7 +609,7 @@ export function Guide() {
     <section className="sia sia-guide sia-rule" id="free-audit">
       <div className="sia-wrap sia-reveal">
         <p className="sia-mono sia-kicker" style={{ justifyContent: "center" }}>
-          Free · 3 minutes
+          Free · Nine quick questions
         </p>
         <h2 className="sia-display">
           The Sonic
@@ -642,7 +642,7 @@ export function Apply() {
           <span className="sia-nw">your <em>brand</em>.</span>
         </h2>
         <p className="sia-body">
-          The Atelier is made for one brand at a time. It takes five minutes, it’s all in writing,
+          The Atelier is made for one brand at a time. It takes a few minutes, it’s all in writing,
           and no, there’s no call. I read every application myself and reply within 2 business days
           with what I’d actually recommend for your brand.
         </p>
@@ -756,7 +756,7 @@ export function FinalCta() {
           </p>
           <p className="sia-body sia-final__line">
             Want to hear it first? Start with the Blueprint tonight. Want one song now? Get the Anthem.
-            Want the whole brand world done for you? Apply for the Atelier. It takes about five minutes, there are no calls, and I read
+            Want the whole brand world done for you? Apply for the Atelier. It takes a few minutes, there are no calls, and I read
             every application myself and reply within 2 business days.
           </p>
           <div className="sia-hero__ctas">

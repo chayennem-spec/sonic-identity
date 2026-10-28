@@ -26,7 +26,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "How do I find out what my brand should sound like?",
-    a: "Take the free Sonic Identity Audit. Nine questions, about three minutes, and it names your Sonic Archetype: the energy your sound was built to carry.",
+    a: "Take the free Sonic Identity Audit. Nine quick questions, and it names your Sonic Archetype: the energy your sound was built to carry.",
   },
 ];
 
@@ -122,7 +122,7 @@ function Page() {
       <h2>Find out what yours should sound like</h2>
       <p>
         Start with the <a href="https://chayennemallari.eden.so/form/sonic-audit" target="_blank" rel="noreferrer">free Sonic Identity Audit</a>:
-        nine questions, about three minutes, and you’ll meet your Sonic Archetype.
+        nine quick questions, and you’ll meet your Sonic Archetype.
       </p>
     </ArticlePage>
   );
