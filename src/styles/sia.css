@@ -1149,3 +1149,23 @@
 }
 .sia-brand--center { justify-content: center; }
 .sia-heard__player { width: 100%; height: 152px; border: 0; border-radius: 12px; margin-top: 6px; background: #121212; }
+
+/* Terms: at a glance + jump links */
+.sia-terms__glance { max-width: 1100px; padding-top: 64px; padding-bottom: 8px; }
+.sia-terms__glance-grid { margin-top: 22px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--sia-line); border-left: 1px solid var(--sia-line); }
+.sia-terms__glance-item { padding: 26px 26px 30px; border-right: 1px solid var(--sia-line); border-bottom: 1px solid var(--sia-line); }
+.sia-terms__glance-item h2 { font-family: var(--sia-display); font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; font-size: 20px; line-height: 1; color: var(--sia-bone); margin: 0 0 12px; }
+.sia-terms__glance-item:nth-child(4) h2 { color: var(--sia-red); }
+.sia-terms__glance-item p { margin: 0; font-size: 16px; line-height: 1.6; color: var(--sia-dim); }
+.sia-terms__glance-note { margin-top: 16px; font-size: 14px; color: var(--sia-dim); }
+.sia-terms__toc { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--sia-line); }
+.sia-terms__toc > .sia-mono { color: var(--sia-red); }
+.sia-terms__toc ol { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px 24px; }
+.sia-terms__toc a { display: block; padding: 6px 0; font-size: 14px; line-height: 1.35; color: var(--sia-bone); text-decoration: none; }
+.sia-terms__toc a .sia-mono { color: var(--sia-dim); margin-right: 6px; }
+.sia-terms__toc a:hover { color: var(--sia-red); }
+.sia-terms__section { scroll-margin-top: 110px; }
+@media (max-width: 860px) {
+  .sia-terms__glance-grid { grid-template-columns: 1fr; }
+  .sia-terms__toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

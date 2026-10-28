@@ -40,6 +40,33 @@ function rich(text: string): ReactNode[] {
   });
 }
 
+const GLANCE: { h: string; p: string }[] = [
+  {
+    h: "What you're buying",
+    p: "Custom music made for your brand: the Instant Recognition Anthem (plus the Encore, if you add it) or the Instant Recognition Atelier.",
+  },
+  {
+    h: "Where you can use it",
+    p: "Across your own brand: posts, paid ads and boosts, launches, sales pages, courses, webinars, podcasts, livestreams and events. Your team can use it on your behalf.",
+  },
+  {
+    h: "Made for you alone",
+    p: "Exclusive brand-use rights, in writing. No expiry, no renewals, and I never license your music to another brand.",
+  },
+  {
+    h: "Never on Spotify",
+    p: "Your music is never released to streaming or music libraries. That's what keeps it clean as your own original audio in posts and ads.",
+  },
+  {
+    h: "What's not included",
+    p: "Selling or licensing it as a song, letting another business use it, or uploading it to a distributor, music library or claiming program.",
+  },
+  {
+    h: "Payments and refunds",
+    p: "Your license starts with your first payment. Because it's made from scratch, payments are non-refundable once your intake is in and work begins. Atelier: the First Listen Promise in section 3.",
+  },
+];
+
 function TermsPage() {
   useReveal();
   return (
@@ -60,6 +87,34 @@ function TermsPage() {
               Purchase” in your Atelier application, or completing your Anthem purchase, is your acceptance.
             </p>
           </header>
+
+          <section className="sia-wrap sia-terms__glance" aria-labelledby="glance-title">
+            <p className="sia-mono sia-kicker" id="glance-title">At a glance</p>
+            <div className="sia-terms__glance-grid">
+              {GLANCE.map((g) => (
+                <div key={g.h} className="sia-terms__glance-item">
+                  <h2>{g.h}</h2>
+                  <p>{g.p}</p>
+                </div>
+              ))}
+            </div>
+            <p className="sia-terms__glance-note">This is a summary. The full Terms below govern.</p>
+            <nav className="sia-terms__toc" aria-label="Jump to a section">
+              <span className="sia-mono">Jump to</span>
+              <ol>
+                {TERMS_SECTIONS.map((s) => {
+                  const [n = "", ...rest] = s.title.split(". ");
+                  return (
+                    <li key={s.title}>
+                      <a href={`#section-${n}`}>
+                        <span className="sia-mono">{n.padStart(2, "0")}</span> {rest.join(". ")}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ol>
+            </nav>
+          </section>
 
           <div className="sia-wrap sia-article__body">
             <h2>Creative Commission &amp; Commercial Music License Agreement</h2>
@@ -84,7 +139,7 @@ function TermsPage() {
             </p>
 
             {TERMS_SECTIONS.map((s) => (
-              <section key={s.title} className="sia-terms__section">
+              <section key={s.title} id={`section-${s.title.split(".")[0]}`} className="sia-terms__section">
                 <h3>{s.title}</h3>
                 {s.blocks.map((b, i) =>
                   b.t === "p" ? (
