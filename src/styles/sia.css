@@ -199,7 +199,7 @@
 
 /* ---------- Gap (problem) ---------- */
 .sia-gap { padding: 140px 0; }
-.sia-gap__grid { display: grid; grid-template-columns: 7fr 5fr; gap: 72px; align-items: end; }
+.sia-gap__grid { display: grid; grid-template-columns: 7fr 5fr; gap: 72px; align-items: start; }
 .sia-gap h2 { font-size: clamp(46px, 6vw, 92px); }
 .sia-gap__side { border-left: 1px solid var(--sia-line); padding-left: 40px; }
 .sia-gap .sia-hand { margin-top: 30px; }
@@ -978,7 +978,7 @@
 .sia-footer__base a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 
 /* Heard in the wild */
-.sia-heard__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.sia-heard__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: start; }
 .sia-heard { margin: 0; padding: 40px 36px; border: 1px solid var(--sia-line); background: rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 12px; }
 .sia-heard__eq { display: inline-flex; gap: 4px; align-items: flex-end; height: 22px; margin-bottom: 8px; }
 .sia-heard__eq i { width: 4px; background: var(--sia-red); animation: sia-heard-eq 1.2s ease-in-out infinite; }
@@ -1110,8 +1110,7 @@
 .sia-offer__list li::before { content: ""; position: absolute; left: 0; top: 19px; width: 10px; height: 1px; background: var(--sia-red); }
 .sia-offer__because { margin-top: 18px; color: var(--sia-dim); font-size: 14px; line-height: 1.55; flex: 1; }
 .sia-offer__because b { color: var(--sia-bone); font-weight: 600; }
-.sia-offer__plan { margin-top: 16px; color: var(--sia-bone); font-size: 11px; }
-.sia-offer__plan::before { content: "· "; color: var(--sia-red); }
+.sia-offer__plan { margin-top: 20px; color: var(--sia-bone); font-family: var(--sia-display); font-weight: 600; font-size: 17px; line-height: 1.35; letter-spacing: -0.01em; text-transform: none; }
 .sia-promise { margin-top: 56px; display: grid; grid-template-columns: auto 1fr auto; gap: 34px; align-items: center; border: 1px solid var(--sia-line); padding: 32px 38px; }
 .sia-promise__seal {
   width: 104px; height: 104px; border-radius: 50%; border: 1px solid var(--sia-red); display: grid; place-items: center; text-align: center;

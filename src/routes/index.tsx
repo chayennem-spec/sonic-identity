@@ -6,17 +6,14 @@ import { HeroSound } from "../components/sia/HeroSound";
 import { Intro, SiteFooter, SiteHeader, StickyCta, useReveal } from "../components/sia/Chrome";
 import {
   About,
-  Apply,
   Faq,
   FAQ,
   FinalCta,
-  Guide,
   Method,
   Offers,
   Proof,
   Rights,
   TheGap,
-  WhySound,
   ForHer,
   OnSet,
   Ticker,
@@ -49,16 +46,13 @@ function HomePage() {
         <Ticker />
         <TheGap />
         <MeetTheLab />
-        <WhySound />
-        <ForHer />
         <Proof />
+        <ForHer />
         <About />
         <OnSet />
         <Method />
         <Rights />
         <Offers />
-        <Apply />
-        <Guide />
         <Faq />
         <FinalCta />
       </main>

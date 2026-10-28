@@ -114,7 +114,7 @@ export function MeetTheLab() {
           {HERO_MEDIA.fullSong && <SongPlayer />}
           <p className="si-mono si-lab__note">Best with headphones</p>
           <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
-            Hear your brand <span className="sia-arrow" aria-hidden="true">↗</span>
+            Hear yours tonight: $297 Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
           </a>
         </div>
       </div>

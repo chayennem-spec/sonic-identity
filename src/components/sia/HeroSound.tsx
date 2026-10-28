@@ -158,16 +158,14 @@ export function HeroSound() {
             Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
           </span>
         </h1>
-        <p className="sia-hero__tag">Your own signature song for every reel, ad and stage. Not the trending sound everyone else is using.</p>
+        <p className="sia-hero__tag">A signature song made for your brand, so every reel, ad and walk-on sounds like you, and only you.</p>
         <p className="sia-hero__sub">
           Okay, real talk. You’ve curated every photo and polished every caption. And your sound?
-          Whatever was trending this morning. I make signature songs for female founders, so when
-          your song plays on a reel, an ad, a launch video or your walk-on, people know it’s you
-          before they see you.
+          Whatever was trending this morning.
         </p>
         <div className="sia-hero__ctas">
           <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">
-            Find my Sonic Archetype <span className="sia-arrow" aria-hidden="true">↗</span>
+            Take the free audit <span className="sia-arrow" aria-hidden="true">↗</span>
           </a>
           <button
             type="button"
@@ -179,7 +177,7 @@ export function HeroSound() {
               <i />
               <i />
             </span>
-            {sounding ? "Pause" : "Hear my signature sound"}
+            {sounding ? "Pause" : "Hear Chayenne’s sound"}
           </button>
         </div>
         <p className="sia-final__alt">
@@ -189,10 +187,6 @@ export function HeroSound() {
           </a>
           .
         </p>
-        <div className="sia-hero__foot sia-mono">
-          <span>Signature sound for female founders</span>
-          <span>Best with headphones</span>
-        </div>
       </div>
     </section>
   );

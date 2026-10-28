@@ -104,7 +104,7 @@ export function StickyCta() {
         rel="noreferrer"
         tabIndex={shown ? 0 : -1}
       >
-        Find my Sonic Archetype <span className="sia-arrow" aria-hidden="true">↗</span>
+        Take the free audit <span className="sia-arrow" aria-hidden="true">↗</span>
       </a>
     </div>
   );
