@@ -1177,8 +1177,9 @@
 }
 .sia-final--split {
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.9) 45%, rgba(0, 0, 0, 0.84) 100%),
-    url("/images/texture-graffiti-sia.webp") center / cover no-repeat;
+    linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 13%, rgba(0, 0, 0, 0.75) 24%, rgba(0, 0, 0, 0.75) 100%),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.72) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.5) 100%),
+    url("/images/texture-graffiti-sia.webp") center top / cover no-repeat;
 }
 @media (max-width: 860px) {
   .sia-gap {
