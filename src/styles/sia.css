@@ -616,7 +616,7 @@
   inset: -50%;
   z-index: 90;
   pointer-events: none;
-  opacity: 0.085;
+  opacity: 0.11;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   animation: sia-grain 0.9s steps(6) infinite;
 }
@@ -1167,4 +1167,28 @@
 @media (max-width: 860px) {
   .sia-terms__glance-grid { grid-template-columns: 1fr; }
   .sia-terms__toc ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Texture photos (Oct 2026): concrete light behind the gap, Chayenne's own graffiti behind the final call */
+.sia-gap {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.93) 0%, rgba(0, 0, 0, 0.82) 50%, rgba(0, 0, 0, 0.6) 100%),
+    url("/images/texture-concrete-light.webp") center / cover no-repeat;
+}
+.sia-final--split {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.94) 0%, rgba(0, 0, 0, 0.8) 45%, rgba(0, 0, 0, 0.5) 100%),
+    url("/images/texture-graffiti-sia.webp") center / cover no-repeat;
+}
+@media (max-width: 860px) {
+  .sia-gap {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+      url("/images/texture-concrete-light.webp") center / cover no-repeat;
+  }
+  .sia-final--split {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.82)),
+      url("/images/texture-graffiti-sia.webp") center / cover no-repeat;
+  }
 }
