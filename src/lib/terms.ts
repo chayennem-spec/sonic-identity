@@ -197,15 +197,27 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     ]
   },
   {
-    "title": "7. No Public Release",
+    "title": "7. Optional Streaming Release",
     "blocks": [
       {
         "t": "p",
-        "text": "Client’s music is made for Client’s own brand use. It is not released to streaming services, download stores or music libraries (including the Instagram, Facebook and TikTok music libraries), and it is not enrolled in YouTube Content ID or any other copyright-matching or claiming program, by Studio or by Client."
+        "text": "Client’s music is made for Client’s own brand. Putting it on listening platforms is optional, and happens only if Client asks for it, using the Release Request form (chayennemallari.eden.so/form/release) or by email."
       },
       {
         "t": "p",
-        "text": "Keeping the music out of public libraries and claiming programs is what lets Client use it as original audio in posts, boosts and ads."
+        "text": "If Client asks, Studio releases the track to listening platforms such as Spotify and Apple Music through its distributor, under the title and artist name Client chooses, and handles the setup, delivery and upkeep at no extra cost to Client."
+      },
+      {
+        "t": "p",
+        "text": "Studio keeps the streaming payouts from that release. For brand music they are usually small, and they have nothing to do with Client’s own business income."
+      },
+      {
+        "t": "p",
+        "text": "To keep the music clean as Client’s own original audio in posts, boosts and ads, a release never includes the Instagram, Facebook or TikTok music libraries, and the music is never enrolled in YouTube Content ID or any other copyright-matching or claiming program, by Studio or by Client."
+      },
+      {
+        "t": "p",
+        "text": "If a platform or distributor declines a track, Studio will let Client know. Client’s brand-use license is not affected."
       },
       {
         "t": "p",
@@ -217,7 +229,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "**Purchases made before October 28, 2026.** Clients who bought before that date keep the optional streaming-release terms they accepted at purchase."
+        "text": "**Purchases made before October 28, 2026.** Clients who bought before that date keep the release options they accepted at purchase."
       }
     ]
   },
@@ -239,7 +251,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Because Client’s music is not released or enrolled in any claiming program, Studio does not administer platform claims."
+        "text": "Because Client’s music is never added to a social music library or enrolled in any claiming program, Studio does not administer platform claims."
       },
       {
         "t": "p",
@@ -302,7 +314,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
           "Sell or license the delivered music as a standalone music product",
           "Transfer the brand-use license to an unrelated third party, except as permitted in a business succession provision",
           "Represent itself as the exclusive copyright owner of rights it has not acquired",
-          "Release or register the music with a distributor, music library or rights-collection service without Studio’s written agreement",
+          "Release the music themselves, or register it with a distributor, music library or rights-collection service (Studio handles any release Client asks for under Section 7)",
           "Authorize another unrelated business to adopt the music as its signature brand anthem"
         ]
       },

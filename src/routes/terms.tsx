@@ -54,12 +54,12 @@ const GLANCE: { h: string; p: string }[] = [
     p: "Exclusive brand-use rights, in writing. No expiry, no renewals, and I never license your music to another brand.",
   },
   {
-    h: "Never on Spotify",
-    p: "Your music is never released to streaming or music libraries. That's what keeps it clean as your own original audio in posts and ads.",
+    h: "Spotify, if you want it",
+    p: "Your choice. Ask and I'll put your song on Spotify and Apple Music for you. It's never added to Instagram, Facebook or TikTok's music libraries, which keeps it clean as your own original audio in posts and ads.",
   },
   {
     h: "What's not included",
-    p: "Selling or licensing it as a song, letting another business use it, or uploading it to a distributor, music library or claiming program.",
+    p: "Selling or licensing it as a song, letting another business use it, or uploading it to a distributor, music library or claiming program yourself.",
   },
   {
     h: "Payments and refunds",
