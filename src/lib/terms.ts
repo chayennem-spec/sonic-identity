@@ -192,28 +192,40 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
+        "text": "If Client chooses to place a track in a social music library under Section 7, other users of that platform can use it in their own posts under the platform’s rules. That use comes from the platform, not from a license by Studio."
+      },
+      {
+        "t": "p",
         "text": "Any broader exclusivity, such as stems or alternate formats, can be added in the Project Schedule."
       }
     ]
   },
   {
-    "title": "7. Optional Streaming Release",
+    "title": "7. Optional Release: Streaming and Music Libraries",
     "blocks": [
       {
         "t": "p",
-        "text": "Client’s music is made for Client’s own brand. Putting it on listening platforms is optional, and happens only if Client asks for it, using the Release Request form (chayennemallari.eden.so/form/release) or by email."
+        "text": "Client’s music is made for Client’s own brand. Releasing it is optional and happens only if Client asks for it, track by track, using the Release Request form (chayennemallari.eden.so/form/release) or by email."
       },
       {
         "t": "p",
-        "text": "If Client asks, Studio releases the track to listening platforms such as Spotify and Apple Music through its distributor, under the title and artist name Client chooses, and handles the setup, delivery and upkeep at no extra cost to Client."
+        "text": "**Listening platforms.** If Client asks, Studio releases a track to listening platforms such as Spotify and Apple Music through its distributor, under the title and artist name Client chooses, and handles the setup, delivery and upkeep at no extra cost to Client."
       },
       {
         "t": "p",
-        "text": "Studio keeps the streaming payouts from that release. For brand music they are usually small, and they have nothing to do with Client’s own business income."
+        "text": "**Social music libraries.** If Client asks, Studio also makes a track available in the Instagram, Facebook and TikTok music libraries, so people can find it by name and use it in their own posts. Client understands that any user of those platforms can then use that track in their own posts under the platform’s rules, and that platforms may treat a library track as licensed music, which can limit boosting or advertising with that track."
       },
       {
         "t": "p",
-        "text": "To keep the music clean as Client’s own original audio in posts, boosts and ads, a release never includes the Instagram, Facebook or TikTok music libraries, and the music is never enrolled in YouTube Content ID or any other copyright-matching or claiming program, by Studio or by Client."
+        "text": "**Ad songs (Anthem).** If Client places its Instant Recognition Anthem in the social music libraries, Studio makes Client two short original ad songs (about 30 seconds each, with 15-second cuts) in the same sonic world, delivered before the Anthem goes into the libraries. The ad songs are never released or placed in any library, so they stay clean for Client’s ads and boosts. Atelier clients choose which of their tracks go into the libraries; the tracks they keep out stay clean for ads."
+      },
+      {
+        "t": "p",
+        "text": "Studio keeps the streaming and library payouts from any release. For brand music they are usually small, and they have nothing to do with Client’s own business income."
+      },
+      {
+        "t": "p",
+        "text": "Client’s music is never enrolled in YouTube Content ID or any other copyright-claiming program, by Studio or by Client."
       },
       {
         "t": "p",
@@ -251,7 +263,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Because Client’s music is never added to a social music library or enrolled in any claiming program, Studio does not administer platform claims."
+        "text": "Because Client’s music is never enrolled in a claiming program, Studio does not administer platform claims."
       },
       {
         "t": "p",
