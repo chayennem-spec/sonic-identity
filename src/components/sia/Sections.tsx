@@ -45,7 +45,7 @@ export function TheGap() {
             <p>
               You don’t do off the rack. Ever. So be honest… how did it feel when the launch you spent
               months on opened with the same trending sound as every other masterclass in your niche?
-              A song nobody licensed for your business, by the way. The kind that can get your video
+              A song that probably isn’t licensed for your business, by the way. The kind that can get your video
               muted right when it finally starts working.
             </p>
             <p>
@@ -70,7 +70,7 @@ const WHY = [
   {
     l: "R",
     t: "Recognized",
-    d: "You know Netflix from two notes, before the logo even shows up. They didn’t get lucky. They played those two notes on everything, for years.",
+    d: "You know your favorite show from its first two notes, before the title even shows up. That didn’t happen by luck. They played those two notes on everything, for years.",
   },
   {
     l: "R",
@@ -343,6 +343,7 @@ const OFFERS = [
       "Two refinement rounds, no calls",
       "A sound guide, so your team never guesses",
       "Exclusive brand-use rights in writing",
+      "On Spotify and in the music libraries, if you want it",
       "About six to eight weeks from your intake",
     ],
     because: "Your whole brand soundtrack, built for one brand at a time and never licensed to another.",
@@ -362,6 +363,7 @@ const OFFERS = [
       "One refinement round",
       "First listen in about 7 to 10 days, finished in 2 to 4 weeks",
       "Exclusive brand-use rights in writing",
+      "On Spotify and in the music libraries, if you want it (with two bonus ad songs)",
       "Its full price comes off the Atelier within 30 days of delivery",
     ],
     because: "Your story, in a song nobody else can use for their brand.",
@@ -378,7 +380,7 @@ const OFFERS = [
     includes: [
       "Your Sonic Archetype",
       "Three sound directions, built from the music you actually love",
-      "A first sketch of each direction, the same night",
+      "Ready-to-paste prompts to hear a first sketch of each, the same night",
       "Its full price comes off the Atelier within 30 days",
     ],
     because: "You do it yourself, tonight, and it counts toward the Atelier if you go all in.",
