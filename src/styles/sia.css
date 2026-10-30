@@ -980,6 +980,8 @@
 /* Heard in the wild */
 .sia-heard__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; align-items: start; }
 .sia-heard { margin: 0; padding: 40px 36px; border: 1px solid var(--sia-line); background: rgba(255,255,255,0.02); display: flex; flex-direction: column; gap: 12px; }
+.sia-heard__photo { width: 100%; aspect-ratio: 4 / 5; max-height: 360px; object-fit: cover; object-position: center 25%; display: block; margin-bottom: 8px; }
+.sia-heard__quote { margin: 4px 0; font-size: 1.25rem; line-height: 1.4; font-style: italic; }
 .sia-heard__eq { display: inline-flex; gap: 4px; align-items: flex-end; height: 22px; margin-bottom: 8px; }
 .sia-heard__eq i { width: 4px; background: var(--sia-red); animation: sia-heard-eq 1.2s ease-in-out infinite; }
 .sia-heard__eq i:nth-child(1) { height: 40%; }

@@ -485,12 +485,25 @@ const HEARD: {
   links: { label: string; href: string }[];
   /** Optional Spotify track id: shows Spotify's own player on the card. */
   spotify?: string;
+  /** Optional client photo, shown at the top of the card. */
+  photo?: string;
+  /** Optional words from the client, shown as a quote. */
+  quote?: string;
 }[] = [
+  // Parked for later (put back when ready):
+  // {
+  //   song: "Soft Girl Millions",
+  //   who: "Leanne Lopez-Mosley",
+  //   note: "Made for Leanne’s world and her Soft Girl Millions women, as a gift. She uses it and credits me publicly.",
+  //   links: [{ label: "Watch it in her world", href: "https://www.instagram.com/reel/Db6DWFxtdi9/" }],
+  // },
   {
-    song: "Soft Girl Millions",
-    who: "Leanne Lopez-Mosley",
-    note: "Made for Leanne’s world and her Soft Girl Millions women, as a gift. She uses it and credits me publicly.",
-    links: [{ label: "Watch it in her world", href: "https://www.instagram.com/reel/Db6DWFxtdi9/" }],
+    song: "KIKI_SONG",
+    who: "Kiki Neag",
+    photo: "/images/kiki-neag.jpg",
+    quote: "KIKI_QUOTE",
+    note: "In her own words, from the voice note she sent after her first listen.",
+    links: [{ label: "Meet Kiki", href: "https://www.instagram.com/kikineag/" }],
   },
   {
     song: "The Money Medium",
@@ -512,6 +525,9 @@ export function Proof() {
         <div className="sia-heard__grid">
           {HEARD.map((h) => (
             <figure className="sia-heard sia-reveal" key={h.song}>
+              {h.photo && (
+                <img className="sia-heard__photo" src={h.photo} alt={h.who} loading="lazy" />
+              )}
               <span className="sia-heard__eq" aria-hidden="true">
                 <i />
                 <i />
@@ -520,6 +536,7 @@ export function Proof() {
               </span>
               <p className="sia-heard__song">{h.song}</p>
               <cite className="sia-mono">For {h.who}</cite>
+              {h.quote && <blockquote className="sia-heard__quote">“{h.quote}”</blockquote>}
               <p className="sia-heard__note">{h.note}</p>
               {h.spotify && (
                 <iframe
