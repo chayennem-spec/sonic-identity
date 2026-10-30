@@ -55,7 +55,7 @@ const GLANCE: { h: string; p: string }[] = [
   },
   {
     h: "Spotify and music libraries, if you want them",
-    p: "Your choice. I can put your song on Spotify, Apple Music and Instagram and TikTok's music libraries, so people can find it by name and post with it. Put your Anthem in the libraries and I make you two short ad songs, kept just for your brand, so your ads stay clean.",
+    p: "Your choice. I can put your song on Spotify, Apple Music and Instagram and TikTok's music libraries, so people can find it by name and post with it. Put your Anthem in the libraries and I make you a bonus ad song, kept just for your brand, so your ads stay clean.",
   },
   {
     h: "What's not included",

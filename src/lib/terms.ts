@@ -217,7 +217,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "**Ad songs (Anthem).** If Client places its Instant Recognition Anthem in the social music libraries, Studio makes Client two short original ad songs (about 30 seconds each, with 15-second cuts) in the same sonic world, delivered before the Anthem goes into the libraries. The ad songs are never released or placed in any library, so they stay clean for Client’s ads and boosts. Atelier clients choose which of their tracks go into the libraries; the tracks they keep out stay clean for ads."
+        "text": "**Ad song (Anthem).** If Client places its Instant Recognition Anthem in the social music libraries, Studio makes Client one short original ad song (about 30 seconds, with a 15-second cut) in the same sonic world, delivered before the Anthem goes into the libraries. The ad song is never released or placed in any library, so it stays clean for Client’s ads and boosts. Atelier clients choose which of their tracks go into the libraries; the tracks they keep out stay clean for ads."
       },
       {
         "t": "p",

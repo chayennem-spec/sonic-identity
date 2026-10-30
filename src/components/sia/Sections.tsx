@@ -363,7 +363,7 @@ const OFFERS = [
       "One refinement round",
       "First listen in about 7 to 10 days, finished in 2 to 4 weeks",
       "Exclusive brand-use rights in writing",
-      "On Spotify and in the music libraries, if you want it (with two bonus ad songs)",
+      "On Spotify and in the music libraries, if you want it (with a bonus ad song)",
       "Its full price comes off the Atelier within 30 days of delivery",
     ],
     because: "Your story, in a song nobody else can use for their brand.",
@@ -677,7 +677,7 @@ export const FAQ = [
   },
   {
     q: "Can another brand ever use my song?",
-    a: "Never. Your Anthem or Atelier comes with exclusive brand-use rights, in writing: content, ads, launches, events, livestreams, your podcast and your programs. No expiry, no renewals, and I never license your sound to another brand. Want it on Spotify, or in Instagram and TikTok’s music libraries so people can find it and post with it? Just ask. Put your Anthem in the libraries and I make you two short ad songs, kept just for your brand, so your ads stay clean. Need a use that isn’t listed? Tell me in your application and we’ll add it. Full details are in the Terms of Purchase.",
+    a: "Never. Your Anthem or Atelier comes with exclusive brand-use rights, in writing: content, ads, launches, events, livestreams, your podcast and your programs. No expiry, no renewals, and I never license your sound to another brand. Want it on Spotify, or in Instagram and TikTok’s music libraries so people can find it and post with it? Just ask. Put your Anthem in the libraries and I make you a bonus ad song, kept just for your brand, so your ads stay clean. Need a use that isn’t listed? Tell me in your application and we’ll add it. Full details are in the Terms of Purchase.",
   },
   {
     q: "Do I have to get on calls?",
