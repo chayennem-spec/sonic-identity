@@ -487,8 +487,8 @@ const HEARD: {
   spotify?: string;
   /** Optional client photo, shown at the top of the card. */
   photo?: string;
-  /** Optional words from the client, shown as a quote. */
-  quote?: string;
+  /** Optional words from the client, one quote per entry. */
+  quote?: string[];
 }[] = [
   // Parked for later (put back when ready):
   // {
@@ -501,8 +501,11 @@ const HEARD: {
     song: "Her mastermind song",
     who: "Kiki Neag",
     photo: "/images/kiki-neag.jpg",
-    quote: "It gave me chills. I was very blown away by how much the song really captured the essence of my brand and of my mastermind, from the feeling to the tone to the music. It was just perfect.",
-    note: "Made for Kiki’s brand and her mastermind. She plays it in her stories whenever she promotes it.",
+    quote: [
+      "It gave me chills. I was very blown away by how much the song really captured the essence of my brand and of my mastermind, from the feeling to the tone to the music. It was just perfect.",
+      "The song literally sticks in their head, and it’s another way to subconsciously, in a way, be with your clients and in their mind.",
+    ],
+    note: "Kiki is a subconscious coach. I made her song for her brand and her mastermind, and she plays it in her stories whenever she promotes it.",
     links: [{ label: "Meet Kiki", href: "https://www.instagram.com/kikineag/" }],
   },
   {
@@ -536,7 +539,9 @@ export function Proof() {
               </span>
               <p className="sia-heard__song">{h.song}</p>
               <cite className="sia-mono">For {h.who}</cite>
-              {h.quote && <blockquote className="sia-heard__quote">“{h.quote}”</blockquote>}
+              {h.quote?.map((q) => (
+                <blockquote className="sia-heard__quote" key={q}>“{q}”</blockquote>
+              ))}
               <p className="sia-heard__note">{h.note}</p>
               {h.spotify && (
                 <iframe
