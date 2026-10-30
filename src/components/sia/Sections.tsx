@@ -498,11 +498,11 @@ const HEARD: {
   //   links: [{ label: "Watch it in her world", href: "https://www.instagram.com/reel/Db6DWFxtdi9/" }],
   // },
   {
-    song: "KIKI_SONG",
+    song: "Her mastermind song",
     who: "Kiki Neag",
     photo: "/images/kiki-neag.jpg",
-    quote: "KIKI_QUOTE",
-    note: "In her own words, from the voice note she sent after her first listen.",
+    quote: "It gave me chills. I was very blown away by how much the song really captured the essence of my brand and of my mastermind, from the feeling to the tone to the music. It was just perfect.",
+    note: "Made for Kiki’s brand and her mastermind. She plays it in her stories whenever she promotes it.",
     links: [{ label: "Meet Kiki", href: "https://www.instagram.com/kikineag/" }],
   },
   {

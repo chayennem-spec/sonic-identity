@@ -114,8 +114,9 @@ function Page() {
         comes with exclusive brand-use rights in writing.
       </p>
       <p>
-        I made <em>Soft Girl Millions</em> for Leanne Lopez-Mosley as a gift, and she uses it and credits me
-        publicly. For Lou Clarke I made <em>The Money Medium</em>, which lives on Spotify. And you can hear my own
+        {/* Parked for later: I made <em>Soft Girl Millions</em> for Leanne Lopez-Mosley as a gift, and she uses it and credits me publicly. */}
+        I made Kiki Neag a song for her brand and her mastermind, and in her words it captured them “from the
+        feeling to the tone to the music.” For Lou Clarke I made <em>The Money Medium</em>, which lives on Spotify. And you can hear my own
         signature sound <a href="/#audio-lab">right here on my site</a>.
       </p>
 
