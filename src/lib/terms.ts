@@ -93,6 +93,10 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       {
         "t": "p",
         "text": "**First Listen Promise (Instant Recognition Atelier).** Client’s first track and Sonic Signature are delivered first. If, after their refinement, Client feels they do not fit Client’s brand, Client may end the project by notifying Studio in writing within 7 days of receiving the refined versions. Client then pays only for that first stage: the amount of Client’s first installment (whether Client paid in full or in installments), with the balance refunded or remaining installments cancelled. No license is granted in music from an ended project. Otherwise, payments are non-refundable once Client’s intake is submitted and work begins."
+      },
+      {
+        "t": "p",
+        "text": "**First Listen Promise (Instant Recognition Anthem).** If Client feels its first listen does not fit Client’s brand, Client may tell Studio in writing within 5 business days of receiving it, and Studio will rebuild the song once from a new creative direction at no extra cost (an Encore added to the order is rebuilt in the same new direction). The new first listen arrives about 7 to 10 days after Client’s note, and the delivery date moves by the same amount. Client’s round of refinement then applies to the rebuilt song. This promise is a rebuild, not a refund: payments for the Anthem and Encore are non-refundable once Client’s intake is submitted and work begins."
       }
     ]
   },

@@ -63,7 +63,7 @@ const GLANCE: { h: string; p: string }[] = [
   },
   {
     h: "Payments and refunds",
-    p: "Your license starts with your first payment. Because it's made from scratch, payments are non-refundable once your intake is in and work begins. Atelier: the First Listen Promise in section 3.",
+    p: "Your license starts with your first payment. Because it's made from scratch, payments are non-refundable once your intake is in and work begins. Both come with a First Listen Promise (section 3): the Anthem gets one rebuild from a fresh direction, the Atelier lets you stop after the first stage.",
   },
 ];
 

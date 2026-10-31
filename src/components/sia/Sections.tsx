@@ -361,6 +361,7 @@ const OFFERS = [
       "One signature song",
       "30- and 15-second cuts for reels, ads and your podcast",
       "One refinement round",
+      "First Listen Promise: not her? I rebuild it from a new direction",
       "First listen in about 7 to 10 days, finished in 2 to 4 weeks",
       "Exclusive brand-use rights in writing",
       "On Spotify and in the music libraries, if you want it (with a bonus ad song)",
@@ -459,8 +460,9 @@ export function Offers() {
               In the Atelier, your first track and your Sonic Signature land first. If, after refining
               them, they just don’t feel like your brand, tell me in writing within 7 days of hearing the
               refined version and we end there. No hard feelings.
-              You pay only for that first stage, and the rest is refunded or cancelled. Full details are
-              in the{" "}
+              You pay only for that first stage, and the rest is refunded or cancelled.
+              With the Anthem, if your first listen doesn’t feel like your brand, tell me within 5 business
+              days and I rebuild it from a fresh direction, once, on me. Full details are in the{" "}
               <a href="/terms">Terms of Purchase</a>.
             </p>
           </div>
@@ -696,7 +698,7 @@ export const FAQ = [
   },
   {
     q: "What if I don’t love it?",
-    a: "Then you tell me. Honestly, I want you to. You get refinement rounds (one for the Anthem, two for the Atelier) and a guide that helps you say what you feel without music words. In the Atelier, your first track and Sonic Signature land first, before the other four are built.",
+    a: "Then you tell me. Honestly, I want you to. You get refinement rounds (one for the Anthem, two for the Atelier) and a guide that helps you say what you feel without music words. And there’s my First Listen Promise. Anthem: if your first listen doesn’t feel like your brand, I rebuild it from a fresh direction, once, on me. Atelier: your first track and Sonic Signature land first, before the other four are built.",
   },
   {
     q: "Do you use AI? Will it sound like AI?",
