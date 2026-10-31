@@ -640,7 +640,7 @@ export function Guide() {
         <p className="sia-hand">(be honest. it’s just us.)</p>
         <p className="sia-body">
           Nine questions. Find out what your brand sounds like right now, and meet your Sonic
-          Archetype: the energy your sound was built to carry.
+          Archetype: the energy people feel from your brand before you say a word.
         </p>
         <a className="sia-btn sia-btn--bone" href={LINKS.audit} target="_blank" rel="noreferrer">
           Take the free audit <span className="sia-arrow" aria-hidden="true">↗</span>

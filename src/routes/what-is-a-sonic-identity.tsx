@@ -26,7 +26,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "How do I find out what my brand should sound like?",
-    a: "Take the free Sonic Identity Audit. Nine quick questions, and it names your Sonic Archetype: the energy your sound was built to carry.",
+    a: "Take the free Sonic Identity Audit. Nine quick questions, and it names your Sonic Archetype: the energy people feel from your brand before you say a word.",
   },
 ];
 
