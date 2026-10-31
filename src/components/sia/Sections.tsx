@@ -344,7 +344,7 @@ const OFFERS = [
       "A sound guide, so your team never guesses",
       "Exclusive brand-use rights in writing",
       "On Spotify and in the music libraries, if you want it",
-      "About six to eight weeks from your intake",
+      "First track and Sonic Signature in about 7 days, your full sound world in about 4 to 6 weeks",
     ],
     because: "Your whole brand soundtrack, built for one brand at a time and never licensed to another.",
     plan: "$10,000 founding rate, five spots through Nov 30 · or 3 payments of $3,500",
@@ -714,7 +714,7 @@ export const FAQ = [
   },
   {
     q: "How long does it take?",
-    a: "The Anthem: your first listen in about 7 to 10 days, finished in 2 to 4 weeks. The Atelier: about six to eight weeks from your intake. Got a launch or event date? Tell me and I’ll be honest about whether we can make it.",
+    a: "The Anthem: your first listen in about 7 to 10 days, finished in 2 to 4 weeks. The Atelier: your first track and Sonic Signature in about 7 days, your full sound world in about 4 to 6 weeks (often faster when your feedback comes back quickly). Got a launch or event date? Tell me and I’ll be honest about whether we can make it.",
   },
   {
     q: "How much is it?",
