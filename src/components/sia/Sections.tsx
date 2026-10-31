@@ -487,6 +487,8 @@ const HEARD: {
   spotify?: string;
   /** Optional client photo, shown at the top of the card. */
   photo?: string;
+  /** Optional line shown under the buttons. */
+  after?: string;
   /** Optional words from the client, one quote per entry. */
   quote?: string[];
 }[] = [
@@ -514,6 +516,8 @@ const HEARD: {
     note: "Made to sound the way her brand feels. It lives on Spotify.",
     links: [{ label: "Listen on Spotify", href: "https://open.spotify.com/track/1F6C3FXTLZZCQdLEDrK4Cn" }],
     spotify: "1F6C3FXTLZZCQdLEDrK4Cn",
+    after:
+      "When the song is yours, your people can play it, save it and share it. Your brand shows up in their car, their playlists and their feed, even on the days you don’t post. That’s omnipresence.",
   },
 ];
 
@@ -562,6 +566,7 @@ export function Proof() {
                     </a>
                   ))}
               </div>
+              {h.after && <p className="sia-heard__after">{h.after}</p>}
             </figure>
           ))}
         </div>
