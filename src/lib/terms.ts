@@ -109,6 +109,10 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
+        "text": "Client’s music is made with third-party AI music tools (currently Suno) on a paid plan that permits commercial use. Studio grants this license from the rights Studio holds under those tools’ terms as they stood when the music was made."
+      },
+      {
+        "t": "p",
         "text": "The authorized uses include:"
       },
       {
@@ -173,7 +177,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     ]
   },
   {
-    "title": "6. Exclusive Brand-Use Commitment",
+    "title": "6. Brand-Use Commitment: Licensed to Your Brand Alone",
     "blocks": [
       {
         "t": "p",
@@ -284,11 +288,15 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Studio may use AI-assisted music creation, production, editing, and sound-design tools as part of its creative process, the way a producer uses software. Every creative decision is made by Studio."
+        "text": "Studio uses AI music tools, including Suno, along with other production, editing and sound-design tools, as part of its creative process, the way a producer uses software. Every creative decision is made by Studio."
       },
       {
         "t": "p",
         "text": "Studio will use tools and materials consistent with the commercial permissions available for the particular project."
+      },
+      {
+        "t": "p",
+        "text": "Studio keeps a paid plan active while making Client’s music and keeps a record of when each track was made. If a tool provider later changes its terms in a way that affects Client’s authorized uses, Studio will tell Client promptly and, where possible, remake the affected music at no cost."
       },
       {
         "t": "p",
@@ -349,7 +357,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "If Studio closes or stops operating, Client’s fully paid, perpetual brand-use license continues."
+        "text": "If Studio closes or stops operating, Client’s fully paid, perpetual brand-use license continues, to the extent Studio’s own rights allow."
       }
     ]
   },

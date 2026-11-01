@@ -11,7 +11,7 @@ const DESCRIPTION =
 
 // Legal business name and state, to be filled in before going live.
 const STUDIO_NAME = "Chayenne Mallari";
-const LAST_UPDATED = "October 2026";
+const LAST_UPDATED = "November 2026";
 
 export const Route = createFileRoute("/terms")({
   head: () => ({
@@ -51,7 +51,7 @@ const GLANCE: { h: string; p: string }[] = [
   },
   {
     h: "Made for you alone",
-    p: "Exclusive brand-use rights, in writing. No expiry, no renewals, and I never license your music to another brand.",
+    p: "Brand-use rights in writing, licensed to your brand alone. No expiry, no renewals, and I never license your music to another brand.",
   },
   {
     h: "Spotify and music libraries, if you want them",
@@ -63,7 +63,7 @@ const GLANCE: { h: string; p: string }[] = [
   },
   {
     h: "Payments and refunds",
-    p: "Your license starts with your first payment. Because it's made from scratch, payments are non-refundable once your intake is in and work begins. Both come with a First Listen Promise (section 3): the Anthem gets one rebuild from a fresh direction, the Atelier lets you stop after the first stage.",
+    p: "Your license starts with your first payment. Because it's made custom for you, payments are non-refundable once your intake is in and work begins. Both come with a First Listen Promise (section 3): the Anthem gets one rebuild from a fresh direction, the Atelier lets you stop after the first stage.",
   },
 ];
 
