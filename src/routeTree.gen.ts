@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as SonicArchetypesRouteImport } from './routes/sonic-archetypes'
 import { Route as SonicIdentityForCoachesRouteImport } from './routes/sonic-identity-for-coaches'
 import { Route as SoundBrandingForFemaleFoundersRouteImport } from './routes/sound-branding-for-female-founders'
 import { Route as TermsRouteImport } from './routes/terms'
@@ -18,6 +19,11 @@ import { Route as WhatIsASonicIdentityRouteImport } from './routes/what-is-a-son
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SonicArchetypesRoute = SonicArchetypesRouteImport.update({
+  id: '/sonic-archetypes',
+  path: '/sonic-archetypes',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SonicIdentityForCoachesRoute = SonicIdentityForCoachesRouteImport.update({
@@ -44,6 +50,7 @@ const WhatIsASonicIdentityRoute = WhatIsASonicIdentityRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/sonic-archetypes': typeof SonicArchetypesRoute
   '/sonic-identity-for-coaches': typeof SonicIdentityForCoachesRoute
   '/sound-branding-for-female-founders': typeof SoundBrandingForFemaleFoundersRoute
   '/terms': typeof TermsRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/sonic-archetypes': typeof SonicArchetypesRoute
   '/sonic-identity-for-coaches': typeof SonicIdentityForCoachesRoute
   '/sound-branding-for-female-founders': typeof SoundBrandingForFemaleFoundersRoute
   '/terms': typeof TermsRoute
@@ -59,6 +67,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/sonic-archetypes': typeof SonicArchetypesRoute
   '/sonic-identity-for-coaches': typeof SonicIdentityForCoachesRoute
   '/sound-branding-for-female-founders': typeof SoundBrandingForFemaleFoundersRoute
   '/terms': typeof TermsRoute
@@ -68,6 +77,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/sonic-archetypes'
     | '/sonic-identity-for-coaches'
     | '/sound-branding-for-female-founders'
     | '/terms'
@@ -75,6 +85,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/sonic-archetypes'
     | '/sonic-identity-for-coaches'
     | '/sound-branding-for-female-founders'
     | '/terms'
@@ -82,6 +93,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/sonic-archetypes'
     | '/sonic-identity-for-coaches'
     | '/sound-branding-for-female-founders'
     | '/terms'
@@ -90,6 +102,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SonicArchetypesRoute: typeof SonicArchetypesRoute
   SonicIdentityForCoachesRoute: typeof SonicIdentityForCoachesRoute
   SoundBrandingForFemaleFoundersRoute: typeof SoundBrandingForFemaleFoundersRoute
   TermsRoute: typeof TermsRoute
@@ -103,6 +116,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sonic-archetypes': {
+      id: '/sonic-archetypes'
+      path: '/sonic-archetypes'
+      fullPath: '/sonic-archetypes'
+      preLoaderRoute: typeof SonicArchetypesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sonic-identity-for-coaches': {
@@ -138,6 +158,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SonicArchetypesRoute: SonicArchetypesRoute,
   SonicIdentityForCoachesRoute: SonicIdentityForCoachesRoute,
   SoundBrandingForFemaleFoundersRoute: SoundBrandingForFemaleFoundersRoute,
   TermsRoute: TermsRoute,
