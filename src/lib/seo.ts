@@ -33,7 +33,7 @@ const service = {
   url: SITE_URL,
   image: OG_IMAGE,
   description:
-    "Sonic identity and sound branding for female founders, coaches and personal brands: signature songs, a sonic signature and a sound guide, with exclusive usage rights. Done for you, no calls.",
+    "Sonic identity and sound branding for female founders, coaches and personal brands: signature songs, a sonic signature and a sound guide, with brand-use rights in writing. Done for you, no calls.",
   founder: { "@id": `${SITE_URL}/#chayenne` },
   areaServed: "Worldwide",
   sameAs: SAME_AS,

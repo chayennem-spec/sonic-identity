@@ -22,11 +22,11 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "Can I play it in my Zoom calls and group programs?",
-    a: "Yes. Your exclusive brand-use rights cover your programs and courses, webinars, livestreams and replays, as well as content, ads, events and your podcast. They’re written into my Terms of Purchase.",
+    a: "Yes. Your brand-use rights cover your programs and courses, webinars, livestreams and replays, as well as content, ads, events and your podcast. They’re written into my Terms of Purchase.",
   },
   {
     q: "Is this AI music?",
-    a: "AI is one of my instruments, the way a producer uses software. The strategy, the lyrics, the taste and every final call are mine, built around you.",
+    a: "AI is one of my instruments, the way a producer uses software. The strategy, the taste and every final call are mine, built around you. Your lyrics come from your own words, shaped by me.",
   },
 ];
 
@@ -97,7 +97,7 @@ function Page() {
       </p>
       <h3>The launch</h3>
       <p>
-        Every launch that starts with a new trending sound starts from zero. A launch track that belongs to your
+        Every launch that starts with a new trending sound starts from zero. A launch track made for your
         brand carries the feeling from one launch to the next, so your audience recognizes the season before you
         announce it.
       </p>
@@ -116,7 +116,7 @@ function Page() {
         your Sonic Archetype first, then make the music.
       </p>
       <p>
-        From your first payment, you get exclusive brand-use rights in writing for your content, ads, launches, events,
+        From your first payment, you get brand-use rights in writing for your content, ads, launches, events,
         podcast and programs. No expiry, no renewals, and I never license your sound to another brand.
       </p>
 

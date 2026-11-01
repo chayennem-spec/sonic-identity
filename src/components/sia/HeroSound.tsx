@@ -158,7 +158,7 @@ export function HeroSound() {
             Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
           </span>
         </h1>
-        <p className="sia-hero__tag">A signature song made for your brand, so every reel, ad and walk-on sounds like you, and only you.</p>
+        <p className="sia-hero__tag">A signature song made for your brand, so every reel, ad and walk-on sounds like you, every time.</p>
         <p className="sia-hero__sub">
           Okay, real talk. You’ve curated every photo and polished every caption. And your sound?
           Whatever was trending this morning.

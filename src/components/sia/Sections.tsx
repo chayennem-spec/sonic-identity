@@ -269,7 +269,7 @@ export function Rights() {
           <p>
             A trending track can’t give you a yes to either one. A song made for your brand can: I make
             it for you, I never license it to another brand, and it comes with{" "}
-            <strong>exclusive brand-use rights in writing, with no expiry and no renewals.</strong>
+            <strong>brand-use rights in writing, licensed to your brand alone, with no expiry and no renewals.</strong>
           </p>
           <p className="sia-hand">Yes and yes.</p>
         </div>
@@ -342,7 +342,7 @@ const OFFERS = [
       "Your Sonic Signature: a 2-to-5-second sound logo, built from one real sound in your world",
       "Two refinement rounds, no calls",
       "A sound guide, so your team never guesses",
-      "Exclusive brand-use rights in writing",
+      "Brand-use rights in writing, licensed to your brand alone",
       "On Spotify and in the music libraries, if you want it",
       "First track and Sonic Signature in about 7 days, your full sound world in about 4 to 6 weeks",
     ],
@@ -363,11 +363,11 @@ const OFFERS = [
       "One refinement round",
       "First Listen Promise: not her? I rebuild it from a new direction",
       "First listen in about 7 to 10 days, finished in 2 to 4 weeks",
-      "Exclusive brand-use rights in writing",
+      "Brand-use rights in writing, licensed to your brand alone",
       "On Spotify and in the music libraries, if you want it (with a bonus ad song)",
       "Its full price comes off the Atelier within 30 days of delivery",
     ],
-    because: "Your story, in a song nobody else can use for their brand.",
+    because: "Your story, in a song I’ll never license to another brand.",
     plan: "$2,500 founding price through Nov 30, then $3,000 · or 2 payments of $1,300",
     cta: "Get your Anthem",
     href: LINKS.anthem,
@@ -519,7 +519,7 @@ const HEARD: {
     links: [{ label: "Listen on Spotify", href: "https://open.spotify.com/track/1F6C3FXTLZZCQdLEDrK4Cn" }],
     spotify: "1F6C3FXTLZZCQdLEDrK4Cn",
     after:
-      "When the song is yours, your people can play it, save it and share it. Your brand shows up in their car, their playlists and their feed, even on the days you don’t post. That’s omnipresence.",
+      "When you have a song made for your brand, your people can play it, save it and share it. Your brand shows up in their car, their playlists and their feed, even on the days you don’t post. That’s omnipresence.",
   },
 ];
 
@@ -702,11 +702,11 @@ export const FAQ = [
   },
   {
     q: "Do you use AI? Will it sound like AI?",
-    a: "Yes, it’s one of my instruments, the way a producer uses software. The direction, the lyrics, the taste and every final call are mine, so what you hear is your brand, not a prompt. AI is in the room. It just doesn’t get a vote.",
+    a: "Yes, it’s one of my instruments, the way a producer uses software. The direction, the taste and every final call are mine, and your lyrics come from your own words, shaped by me. So what you hear is your brand, not a prompt. AI is in the room. It just doesn’t get a vote.",
   },
   {
     q: "Can another brand ever use my song?",
-    a: "Never. Your Anthem or Atelier comes with exclusive brand-use rights, in writing: content, ads, launches, events, livestreams, your podcast and your programs. No expiry, no renewals, and I never license your sound to another brand. Want it on Spotify, or in Instagram and TikTok’s music libraries so people can find it and post with it? Just ask. Put your Anthem in the libraries and I make you a bonus ad song, kept just for your brand, so your ads stay clean. Need a use that isn’t listed? Tell me in your application and we’ll add it. Full details are in the Terms of Purchase.",
+    a: "Never. Your Anthem or Atelier comes with brand-use rights in writing, licensed to your brand alone: content, ads, launches, events, livestreams, your podcast and your programs. No expiry, no renewals, and I never license your sound to another brand. Want it on Spotify, or in Instagram and TikTok’s music libraries so people can find it and post with it? Just ask. Put your Anthem in the libraries and I make you a bonus ad song, kept just for your brand, so your ads stay clean. Need a use that isn’t listed? Tell me in your application and we’ll add it. Full details are in the Terms of Purchase.",
   },
   {
     q: "Do I have to get on calls?",

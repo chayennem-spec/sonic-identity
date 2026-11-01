@@ -4,25 +4,25 @@ export function BrandBand() {
   return (
     <div className="si si-marquee" aria-hidden="true">
       <div className="si-marquee__track">
-        <span>Stop renting your sound</span>
+        <span>Stop borrowing your sound</span>
         <i>●</i>
         <span>Your sound is your signature</span>
         <i>●</i>
         <span>It’s already yours</span>
         <i>●</i>
-        <span>Stop renting your sound</span>
+        <span>Stop borrowing your sound</span>
         <i>●</i>
         <span>Your sound is your signature</span>
         <i>●</i>
         <span>It’s already yours</span>
         <i>●</i>
-        <span>Stop renting your sound</span>
+        <span>Stop borrowing your sound</span>
         <i>●</i>
         <span>Your sound is your signature</span>
         <i>●</i>
         <span>It’s already yours</span>
         <i>●</i>
-        <span>Stop renting your sound</span>
+        <span>Stop borrowing your sound</span>
         <i>●</i>
         <span>Your sound is your signature</span>
         <i>●</i>
