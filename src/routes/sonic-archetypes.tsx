@@ -110,7 +110,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "Is one of these demos my song?",
-    a: "No. Each demo is one way that archetype can sound. Your Anthem keeps your archetype’s energy and builds everything else around you: your words, your world and your people. It comes with exclusive brand-use rights in writing, never licensed to another brand.",
+    a: "No. Each demo is one way that archetype can sound. Your Anthem keeps your archetype’s energy and builds everything else around you: your words, your world and your people. It comes with brand-use rights in writing, licensed to your brand alone and never to another brand.",
   },
   {
     q: "I like the energy but not the genre. Is that a problem?",
