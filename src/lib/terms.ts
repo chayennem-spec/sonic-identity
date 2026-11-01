@@ -300,10 +300,6 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "Studio will not knowingly incorporate unauthorized third-party recordings, samples, lyrics, or other protected materials."
-      },
-      {
-        "t": "p",
         "text": "Client acknowledges that:"
       },
       {
