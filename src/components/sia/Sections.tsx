@@ -204,14 +204,14 @@ export function Method() {
       <div className="sia-wrap">
         <div className="sia-sound__head sia-reveal">
           <div>
-            <p className="sia-mono sia-kicker">The method</p>
+            <p className="sia-mono sia-kicker">The method · The S.O.U.N.D. Framework</p>
             <h2 className="sia-display">
               How a signature sound <span className="sia-nw">is <em>built</em>.</span>
             </h2>
           </div>
           <p>
             You don’t need to know what a minor key is. That’s my job. Your Sonic Archetype tells me
-            who you are. These five decisions turn that into a song. You tell me about your brand in
+            who you are. My S.O.U.N.D. Framework, five decisions, turns that into a song. You tell me about your brand in
             writing, and I take it from there. Every note starts from your archetype, not a stock
             library.
           </p>
