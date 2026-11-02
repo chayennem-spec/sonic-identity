@@ -113,8 +113,8 @@ function Page() {
 
       <h2>How I build it</h2>
       <p>
-        I spent twenty years behind the chair reading high-net-worth clients before they said a word. Now I do
-        that with sound. Every brand I build goes through my S.O.U.N.D. Framework, the same five decisions: the style that fits who you
+        For twenty years behind the chair, I chose music for how I wanted each client to feel walking out. Now I do
+        that for brands. Every sound I build starts with the same five decisions: the style that fits who you
         actually are, the outcome your people should feel, the undertone underneath, the narrative your sound
         tells, and how it’s delivered across your platforms.
       </p>

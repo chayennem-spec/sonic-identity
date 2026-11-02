@@ -596,9 +596,19 @@ export function About() {
           <div className="sia-body">
             <p className="sia-lead">Hi, I’m Chayenne Mallari, the Sonic Identity Architect.</p>
             <p>
-              For more than twenty years I stood behind the chair for high-net-worth clients. I could
-              tell who someone was before they said a word: how they wanted to walk out, and what they
-              wanted a room to feel when they walked in. Now? I do that with sound.
+              I’ve always used music on purpose. One playlist when I needed to feel unstoppable, another
+              when I needed to soften, and songs I made myself to shift who I was becoming.
+            </p>
+            <p>
+              For more than twenty years behind the chair, I did the same for my clients. Their music,
+              chosen for how I wanted them to feel. The woman who sat down two weeks after her breakup
+              and said “cut it off” didn’t just leave with a new haircut. She left a different woman,
+              and the music was part of it.
+            </p>
+            <p>
+              Then I noticed every founder I followed had a gorgeous brand and the same trending song
+              under it. When AI music arrived, I started building for brands what I’d been doing by
+              instinct all along.
             </p>
             <p>
               I’m a certified hypnotherapist and NLP trainer, and I built an eight-archetype Sonic
