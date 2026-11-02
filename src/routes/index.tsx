@@ -9,7 +9,7 @@ import {
   Faq,
   FAQ,
   FinalCta,
-  Method,
+  MethodSection,
   Offers,
   Proof,
   Rights,
@@ -50,7 +50,7 @@ function HomePage() {
         <ForHer />
         <About />
         <OnSet />
-        <Method />
+        <MethodSection />
         <Rights />
         <Offers />
         <Faq />

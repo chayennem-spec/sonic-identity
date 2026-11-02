@@ -85,7 +85,7 @@ export function StickyCta() {
     const onScroll = () => {
       const nearEnd = window.innerHeight + window.scrollY > document.body.scrollHeight - 1900;
       // Stay out of the way while she's reading the offers or the application.
-      const busy = ["offers", "apply"].some((id) => {
+      const busy = ["offers", "apply", "method"].some((id) => {
         const r = document.getElementById(id)?.getBoundingClientRect();
         return !!r && r.top < window.innerHeight && r.bottom > 0;
       });

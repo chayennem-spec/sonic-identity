@@ -1199,3 +1199,53 @@
 /* Readability on the concrete: body copy a step brighter */
 .sia-gap .sia-body p { color: #c9c2b6; }
 .sia-gap .sia-body .sia-lead { color: var(--sia-bone) !important; }
+
+/* S.O.U.N.D. reel */
+.sia-reel { padding: 120px 0 0; }
+.sia-reel h2 { font-size: clamp(42px, 5.4vw, 80px); max-width: 12ch; }
+.sia-reel .sia-sound__head { margin-bottom: 0; }
+.sia-reel__intro { padding-bottom: 28px; }
+.sia-reel__hint { display: flex; align-items: center; gap: 12px; color: var(--sia-dim); margin-top: 28px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; }
+.sia-reel__nudge { display: inline-block; width: 46px; height: 1px; background: var(--sia-red); animation: sia-reel-nudge 1.6s ease-in-out infinite; }
+@keyframes sia-reel-nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
+.sia-reel__pin { position: relative; height: 500svh; }
+.sia-reel__panel { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: 14px; overflow: hidden; background: var(--sia-black); }
+.sia-reel__viewport { overflow: hidden; width: 100%; }
+.sia-reel__track { display: flex; gap: 22px; padding: 0 calc(50vw - min(78vw, 560px) / 2); will-change: transform; }
+.sia-reel__frame, .sia-reel__end { flex: 0 0 min(78vw, 560px); box-sizing: border-box; background: var(--sia-off); border: 1px solid var(--sia-line); padding: 18px 22px 24px; display: flex; flex-direction: column; min-height: min(68svh, 640px); }
+.sia-reel__top { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sia-dim); }
+.sia-reel__count { color: var(--sia-red); }
+.sia-reel__letter { font-family: var(--sia-display); font-weight: 700; font-size: min(42svh, 360px); line-height: 0.82; letter-spacing: -0.04em; margin: auto 0 10px; color: transparent; -webkit-text-stroke: 1.5px var(--sia-line); transition: color 500ms ease, -webkit-text-stroke-color 500ms ease; }
+.sia-reel__frame.is-lit .sia-reel__letter { color: var(--sia-bone); -webkit-text-stroke-color: var(--sia-bone); }
+.sia-reel__frame.is-last.is-lit .sia-reel__letter { color: var(--sia-red); -webkit-text-stroke-color: var(--sia-red); }
+.sia-reel__word { font-family: var(--sia-display); font-weight: 700; text-transform: uppercase; font-size: clamp(26px, 3.4vw, 40px); letter-spacing: -0.01em; color: var(--sia-bone); margin: 0 0 8px; }
+.sia-reel__line { color: var(--sia-dim); font-size: 16px; line-height: 1.55; margin: 0; max-width: 30em; }
+.sia-reel__end { justify-content: center; background: transparent; border-color: transparent; }
+.sia-reel__mark { font-family: var(--sia-display); font-weight: 700; font-size: clamp(54px, 9vw, 110px); line-height: 0.9; letter-spacing: -0.03em; color: var(--sia-bone); margin: 0; }
+.sia-reel__mark span { color: var(--sia-red); }
+.sia-reel__script { font-family: var(--sia-lipstick); color: var(--sia-red); font-size: clamp(34px, 4vw, 52px); transform: rotate(-3deg); transform-origin: left center; margin: 18px 0 12px; }
+.sia-reel__closer { color: var(--sia-dim); font-size: 16px; margin: 0; }
+.sia-reel__sprockets { height: 14px; background-image: radial-gradient(circle, var(--sia-off) 4px, transparent 4.5px); background-size: 26px 14px; background-repeat: repeat-x; background-position: center; opacity: 0.9; }
+.sia-reel__rail { display: flex; align-items: center; gap: 16px; padding: 4px calc(50vw - min(78vw, 560px) / 2) 0; }
+.sia-reel__letters { display: flex; gap: 8px; font-size: 12px; }
+.sia-reel__letters b { font-weight: 400; color: var(--sia-line); transition: color 300ms ease; }
+.sia-reel__letters b.is-on { color: var(--sia-bone); }
+.sia-reel__bar { flex: 1; height: 1px; background: var(--sia-line); position: relative; overflow: hidden; }
+.sia-reel__bar i { position: absolute; inset: 0; background: var(--sia-red); transform-origin: left; transform: scaleX(0); }
+.sia-reel__frames { font-size: 12px; color: var(--sia-dim); letter-spacing: 0.12em; }
+@media (max-width: 640px) {
+  .sia-reel__frame, .sia-reel__end { padding: 16px 18px 20px; min-height: 64svh; }
+  .sia-reel__letter { font-size: min(36svh, 64vw); }
+  .sia-reel__line { font-size: 15px; }
+  .sia-reel__track { gap: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sia-reel__pin { height: auto; }
+  .sia-reel__panel { position: static; height: auto; padding: 24px 0 64px; }
+  .sia-reel__track { flex-direction: column; align-items: center; transform: none !important; padding: 0 20px; }
+  .sia-reel__frame, .sia-reel__end { flex: none; width: min(100%, 560px); min-height: 0; }
+  .sia-reel__letter { color: var(--sia-bone); -webkit-text-stroke-color: var(--sia-bone); font-size: 140px; }
+  .sia-reel__frame.is-last .sia-reel__letter { color: var(--sia-red); -webkit-text-stroke-color: var(--sia-red); }
+  .sia-reel__sprockets, .sia-reel__rail, .sia-reel__hint { display: none; }
+  .sia-reel__nudge { animation: none; }
+}

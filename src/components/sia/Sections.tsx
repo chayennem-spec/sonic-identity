@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { ASSETS, LINKS } from "../../lib/constants";
+import { useEffect, useRef, useState } from "react";
+import { ASSETS, LINKS, METHOD_LAYOUT } from "../../lib/constants";
 
 // Homepage sections, Oct 2026 redesign. Copy written for Chayenne; edit freely.
 
@@ -228,6 +228,123 @@ export function Method() {
               </div>
             </article>
           ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function MethodSection() {
+  return METHOD_LAYOUT === "reel" ? <MethodReel /> : <Method />;
+}
+
+const LETTERS = ["S", "O", "U", "N", "D"];
+
+/** S.O.U.N.D. as a sideways film strip, pinned while you scroll. */
+export function MethodReel() {
+  const pinRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(-1);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const pin = pinRef.current;
+    const track = trackRef.current;
+    if (!pin || !track) return;
+    let raf = 0;
+    const frame = () => {
+      raf = 0;
+      const box = pin.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const scrollable = box.height - vh;
+      const p = scrollable > 0 ? Math.min(1, Math.max(0, -box.top / scrollable)) : 0;
+      const viewport = track.parentElement?.clientWidth || window.innerWidth;
+      const travel = Math.max(0, track.scrollWidth - viewport);
+      track.style.transform = `translate3d(${(-p * travel).toFixed(1)}px,0,0)`;
+      // Which frame sits in the middle of the screen?
+      const mid = viewport / 2;
+      let idx = -1;
+      track.querySelectorAll<HTMLElement>("[data-frame]").forEach((f, i) => {
+        const r = f.getBoundingClientRect();
+        if (r.left < mid + r.width * 0.2) idx = i;
+      });
+      setActive(idx);
+      setProgress(p);
+    };
+    const onScroll = () => {
+      if (!raf) raf = requestAnimationFrame(frame);
+    };
+    frame();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
+
+  const shown = Math.min(5, Math.max(0, active + 1));
+  return (
+    <section className="sia sia-reel sia-rule" id="method" aria-label="The S.O.U.N.D. Framework">
+      <div className="sia-wrap sia-reel__intro">
+        <div className="sia-sound__head">
+          <div>
+            <p className="sia-mono sia-kicker">The method · The S.O.U.N.D. Framework</p>
+            <h2 className="sia-display">
+              How a signature sound <span className="sia-nw">is <em>built</em>.</span>
+            </h2>
+          </div>
+          <p>
+            You don’t need to know what a minor key is. That’s my job. Your Sonic Archetype tells me
+            who you are. My S.O.U.N.D. Framework, five decisions, turns that into a song. You tell me about your brand in
+            writing, and I take it from there. Every note starts from your archetype, not a stock
+            library.
+          </p>
+        </div>
+        <p className="sia-mono sia-reel__hint" aria-hidden="true">
+          Keep scrolling <span className="sia-reel__nudge" />
+        </p>
+      </div>
+
+      <div className="sia-reel__pin" ref={pinRef}>
+        <div className="sia-reel__panel">
+          <div className="sia-reel__sprockets" aria-hidden="true" />
+          <div className="sia-reel__viewport">
+            <div className="sia-reel__track" ref={trackRef}>
+              {SOUND.map((s, i) => (
+                <article
+                  key={s.t}
+                  data-frame
+                  className={`sia-reel__frame${i <= active ? " is-lit" : ""}${i === 4 ? " is-last" : ""}`}
+                >
+                  <div className="sia-reel__top sia-mono">
+                    <span>SIA · Reel 01</span>
+                    <span className="sia-reel__count">{s.l} / 05</span>
+                  </div>
+                  <span className="sia-reel__letter" aria-hidden="true">{LETTERS[i]}</span>
+                  <h3 className="sia-reel__word">{s.t}</h3>
+                  <p className="sia-reel__line">{s.d}</p>
+                </article>
+              ))}
+              <div className="sia-reel__end" data-frame>
+                <p className="sia-reel__mark">S.O.U.N.D<span>.</span></p>
+                <p className="sia-reel__script">Five decisions. One sound.</p>
+                <p className="sia-reel__closer">Every note starts from your archetype, not a stock library.</p>
+              </div>
+            </div>
+          </div>
+          <div className="sia-reel__sprockets" aria-hidden="true" />
+          <div className="sia-reel__rail" aria-hidden="true">
+            <span className="sia-reel__letters sia-mono">
+              {LETTERS.map((l, i) => (
+                <b key={l} className={i < shown ? "is-on" : ""}>{l}</b>
+              ))}
+            </span>
+            <span className="sia-reel__bar"><i style={{ transform: `scaleX(${progress.toFixed(3)})` }} /></span>
+            <span className="sia-reel__frames sia-mono">{String(Math.max(1, shown)).padStart(2, "0")} / 05</span>
+          </div>
         </div>
       </div>
     </section>

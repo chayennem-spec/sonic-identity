@@ -60,3 +60,6 @@ export const CRM_CONFIG = {
     brandStory: "klOllZgm9RYYpytEQ7O2",
   },
 };
+
+// "reel" = S.O.U.N.D. as a sideways film strip; "grid" = the original five cards.
+export const METHOD_LAYOUT: "reel" | "grid" = "reel";
