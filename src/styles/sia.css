@@ -1208,7 +1208,7 @@
 .sia-reel__hint { display: flex; align-items: center; gap: 12px; color: var(--sia-dim); margin-top: 28px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; }
 .sia-reel__nudge { display: inline-block; width: 46px; height: 1px; background: var(--sia-red); animation: sia-reel-nudge 1.6s ease-in-out infinite; }
 @keyframes sia-reel-nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
-.sia-reel__pin { position: relative; height: 500svh; }
+.sia-reel__pin { position: relative; height: 350svh; }
 .sia-reel__panel { position: sticky; top: 0; height: 100svh; display: flex; flex-direction: column; justify-content: center; gap: 14px; overflow: hidden; background: var(--sia-black); }
 .sia-reel__viewport { overflow: hidden; width: 100%; }
 .sia-reel__track { display: flex; gap: 22px; padding: 0 calc(50vw - min(78vw, 560px) / 2); will-change: transform; }
