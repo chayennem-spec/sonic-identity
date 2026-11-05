@@ -92,7 +92,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
       },
       {
         "t": "p",
-        "text": "**First Listen Promise (Instant Recognition Atelier).** Client’s first track and Sonic Signature are delivered first. If, after their refinement, Client feels they do not fit Client’s brand, Client may end the project by notifying Studio in writing within 7 days of receiving the refined versions. Client then pays only for that first stage: the amount of Client’s first installment (whether Client paid in full or in installments), with the balance refunded or remaining installments cancelled. No license is granted in music from an ended project. Otherwise, payments are non-refundable once Client’s intake is submitted and work begins."
+        "text": "**First Listen Promise (Instant Recognition Atelier).** Client’s first track is delivered first. If, after its refinement, Client feels it does not fit Client’s brand, Client may end the project by notifying Studio in writing within 7 days of receiving the refined version. Client then pays only for that first stage: the amount of Client’s first installment (whether Client paid in full or in installments), with the balance refunded or remaining installments cancelled. No license is granted in music from an ended project. Otherwise, payments are non-refundable once Client’s intake is submitted and work begins."
       },
       {
         "t": "p",
@@ -181,7 +181,7 @@ export const TERMS_SECTIONS: { title: string; blocks: Block[] }[] = [
     "blocks": [
       {
         "t": "p",
-        "text": "Studio will not license the delivered recordings, the Sonic Signature, or any cut, loop or edit of them to any other company or personal brand for use in its business, marketing or brand identity."
+        "text": "Studio will not license the delivered recordings or any cut, loop or edit of them to any other company or personal brand for use in its business, marketing or brand identity."
       },
       {
         "t": "p",

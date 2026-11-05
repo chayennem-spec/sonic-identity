@@ -10,7 +10,7 @@ const DESCRIPTION =
 const FAQ_ITEMS: QA[] = [
   {
     q: "What is a sonic identity in simple terms?",
-    a: "It’s what your brand sounds like, on purpose: a signature song, a short sound people learn to recognize as you, and a set of rules for where each one plays. Think of it as a logo, but for the ear.",
+    a: "It’s what your brand sounds like, on purpose: a signature song, a family of tracks around it, and a set of rules for where each one plays. Think of it as a logo, but for the ear.",
   },
   {
     q: "Is a sonic identity the same as sonic branding or sound branding?",
@@ -18,7 +18,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "Isn’t that just a jingle?",
-    a: "No. A jingle is one catchy line about your product. A sonic identity is a whole sound world built from who you are: songs, a signature, cuts for every platform and a guide for your team.",
+    a: "No. A jingle is one catchy line about your product. A sonic identity is a whole sound world built from who you are: songs, cuts for every platform and a guide for your team.",
   },
   {
     q: "Do personal brands really need one?",
@@ -65,10 +65,6 @@ function Page() {
         <li>
           <strong>A signature song or anthem.</strong> Your message, your energy and your movement in one piece
           of music, with lyrics pulled from the words you already say.
-        </li>
-        <li>
-          <strong>A Sonic Signature.</strong> Sometimes called an audio logo: two to five seconds people learn to
-          recognize as you. Your version of the Netflix “ta-dum.”
         </li>
         <li>
           <strong>A sound family.</strong> Tracks for different moments that still sound like the same brand: a

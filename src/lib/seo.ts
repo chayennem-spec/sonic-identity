@@ -33,11 +33,11 @@ const service = {
   url: SITE_URL,
   image: OG_IMAGE,
   description:
-    "Sonic identity and sound branding for female founders, coaches and personal brands: signature songs, a sonic signature and a sound guide, with brand-use rights in writing. Done for you, no calls.",
+    "Sonic identity and sound branding for female founders, coaches and personal brands: signature songs and a sound guide, with brand-use rights in writing. Done for you, no calls.",
   founder: { "@id": `${SITE_URL}/#chayenne` },
   areaServed: "Worldwide",
   sameAs: SAME_AS,
-  serviceType: ["Sonic identity", "Sound branding", "Signature song creation", "Audio logo"],
+  serviceType: ["Sonic identity", "Sound branding", "Signature song creation"],
 };
 
 /** JSON-LD script entries for TanStack head(). */

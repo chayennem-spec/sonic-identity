@@ -5,7 +5,7 @@ import { articleBlock, faqBlock, ldScripts, pageHead } from "../lib/seo";
 const PATH = "/sound-branding-for-female-founders";
 const TITLE = "Sound Branding for Female Founders | Sonic Identity Architect";
 const DESCRIPTION =
-  "Sound branding for female founders: a signature song, a Sonic Signature and a sound guide, made for your brand alone. What it is and how it’s built.";
+  "Sound branding for female founders: a signature song and a sound guide, made for your brand alone. What it is and how it’s built.";
 
 const FAQ_ITEMS: QA[] = [
   {
@@ -74,10 +74,6 @@ function Page() {
           carry home. It plays when the moment matters: your launch, your walk-on, your podcast open.
         </li>
         <li>
-          <strong>A Sonic Signature.</strong> Two to five seconds people learn to recognize as you, the opening
-          of every reel and every episode.
-        </li>
-        <li>
           <strong>Cuts for real life.</strong> Full, 30-second and 15-second versions for reels, stories, ads
           and your podcast.
         </li>
@@ -130,7 +126,7 @@ function Page() {
         <li>
           <strong>The Instant Recognition Atelier.</strong> Your brand’s full soundtrack: five original tracks
           spent your way (a song for each offer, your anthem, a walk-on, a beat for your reels), plus your
-          Sonic Signature and sound guide.
+          sound guide.
         </li>
       </ul>
       <p>

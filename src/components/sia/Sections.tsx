@@ -457,12 +457,11 @@ const OFFERS = [
     desc: "You’ve already invested in how your brand looks. This is how it sounds, everywhere you show up. All it takes is one written intake and a voice memo or two, with zero calls. Then I build it for your brand alone.",
     includes: [
       "5 original tracks, spent your way: offers, anthem, walk-on, reels",
-      "Your Sonic Signature: a 2-to-5-second sound logo, built from one real sound in your world",
-      "Two refinement rounds, no calls",
+      "Two refinement rounds, with every message through Eden or Telegram",
       "A sound guide, so your team never guesses",
       "Brand-use rights in writing, licensed to your brand alone",
       "On Spotify and in the music libraries, if you want it",
-      "First track and Sonic Signature in about 7 days, your full sound world in about 4 to 6 weeks",
+      "First track in about 7 days, your full sound world in about 4 to 6 weeks",
     ],
     because: "It’s your whole brand soundtrack, built for one brand at a time and never licensed to another.",
     plan: "$10,000 · or 3 payments of $3,500",
@@ -563,8 +562,8 @@ export function Offers() {
           <div>
             <h3>Hear it before you’re <span className="sia-nw">all in.</span></h3>
             <p>
-              In the Atelier, your first track and your Sonic Signature land first. If, after refining
-              them, they just don’t feel like your brand, tell me in writing within 7 days of hearing the
+              In the Atelier, your first track lands first. If, after refining
+              it, it just doesn’t feel like your brand, tell me in writing within 7 days of hearing the
               refined version and we end there. No hard feelings.
               You pay only for that first stage, and the rest is refunded or cancelled.
               With the Anthem, if your first listen doesn’t feel like your brand, tell me within 5 business
@@ -788,7 +787,7 @@ export function Apply() {
 export const FAQ = [
   {
     q: "What is a sonic identity?",
-    a: "It’s the sound of your brand: the signature song, your Sonic Signature (think audio logo) and the family of sounds that play across your reels, podcast, launches and stage, so people know it’s you by ear. Like a signature scent, but for your brand.",
+    a: "It’s the sound of your brand: the signature song and the family of sounds that play across your reels, podcast, launches and stage, so people know it’s you by ear. Like a signature scent, but for your brand.",
   },
   {
     q: "Can’t I just use a song I love on Spotify?",
@@ -804,7 +803,7 @@ export const FAQ = [
   },
   {
     q: "What if I don’t love it?",
-    a: "Then you tell me. Honestly, I want you to. You get refinement rounds (one for the Anthem, two for the Atelier) and a guide that helps you say what you feel without music words. And there’s my First Listen Promise. With the Anthem, if your first listen doesn’t feel like your brand, I rebuild it from a fresh direction, once, on me. With the Atelier, your first track and Sonic Signature land first, before the other four are built.",
+    a: "Then you tell me. Honestly, I want you to. You get refinement rounds (one for the Anthem, two for the Atelier) and a guide that helps you say what you feel without music words. And there’s my First Listen Promise. With the Anthem, if your first listen doesn’t feel like your brand, I rebuild it from a fresh direction, once, on me. With the Atelier, your first track lands first, before the other four are built.",
   },
   {
     q: "Do you use AI? Will it sound like AI?",
@@ -820,7 +819,7 @@ export const FAQ = [
   },
   {
     q: "How long does it take?",
-    a: "For the Anthem, your first listen comes in about 7 to 10 days, and it’s finished in 2 to 4 weeks. For the Atelier, your first track and Sonic Signature come in about 7 days, and your full sound world in about 4 to 6 weeks (often faster when your feedback comes back quickly). Got a launch or event date? Tell me and I’ll be honest about whether we can make it.",
+    a: "For the Anthem, your first listen comes in about 7 to 10 days, and it’s finished in 2 to 4 weeks. For the Atelier, your first track comes in about 7 days, and your full sound world in about 4 to 6 weeks (often faster when your feedback comes back quickly). Got a launch or event date? Tell me and I’ll be honest about whether we can make it.",
   },
   {
     q: "How much is it?",

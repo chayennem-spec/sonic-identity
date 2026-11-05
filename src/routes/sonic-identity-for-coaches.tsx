@@ -77,10 +77,6 @@ function Page() {
           realizes you’re here.
         </li>
         <li>
-          <strong>Your Sonic Signature.</strong> These are the two to five seconds that open every episode and every reel,
-          until your people know it’s you with their eyes closed.
-        </li>
-        <li>
           <strong>A sound guide.</strong> It makes sure your podcast editor, your launch manager and your event
           producer all use the right track, the right way.
         </li>
