@@ -158,7 +158,7 @@ export function HeroSound() {
             Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
           </span>
         </h1>
-        <p className="sia-hero__tag">Signature sounds designed for your brand, so you’re recognized, remembered and felt everywhere you show up.</p>
+        <p className="sia-hero__tag">Signature sounds designed for your brand, so you’re recognized, remembered and felt everywhere you show up, even without being seen.</p>
         <p className="sia-hero__sub">
           You’ve curated every photo and refined every caption. Your sound is the one part of your
           brand still left to chance, and it’s usually whatever was trending this morning.
