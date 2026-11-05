@@ -10,11 +10,11 @@ const DESCRIPTION =
 const FAQ_ITEMS: QA[] = [
   {
     q: "What is a sonic identity in simple terms?",
-    a: "It’s what your brand sounds like, on purpose. A signature song, a short sound people learn to recognize as you, and a set of rules for where each one plays. Like a logo, but for the ear.",
+    a: "It’s what your brand sounds like, on purpose: a signature song, a short sound people learn to recognize as you, and a set of rules for where each one plays. Think of it as a logo, but for the ear.",
   },
   {
     q: "Is a sonic identity the same as sonic branding or sound branding?",
-    a: "Close cousins. Sonic branding or sound branding is the practice; your sonic identity is the result: the specific sounds that belong to your brand.",
+    a: "They’re close cousins. Sonic branding or sound branding is the practice; your sonic identity is the result: the specific sounds that belong to your brand.",
   },
   {
     q: "Isn’t that just a jingle?",
@@ -26,7 +26,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "How do I find out what my brand should sound like?",
-    a: "Take the free Sonic Identity Audit. Nine quick questions, and it names your Sonic Archetype: the energy people feel from your brand before you say a word.",
+    a: "Take the free Sonic Identity Audit. It’s nine quick questions, and it names your Sonic Archetype: the energy people feel from your brand before you say a word.",
   },
 ];
 
@@ -75,8 +75,8 @@ function Page() {
           launch, a walk-on, a beat under your everyday reels, a song for your offer.
         </li>
         <li>
-          <strong>A sound guide.</strong> The rules: which track goes where, which cut for which platform, so
-          your team never guesses.
+          <strong>A sound guide.</strong> It’s the rule book: which track goes where and which cut goes on
+          which platform, so your team never guesses.
         </li>
       </ul>
 
@@ -88,7 +88,7 @@ function Page() {
         every place you show up.
       </p>
       <p>
-        And trending audio? It’s borrowed. Great for a week of reach, but it puts someone else’s name on your
+        And trending audio? It’s borrowed. It’s great for a week of reach, but it puts someone else’s name on your
         content, and it changes every week, so nothing builds.
       </p>
 
@@ -109,8 +109,8 @@ function Page() {
       <h2>How a sonic identity gets made</h2>
       <p>
         I’m Chayenne Mallari, a Sonic Identity Architect. I map your Sonic Archetype first, from your photos,
-        your copy and the way you talk, then run every sound through my S.O.U.N.D. Framework, five decisions: style, outcome,
-        undertone, narrative and delivery. Then I make the music. It’s done for you, with no calls, and it
+        your copy and the way you talk, then run every sound through the five decisions of my S.O.U.N.D. Framework:
+        style, outcome, undertone, narrative and delivery. Then I make the music. It’s done for you, with no calls, and it
         comes with brand-use rights in writing, licensed to your brand alone.
       </p>
       <p>

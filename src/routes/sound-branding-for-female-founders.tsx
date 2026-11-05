@@ -44,7 +44,7 @@ function Page() {
       kicker="Guide · Sound branding"
       title="Sound branding for female"
       em="founders"
-      lead="You’ve branded everything people can see. The photos, the fonts, the website you fought for. Sound branding is the part they hear, and right now it’s probably whatever was trending this morning."
+      lead="You’ve branded everything people can see: the photos, the fonts, the website you fought for. Sound branding is the part they hear, and right now it’s probably whatever was trending this morning."
       faq={FAQ_ITEMS}
       related={[
         { href: "/what-is-a-sonic-identity", label: "What is a sonic identity?" },
@@ -59,8 +59,8 @@ function Page() {
         the woman before you in the feed.
       </p>
       <p>
-        That’s the gap sound branding closes. Not more content. A sound made from your brand, so the second
-        it plays, people know it’s you.
+        That’s the gap sound branding closes. It isn’t more content; it’s a sound made from your brand, so the
+        second it plays, people know it’s you.
       </p>
 
       <h2>What sound branding actually is (for a founder)</h2>
@@ -89,7 +89,7 @@ function Page() {
 
       <h2>Why trending audio isn’t a strategy</h2>
       <p>
-        Trending audio is great for reach. Use it. Just know what you’re getting: a week of relevance, attached
+        Trending audio is great for reach, so use it. Just know what you’re getting: a week of relevance, attached
         to somebody else’s name. When someone loves your reel and taps the sound, they land on a page full of
         strangers using the same song. Your best moment becomes their traffic.
       </p>
@@ -121,8 +121,8 @@ function Page() {
       <p>There are three ways in:</p>
       <ul>
         <li>
-          <strong>The Sonic Blueprint.</strong> Self-serve, about 20 minutes. Your archetype, three sound
-          directions and prompts so you hear a first sketch the same day.
+          <strong>The Sonic Blueprint.</strong> It’s self-serve and takes about 20 minutes. You get your
+          archetype, three sound directions and prompts so you can hear a first sketch the same day.
         </li>
         <li>
           <strong>The Instant Recognition Anthem.</strong> One signature song with its cuts, ready when you are.
@@ -134,8 +134,8 @@ function Page() {
         </li>
       </ul>
       <p>
-        No calls for any of them. A written intake, voice notes on your time, and brand-use rights in
-        writing. I never license your sound to another brand.
+        There are no calls for any of them, just a written intake, voice notes on your time, and brand-use
+        rights in writing. I never license your sound to another brand.
       </p>
 
       <h2>The founder this is for</h2>

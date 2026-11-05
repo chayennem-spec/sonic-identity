@@ -158,10 +158,10 @@ export function HeroSound() {
             Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
           </span>
         </h1>
-        <p className="sia-hero__tag">A signature song made for your brand, so every reel, ad and walk-on sounds like you, every time.</p>
+        <p className="sia-hero__tag">I make a signature song for your brand, so every reel, ad and walk-on sounds like you, every time.</p>
         <p className="sia-hero__sub">
-          Okay, real talk. You’ve curated every photo and polished every caption. And your sound?
-          Whatever was trending this morning.
+          Okay, real talk: you’ve curated every photo and polished every caption, and your sound is…
+          whatever was trending this morning.
         </p>
         <div className="sia-hero__ctas">
           <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">
@@ -181,7 +181,7 @@ export function HeroSound() {
           </button>
         </div>
         <p className="sia-final__alt">
-          Free, nine quick questions. Want to hear your sound tonight?{" "}
+          The audit is free and takes nine quick questions. Want to hear your sound tonight?{" "}
           <a href={LINKS.blueprint} target="_blank" rel="noreferrer">
             Try the $297 Blueprint
           </a>

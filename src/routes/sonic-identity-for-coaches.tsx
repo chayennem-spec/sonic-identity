@@ -44,18 +44,18 @@ function Page() {
       kicker="Guide · For coaches"
       title="A sonic identity for"
       em="coaches"
-      lead="Your clients hear you before they ever work with you: on your podcast, in your masterclass waiting room, under your launch video. A sonic identity makes every one of those moments sound like the same world. Yours."
+      lead="Your clients hear you before they ever work with you: on your podcast, in your masterclass waiting room, under your launch video. A sonic identity makes every one of those moments sound like it belongs to the same world: yours."
       faq={FAQ_ITEMS}
       related={[
         { href: "/what-is-a-sonic-identity", label: "What is a sonic identity?" },
         { href: "/sound-branding-for-female-founders", label: "Sound branding for female founders" },
       ]}
     >
-      <h2>Your coaching brand already has a sound. Nobody chose it.</h2>
+      <h2>Your coaching brand already has a sound. You just didn’t choose it.</h2>
       <p>
-        Monday your podcast opens with a stock loop. Wednesday your launch reel uses a trending sound. Friday
-        your masterclass waiting room plays your Spotify playlist. Same audience, three different brands, as
-        far as their ears know.
+        On Monday your podcast opens with a stock loop. On Wednesday your launch reel uses a trending sound. On
+        Friday your masterclass waiting room plays your Spotify playlist. It’s the same audience, but as far as
+        their ears know, that’s three different brands.
       </p>
       <p>
         You’d never use three different logos in one week. A sonic identity is how you stop doing it with
@@ -65,24 +65,24 @@ function Page() {
       <h2>What a sonic identity looks like for a coach</h2>
       <ul>
         <li>
-          <strong>A song for your signature program.</strong> Built from the transformation you sell, so the
+          <strong>A song for your signature program.</strong> It’s built from the transformation you sell, so the
           people buying it can hear what it feels like to be inside it.
         </li>
         <li>
-          <strong>A beat for your talking content.</strong> No vocals, made to sit under your voice on reels,
-          lives and webinars.
+          <strong>A beat for your talking content.</strong> It has no vocals and it’s made to sit under your
+          voice on reels, lives and webinars.
         </li>
         <li>
-          <strong>A walk-on.</strong> For your retreat, your summit, your stage. The moment your room realizes
-          you’re here.
+          <strong>A walk-on.</strong> It’s for your retreat, your summit or your stage: the moment your room
+          realizes you’re here.
         </li>
         <li>
-          <strong>Your Sonic Signature.</strong> The two to five seconds that open every episode and every reel,
+          <strong>Your Sonic Signature.</strong> These are the two to five seconds that open every episode and every reel,
           until your people know it’s you with their eyes closed.
         </li>
         <li>
-          <strong>A sound guide.</strong> So your podcast editor, your launch manager and your event producer all
-          use the right track, the right way.
+          <strong>A sound guide.</strong> It makes sure your podcast editor, your launch manager and your event
+          producer all use the right track, the right way.
         </li>
       </ul>
 
