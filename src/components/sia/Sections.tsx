@@ -147,7 +147,7 @@ export function ForHer() {
               </li>
             ))}
           </ol>
-          <p className="sia-hand">Nodding along? Hi, business baddie… you’re exactly who I make songs for.</p>
+          <p className="sia-hand">Nodding along? Then you’re exactly who I make songs for.</p>
         </div>
       </div>
     </section>
@@ -882,7 +882,7 @@ export function FinalCta() {
           <p className="sia-body sia-final__line">
             Picture it: it’s three minutes before your masterclass, the waiting room’s filling up… and the
             music playing is so obviously you that people know whose room they’re in before you say a
-            word. That’s HER, and that’s the whole brief.
+            word. That’s the whole brief.
           </p>
           <p className="sia-body sia-final__line">
             Start with the free audit and meet your Sonic Archetype. It’s nine quick questions. Or, if
