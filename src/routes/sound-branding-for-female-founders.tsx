@@ -145,7 +145,7 @@ function Page() {
         handled, and she wants the room to know it’s her before she says a word.
       </p>
       <p>
-        Nodding? Start with the <a href="https://chayennemallari.eden.so/form/sonic-audit" target="_blank" rel="noreferrer">free Sonic Identity
+        If this sounds like you, start with the <a href="https://chayennemallari.eden.so/form/sonic-audit" target="_blank" rel="noreferrer">free Sonic Identity
         Audit</a>. Nine quick questions, and you’ll know exactly where your sound stands.
       </p>
     </ArticlePage>
