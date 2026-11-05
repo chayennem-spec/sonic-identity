@@ -456,7 +456,7 @@ const OFFERS = [
     line: "One intake, and then I disappear into the studio.",
     desc: "You’ve already invested in how your brand looks. This is how it sounds, everywhere you show up. All it takes is one written intake and a voice memo or two, with zero calls. Then I build it for your brand alone.",
     includes: [
-      "5 original tracks, spent your way: offers, anthem, walk-on, reels",
+      "4 original tracks, spent your way: offers, anthem, walk-on, reels",
       "Two refinement rounds, plus a private Telegram line to me for questions and updates",
       "A sound guide, so your team never guesses",
       "Brand-use rights in writing, licensed to your brand alone",
@@ -464,7 +464,7 @@ const OFFERS = [
       "First track in about 7 days, your full sound world in about 4 to 6 weeks",
     ],
     because: "It’s your whole brand soundtrack, built for one brand at a time and never licensed to another.",
-    plan: "$10,000 · or 3 payments of $3,500",
+    plan: "$8,000 · or 3 payments of $2,800",
     cta: "Apply for the Atelier",
     href: LINKS.apply,
   },
@@ -565,7 +565,7 @@ export function Offers() {
               In the Atelier, your first track lands first. If, after refining
               it, it just doesn’t feel like your brand, tell me in writing within 7 days of hearing the
               refined version and we end there. No hard feelings.
-              You pay only for that first stage, and the rest is refunded or cancelled.
+              You pay $2,500 for that first stage, the price of one Anthem, and the rest is refunded or cancelled.
               With the Anthem, if your first listen doesn’t feel like your brand, tell me within 5 business
               days and I rebuild it from a fresh direction, once, on me. Full details are in the{" "}
               <a href="/terms">Terms of Purchase</a>.
@@ -803,7 +803,7 @@ export const FAQ = [
   },
   {
     q: "What if I don’t love it?",
-    a: "Then you tell me. Honestly, I want you to. You get refinement rounds (one for the Anthem, two for the Atelier) and a guide that helps you say what you feel without music words. And there’s my First Listen Promise. With the Anthem, if your first listen doesn’t feel like your brand, I rebuild it from a fresh direction, once, on me. With the Atelier, your first track lands first, before the other four are built.",
+    a: "Then you tell me. Honestly, I want you to. You get refinement rounds (one for the Anthem, two for the Atelier) and a guide that helps you say what you feel without music words. And there’s my First Listen Promise. With the Anthem, if your first listen doesn’t feel like your brand, I rebuild it from a fresh direction, once, on me. With the Atelier, your first track lands first, before the other three are built.",
   },
   {
     q: "Do you use AI? Will it sound like AI?",
@@ -823,7 +823,7 @@ export const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "The Blueprint is $297. The Anthem is $2,500, or 2 payments of $1,300. The Atelier is $10,000, or 3 payments of $3,500. No “book a call to find out.”",
+    a: "The Blueprint is $297. The Anthem is $2,500, or 2 payments of $1,300. The Atelier is $8,000, or 3 payments of $2,800. No “book a call to find out.”",
   },
   {
     q: "Where do I start?",

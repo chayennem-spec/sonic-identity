@@ -124,7 +124,7 @@ function Page() {
           <strong>The Instant Recognition Anthem.</strong> One signature song with its cuts, ready when you are.
         </li>
         <li>
-          <strong>The Instant Recognition Atelier.</strong> Your brand’s full soundtrack: five original tracks
+          <strong>The Instant Recognition Atelier.</strong> Your brand’s full soundtrack: four original tracks
           spent your way (a song for each offer, your anthem, a walk-on, a beat for your reels), plus your
           sound guide.
         </li>

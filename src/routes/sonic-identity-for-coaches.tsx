@@ -14,7 +14,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "Can I have a song for my signature program?",
-    a: "Yes. In the Atelier you spend your five tracks your way, and a song for each offer is a beautiful use of them, so the people buying your program can hear what it feels like to be inside it.",
+    a: "Yes. In the Atelier you spend your four tracks your way, and a song for each offer is a beautiful use of them, so the people buying your program can hear what it feels like to be inside it.",
   },
   {
     q: "I talk in most of my content. Will a song compete with my voice?",
