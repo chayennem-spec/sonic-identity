@@ -147,7 +147,7 @@ export function ForHer() {
               </li>
             ))}
           </ol>
-          <p className="sia-hand">If this is you, you’re exactly who I design signature sounds for.</p>
+          <p className="sia-hand">If this is you, I already know what your brand should sound like.</p>
         </div>
       </div>
     </section>
