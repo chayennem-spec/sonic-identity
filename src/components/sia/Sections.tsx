@@ -457,7 +457,7 @@ const OFFERS = [
     desc: "You’ve already invested in how your brand looks. This is how it sounds, everywhere you show up. All it takes is one written intake and a voice memo or two, with zero calls. Then I build it for your brand alone.",
     includes: [
       "5 original tracks, spent your way: offers, anthem, walk-on, reels",
-      "Two refinement rounds, with every message through Eden or Telegram",
+      "Two refinement rounds, plus a private Telegram line to me",
       "A sound guide, so your team never guesses",
       "Brand-use rights in writing, licensed to your brand alone",
       "On Spotify and in the music libraries, if you want it",
