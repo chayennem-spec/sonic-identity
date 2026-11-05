@@ -147,7 +147,7 @@ export function ForHer() {
               </li>
             ))}
           </ol>
-          <p className="sia-hand">If this is you, I already know what your brand should sound like.</p>
+          <p className="sia-hand">If this is you, let’s find out what your brand should sound like.</p>
         </div>
       </div>
     </section>
