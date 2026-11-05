@@ -158,10 +158,10 @@ export function HeroSound() {
             Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
           </span>
         </h1>
-        <p className="sia-hero__tag">I make a signature song for your brand, so every reel, ad and walk-on sounds like you, every time.</p>
+        <p className="sia-hero__tag">I make a signature song for your brand, so every reel, ad and walk-on sounds like you… not like half of Instagram.</p>
         <p className="sia-hero__sub">
-          Okay, real talk: you’ve curated every photo and polished every caption, and your sound is…
-          whatever was trending this morning.
+          Okay, real talk: you’ve curated every photo and rewritten that caption at 2am, and your sound
+          is… whatever was trending this morning. Make that make sense.
         </p>
         <div className="sia-hero__ctas">
           <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">

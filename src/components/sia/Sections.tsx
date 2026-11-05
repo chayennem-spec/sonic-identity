@@ -41,7 +41,7 @@ export function TheGap() {
         </div>
         <div className="sia-gap__side sia-reveal">
           <div className="sia-body">
-            <p className="sia-lead">You hired the photographer. You booked the stylist. You check your feed twice before anything goes up.</p>
+            <p className="sia-lead">You hired the photographer, booked the stylist, and debated two shades of beige before anything went up.</p>
             <p>
               You don’t do off the rack, ever. So be honest… how did it feel when the launch you spent
               months on opened with the same trending sound as every other masterclass in your niche?
@@ -55,8 +55,8 @@ export function TheGap() {
               logo even shows up, because they’ve played it on everything for years.
             </p>
             <p>
-              Your brand guide covers everything people see.{" "}
-              <strong>Nobody’s looked after what they hear.</strong>
+              You spent thousands so your brand doesn’t LOOK like everyone else’s…{" "}
+              <strong>so why does it sound like everyone else’s?</strong>
             </p>
           </div>
           <p className="sia-hand">Make it yours.</p>
@@ -80,7 +80,7 @@ const WHY = [
   {
     l: "F",
     t: "Felt",
-    d: "Music sets the mood before you’ve said a word. So you might as well choose it on purpose: calm, powerful, or a little bit obsessed.",
+    d: "Music sets the mood before you’ve said a word; it’s the whole reason your getting-ready playlist exists. So you might as well choose it on purpose: calm, powerful, or a little bit obsessed.",
   },
 ];
 
@@ -99,8 +99,8 @@ export function WhySound() {
           <p>
             Your launch video opens, your face hasn’t even loaded yet… and they already know it’s you.
             The lights drop at your event, your walk-on starts, and the room knows you’re coming before
-            you reach the mic. There’s no trick to it. You just play the same sound so many times that
-            people can’t hear it without thinking of you.
+            you reach the mic. It isn’t magic. It’s repetition: you play the same sound so many times
+            that people can’t hear it without thinking of you.
           </p>
         </div>
         <div className="sia-sound__grid sia-sound__grid--three sia-reveal">
@@ -147,7 +147,7 @@ export function ForHer() {
               </li>
             ))}
           </ol>
-          <p className="sia-hand">Nodding along? Hi, you’re exactly who I make songs for.</p>
+          <p className="sia-hand">Nodding along? Hi, business baddie… you’re exactly who I make songs for.</p>
         </div>
       </div>
     </section>
@@ -398,10 +398,12 @@ export function Rights() {
             <p>
               That little line under your handle. If you used a trending song, it’s someone else’s
               name, even on the reel you paid an editor to cut. Someone loves it, taps
-              the sound… and ends up on a page full of strangers using the same song. Oof.
+              the sound… and ends up on a page full of strangers using the same song. Oof… you just sent
+              your new fan to someone else’s party.
             </p>
             <p>
-              With a sound made for your brand, it says <strong>your</strong> name: “Original audio”
+              You’d never let another woman’s logo sit on your launch. With a sound made for your brand,
+              it says <strong>your</strong> name: “Original audio”
               with your handle, in the corner of every reel. Tap it and you land on your audio page,
               with your name at the top.
             </p>
@@ -880,7 +882,7 @@ export function FinalCta() {
           <p className="sia-body sia-final__line">
             Picture it: it’s three minutes before your masterclass, the waiting room’s filling up… and the
             music playing is so obviously you that people know whose room they’re in before you say a
-            word. That’s the whole brief.
+            word. That’s HER, and that’s the whole brief.
           </p>
           <p className="sia-body sia-final__line">
             Start with the free audit and meet your Sonic Archetype. It’s nine quick questions. Or, if

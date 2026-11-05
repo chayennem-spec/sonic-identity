@@ -55,7 +55,7 @@ function Page() {
       <h2>The short answer</h2>
       <p>
         Your brand speaks in three languages: what people see, what they read, and what they hear. Most personal
-        brands have the first two handled. A sonic identity is the third: a set of sounds made from your brand,
+        brands have the first two handled down to the last comma. A sonic identity is the third: a set of sounds made from your brand,
         so people recognize you by ear.
       </p>
       <Pull>Be heard before you’re seen.</Pull>

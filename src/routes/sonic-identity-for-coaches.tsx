@@ -58,8 +58,8 @@ function Page() {
         their ears know, that’s three different brands.
       </p>
       <p>
-        You’d never use three different logos in one week. A sonic identity is how you stop doing it with
-        sound.
+        You’d never use three different logos in one week… so why are you doing it with sound? A sonic
+        identity is how you stop.
       </p>
 
       <h2>What a sonic identity looks like for a coach</h2>
