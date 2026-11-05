@@ -445,8 +445,7 @@ export function Rights() {
 /**
  * Offers, with pricing psychology built in (no prices on the site; they live on Eden):
  * high-to-low order, an "If it were mine..." tag on the Atelier, a "because" line and a short
- * what's-included list per offer, a real founding deadline and the First Listen Promise.
- * Take the founding note down on Dec 1 (the Atelier price goes up then).
+ * what's-included list per offer and the First Listen Promise. No deadlines or price raises.
  */
 const OFFERS = [
   {
@@ -466,7 +465,7 @@ const OFFERS = [
       "First track and Sonic Signature in about 7 days, your full sound world in about 4 to 6 weeks",
     ],
     because: "It’s your whole brand soundtrack, built for one brand at a time and never licensed to another.",
-    plan: "$10,000 founding rate, five spots through Nov 30 · or 3 payments of $3,500",
+    plan: "$10,000 · or 3 payments of $3,500",
     cta: "Apply for the Atelier",
     href: LINKS.apply,
   },
@@ -487,7 +486,7 @@ const OFFERS = [
       "Its full price comes off the Atelier within 30 days of delivery",
     ],
     because: "It’s your story, in a song I’ll never license to another brand.",
-    plan: "$2,500 founding price through Nov 30, then $3,000 · or 2 payments of $1,300",
+    plan: "$2,500 · or 2 payments of $1,300",
     cta: "Get your Anthem",
     href: LINKS.anthem,
   },
@@ -511,11 +510,6 @@ const OFFERS = [
 ];
 
 export function Offers() {
-  // The founding note hides itself once the founding rate ends (Dec 1, Pacific).
-  const [foundingOpen, setFoundingOpen] = useState(true);
-  useEffect(() => {
-    if (Date.now() >= Date.parse("2026-12-01T08:00:00Z")) setFoundingOpen(false);
-  }, []);
   return (
     <section className="sia sia-offers sia-rule" id="offers">
       <div className="sia-wrap">
@@ -528,13 +522,6 @@ export function Offers() {
             There are three ways in, so pick the one that matches how much you want off your plate.
           </p>
         </div>
-        {foundingOpen && (
-          <p className="sia-offers__note sia-mono sia-reveal">
-            <span>
-              The Atelier has five founding spots, and founding prices end <b>Nov 30</b>
-            </span>
-          </p>
-        )}
         <div className="sia-offers__grid">
           {OFFERS.map((o, i) => (
             <article className={`sia-offer${o.featured ? " sia-offer--featured" : ""} sia-reveal`} key={o.name}>
@@ -837,7 +824,7 @@ export const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "The Blueprint is $297. The Anthem is $2,500 at its founding price through Nov 30 (then $3,000), or 2 payments of $1,300. The Atelier is $10,000 at its founding rate for five spots through Nov 30 (then $12,000), or 3 payments of $3,500. No “book a call to find out.”",
+    a: "The Blueprint is $297. The Anthem is $2,500, or 2 payments of $1,300. The Atelier is $10,000, or 3 payments of $3,500. No “book a call to find out.”",
   },
   {
     q: "Where do I start?",
