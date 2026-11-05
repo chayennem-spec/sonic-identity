@@ -5,7 +5,7 @@ import { articleBlock, faqBlock, ldScripts, pageHead } from "../lib/seo";
 const PATH = "/sonic-identity-for-coaches";
 const TITLE = "Sonic Identity for Coaches | Sound Branding for Your Programs";
 const DESCRIPTION =
-  "A sonic identity for coaches: signature songs for your programs, masterclasses, podcast and stage, made from your message and licensed only to you.";
+  "A sonic identity for coaches: signature songs for your programs, masterclasses, podcast and stage, made from your message and licensed to your brand alone.";
 
 const FAQ_ITEMS: QA[] = [
   {
