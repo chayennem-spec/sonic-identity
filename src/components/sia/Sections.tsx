@@ -648,7 +648,7 @@ export function Proof() {
       <div className="sia-wrap">
         <p className="sia-mono sia-kicker sia-reveal">Heard in the wild</p>
         <h2 className="sia-display sia-reveal">
-          Signature songs that embody <span className="sia-nw"><em>their brand identity</em>.</span>
+          Signature sounds that embody <span className="sia-nw"><em>their brand identity</em>.</span>
         </h2>
         <div className="sia-heard__grid">
           {HEARD.map((h) => (
