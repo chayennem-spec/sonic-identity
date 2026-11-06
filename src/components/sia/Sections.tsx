@@ -476,7 +476,7 @@ const OFFERS = [
       ],
       oneByOne: "$10,297",
       yoursLabel: "Your Atelier",
-      yours: "$8,000, or 3 monthly payments of $2,800",
+      yours: "$8,000",
     },
     cta: "Apply for the Atelier",
     href: LINKS.apply,
