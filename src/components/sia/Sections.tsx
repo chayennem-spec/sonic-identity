@@ -465,6 +465,19 @@ const OFFERS = [
     ],
     because: "It’s your whole brand soundtrack, built for one brand at a time and never licensed to another.",
     plan: "$8,000 · or 3 payments of $2,800",
+    value: {
+      title: "Instant Recognition Atelier",
+      rows: [
+        ["4 custom tracks, spend them your way", "$10,000 value"],
+        ["Sonic Blueprint: your archetype and full sound direction", "$297 value"],
+        ["The full sound family: every version and cut of all 4 tracks", "Included"],
+        ["The First Listen Promise", "Included"],
+        ["Brand-use rights in writing, licensed to your brand alone", "Included"],
+      ],
+      oneByOne: "$10,297",
+      yoursLabel: "Your Atelier",
+      yours: "$8,000, or 3 monthly payments of $2,800",
+    },
     cta: "Apply for the Atelier",
     href: LINKS.apply,
   },
@@ -486,6 +499,18 @@ const OFFERS = [
     ],
     because: "It’s your story, in a song I’ll never license to another brand.",
     plan: "$2,500 · or 2 payments of $1,300",
+    value: {
+      title: "Instant Recognition Anthem",
+      rows: [
+        ["Sonic Blueprint: your archetype and sound direction", "$297 value"],
+        ["Your custom anthem, full song, with 30- and 15-second cuts", "$2,500 value"],
+        ["Instrumental cuts for your podcast and content", "Included"],
+        ["Brand-use rights in writing, licensed to your brand alone", "Included"],
+      ],
+      oneByOne: "$2,797",
+      yoursLabel: "Your Anthem",
+      yours: "$2,500",
+    },
     cta: "Get your Anthem",
     href: LINKS.anthem,
   },
@@ -538,6 +563,30 @@ export function Offers() {
               <p className="sia-offer__because">
                 <b>Why it’s worth it:</b> {o.because}
               </p>
+              {o.value && (
+                <div className="sia-offer__value">
+                  <p className="sia-mono sia-offer__value-title">The value</p>
+                  <ul>
+                    {o.value.rows.map(([label, amount]) => (
+                      <li key={label}>
+                        <span>{label}</span>
+                        <span className="sia-mono">{amount}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="sia-offer__value-total">
+                    <span>Bought one by one</span>
+                    <span className="sia-mono">{o.value.oneByOne}</span>
+                  </p>
+                  <p className="sia-offer__value-yours">
+                    <span>{o.value.yoursLabel}</span>
+                    <span>{o.value.yours}</span>
+                  </p>
+                  <p className="sia-offer__value-terms">
+                    Full terms on the <a href="/terms">Terms of Purchase</a> page.
+                  </p>
+                </div>
+              )}
               {o.plan && <p className="sia-mono sia-offer__plan">{o.plan}</p>}
               <a
                 className={`sia-btn ${o.featured ? "sia-btn--red" : "sia-btn--ghost"}`}
