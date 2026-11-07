@@ -450,7 +450,7 @@ const OFFERS = [
     label: "",
     name: "The Instant Recognition Atelier",
     line: "One intake, and then I disappear into the studio.",
-    desc: "The photoshoots, the website, the designer who finally got your logo right. You’ve spent thousands on how your brand looks. The Atelier is how it sounds. It’s a full brand soundtrack, so your reels, your launches, your podcast and your stage finally sound like the same woman. You won’t have to hop on a single call. Just fill out one intake, send a voice memo or two, and I’ll take it from there. What I build is made for your brand, and only yours.",
+    desc: "The photoshoots, the website, the designer who finally got your logo right. You’ve spent thousands on how your brand looks. The Atelier is how it sounds. It’s a full brand soundtrack, so your reels, your launches, your podcast and your stage finally sound like the same woman. You won’t have to hop on a single call. Just fill out one intake, send a voice memo or two, and I’ll take it from there. What I build is made for your brand, and licensed to no one else.",
     includes: [
       "4 original tracks, spent your way: offers, anthem, walk-on, reels",
       "Two refinement rounds, plus a private Telegram line to me for questions and updates",
