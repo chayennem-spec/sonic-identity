@@ -1274,7 +1274,10 @@
   --sia-bone: #111111;
   --sia-dim: #5e5850;
 }
-.sia img, .sia video { filter: grayscale(1) contrast(1.05); }
+.sia img, .sia video { filter: grayscale(1) sepia(0.12) contrast(1.05); }
+/* Warmth where it sells: your face up top, a real client's face, your red headphones. */
+.sia.sia-hero img { filter: contrast(1.08) saturate(0.82) sepia(0.14) brightness(0.97); }
+.sia .sia-heard__photo, .sia .sia-final__photo img { filter: none; }
 .sia-btn--red { color: #f6f1e7; }
 /* Keep the About caption above the drifting photo, so both names show in full. */
 .sia-about__photo figcaption { position: relative; z-index: 2; background: var(--sia-black); }
