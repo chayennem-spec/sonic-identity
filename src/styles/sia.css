@@ -1276,3 +1276,5 @@
 }
 .sia img, .sia video { filter: grayscale(1) contrast(1.05); }
 .sia-btn--red { color: #f6f1e7; }
+/* Keep the About caption above the drifting photo, so both names show in full. */
+.sia-about__photo figcaption { position: relative; z-index: 2; background: var(--sia-black); }
