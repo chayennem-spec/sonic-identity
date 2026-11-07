@@ -1276,7 +1276,7 @@
 }
 .sia img, .sia video { filter: grayscale(1) sepia(0.12) contrast(1.05); }
 /* Warmth where it sells: your face up top, a real client's face, your red headphones. */
-.sia.sia-hero img { filter: contrast(1.08) saturate(0.82) sepia(0.14) brightness(0.97); }
+.sia.sia-hero img { filter: contrast(1.06) saturate(1.12) sepia(0.04) brightness(1.01); }
 .sia .sia-heard__photo, .sia .sia-final__photo img { filter: none; }
 .sia-btn--red { color: #f6f1e7; }
 /* Keep the About caption above the drifting photo, so both names show in full. */
