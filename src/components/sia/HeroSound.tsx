@@ -181,11 +181,7 @@ export function HeroSound() {
           </button>
         </div>
         <p className="sia-final__alt">
-          The audit is free and takes nine quick questions. Want to hear your sound tonight?{" "}
-          <a href={LINKS.blueprint} target="_blank" rel="noreferrer">
-            Try the $297 Blueprint
-          </a>
-          .
+          The audit is free and takes nine quick questions.
         </p>
       </div>
     </section>

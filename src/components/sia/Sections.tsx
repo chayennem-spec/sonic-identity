@@ -45,14 +45,11 @@ export function TheGap() {
             <p>
               You don’t do off the rack, ever. So be honest… how did it feel when the launch you spent
               months on opened with the same trending sound as every other masterclass in your niche?
-              And by the way, that song probably isn’t licensed for your business, which is exactly what
-              gets a video muted right when it finally starts working.
             </p>
             <p>
               And a borrowed song makes people remember <strong>someone else.</strong> Sound is the
               part of your brand that follows people home. Right now, it’s following them home with
-              another artist’s name on it. Think about Netflix: you know it from one “ta-dum,” before the
-              logo even shows up, because they’ve played it on everything for years.
+              another artist’s name on it.
             </p>
             <p>
               You spent thousands so your brand doesn’t LOOK like everyone else’s…{" "}
@@ -211,7 +208,7 @@ export function Method() {
           </div>
           <p>
             You don’t need to know what a minor key is; that’s my job. Your Sonic Archetype tells me
-            who you are, and my S.O.U.N.D. Framework turns that into a song through five decisions. You
+            who you are, and my S.O.U.N.D. Framework turns that into your sound through five decisions. You
             tell me about your brand in writing, and I take it from there, so every note starts from
             your archetype, not a stock library.
           </p>
@@ -298,7 +295,7 @@ export function MethodReel() {
           </div>
           <p>
             You don’t need to know what a minor key is; that’s my job. Your Sonic Archetype tells me
-            who you are, and my S.O.U.N.D. Framework turns that into a song through five decisions. You
+            who you are, and my S.O.U.N.D. Framework turns that into your sound through five decisions. You
             tell me about your brand in writing, and I take it from there, so every note starts from
             your archetype, not a stock library.
           </p>
@@ -384,8 +381,7 @@ export function Rights() {
         </ol>
         <div className="sia-rights__close sia-reveal">
           <p>
-            A trending track can’t give you a yes to either one. A song made for your brand can: I make
-            it for you, I never license it to another brand, and it comes with{" "}
+            A trending track can’t give you a yes to either one. A song made for your brand can: it comes with{" "}
             <strong>brand-use rights in writing, licensed to your brand alone, with no expiry and no renewals.</strong>
           </p>
           <p className="sia-hand">Yes and yes.</p>
@@ -454,7 +450,7 @@ const OFFERS = [
     label: "",
     name: "The Instant Recognition Atelier",
     line: "One intake, and then I disappear into the studio.",
-    desc: "You’ve already invested in how your brand looks. This is how it sounds, everywhere you show up. All it takes is one written intake and a voice memo or two, with zero calls. Then I build it for your brand alone.",
+    desc: "You’ve already invested in how your brand looks. This is your brand soundtrack: how it sounds, everywhere you show up. All it takes is one written intake and a voice memo or two, with zero calls. Then I build it for your brand alone.",
     includes: [
       "4 original tracks, spent your way: offers, anthem, walk-on, reels",
       "Two refinement rounds, plus a private Telegram line to me for questions and updates",
