@@ -201,14 +201,14 @@ export function Method() {
       <div className="sia-wrap">
         <div className="sia-sound__head sia-reveal">
           <div>
-            <p className="sia-mono sia-kicker">The method · Five decisions</p>
+            <p className="sia-mono sia-kicker">The method · The S.O.U.N.D. Framework</p>
             <h2 className="sia-display">
               How a signature sound <span className="sia-nw">is <em>built</em>.</span>
             </h2>
           </div>
           <p>
             You don’t need to know what a minor key is; that’s my job. Your Sonic Archetype tells me
-            who you are, and five decisions turn that into your sound. You
+            who you are, and my S.O.U.N.D. Framework turns that into your sound through five decisions. You
             tell me about your brand in writing, and I take it from there, so every note starts from
             your archetype, not a stock library.
           </p>
@@ -284,18 +284,18 @@ export function MethodReel() {
 
   const shown = Math.min(5, Math.max(0, active + 1));
   return (
-    <section className="sia sia-reel sia-rule" id="method" aria-label="The method: five decisions">
+    <section className="sia sia-reel sia-rule" id="method" aria-label="The S.O.U.N.D. Framework">
       <div className="sia-wrap sia-reel__intro">
         <div className="sia-sound__head">
           <div>
-            <p className="sia-mono sia-kicker">The method · Five decisions</p>
+            <p className="sia-mono sia-kicker">The method · The S.O.U.N.D. Framework</p>
             <h2 className="sia-display">
               How a signature sound <span className="sia-nw">is <em>built</em>.</span>
             </h2>
           </div>
           <p>
             You don’t need to know what a minor key is; that’s my job. Your Sonic Archetype tells me
-            who you are, and five decisions turn that into your sound. You
+            who you are, and my S.O.U.N.D. Framework turns that into your sound through five decisions. You
             tell me about your brand in writing, and I take it from there, so every note starts from
             your archetype, not a stock library.
           </p>
@@ -326,7 +326,7 @@ export function MethodReel() {
                 </article>
               ))}
               <div className="sia-reel__end" data-frame>
-                <p className="sia-reel__mark">Your sound<span>.</span></p>
+                <p className="sia-reel__mark">S.O.U.N.D<span>.</span></p>
                 <p className="sia-reel__script">Five decisions, one sound.</p>
                 <p className="sia-reel__closer">Every note starts from your archetype, not a stock library.</p>
               </div>
