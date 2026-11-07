@@ -748,7 +748,13 @@ export function About() {
             <p>
               For more than twenty years I stood behind the chair for high-net-worth clients. I could
               tell who someone was before they said a word: how they wanted to walk out, and what they
-              wanted a room to feel when they walked in. Now? I do that with sound.
+              wanted a room to feel when they walked in.
+            </p>
+            <p>
+              When I opened my own studio suite, I curated every song that played in it, and I noticed
+              something I couldn’t unhear. When the music matched a client’s energy, she sat up a little
+              taller, she walked out feeling more like herself, and she’d often add one more thing before
+              she left. Same chair, same service, different sound. Now? I do that for your brand.
             </p>
             <p>
               I’m a certified hypnotherapist and NLP trainer, and I built an eight-archetype Sonic
