@@ -158,7 +158,7 @@ function TermsPage() {
             <h3>Questions</h3>
             <p>
               Email <a href="mailto:hello@sonicidentityarchitect.com">hello@sonicidentityarchitect.com</a> before
-              you apply. I’m happy to walk you through anything here, in writing.
+              you apply. I’m happy to walk you through anything here.
             </p>
           </div>
         </article>

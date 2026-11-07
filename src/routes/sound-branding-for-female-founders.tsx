@@ -130,8 +130,8 @@ function Page() {
         </li>
       </ul>
       <p>
-        There are no calls for any of them, just a written intake, voice notes on your time, and brand-use
-        rights in writing. I never license your sound to another brand.
+        There are no calls for any of them. You fill out a short intake, send a few voice memos on your
+        own time, and your brand-use rights are spelled out in writing. I never license your sound to another brand.
       </p>
 
       <h2>The founder this is for</h2>

@@ -611,9 +611,9 @@ export function Offers() {
           <div>
             <h3>Hear it before you’re <span className="sia-nw">all in.</span></h3>
             <p>
-              In the Atelier, your first track lands first. If, after refining
-              it, it just doesn’t feel like your brand, just email me within 7 days of hearing the
-              refined version and we end there. No hard feelings.
+              In the Atelier, you hear your first track before I make the other three. If, after we
+              refine it, it just doesn’t feel like your brand, email me within 7 days of hearing the
+              new version and we stop there. No hard feelings.
               You pay $2,500 for that first stage, the price of one Anthem, and the rest is refunded or cancelled.
               With the Anthem, if your first listen doesn’t feel like your brand, tell me within 5 business
               days and I rebuild it from a fresh direction, once, on me. Full details are in the{" "}
@@ -860,7 +860,7 @@ export const FAQ = [
   },
   {
     q: "What if I don’t love it?",
-    a: "Then you tell me. Honestly, I want you to. You get refinement rounds (one for the Anthem, two for the Atelier) and a guide that helps you say what you feel without music words. And there’s my First Listen Promise. With the Anthem, if your first listen doesn’t feel like your brand, I rebuild it from a fresh direction, once, on me. With the Atelier, your first track lands first, before the other three are built.",
+    a: "Then you tell me. Honestly, I want you to. You get refinement rounds (one for the Anthem, two for the Atelier) and a guide that helps you say what you feel without music words. And there’s my First Listen Promise. With the Anthem, if your first listen doesn’t feel like your brand, I rebuild it from a fresh direction, once, on me. With the Atelier, you hear your first track before I make the other three.",
   },
   {
     q: "Do you use AI? Will it sound like AI?",
