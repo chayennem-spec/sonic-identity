@@ -171,8 +171,10 @@ export function OnSet() {
           The woman behind <span className="sia-nw">the <em>sound</em>.</span>
         </h2>
       </div>
+      <div className="sia-onset__pin" data-pin>
+      <div className="sia-onset__panel">
       <div className="sia-onset__viewport">
-        <div className="sia-onset__track" data-scrollx="0.35">
+        <div className="sia-onset__track" data-pinx>
           {ON_SET.map((p, i) => (
             <figure className="sia-onset__frame" key={p.src} style={{ aspectRatio: `${p.w} / ${p.h}` }}>
               <img src={p.src} alt={p.alt} width={p.w} height={p.h} loading="lazy" />
@@ -182,6 +184,8 @@ export function OnSet() {
             </figure>
           ))}
         </div>
+      </div>
+      </div>
       </div>
     </section>
   );
@@ -207,10 +211,10 @@ export function Method() {
             </h2>
           </div>
           <p>
-            You don’t need to know what a minor key is; that’s my job. Your Sonic Archetype tells me
-            who you are, and my S.O.U.N.D. Framework turns that into your sound through five decisions. You
-            tell me about your brand in writing, and I take it from there, so every note starts from
-            your archetype, not a stock library.
+            You don’t need to know what a minor key is. That’s my job. Your Sonic Archetype tells me
+            who you are, and my S.O.U.N.D. Framework turns that into your sound through five decisions.
+            You tell me about your brand, I take it from there, and everything I make is built around
+            your archetype, not pulled from a stock library.
           </p>
         </div>
         <div className="sia-sound__grid sia-reveal">
@@ -294,10 +298,10 @@ export function MethodReel() {
             </h2>
           </div>
           <p>
-            You don’t need to know what a minor key is; that’s my job. Your Sonic Archetype tells me
-            who you are, and my S.O.U.N.D. Framework turns that into your sound through five decisions. You
-            tell me about your brand in writing, and I take it from there, so every note starts from
-            your archetype, not a stock library.
+            You don’t need to know what a minor key is. That’s my job. Your Sonic Archetype tells me
+            who you are, and my S.O.U.N.D. Framework turns that into your sound through five decisions.
+            You tell me about your brand, I take it from there, and everything I make is built around
+            your archetype, not pulled from a stock library.
           </p>
         </div>
         <p className="sia-mono sia-reel__hint" aria-hidden="true">
@@ -328,7 +332,7 @@ export function MethodReel() {
               <div className="sia-reel__end" data-frame>
                 <p className="sia-reel__mark">S.O.U.N.D<span>.</span></p>
                 <p className="sia-reel__script">Five decisions, one sound.</p>
-                <p className="sia-reel__closer">Every note starts from your archetype, not a stock library.</p>
+                <p className="sia-reel__closer">Everything I make starts with your archetype, not a stock library.</p>
               </div>
             </div>
           </div>
@@ -608,7 +612,7 @@ export function Offers() {
             <h3>Hear it before you’re <span className="sia-nw">all in.</span></h3>
             <p>
               In the Atelier, your first track lands first. If, after refining
-              it, it just doesn’t feel like your brand, tell me in writing within 7 days of hearing the
+              it, it just doesn’t feel like your brand, just email me within 7 days of hearing the
               refined version and we end there. No hard feelings.
               You pay $2,500 for that first stage, the price of one Anthem, and the rest is refunded or cancelled.
               With the Anthem, if your first listen doesn’t feel like your brand, tell me within 5 business
@@ -823,7 +827,7 @@ export function Apply() {
           <span className="sia-nw">your <em>brand</em>.</span>
         </h2>
         <p className="sia-body">
-          The Atelier is made for one brand at a time. It takes a few minutes, it’s all in writing,
+          The Atelier is made for one brand at a time. It takes a few minutes, you just answer a few questions,
           and no, there’s no call. I read every application myself and reply within 2 business days
           with what I’d actually recommend for your brand.
         </p>
@@ -868,7 +872,7 @@ export const FAQ = [
   },
   {
     q: "Do I have to get on calls?",
-    a: "Nope, not for the Anthem or the Atelier. You have enough meetings, love. Everything happens in writing and voice notes: you approve each stage, I do the building.",
+    a: "Nope, not for the Anthem or the Atelier. You have enough meetings, love. We do everything over email and voice memos: you approve each stage, I do the building.",
   },
   {
     q: "How long does it take?",

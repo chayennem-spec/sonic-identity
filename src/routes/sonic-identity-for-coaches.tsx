@@ -107,7 +107,7 @@ function Page() {
 
       <h2>How it works (no calls, promise)</h2>
       <p>
-        You have enough meetings. Everything happens in writing and voice notes: a written intake, your
+        You have enough meetings. We do it all over email and voice memos: a short intake, your
         favorite lines from your own copy, a voice memo or two, and your reactions to your first listen. I map
         your Sonic Archetype first, then make the music.
       </p>

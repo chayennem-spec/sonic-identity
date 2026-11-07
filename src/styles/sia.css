@@ -1278,3 +1278,14 @@
 .sia-btn--red { color: #f6f1e7; }
 /* Keep the About caption above the drifting photo, so both names show in full. */
 .sia-about__photo figcaption { position: relative; z-index: 2; background: var(--sia-black); }
+/* On Set: the strip is pinned and glides across slowly instead of racing past. */
+.sia-onset { padding-bottom: 0; overflow: visible; }
+.sia-onset__pin { position: relative; height: 360svh; }
+.sia-onset__panel { position: sticky; top: 0; height: 100svh; display: flex; align-items: center; overflow: hidden; }
+.sia-onset__viewport { width: 100%; }
+@media (max-width: 860px) { .sia-onset__pin { height: 450svh; } }
+@media (prefers-reduced-motion: reduce) {
+  .sia-onset__pin { height: auto; }
+  .sia-onset__panel { position: static; height: auto; }
+  .sia-onset__viewport { overflow-x: auto; }
+}

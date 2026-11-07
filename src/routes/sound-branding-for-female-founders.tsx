@@ -22,7 +22,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "Do I have to get on calls?",
-    a: "No. Everything happens in writing and voice notes. You fill in a written intake, react to your first listen in a voice note, and I build.",
+    a: "No. We do it all over email and voice memos. You fill out a short intake, tell me what you think of your first listen in a voice memo, and I build.",
   },
   {
     q: "Where do I start?",

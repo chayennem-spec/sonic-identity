@@ -234,6 +234,7 @@ export function useScrollMotion() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const tracks = Array.from(document.querySelectorAll<HTMLElement>("[data-scrollx]"));
+    const pinned = Array.from(document.querySelectorAll<HTMLElement>("[data-pinx]"));
     const ticker = document.querySelector<HTMLElement>(".sia-ticker__track");
     const tickerAnim = ticker?.getAnimations?.()[0];
     let lastY = window.scrollY;
@@ -250,6 +251,17 @@ export function useScrollMotion() {
         const progress = (vh - box.top) / (vh + box.height); // 0 entering, 1 leaving
         const travel = Math.max(0, el.scrollWidth - (el.parentElement?.clientWidth || 0));
         el.style.transform = `translate3d(${(-progress * travel * (k / 0.35)).toFixed(1)}px,0,0)`;
+      }
+      // Pinned strips: the section holds still while the photos glide across, start to finish.
+      for (const el of pinned) {
+        const pin = el.closest<HTMLElement>("[data-pin]");
+        if (!pin) continue;
+        const r = pin.getBoundingClientRect();
+        const span = r.height - vh;
+        if (span <= 0 || r.bottom < 0 || r.top > vh) continue;
+        const p = Math.min(1, Math.max(0, -r.top / span));
+        const travel = Math.max(0, el.scrollWidth - (el.parentElement?.clientWidth || 0) + 48);
+        el.style.transform = `translate3d(${(-p * travel).toFixed(1)}px,0,0)`;
       }
     };
     const onScroll = () => {
