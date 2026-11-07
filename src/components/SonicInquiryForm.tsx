@@ -254,8 +254,8 @@ export function SonicInquiryForm() {
                 <option value="The Instant Recognition Anthem" className="bg-card text-foreground">
                   The Instant Recognition Anthem (signature song)
                 </option>
-                <option value="The Sonic Imprint guide" className="bg-card text-foreground">
-                  The Sonic Imprint guide
+                <option value="The Sonic Blueprint" className="bg-card text-foreground">
+                  The Sonic Blueprint
                 </option>
                 <option value="Not sure yet" className="bg-card text-foreground">
                   Not sure yet

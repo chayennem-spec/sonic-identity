@@ -1261,3 +1261,18 @@
   .sia-reel__sprockets, .sia-reel__rail, .sia-reel__hint { display: none; }
   .sia-reel__nudge { animation: none; }
 }
+
+/* ============================================================
+   Editorial look (Nov 2026): cream and black sections take turns,
+   photos in black and white, #CC4430 only as a touch.
+   Light sections swap the tokens, so every component follows.
+============================================================= */
+.sia-proof, .sia-about, .sia-sound#method, .sia-reel, .sia-offers, .sia-faq {
+  --sia-black: #efe9dc;
+  --sia-off: #e7e0d1;
+  --sia-line: #d3cbbb;
+  --sia-bone: #111111;
+  --sia-dim: #5e5850;
+}
+.sia img, .sia video { filter: grayscale(1) contrast(1.05); }
+.sia-btn--red { color: #f6f1e7; }
