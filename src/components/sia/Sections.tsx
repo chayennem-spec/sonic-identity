@@ -751,10 +751,12 @@ export function About() {
               wanted a room to feel when they walked in.
             </p>
             <p>
-              When I opened my own studio suite, I curated every song that played in it, and I noticed
-              something I couldn’t unhear. When the music matched a client’s energy, she sat up a little
-              taller, she walked out feeling more like herself, and she’d often add one more thing before
-              she left. Same chair, same service, different sound. Now? I do that for your brand.
+              When I opened my own studio salon, I chose the music for every client who sat in my chair.
+              As a hair extension specialist, I was changing how a woman looked on the outside, so I built
+              playlists for how I wanted her to feel on the inside: confident, magnetic, a little
+              untouchable. When the music matched her energy, she sat up taller, she walked out feeling
+              more like herself, and she’d often add one more thing before she left. Same chair, same
+              service, different sound. Now? I do that for your brand.
             </p>
             <p>
               I’m a certified hypnotherapist and NLP trainer, and I built an eight-archetype Sonic
