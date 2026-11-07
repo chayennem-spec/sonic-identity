@@ -450,7 +450,7 @@ const OFFERS = [
     label: "",
     name: "The Instant Recognition Atelier",
     line: "One intake, and then I disappear into the studio.",
-    desc: "You’ve already invested in how your brand looks. This is your brand soundtrack: how it sounds, everywhere you show up. All it takes is one written intake and a voice memo or two, with zero calls. Then I build it for your brand alone.",
+    desc: "The photoshoots, the website, the designer who finally got your logo right. You’ve spent thousands on how your brand looks. The Atelier is how it sounds. It’s a full brand soundtrack, so your reels, your launches, your podcast and your stage finally sound like the same woman. You won’t have to hop on a single call. Just fill out one intake, send a voice memo or two, and I’ll take it from there. What I build is made for your brand, and only yours.",
     includes: [
       "4 original tracks, spent your way: offers, anthem, walk-on, reels",
       "Two refinement rounds, plus a private Telegram line to me for questions and updates",
@@ -459,7 +459,7 @@ const OFFERS = [
       "On Spotify and in the music libraries, if you want it",
       "First track in about 7 days, your full sound world in about 4 to 6 weeks",
     ],
-    because: "It’s your whole brand soundtrack, built for one brand at a time and never licensed to another.",
+    because: "Your brand gets one sound people recognize everywhere, and it’s never licensed to anyone else.",
     plan: "$8,000 · or 3 payments of $2,800",
     value: {
       title: "Instant Recognition Atelier",
@@ -482,7 +482,7 @@ const OFFERS = [
     label: "",
     name: "The Instant Recognition Anthem",
     line: "One signature song that says your name before you do",
-    desc: "Want to start with one song? I make it around your story and your archetype, for your walk-on, your launch video and your podcast open.",
+    desc: "Want to start with one song? This is it. It’s built from your story and your archetype, so when it plays under your walk-on, your launch video or your podcast open, people know it’s you before you say a word.",
     includes: [
       "One signature song",
       "30- and 15-second cuts for reels, ads and your podcast",
@@ -493,7 +493,7 @@ const OFFERS = [
       "On Spotify and in the music libraries, if you want it (with a bonus ad song)",
       "Its full price comes off the Atelier within 30 days of delivery",
     ],
-    because: "It’s your story, in a song I’ll never license to another brand.",
+    because: "It’s your brand set to music, and it’ll never be licensed to another brand.",
     plan: "$2,500 · or 2 payments of $1,300",
     value: {
       title: "Instant Recognition Anthem",
@@ -515,14 +515,14 @@ const OFFERS = [
     label: "",
     name: "The Sonic Blueprint",
     line: "Hear your brand before you invest",
-    desc: "Curious but not ready to commit? Totally fair. In one sitting, the Blueprint reads your brand from your feed and the music you love, and you hear first sketches the same night.",
+    desc: "Not ready to hand it over yet? That’s totally fair. The Blueprint looks at your brand and the music you actually love, gives you your archetype and three directions for your sound, and you’ll hear the first sketches that same night.",
     includes: [
       "Your Sonic Archetype",
       "Three sound directions, built from the music you actually love",
       "Ready-to-paste prompts to hear a first sketch of each, the same night",
       "Its full price comes off the Atelier within 30 days",
     ],
-    because: "You do it yourself, tonight, and it counts toward the Atelier if you go all in.",
+    because: "You do it on your own time, and the full $297 counts toward the Atelier if you decide to go all in.",
     plan: "$297 · same day",
     cta: "Start the Blueprint",
     href: LINKS.blueprint,
