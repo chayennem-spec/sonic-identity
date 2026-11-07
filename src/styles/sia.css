@@ -1268,9 +1268,9 @@
    Light sections swap the tokens, so every component follows.
 ============================================================= */
 .sia-proof, .sia-about, .sia-sound#method, .sia-reel, .sia-offers, .sia-faq {
-  --sia-black: #efe9dc;
-  --sia-off: #e7e0d1;
-  --sia-line: #d3cbbb;
+  --sia-black: #e4ddd0;
+  --sia-off: #dad2c3;
+  --sia-line: #c9c0b0;
   --sia-bone: #111111;
   --sia-dim: #5e5850;
 }
