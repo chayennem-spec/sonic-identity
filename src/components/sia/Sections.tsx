@@ -753,8 +753,8 @@ export function About() {
             <p>
               When I opened my own studio salon, I chose the music for every client who sat in my chair.
               As a hair extension specialist, I was changing how a woman looked on the outside, so I built
-              playlists for how I wanted her to feel on the inside: confident, magnetic, a little
-              untouchable. When the music matched her energy, she sat up taller, she walked out feeling
+              playlists for how I wanted her to feel on the inside: confident, magnetic, an untouchable
+              badass. When the music matched her energy, she sat up taller, she walked out feeling
               more like herself, and she’d often add one more thing before she left. Same chair, same
               service, different sound. Now? I do that for your brand.
             </p>
