@@ -79,7 +79,7 @@ export function Waveform({
         if (alpha <= 0.01) continue;
         ctx.beginPath();
         ctx.lineWidth = ln.w;
-        ctx.strokeStyle = isRed ? `rgba(255,74,28,${0.9 * alpha})` : ln.c;
+        ctx.strokeStyle = isRed ? `rgba(204, 68, 48,${0.9 * alpha})` : ln.c;
         for (let x = 0; x <= W; x += 2) {
           const u = x / W;
           // taper to flat at both ends, like a recorded phrase

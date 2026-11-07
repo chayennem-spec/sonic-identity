@@ -10,7 +10,7 @@
   --sia-line: #262423;
   --sia-bone: #efe9dc;
   --sia-dim: #a39d93;
-  --sia-red: #ff4a1c;
+  --sia-red: #cc4430;
   --sia-ox: #3f1614;
   --sia-ease: 260ms cubic-bezier(0.2, 0.7, 0.2, 1);
   --sia-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -277,7 +277,7 @@
 .sia-proof { padding: 120px 0; }
 .sia-proof h2 { font-size: clamp(42px, 5.6vw, 84px); margin-bottom: 56px; }
 .sia-proof__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.sia-quote { border: 1px dashed rgba(255, 74, 28, 0.55); padding: 30px 28px; display: flex; flex-direction: column; gap: 22px; min-height: 280px; }
+.sia-quote { border: 1px dashed rgba(204, 68, 48, 0.55); padding: 30px 28px; display: flex; flex-direction: column; gap: 22px; min-height: 280px; }
 .sia-quote__flag { align-self: flex-start; color: var(--sia-black); background: var(--sia-red); padding: 5px 8px; font-size: 10px; }
 .sia-quote blockquote { font-size: 19px; line-height: 1.5; color: var(--sia-dim); font-style: italic; flex: 1; }
 .sia-quote cite { font-style: normal; color: var(--sia-bone); }
@@ -904,7 +904,7 @@
 .sia-chip b { color: var(--sia-bone); font-weight: 600; }
 .sia-chip__note { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: rgba(239, 233, 220, 0.14); font-size: 13px; }
 .sia-chip--them { opacity: 0.55; text-decoration: line-through; text-decoration-color: var(--sia-red); }
-.sia-chip--you { background: rgba(255, 74, 28, 0.14); border-color: rgba(255, 74, 28, 0.5); color: var(--sia-bone); font-size: 16px; }
+.sia-chip--you { background: rgba(204, 68, 48, 0.14); border-color: rgba(204, 68, 48, 0.5); color: var(--sia-bone); font-size: 16px; }
 .sia-chip--you .sia-chip__note { background: var(--sia-red); color: #000; }
 .sia-ig__vs { color: var(--sia-red); font-size: 11px; margin: 4px 0 -2px 6px; }
 .sia-sticker { margin-top: 18px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 20px 14px 16px; border-radius: 14px; background: var(--sia-bone); color: #111; transform: rotate(-3deg); box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5); font-size: 14px; line-height: 1.25; }
@@ -920,7 +920,7 @@
 
 .sia-final__alt { margin-top: 22px; font-size: 14px; color: var(--sia-dim); }
 .sia-final__alt a { color: var(--sia-bone); text-decoration: underline; text-underline-offset: 3px; }
-.sia-final__alt a:hover { color: var(--sia-red, #FF4A1C); }
+.sia-final__alt a:hover { color: var(--sia-red, #cc4430); }
 
 /* ---------- Guide / article pages ---------- */
 .sia-article { padding-top: 150px; }
@@ -1012,7 +1012,7 @@
 .sia-reveal.sia-display.is-in { clip-path: inset(-40% -12% -40% -12%); }
 
 .sia-offer { transition: transform 450ms cubic-bezier(0.2, 0.7, 0.2, 1), border-color 300ms ease, background 300ms ease, box-shadow 450ms ease; }
-.sia-offer:hover { box-shadow: 0 0 0 1px rgba(255, 74, 28, 0.35), 0 24px 60px -24px rgba(255, 74, 28, 0.45); }
+.sia-offer:hover { box-shadow: 0 0 0 1px rgba(204, 68, 48, 0.35), 0 24px 60px -24px rgba(204, 68, 48, 0.45); }
 
 @media (prefers-reduced-motion: reduce) {
   [data-drift] img, .sia-hero__figure[data-drift] { translate: none; }
