@@ -683,7 +683,7 @@ const HEARD: {
     song: "The Money Medium",
     who: "Lou Clarke",
     quote: [
-      "When I first heard the sound you created for my brand, it literally gave me tingles. It made me realize I wasn't giving myself enough credit. Having my own sound for myself and my brand brought me into a place of ownership of who I am, what I do and who I support.",
+      "When I first heard the sound you created for my brand, it literally gave me tingles. It was like one massive goosebump, like my entire vibration was catapulted into a new frequency, and it's almost like I could feel it reprogramming my DNA. It made me realize I wasn't giving myself enough credit. Having my own sound for myself and my brand brought me into a place of ownership of who I am, what I do and who I support.",
       "I'm the only one walking into my keynote with my music. Everybody else is walking into Carrie Underwood or Britney Spears. I'm walking into my song. People pull out their phones with Shazam, trying to figure out what song it is.",
       "I have women who've been afraid to look at their money now looking at their money with literally me in their ears. One of my private clients plays my four songs every single morning on her drive to her office.",
       "If you're spending that kind of money to create a visual brand, why are we not also doing an audio brand? You're not just someone on social media anymore. You're someone on Spotify. You're someone who's in their ears.",
