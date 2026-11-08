@@ -673,8 +673,8 @@ const HEARD: {
       "I've been crying all morning about it. In a beautiful way… Thank you for feeling my movement and my art, and being moved so deeply.",
       "I am blown away, and also not surprised at all. I will be using these songs once I visually launch.",
     ],
-    note: "I made Desiree's songs around her movement and her art, ready for the day she launches.",
-    links: [],
+    note: "I made Desiree two songs for two of her offers, each one built around her movement and her art.",
+    links: [{ label: "Hear one in her world", href: "https://www.instagram.com/p/DXuZBqZER4N/" }],
   },
   {
     song: "The Money Medium",
