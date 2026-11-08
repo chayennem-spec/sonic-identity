@@ -668,12 +668,12 @@ const HEARD: {
   },
   {
     song: "Her launch songs",
-    who: "Desiree",
+    who: "Desiree Lakeisha",
     quote: [
       "I've been crying all morning about it. In a beautiful way… Thank you for feeling my movement and my art, and being moved so deeply.",
       "I am blown away, and also not surprised at all. I will be using these songs once I visually launch.",
     ],
-    note: "I made Desiree two songs for two of her offers, each one built around her movement and her art.",
+    note: "Desiree is an artistic director and creative visionary. I made her two songs for two of her offers, each one built around her movement and her art."
     links: [
       { label: "Hear song one", href: "https://www.instagram.com/p/DXuZBqZER4N/" },
       { label: "Hear song two", href: "https://www.instagram.com/p/DYKeGXlERls/" },
