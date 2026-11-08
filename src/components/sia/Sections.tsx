@@ -667,6 +667,16 @@ const HEARD: {
     links: [{ label: "Hear it in her world", href: "https://www.instagram.com/p/DcO7446DMFu/" }],
   },
   {
+    song: "Her launch songs",
+    who: "Desiree",
+    quote: [
+      "I've been crying all morning about it. In a beautiful way… Thank you for feeling my movement and my art, and being moved so deeply.",
+      "I am blown away, and also not surprised at all. I will be using these songs once I visually launch.",
+    ],
+    note: "I made Desiree's songs around her movement and her art, ready for the day she launches.",
+    links: [],
+  },
+  {
     song: "The Money Medium",
     who: "Lou Clarke",
     note: "I made it to sound the way her brand feels, and it lives on Spotify.",
