@@ -674,7 +674,10 @@ const HEARD: {
       "I am blown away, and also not surprised at all. I will be using these songs once I visually launch.",
     ],
     note: "I made Desiree two songs for two of her offers, each one built around her movement and her art.",
-    links: [{ label: "Hear one in her world", href: "https://www.instagram.com/p/DXuZBqZER4N/" }],
+    links: [
+      { label: "Hear song one", href: "https://www.instagram.com/p/DXuZBqZER4N/" },
+      { label: "Hear song two", href: "https://www.instagram.com/p/DYKeGXlERls/" },
+    ],
   },
   {
     song: "The Money Medium",
