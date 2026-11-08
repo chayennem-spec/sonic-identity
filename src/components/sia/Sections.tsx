@@ -682,11 +682,15 @@ const HEARD: {
   {
     song: "The Money Medium",
     who: "Lou Clarke",
-    note: "I made it to sound the way her brand feels, and it lives on Spotify.",
+    quote: [
+      "When I first heard the sound you created for my brand, it literally gave me tingles. It made me realize I wasn't giving myself enough credit. Having my own sound for myself and my brand brought me into a place of ownership of who I am, what I do and who I support.",
+      "I'm the only one walking into my keynote with my music. Everybody else is walking into Carrie Underwood or Britney Spears. I'm walking into my song. People pull out their phones with Shazam, trying to figure out what song it is.",
+      "I have women who've been afraid to look at their money now looking at their money with literally me in their ears. One of my private clients plays my four songs every single morning on her drive to her office.",
+      "If you're spending that kind of money to create a visual brand, why are we not also doing an audio brand? You're not just someone on social media anymore. You're someone on Spotify. You're someone who's in their ears.",
+    ],
+    note: "Lou works in the finance industry. I made her brand's songs to sound the way her brand feels, and they live on Spotify, where her clients play them before their money dates.",
     links: [{ label: "Listen on Spotify", href: "https://open.spotify.com/track/1F6C3FXTLZZCQdLEDrK4Cn" }],
     spotify: "1F6C3FXTLZZCQdLEDrK4Cn",
-    after:
-      "When you have a song made for your brand, your people can play it, save it and share it. Your brand shows up in their car, their playlists and their feed, even on the days you don’t post. That’s omnipresence.",
   },
 ];
 
