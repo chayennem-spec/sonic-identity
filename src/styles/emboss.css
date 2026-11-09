@@ -149,3 +149,46 @@
 .sia.sia-hero .sia-hero__figure img {
   filter: contrast(1.07) saturate(0.84) brightness(0.96) sepia(0.05);
 }
+
+/* ---------- Last section ("Stop borrowing their song"): graffiti swapped for the charcoal plaster ---------- */
+.sia.sia-final--split {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse 70% 80% at 30% 45%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.45) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 18%),
+    #0d0d0c url("/textures/plaster-charcoal.webp") center / cover no-repeat;
+}
+.sia.sia-final--split::before {
+  content: "";
+  position: absolute;
+  inset: -10% -5%;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(118deg,
+    transparent 8%,
+    rgba(255, 240, 220, 0.03) 14%, rgba(255, 240, 220, 0.03) 23%,
+    rgba(0, 0, 0, 0.26) 24.5%, rgba(0, 0, 0, 0.26) 26%,
+    rgba(255, 240, 220, 0.026) 27.5%, rgba(255, 240, 220, 0.026) 36%,
+    transparent 42%);
+  filter: blur(22px);
+  mix-blend-mode: screen;
+}
+.sia.sia-final--split .sia-wrap { position: relative; z-index: 1; }
+.sia.sia-final--split .sia-display {
+  color: #2a2927;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)),
+    url("/textures/plaster-charcoal.webp") 60% 50% / 1100px auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: url(#sia-stone);
+}
+.sia.sia-final--split .sia-display em {
+  -webkit-text-fill-color: var(--sia-red);
+  color: var(--sia-red);
+}
+@media (max-width: 860px) {
+  .sia.sia-final--split { background-size: auto, auto, 1600px auto; background-position: 0 0, 0 0, 30% 50%; }
+}
