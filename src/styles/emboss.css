@@ -247,3 +247,9 @@
   .sia.sia-hero { background-size: 1600px auto; background-position: 30% 100%; }
   .sia.sia-final--split { background-size: auto, 1600px auto; background-position: 0 0, 30% 50%; }
 }
+
+/* Cool the room behind her to match the black felt paper. The photo underneath is the room;
+   her cut-out sits on top, so she keeps her warmth while the background goes neutral charcoal. */
+.sia.sia-hero .sia-hero__figure > img:not(.sia-hero__cutout) {
+  filter: saturate(0.2) brightness(0.8) contrast(1.06);
+}
