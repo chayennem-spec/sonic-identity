@@ -1,0 +1,151 @@
+/* ============================================================
+   Embossed finish (Nov 2026)
+   Adds texture and raised type ON TOP of the existing design.
+   No layout, spacing or copy changes live here: delete the import
+   in styles.css and the site goes back to exactly how it was.
+   The lighting filters live in components/sia/EmbossDefs.tsx.
+============================================================= */
+:root {
+  /* Chayenne's lipstick red replaces the old red-orange accent */
+  --sia-red: #b52e2c;
+  /* Pressed-card relief: soft highlights and shadows with transparency, so the
+     same texture works on the black sections and the cream ones. */
+  --sia-relief: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='r' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.011 .018' numOctaves='5' seed='4' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' surfaceScale='2.2' lighting-color='%23fff' result='l'%3E%3CfeDistantLight azimuth='225' elevation='50'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix in='l' result='hi' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .9 0 0 0 -.72'/%3E%3CfeColorMatrix in='l' result='lo' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -.7 0 0 0 .511'/%3E%3CfeMerge%3E%3CfeMergeNode in='lo'/%3E%3CfeMergeNode in='hi'/%3E%3C/feMerge%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23r)'/%3E%3C/svg%3E");
+  --sia-relief-soft: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='r' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.03 .04' numOctaves='4' seed='4' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' surfaceScale='1.2' lighting-color='%23fff' result='l'%3E%3CfeDistantLight azimuth='225' elevation='50'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix in='l' result='hi' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .6 0 0 0 -.48'/%3E%3CfeColorMatrix in='l' result='lo' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -.3 0 0 0 .219'/%3E%3CfeMerge%3E%3CfeMergeNode in='lo'/%3E%3CfeMergeNode in='hi'/%3E%3C/feMerge%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23r)'/%3E%3C/svg%3E");
+  --sia-paper-grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+  --sia-foil: linear-gradient(105deg, #7d1a18 0%, #c9433f 28%, #e9817a 38%, #b52e2c 50%, #8e201e 70%, #c23a37 100%);
+}
+
+/* ---------- 1. Textured grounds (every section except the hero photo) ---------- */
+.sia:not(.sia-hero):not(.sia-gap):not(.sia-final--split),
+.si-lab,
+.si-lab__left,
+.si-lab__right,
+.sia-offer,
+.sia-header {
+  background-image: var(--sia-paper-grain), var(--sia-relief);
+  background-size: 200px 200px, 520px 520px;
+}
+/* cream sections: a quieter relief, like heavy paper */
+.sia-proof, .sia-about, .sia-sound#method, .sia-reel, .sia-offers, .sia-faq {
+  background-image: var(--sia-paper-grain), var(--sia-relief-soft);
+}
+/* the black card sits a hair off pure black so the relief can show */
+.sia:not(.sia-hero):not(.sia-proof):not(.sia-about):not(.sia-reel):not(.sia-offers):not(.sia-faq):not(#method),
+.si-lab, .si-lab__left, .si-lab__right {
+  background-color: #111110;
+}
+.sia-header { background-color: rgba(17, 17, 16, 0.98); }
+
+/* ---------- 2. Raised headlines ---------- */
+/* Letters are nearly the colour of the ground; light and shadow carry them. */
+.sia .sia-display {
+  color: color-mix(in srgb, var(--sia-black) 90%, var(--sia-bone));
+  filter: url(#sia-raise);
+}
+.sia-proof .sia-display, .sia-about .sia-display, .sia-sound#method .sia-display,
+.sia-reel .sia-display, .sia-offers .sia-display, .sia-faq .sia-display {
+  color: color-mix(in srgb, var(--sia-black) 97%, #fff);
+  filter: url(#sia-raise-paper);
+}
+/* ---------- 2b. First screen: charcoal plaster wall with window light ---------- */
+/* Her photo stays exactly as it is; its soft edges now fade into plaster instead of flat black. */
+.sia.sia-hero {
+  background: #0d0d0c url("/textures/plaster-charcoal.webp") center / cover no-repeat;
+}
+.sia-hero__media--still { background: transparent; }
+/* Feather the photo's left edge too, so it melts into the wall with no visible line */
+@media (min-width: 861px) {
+  .sia-hero__figure--photo img,
+  .sia-hero__figure--photo .sia-hero__cutout {
+    -webkit-mask-image: radial-gradient(ellipse 66% 70% at 56% 42%, #000 40%, transparent 96%), linear-gradient(90deg, transparent 0%, #000 34%);
+    -webkit-mask-composite: source-in;
+    mask-image: radial-gradient(ellipse 66% 70% at 56% 42%, #000 40%, transparent 96%), linear-gradient(90deg, transparent 0%, #000 34%);
+    mask-composite: intersect;
+  }
+}
+.sia .sia-hero__media--still .sia-hero__shade {
+  background:
+    radial-gradient(ellipse 60% 70% at 24% 42%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.45) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 30%);
+}
+/* Light through a window: soft beams and the shadow of the frame falling across the wall */
+.sia.sia-hero::before {
+  content: "";
+  position: absolute;
+  inset: -10% -5% -10% -5%;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(118deg,
+      transparent 6%,
+      rgba(255, 240, 220, 0.035) 12%, rgba(255, 240, 220, 0.035) 21%,
+      rgba(0, 0, 0, 0.28) 22.5%, rgba(0, 0, 0, 0.28) 24%,
+      rgba(255, 240, 220, 0.03) 25.5%, rgba(255, 240, 220, 0.03) 34%,
+      transparent 40%,
+      transparent 48%,
+      rgba(255, 240, 220, 0.02) 53%, rgba(255, 240, 220, 0.02) 60%,
+      transparent 66%);
+  filter: blur(22px);
+  mix-blend-mode: screen;
+  -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 50%, transparent 72%);
+  mask-image: linear-gradient(90deg, #000 0%, #000 50%, transparent 72%);
+}
+.sia.sia-hero::after { mix-blend-mode: multiply; }
+@media (max-width: 860px) {
+  .sia .sia-hero__media--still .sia-hero__shade { background: none; }
+  .sia.sia-hero { background-size: 1600px auto; background-position: 30% 100%; }
+  .sia.sia-hero::before {
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, transparent 30%, #000 45%);
+    mask-image: linear-gradient(180deg, transparent 0%, transparent 30%, #000 45%);
+  }
+}
+
+/* The headline is cast from the same plaster: its letters carry the wall's
+   texture and are lit by the same window, with a crisp edge so it stays sharp. */
+.sia.sia-hero .sia-display {
+  color: #2a2927;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)),
+    url("/textures/plaster-charcoal.webp") 30% 40% / 1100px auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: url(#sia-stone);
+}
+.sia.sia-hero .sia-display em {
+  -webkit-text-fill-color: var(--sia-red);
+  color: var(--sia-red);
+}
+/* Lipstick script words keep their red: they read as raised red lacquer */
+.sia .sia-display .sia-hand,
+.sia .sia-display em { color: var(--sia-red); }
+
+/* ---------- 3. The wordmark, pressed like the black card logo ---------- */
+.sia-wordmark {
+  color: #2e2c29;
+  -webkit-text-stroke: 0;
+  letter-spacing: -0.015em;
+  filter: url(#sia-raise-fine);
+}
+
+/* ---------- 4. Red as a material: foil and lacquer ---------- */
+.sia-btn--red {
+  background: linear-gradient(160deg, #c2403c 0%, #a82927 45%, #8a1f1d 100%);
+  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.22), inset -1px -2px 3px rgba(0, 0, 0, 0.35), 3px 5px 10px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+.sia-btn--red:hover { background: var(--sia-bone); color: #111; text-shadow: none; }
+
+@media print {
+  .sia .sia-display, .sia-wordmark { filter: none; color: inherit; }
+}
+
+/* Hero tagline: keep it in the left column so it no longer runs across the photo */
+.sia-hero__tag { max-width: 26em; text-wrap: balance; }
+
+/* Blend her photo into the wall: a touch cooler, less saturated and a little deeper,
+   so the warm room behind her melts into the charcoal plaster. Lips and skin keep their colour. */
+.sia.sia-hero .sia-hero__figure img {
+  filter: contrast(1.07) saturate(0.84) brightness(0.96) sepia(0.05);
+}

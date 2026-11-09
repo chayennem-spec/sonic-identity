@@ -8,6 +8,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
+import { EmbossDefs } from "../components/sia/EmbossDefs";
 import appCss from "../styles.css?url";
 import { reportVibeError } from "../lib/vibe-error-reporting";
 
@@ -118,6 +119,7 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <EmbossDefs />
         {children}
         <Scripts />
       </body>

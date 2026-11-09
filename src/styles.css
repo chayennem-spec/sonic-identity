@@ -5,6 +5,8 @@
 @import "./styles/brand-fonts.css";
 @import "./styles/brand-kit.css";
 @import "./styles/sia.css";
+/* Embossed finish: texture + raised headlines. Remove this line to switch it off. */
+@import "./styles/emboss.css";
 
 @custom-variant dark (&:is(.dark *));
 
