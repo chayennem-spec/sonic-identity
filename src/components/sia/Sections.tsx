@@ -153,12 +153,10 @@ export function ForHer() {
 
 
 const ON_SET = [
-  { src: "/images/chayenne-set-01.webp", alt: "Chayenne Mallari leaning forward on a sculptural white chair in black leather", w: 1100, h: 1650 },
-  { src: "/images/chayenne-set-03.webp", alt: "Chayenne Mallari standing in a raw plaster archway in black leather", w: 1600, h: 1067 },
-  { src: "/images/chayenne-set-02.webp", alt: "Chayenne Mallari seated facing the camera on a white stool", w: 1100, h: 1650 },
-  { src: "/images/chayenne-set-04.webp", alt: "Chayenne Mallari kneeling on a faux fur block inside a plaster archway", w: 1100, h: 1650 },
-  { src: "/images/chayenne-set-06.webp", alt: "Chayenne Mallari seated on a white chair, looking away from the camera", w: 1100, h: 1650 },
-  { src: "/images/chayenne-set-05.webp", alt: "Chayenne Mallari seated with her hand resting on a white stool", w: 1100, h: 1650 },
+  { src: "/images/chayenne-editorial.webp", alt: "Chayenne Mallari in black sunglasses and a leather jacket", w: 1233, h: 1275 },
+  { src: "/images/chayenne-chrome-visor.webp", alt: "Chayenne Mallari in a chrome visor and red lip, black leather jacket", w: 941, h: 1672 },
+  { src: "/images/chayenne-headphones.webp", alt: "Chayenne Mallari in red headphones and black sunglasses", w: 1233, h: 1275 },
+  { src: "/images/chayenne-editorial-bw.webp", alt: "Chayenne Mallari in black and white, sunglasses and leather", w: 1233, h: 1275 },
 ];
 
 /** Editorial film strip that slides sideways as you scroll (still for reduced motion). */
@@ -889,7 +887,7 @@ export const FAQ = [
   },
   {
     q: "Do I have to get on calls?",
-    a: "Nope, not for the Anthem or the Atelier. You have enough meetings, love. We do everything over email and voice memos: you approve each stage, I do the building.",
+    a: "Just the good ones. Your Anthem comes with one private 20-minute First Listen call, where we hear your song together. The Atelier comes with two private 30-minute calls: your Live Brand Read at the start and your First Listen when your first track is ready. Everything else happens over email and voice memos, on your time.",
   },
   {
     q: "How long does it take?",
