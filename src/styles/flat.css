@@ -62,3 +62,14 @@
   filter: none !important;
   object-position: center 25%;
 }
+
+/* Guide pages: their FAQ sits on the dark page, so it keeps the dark tokens */
+.sia-article__faq {
+  --sia-black: #0c0c0d;
+  --sia-off: #141414;
+  --sia-line: #262423;
+  --sia-bone: #efe9dc;
+  --sia-dim: #a39d93;
+  --sia-card: #151516;
+  --sia-ground: #0c0c0d;
+}

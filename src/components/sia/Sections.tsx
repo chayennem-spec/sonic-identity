@@ -776,7 +776,7 @@ export function About() {
               As a hair extension specialist, I was changing how a woman looked on the outside, so I built
               playlists for how I wanted her to feel on the inside: confident, magnetic, an untouchable
               badass. When the music matched her energy, she sat up taller, she walked out feeling
-              more like herself, and she’d often add one more thing before she left. Same chair, same
+              more like herself, and she often would add one more product to her purchase before she left. Same chair, same
               service, different sound. Now? I do that for your brand.
             </p>
             <p>
