@@ -914,6 +914,9 @@ export function Faq() {
           <h2 className="sia-display">
             Before <span className="sia-nw">you <em>press play</em>.</span>
           </h2>
+          <figure className="sia-faq__photo">
+            <img src="/images/chayenne-editorial-bw.webp" alt="Chayenne Mallari in sunglasses and a black leather jacket" loading="lazy" />
+          </figure>
         </div>
         <div className="sia-reveal">
           {FAQ.map((f, i) => (
@@ -965,7 +968,7 @@ export function FinalCta() {
           </p>
         </div>
         <figure className="sia-final__photo sia-reveal" aria-hidden="true" data-drift="0.1">
-          <img src="/images/headphones-red-cutout.webp" alt="" loading="lazy" />
+          <img src="/images/chayenne-headphones.webp" alt="" loading="lazy" />
         </figure>
       </div>
     </section>

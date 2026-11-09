@@ -1,18 +1,20 @@
 /* ============================================================
-   Flat dark (Nov 2026)
-   Solid dark grounds, flat cards with a thin line, no textures,
-   no grain, no embossed type. Bright red-orange #FF4A1C accent.
-   Delete the import in styles.css to switch it off.
+   Flat look (Nov 2026)
+   Solid grounds (black and gray beige taking turns), flat cards with a
+   thin line, no textures, no grain, no embossed type.
+   Bright red-orange #FF4A1C accent. Delete the import in styles.css to switch it off.
 ============================================================= */
 :root { --sia-card: #151516; --sia-ground: #0c0c0d; }
 
-/* Every section dark: undo the cream sections */
+/* Gray beige sections, flat (no vignette, no paper) */
 .sia-proof, .sia-about, .sia-sound#method, .sia-reel, .sia-offers, .sia-faq {
-  --sia-black: #0c0c0d;
-  --sia-off: #141414;
-  --sia-line: #262423;
-  --sia-bone: #efe9dc;
-  --sia-dim: #a39d93;
+  --sia-black: #e4ddd0;
+  --sia-off: #dad2c3;
+  --sia-line: #c9c0b0;
+  --sia-bone: #111111;
+  --sia-dim: #5e5850;
+  --sia-card: #ece6db;
+  --sia-ground: #e4ddd0;
 }
 
 /* Solid grounds, no photos or textures behind sections */
@@ -24,13 +26,11 @@
 .sia.sia-final--split::before { display: none; }
 .sia-header { background: rgba(12, 12, 13, 0.96); background-image: none; }
 
-/* No film grain over the page */
-.sia-film, .sia-film-grain { display: none; }
+/* No film grain or lens vignette over the page */
+.sia-film, .sia-film-grain, .sia-vignette { display: none; }
 
-/* Flat type: solid cream headlines, red-orange accents */
+/* Flat type: solid headlines, red-orange accents */
 .sia .sia-display,
-.sia-proof .sia-display, .sia-about .sia-display, .sia-sound#method .sia-display,
-.sia-reel .sia-display, .sia-offers .sia-display, .sia-faq .sia-display,
 .sia.sia-hero .sia-display, .sia.sia-final--split .sia-display {
   color: var(--sia-bone);
   filter: none;
@@ -40,7 +40,7 @@
 }
 .sia .sia-display em { color: var(--sia-red); -webkit-text-fill-color: var(--sia-red); }
 
-/* Flat cards: one step lighter than the ground, thin line, soft corners */
+/* Flat cards: a step off the ground, thin line, soft corners */
 .sia-offer, .sia-heard, .sia-letter, .sia-quote, .sia-reel__frame {
   background: var(--sia-card);
   background-image: none;
@@ -50,3 +50,15 @@
 }
 .sia-offer:hover { box-shadow: 0 0 0 1px rgba(255, 74, 28, 0.45); }
 .sia-heard__photo { border-radius: 12px; }
+
+/* More of her: a photo under the FAQ headline, her in red headphones in the last section */
+.sia-faq__photo { margin: 40px 0 0; border-radius: 18px; overflow: hidden; aspect-ratio: 4 / 5; max-width: 420px; }
+.sia-faq__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+@media (min-width: 861px) { .sia-faq__grid > div:first-child { position: sticky; top: 110px; align-self: start; } }
+@media (max-width: 860px) { .sia-faq__photo { max-width: none; aspect-ratio: 4 / 3; } }
+.sia-final__photo { aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; }
+.sia-final__photo img {
+  -webkit-mask-image: none; mask-image: none;
+  filter: none !important;
+  object-position: center 25%;
+}
