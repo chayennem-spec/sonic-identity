@@ -6,8 +6,7 @@
    The lighting filters live in components/sia/EmbossDefs.tsx.
 ============================================================= */
 :root {
-  /* Chayenne's lipstick red replaces the old red-orange accent */
-  --sia-red: #b52e2c;
+  /* Accent colour comes from sia.css (--sia-red); this file no longer overrides it. */
   /* Pressed-card relief: soft highlights and shadows with transparency, so the
      same texture works on the black sections and the cream ones. */
   --sia-relief: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520'%3E%3Cfilter id='r' x='0' y='0' width='100%25' height='100%25' color-interpolation-filters='sRGB'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.011 .018' numOctaves='5' seed='4' stitchTiles='stitch' result='n'/%3E%3CfeDiffuseLighting in='n' surfaceScale='2.2' lighting-color='%23fff' result='l'%3E%3CfeDistantLight azimuth='225' elevation='50'/%3E%3C/feDiffuseLighting%3E%3CfeColorMatrix in='l' result='hi' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 .9 0 0 0 -.72'/%3E%3CfeColorMatrix in='l' result='lo' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -.7 0 0 0 .511'/%3E%3CfeMerge%3E%3CfeMergeNode in='lo'/%3E%3CfeMergeNode in='hi'/%3E%3C/feMerge%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23r)'/%3E%3C/svg%3E");
@@ -131,7 +130,7 @@
 
 /* ---------- 4. Red as a material: foil and lacquer ---------- */
 .sia-btn--red {
-  background: linear-gradient(160deg, #c2403c 0%, #a82927 45%, #8a1f1d 100%);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.14) 0%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.22) 100%), var(--sia-red);
   box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.22), inset -1px -2px 3px rgba(0, 0, 0, 0.35), 3px 5px 10px rgba(0, 0, 0, 0.45);
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
 }
