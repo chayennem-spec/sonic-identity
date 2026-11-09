@@ -113,3 +113,7 @@
   --sia-card: #151516;
   --sia-ground: #0c0c0d;
 }
+
+/* Header logo (Nov 2026): wordmark in bone, her name in brand red. */
+.sia-header .sia-brand .sia-wordmark { color: #efe9dc !important; }
+.sia-header .sia-brand .sia-tagline { color: var(--sia-red, #ff4a1c) !important; }
