@@ -59,6 +59,27 @@ export function EmbossDefs() {
             <feMergeNode in="lit" />
           </feMerge>
         </filter>
+        {/* Readable headlines: cream letters stamped into the dark wall, with a soft rounded edge and a close shadow */}
+        <filter id="sia-cream" x="-8%" y="-30%" width="116%" height="160%" colorInterpolationFilters="sRGB">
+          <feGaussianBlur in="SourceAlpha" stdDeviation=".9" result="bump" />
+          <feDiffuseLighting in="bump" surfaceScale="1.4" diffuseConstant="1.556" lightingColor="#fff" result="diff">
+            <feDistantLight azimuth="225" elevation="40" />
+          </feDiffuseLighting>
+          <feComposite in="diff" in2="SourceAlpha" operator="in" result="diffIn" />
+          <feBlend in="SourceGraphic" in2="diffIn" mode="multiply" result="lit" />
+          <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="ao" />
+          <feFlood floodColor="#000" floodOpacity=".45" />
+          <feComposite in2="ao" operator="in" result="aoShadow" />
+          <feGaussianBlur in="SourceAlpha" stdDeviation="1.4" result="sb" />
+          <feOffset in="sb" dx="1.2" dy="1.6" result="so" />
+          <feFlood floodColor="#000" floodOpacity=".75" />
+          <feComposite in2="so" operator="in" result="shadow" />
+          <feMerge>
+            <feMergeNode in="aoShadow" />
+            <feMergeNode in="shadow" />
+            <feMergeNode in="lit" />
+          </feMerge>
+        </filter>
         {/* Raised letters on the cream paper sections */}
         <filter id="sia-raise-paper" x="-8%" y="-30%" width="116%" height="160%" colorInterpolationFilters="sRGB">
           <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="bump" />

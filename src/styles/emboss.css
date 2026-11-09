@@ -201,3 +201,31 @@
   mask-image: none;
   filter: drop-shadow(14px 22px 26px rgba(0, 0, 0, 0.75)) drop-shadow(3px 5px 4px rgba(0, 0, 0, 0.6));
 }
+
+/* ============================================================
+   Readability pass (Nov 8): headlines read instantly again.
+   Texture stays everywhere; the blind (tone-on-tone) emboss is kept
+   only for the wordmark, where nobody needs to read it to understand her.
+============================================================= */
+.sia .sia-display,
+.sia.sia-hero .sia-display,
+.sia.sia-final--split .sia-display {
+  color: var(--sia-bone);
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
+  filter: url(#sia-cream);
+}
+/* cream paper sections: ink letters pressed into the paper (letterpress) */
+.sia-proof .sia-display, .sia-about .sia-display, .sia-sound#method .sia-display,
+.sia-reel .sia-display, .sia-offers .sia-display, .sia-faq .sia-display {
+  color: var(--sia-bone);
+  filter: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.55), 0 -1px 0 rgba(0, 0, 0, 0.12);
+}
+.sia .sia-display em,
+.sia .sia-display .sia-hand {
+  color: var(--sia-red);
+  -webkit-text-fill-color: var(--sia-red);
+}
