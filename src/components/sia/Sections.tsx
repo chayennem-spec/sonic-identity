@@ -942,11 +942,10 @@ export function FinalCta() {
           <p className="sia-body sia-final__line">
             Picture it: it’s three minutes before your masterclass, the waiting room’s filling up… and the
             music playing is so obviously you that people know whose room they’re in before you say a
-            word. That’s the whole brief.
+            word. That’s what I make for you.
           </p>
           <p className="sia-body sia-final__line">
-            Start with the free audit and meet your Sonic Archetype. It’s nine quick questions. Or, if
-            you already know, get your Anthem today.
+            Start with the free audit and meet your Sonic Archetype. It’s nine quick questions.
           </p>
           <div className="sia-hero__ctas">
             <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">
@@ -965,7 +964,7 @@ export function FinalCta() {
           </p>
         </div>
         <figure className="sia-final__photo sia-reveal" aria-hidden="true" data-drift="0.1">
-          <img src="/images/headphones-red-cutout.webp" alt="" loading="lazy" />
+          <img src="/images/headphones-burgundy-cutout.webp" alt="" loading="lazy" />
         </figure>
       </div>
     </section>
