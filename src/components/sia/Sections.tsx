@@ -153,7 +153,7 @@ export function ForHer() {
 
 
 const ON_SET = [
-  { src: "/images/chayenne-set-01.webp", alt: "Chayenne Mallari leaning forward on a sculptural white chair, black leather and red lips", w: 1100, h: 1650 },
+  { src: "/images/chayenne-set-01.webp", alt: "Chayenne Mallari leaning forward on a sculptural white chair in black leather", w: 1100, h: 1650 },
   { src: "/images/chayenne-set-03.webp", alt: "Chayenne Mallari standing in a raw plaster archway in black leather", w: 1600, h: 1067 },
   { src: "/images/chayenne-set-02.webp", alt: "Chayenne Mallari seated facing the camera on a white stool", w: 1100, h: 1650 },
   { src: "/images/chayenne-set-04.webp", alt: "Chayenne Mallari kneeling on a faux fur block inside a plaster archway", w: 1100, h: 1650 },
