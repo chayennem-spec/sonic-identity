@@ -373,80 +373,14 @@
   }
 }
 
-/* ============================================================
-   Magazine touches (Nov 8, from the Sound Issue carousel), last section first:
-   issue-style kicker, a drop cap, and the headphones as a real instant print
-   taped to the black card with a handwritten caption.
-============================================================= */
-.sia.sia-final--split .sia-kicker::after {
-  content: "No. 06";
-  margin-left: auto;
-  padding-left: 18px;
-  font: inherit;
-  letter-spacing: inherit;
-  opacity: 0.8;
-}
-.sia.sia-final--split .sia-display + .sia-final__line::first-letter {
-  float: left;
-  font-family: var(--sia-display);
-  font-weight: 800;
-  font-size: 3.6em;
-  line-height: 0.82;
-  margin: 0.08em 0.12em 0 -0.03em;
-  color: var(--sia-red);
-}
-/* the print */
-.sia.sia-final--split .sia-final__photo {
-  translate: none;
-  scale: none;
-  rotate: 3.5deg;
-  width: min(440px, 82%);
-  aspect-ratio: auto;
-  margin-left: auto;
-  margin-right: 6%;
-  padding: 16px 16px 74px;
-  background: #ebe5da;
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 22px 40px rgba(0, 0, 0, 0.6), 0 4px 10px rgba(0, 0, 0, 0.45);
-}
+/* Headphones (Nov 8, chosen): the real photo, background darkened to the card's tone in the
+   image itself so there is no lighter "spotlight" patch; larger, edges feathered into the card. */
+.sia.sia-final--split .sia-final__photo { translate: 6% 0; scale: 1.25; }
 .sia.sia-final--split .sia-final__photo img {
-  aspect-ratio: 1 / 1;
-  height: auto;
-  -webkit-mask-image: none;
-  mask-image: none;
-  filter: contrast(1.04) saturate(0.9) brightness(0.95);
-  transform: none;
-}
-.sia.sia-final--split .sia-final__photo::before {
-  content: "";
-  position: absolute;
-  top: -16px;
-  left: 50%;
-  width: 150px;
-  height: 42px;
-  translate: -50% 0;
-  rotate: -5deg;
-  background: url("/images/tape.webp") center / 100% 100% no-repeat;
-  opacity: 0.9;
-  z-index: 2;
-}
-.sia.sia-final--split .sia-final__photo::after {
-  content: "your sound, not theirs";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 16px;
-  text-align: center;
-  font-family: var(--sia-lipstick);
-  font-size: 32px;
-  line-height: 1;
-  color: #3f1614;
-  rotate: -2deg;
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%);
+  filter: saturate(0.95);
 }
 @media (max-width: 860px) {
-  .sia.sia-final--split .sia-final__photo { width: 78%; margin: 10px auto 26px; padding: 12px 12px 58px; }
-  .sia.sia-final--split .sia-final__photo::after { font-size: 26px; bottom: 14px; }
-  .sia.sia-final--split .sia-final__photo img {
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
+  .sia.sia-final--split .sia-final__photo { translate: 0 0; scale: 1.1; }
 }
