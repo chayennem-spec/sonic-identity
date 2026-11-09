@@ -229,3 +229,6 @@
   color: var(--sia-red);
   -webkit-text-fill-color: var(--sia-red);
 }
+
+/* Waveform line behind her head removed (Nov 8): read as fake against the plaster */
+.sia-wave--behind { display: none; }
