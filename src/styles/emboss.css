@@ -284,9 +284,6 @@
 
 /* Header (Nov 8): the bar is the same black felt paper as the page, and the wordmark is pressed
    into it. Both use the same fixed texture so the grain runs straight through the letters. */
-.sia-header {
-  background: #0c0c0b url("/textures/black-felt-paper.webp") center top / 1600px auto fixed;
-}
 .sia-wordmark {
   color: transparent;
   background:
@@ -297,4 +294,62 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0;
   filter: url(#sia-raise-fine);
+}
+
+/* ============================================================
+   One sheet of paper (Nov 8, late): the header, first screen and last screen
+   all use the exact same black felt card at the same scale, fixed to the
+   window, so the grain runs straight across from one to the next with no seam.
+============================================================= */
+.sia.sia-hero,
+.sia.sia-final--split {
+  background: #0c0c0b url("/textures/black-felt-paper.webp") center top / 1600px auto fixed;
+}
+/* no darkening along the top edge, so the hero meets the header flush */
+.sia .sia-hero__media--still .sia-hero__shade {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0) 26%);
+}
+@media (max-width: 860px) {
+  .sia.sia-hero,
+  .sia.sia-final--split { background-size: 1600px auto; background-position: center top; }
+}
+
+/* Headphones: back to the red that matches the site, toned down under a dark luxury
+   wash so they sit in the scene instead of popping like a product shot.
+   Bigger than the original, only just touching the edge. */
+.sia.sia-final--split .sia-final__photo {
+  translate: 10% 2%;
+  scale: 1.18;
+}
+.sia.sia-final--split .sia-final__photo img {
+  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 55%, transparent 100%), linear-gradient(100deg, #000 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 55%, transparent 100%), linear-gradient(100deg, #000 55%, transparent 100%);
+  filter: brightness(0.62) saturate(0.78) contrast(1.05) drop-shadow(14px 22px 26px rgba(0, 0, 0, 0.8));
+}
+@media (max-width: 860px) {
+  .sia.sia-final--split .sia-final__photo { translate: 8% 4%; scale: 1; }
+  .sia.sia-final--split .sia-final__photo img {
+    -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 55%, transparent 100%);
+    mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 55%, transparent 100%);
+  }
+}
+/* the header sits flush on the paper: no dividing line */
+.sia-header { border-bottom-color: transparent; }
+/* window-light beams off on the first and last screens so they match the header exactly */
+.sia.sia-hero::before, .sia.sia-final--split::before { display: none; }
+
+/* ============================================================
+   Final match (Nov 8): the first and last screens use exactly the header's
+   flat black card (fine paper grain + soft relief on #111110), fixed to the
+   window so the header sits flush on them with no seam.
+============================================================= */
+.sia.sia-hero,
+.sia.sia-final--split,
+.sia.sia-header {
+  background-color: #111110 !important;
+  background-image: var(--sia-paper-grain), var(--sia-relief) !important;
+  background-size: 200px 200px, 520px 520px !important;
+  background-repeat: repeat !important;
+  background-position: 0 0, 0 0 !important;
+  background-attachment: fixed !important;
 }
