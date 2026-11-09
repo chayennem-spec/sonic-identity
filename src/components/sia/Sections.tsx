@@ -964,7 +964,7 @@ export function FinalCta() {
           </p>
         </div>
         <figure className="sia-final__photo sia-reveal" aria-hidden="true" data-drift="0.1">
-          <img src="/images/headphones-red-cutout.webp" alt="" loading="lazy" />
+          <img src="/images/headphones-red-concrete.webp" alt="" loading="lazy" />
         </figure>
       </div>
     </section>
