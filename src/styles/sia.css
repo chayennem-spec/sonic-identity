@@ -1286,7 +1286,11 @@
 .sia-onset__pin { position: relative; height: 360svh; }
 .sia-onset__panel { position: sticky; top: 0; height: 100svh; display: flex; align-items: center; overflow: hidden; }
 .sia-onset__viewport { width: 100%; }
-@media (max-width: 860px) { .sia-onset__pin { height: 450svh; } }
+/* Phones: a longer pin so a flick of the thumb moves the photos gently, and an eased glide instead of a jump. */
+@media (max-width: 860px) {
+  .sia-onset__pin { height: 720svh; }
+  .sia-onset__track { transition: transform 260ms cubic-bezier(0.22, 0.61, 0.36, 1); }
+}
 @media (prefers-reduced-motion: reduce) {
   .sia-onset__pin { height: auto; }
   .sia-onset__panel { position: static; height: auto; }
