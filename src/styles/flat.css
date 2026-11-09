@@ -1,0 +1,52 @@
+/* ============================================================
+   Flat dark (Nov 2026)
+   Solid dark grounds, flat cards with a thin line, no textures,
+   no grain, no embossed type. Bright red-orange #FF4A1C accent.
+   Delete the import in styles.css to switch it off.
+============================================================= */
+:root { --sia-card: #151516; --sia-ground: #0c0c0d; }
+
+/* Every section dark: undo the cream sections */
+.sia-proof, .sia-about, .sia-sound#method, .sia-reel, .sia-offers, .sia-faq {
+  --sia-black: #0c0c0d;
+  --sia-off: #141414;
+  --sia-line: #262423;
+  --sia-bone: #efe9dc;
+  --sia-dim: #a39d93;
+}
+
+/* Solid grounds, no photos or textures behind sections */
+.sia, .sia.sia-hero, .sia-gap, .sia-final--split, .si-lab, .si-lab__left, .si-lab__right {
+  background: var(--sia-ground);
+  background-image: none;
+}
+.sia::before { background-image: none; }
+.sia.sia-final--split::before { display: none; }
+.sia-header { background: rgba(12, 12, 13, 0.96); background-image: none; }
+
+/* No film grain over the page */
+.sia-film, .sia-film-grain { display: none; }
+
+/* Flat type: solid cream headlines, red-orange accents */
+.sia .sia-display,
+.sia-proof .sia-display, .sia-about .sia-display, .sia-sound#method .sia-display,
+.sia-reel .sia-display, .sia-offers .sia-display, .sia-faq .sia-display,
+.sia.sia-hero .sia-display, .sia.sia-final--split .sia-display {
+  color: var(--sia-bone);
+  filter: none;
+  text-shadow: none;
+  -webkit-text-fill-color: currentColor;
+  background: none;
+}
+.sia .sia-display em { color: var(--sia-red); -webkit-text-fill-color: var(--sia-red); }
+
+/* Flat cards: one step lighter than the ground, thin line, soft corners */
+.sia-offer, .sia-heard, .sia-letter, .sia-quote, .sia-reel__frame {
+  background: var(--sia-card);
+  background-image: none;
+  border: 1px solid var(--sia-line);
+  border-radius: 18px;
+  box-shadow: none;
+}
+.sia-offer:hover { box-shadow: 0 0 0 1px rgba(255, 74, 28, 0.45); }
+.sia-heard__photo { border-radius: 12px; }
