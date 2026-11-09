@@ -6,8 +6,10 @@
 ============================================================= */
 :root { --sia-card: #151516; --sia-ground: #0c0c0d; }
 
-/* Gray beige sections, flat (no vignette, no paper) */
-.sia-proof, .sia-about, .sia-sound#method, .sia-reel, .sia-offers, .sia-faq {
+/* Black and gray beige take turns, top to bottom:
+   hero black, gap beige, lab black, proof beige, for-her black, about beige,
+   on set black, method beige, rights black, offers beige, FAQ black, last section beige. */
+.sia-gap, .sia-proof, .sia-about, .sia-sound#method, .sia-reel, .sia-offers, .sia-final--split {
   --sia-black: #e4ddd0;
   --sia-off: #dad2c3;
   --sia-line: #c9c0b0;
@@ -65,6 +67,44 @@
 
 /* Guide pages: their FAQ sits on the dark page, so it keeps the dark tokens */
 .sia-article__faq {
+  --sia-black: #0c0c0d;
+  --sia-off: #141414;
+  --sia-line: #262423;
+  --sia-bone: #efe9dc;
+  --sia-dim: #a39d93;
+  --sia-card: #151516;
+  --sia-ground: #0c0c0d;
+}
+
+/* Homepage FAQ goes black so the turns stay even */
+.sia.sia-faq {
+  --sia-black: #0c0c0d;
+  --sia-off: #141414;
+  --sia-line: #262423;
+  --sia-bone: #efe9dc;
+  --sia-dim: #a39d93;
+  --sia-card: #151516;
+  --sia-ground: #0c0c0d;
+}
+/* The gap on beige: body copy back to the section's own colors */
+.sia-gap .sia-body p { color: var(--sia-dim); }
+
+/* Strict rhythm (Nov 2026): dark and gray beige take turns down the page.
+   Hero dark, gap beige, audio lab dark, heard beige, for-her dark, about beige,
+   on set dark, method beige, rights dark, offers beige, FAQ dark, final "Your move" section beige. */
+.sia.sia-gap {
+  --sia-black: #e4ddd0;
+  --sia-off: #dad2c3;
+  --sia-line: #c9c0b0;
+  --sia-bone: #111111;
+  --sia-dim: #5e5850;
+  --sia-card: #ece6db;
+  --sia-ground: #e4ddd0;
+  color: var(--sia-bone);
+}
+.sia-gap .sia-body p { color: var(--sia-dim); }
+.sia-gap .sia-body .sia-lead { color: var(--sia-bone) !important; }
+.sia.sia-faq {
   --sia-black: #0c0c0d;
   --sia-off: #141414;
   --sia-line: #262423;
