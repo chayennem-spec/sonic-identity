@@ -121,7 +121,7 @@ export function WhySound() {
 const FOR_HER = [
   "Has built the business, hired the team and gets booked for the stage.",
   "Wears the tailored piece, not the trending one, and wants her brand to do the same.",
-  "Is done with courses and calls, and honestly shouldn’t have to log into one more thing.",
+  "Is done with courses and homework, and honestly shouldn’t have to log into one more thing.",
   "Walks into rooms where people already know her name. Now she wants them to know her sound.",
 ];
 
@@ -453,10 +453,11 @@ const OFFERS = [
     tag: "If it were mine...",
     label: "",
     name: "The Instant Recognition Atelier",
-    line: "One intake, and then I disappear into the studio.",
-    desc: "The photoshoots, the website, the designer who finally got your logo right. You’ve spent thousands on how your brand looks. The Atelier is how it sounds. It’s a full brand soundtrack, so your reels, your launches, your podcast and your stage finally sound like the same woman. You won’t have to hop on a single call. Just fill out one intake, send a voice memo or two, and I’ll take it from there. What I build is made for your brand, and licensed to no one else.",
+    line: "One intake, one live read, and then I disappear into the studio.",
+    desc: "The photoshoots, the website, the designer who finally got your logo right. You’ve spent thousands on how your brand looks. The Atelier is how it sounds. It’s a full brand soundtrack, so your reels, your launches, your podcast and your stage finally sound like the same woman. It starts with one intake and your Live Brand Read, a private 30-minute call where I read your brand with you, live. Then I disappear into the studio, and we meet again for your First Listen call, because I want to see your face when you hear it. What I build is made for your brand, and licensed to no one else.",
     includes: [
       "4 original tracks, spent your way: offers, anthem, walk-on, reels",
+      "Two private 30-minute calls with me: your Live Brand Read and your First Listen",
       "Two refinement rounds, plus a private Telegram line to me for questions and updates",
       "A sound guide, so your team never guesses",
       "Brand-use rights in writing, licensed to your brand alone",
@@ -471,6 +472,8 @@ const OFFERS = [
         ["4 custom tracks, spend them your way", "$10,000 value"],
         ["Sonic Blueprint: your archetype and full sound direction", "$297 value"],
         ["The full sound family: every version and cut of all 4 tracks", "Included"],
+        ["Live Brand Read: a private 30-minute call with me", "Included"],
+        ["First Listen call: a private 30-minute call with me", "Included"],
         ["The First Listen Promise", "Included"],
         ["Brand-use rights in writing, licensed to your brand alone", "Included"],
       ],
@@ -490,6 +493,7 @@ const OFFERS = [
     includes: [
       "One signature song",
       "30- and 15-second cuts for reels, ads and your podcast",
+      "A private 20-minute First Listen call with me",
       "One refinement round",
       "First Listen Promise: not her? I rebuild it from a new direction",
       "First listen in about 7 to 10 days, finished in 2 to 4 weeks",
@@ -505,6 +509,7 @@ const OFFERS = [
         ["Sonic Blueprint: your archetype and sound direction", "$297 value"],
         ["Your custom anthem, full song, with 30- and 15-second cuts", "$2,500 value"],
         ["Instrumental cuts for your podcast and content", "Included"],
+        ["First Listen call: a private 20-minute call with me", "Included"],
         ["Brand-use rights in writing, licensed to your brand alone", "Included"],
       ],
       oneByOne: "$2,797",
@@ -845,7 +850,7 @@ export function Apply() {
         </h2>
         <p className="sia-body">
           The Atelier is made for one brand at a time. It takes a few minutes, you just answer a few questions,
-          and no, there’s no call. I read every application myself and reply within 2 business days
+          and I read every application myself and reply within 2 business days
           with what I’d actually recommend for your brand.
         </p>
         <div className="sia-hero__ctas" style={{ justifyContent: "center" }}>
@@ -888,8 +893,8 @@ export const FAQ = [
     a: "Never. Your Anthem or Atelier comes with brand-use rights in writing, licensed to your brand alone: content, ads, launches, events, livestreams, your podcast and your programs. No expiry, no renewals, and I never license your sound to another brand. Want it on Spotify, or in Instagram and TikTok’s music libraries so people can find it and post with it? Just ask. Put your Anthem in the libraries and I make you a bonus ad song, kept just for your brand, so your ads stay clean. Need a use that isn’t listed? Tell me in your application and we’ll add it. Full details are in the Terms of Purchase.",
   },
   {
-    q: "Do I have to get on calls?",
-    a: "Nope, not for the Anthem or the Atelier. You have enough meetings, love. We do everything over email and voice memos: you approve each stage, I do the building.",
+    q: "Are there any calls?",
+    a: "Just the good ones. The Atelier comes with two private 30-minute calls: your Live Brand Read at the start, and your First Listen call when your first track is ready. The Anthem comes with a 20-minute First Listen call. Everything else happens over email and voice memos, on your time, love. The Blueprint is all yours to do whenever you like.",
   },
   {
     q: "How long does it take?",
@@ -897,7 +902,7 @@ export const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "The Blueprint is $297. The Anthem is $2,500, or 2 payments of $1,300. The Atelier is $8,000, or 3 payments of $2,800. No “book a call to find out.”",
+    a: "The Blueprint is $297. The Anthem is $2,500, or 2 payments of $1,300. The Atelier is $8,000, or 3 payments of $2,800. Every price is right here, out in the open.",
   },
   {
     q: "Where do I start?",
@@ -964,7 +969,7 @@ export function FinalCta() {
             <a href={LINKS.apply} target="_blank" rel="noreferrer">
               Apply for the Atelier
             </a>
-            . There are no calls, and I reply within 2 business days.
+            . I read every application myself and reply within 2 business days.
           </p>
         </div>
         <figure className="sia-final__photo sia-reveal" aria-hidden="true" data-drift="0.1">
