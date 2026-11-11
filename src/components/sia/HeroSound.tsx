@@ -181,7 +181,7 @@ export function HeroSound() {
           </button>
         </div>
         <p className="sia-final__alt">
-          The audit is free, it’s only nine questions, and there’s zero homework.
+          The audit is free and it’s only nine questions.
         </p>
       </div>
     </section>
