@@ -329,7 +329,7 @@ export function MethodReel() {
               ))}
               <div className="sia-reel__end" data-frame>
                 <p className="sia-reel__mark">Yours<span>.</span></p>
-                <p className="sia-reel__script">Built letter by letter, around you and your brand.</p>
+                <p className="sia-reel__script">Made bespoke to you, so your brand sounds as good as it looks.</p>
                 <p className="sia-reel__closer">Everything I make starts with your archetype, not a stock library.</p>
               </div>
             </div>
