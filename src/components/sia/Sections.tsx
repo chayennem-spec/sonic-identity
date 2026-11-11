@@ -191,10 +191,10 @@ export function OnSet() {
 
 const SOUND = [
   { l: "01", t: "Style", d: "The genre, era and vibe that fit who you actually are, not whatever’s on someone’s For You page." },
-  { l: "02", t: "Outcome", d: "What people feel the second it plays: calm, powerful, wanted… or just “wait, who is that?”" },
+  { l: "02", t: "Outcome", d: "What people feel the second it plays, and the tempo that gets them there: calm, powerful, wanted… or just “wait, who is that?”" },
   { l: "03", t: "Undertone", d: "The texture underneath, the part people feel but couldn’t name. Is it soft and expensive, or a little dangerous?" },
   { l: "04", t: "Narrative", d: "The story your sound tells, even when there isn’t a single word in it. And yes, even an instrumental can have a point of view." },
-  { l: "05", t: "Delivery", d: "Tempo, voice, mix and length, made for wherever you show up: reels, podcasts, stages." },
+  { l: "05", t: "Delivery", d: "Voice, mix, length and cuts, made for wherever you show up: reels, podcasts, stages. Then used the same way every time, so people learn it’s you." },
 ];
 
 export function Method() {
