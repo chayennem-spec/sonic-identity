@@ -67,7 +67,7 @@ const WHY = [
   {
     l: "R",
     t: "Recognized",
-    d: "You know your favorite show from its first two notes, before the title even shows up. That wasn’t luck, love. They played those two notes on everything, for years, until your brain filed them under their name.",
+    d: "You know your favorite show from its first two notes, before the title even shows up. That wasn’t luck. They played those two notes on everything, for years, until your brain filed them under their name.",
   },
   {
     l: "R",
@@ -705,7 +705,7 @@ export function Proof() {
       <div className="sia-wrap">
         <p className="sia-mono sia-kicker sia-reveal">Heard in the wild</p>
         <h2 className="sia-display sia-reveal">
-          Real brands. Real songs. Real <span className="sia-nw"><em>goosebumps</em>.</span>
+          Signature sounds that embody <span className="sia-nw"><em>their brand identity</em>.</span>
         </h2>
         <div className="sia-heard__grid">
           {HEARD.map((h) => (
@@ -894,7 +894,7 @@ export const FAQ = [
   },
   {
     q: "Are there any calls?",
-    a: "Just the good ones. The Atelier comes with two private 30-minute calls: your Live Brand Read at the start, and your First Listen call when your first track is ready. The Anthem comes with a 20-minute First Listen call. Everything else happens over email and voice memos, on your time, love. The Blueprint is all yours to do whenever you like.",
+    a: "Just the good ones. The Atelier comes with two private 30-minute calls: your Live Brand Read at the start, and your First Listen call when your first track is ready. The Anthem comes with a 20-minute First Listen call. Everything else happens over email and voice memos, on your time. The Blueprint is all yours to do whenever you like.",
   },
   {
     q: "How long does it take?",
