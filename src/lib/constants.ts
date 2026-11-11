@@ -61,5 +61,5 @@ export const CRM_CONFIG = {
   },
 };
 
-// "reel" = the five decisions as a sideways film strip; "grid" = the original five cards.
+// "reel" = the S.O.U.N.D. Framework as a sideways film strip; "grid" = the original five cards.
 export const METHOD_LAYOUT: "reel" | "grid" = "reel";

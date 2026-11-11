@@ -203,14 +203,14 @@ export function Method() {
       <div className="sia-wrap">
         <div className="sia-sound__head sia-reveal">
           <div>
-            <p className="sia-mono sia-kicker">The method · The five decisions</p>
+            <p className="sia-mono sia-kicker">The method · The S.O.U.N.D. Framework</p>
             <h2 className="sia-display">
               How a signature sound <span className="sia-nw">is <em>built</em>.</span>
             </h2>
           </div>
           <p>
             You don’t need to know what a minor key is. That’s my job. Your Sonic Archetype tells me
-            who you are, and I turn it into your sound through five decisions.
+            who you are, and I turn it into your sound through my S.O.U.N.D. Framework.
             You talk about your brand, I take it from there. Nothing gets pulled from a stock library,
             and nothing gets borrowed from someone else’s brand.
           </p>
@@ -239,7 +239,7 @@ export function MethodSection() {
 
 const LETTERS = ["S", "O", "U", "N", "D"];
 
-/** The five decisions as a sideways film strip, pinned while you scroll. */
+/** The S.O.U.N.D. Framework as a sideways film strip, pinned while you scroll. */
 export function MethodReel() {
   const pinRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
@@ -286,18 +286,18 @@ export function MethodReel() {
 
   const shown = Math.min(5, Math.max(0, active + 1));
   return (
-    <section className="sia sia-reel sia-rule" id="method" aria-label="The five decisions">
+    <section className="sia sia-reel sia-rule" id="method" aria-label="The S.O.U.N.D. Framework">
       <div className="sia-wrap sia-reel__intro">
         <div className="sia-sound__head">
           <div>
-            <p className="sia-mono sia-kicker">The method · The five decisions</p>
+            <p className="sia-mono sia-kicker">The method · The S.O.U.N.D. Framework</p>
             <h2 className="sia-display">
               How a signature sound <span className="sia-nw">is <em>built</em>.</span>
             </h2>
           </div>
           <p>
             You don’t need to know what a minor key is. That’s my job. Your Sonic Archetype tells me
-            who you are, and I turn it into your sound through five decisions.
+            who you are, and I turn it into your sound through my S.O.U.N.D. Framework.
             You talk about your brand, I take it from there. Nothing gets pulled from a stock library,
             and nothing gets borrowed from someone else’s brand.
           </p>
@@ -329,7 +329,7 @@ export function MethodReel() {
               ))}
               <div className="sia-reel__end" data-frame>
                 <p className="sia-reel__mark">Yours<span>.</span></p>
-                <p className="sia-reel__script">Five decisions, one sound.</p>
+                <p className="sia-reel__script">One framework, one sound.</p>
                 <p className="sia-reel__closer">Everything I make starts with your archetype, not a stock library.</p>
               </div>
             </div>
