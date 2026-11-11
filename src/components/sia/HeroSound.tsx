@@ -161,7 +161,7 @@ export function HeroSound() {
         <p className="sia-hero__tag">Signature sounds made for your brand, so you’re recognized, remembered and felt everywhere you show up. Even before your face loads.</p>
         <p className="sia-hero__sub">
           You’ve art-directed every photo and rewritten every caption at least twice. And your sound?
-          Whatever was trending this morning. That’s not a sound. That’s a coin toss.
+          You used whatever was trending this morning. That’s not a sound. That’s a coin toss.
         </p>
         <div className="sia-hero__ctas">
           <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">
