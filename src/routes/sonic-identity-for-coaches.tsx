@@ -105,11 +105,12 @@ function Page() {
 
       <InlineCta line="Hear your coaching brand’s sound directions the same day." />
 
-      <h2>How it works (no calls, promise)</h2>
+      <h2>How it works (on your time)</h2>
       <p>
-        You have enough meetings. We do it all over email and voice memos: a short intake, your
-        favorite lines from your own copy, a voice memo or two, and your reactions to your first listen. I map
-        your Sonic Archetype first, then make the music.
+        You have enough meetings, so we only keep the ones that matter. Most of it happens over email and voice
+        memos: a short intake, your favorite lines from your own copy and a voice memo or two. The Anthem comes
+        with a 20-minute First Listen call, and the Atelier comes with two 30-minute calls, your Live Brand Read
+        and your First Listen. I map your Sonic Archetype first, then make the music.
       </p>
       <p>
         From your first payment, you get brand-use rights in writing for your content, ads, launches, events,

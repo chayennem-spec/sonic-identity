@@ -106,7 +106,7 @@ function Page() {
       <p>
         I’m Chayenne Mallari, a Sonic Identity Architect. I map your Sonic Archetype first, from your photos,
         your copy and the way you talk, then run every sound through my five decisions:
-        style, outcome, undertone, narrative and delivery. Then I make the music. It’s done for you, with no calls, and it
+        style, outcome, undertone, narrative and delivery. Then I make the music. It’s done for you, on your time, and it
         comes with brand-use rights in writing, licensed to your brand alone.
       </p>
       <p>

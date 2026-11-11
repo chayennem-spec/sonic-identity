@@ -1,0 +1,119 @@
+/* ============================================================
+   Flat look (Nov 2026)
+   Solid grounds (black and gray beige taking turns), flat cards with a
+   thin line, no textures, no grain, no embossed type.
+   Bright red-orange #FF4A1C accent. Delete the import in styles.css to switch it off.
+============================================================= */
+:root { --sia-card: #151516; --sia-ground: #0c0c0d; }
+
+/* Black and gray beige take turns, top to bottom:
+   hero black, gap beige, lab black, proof beige, for-her black, about beige,
+   on set black, method beige, rights black, offers beige, FAQ black, last section beige. */
+.sia-gap, .sia-proof, .sia-about, .sia-sound#method, .sia-reel, .sia-offers, .sia-final--split {
+  --sia-black: #e4ddd0;
+  --sia-off: #dad2c3;
+  --sia-line: #c9c0b0;
+  --sia-bone: #111111;
+  --sia-dim: #5e5850;
+  --sia-card: #ece6db;
+  --sia-ground: #e4ddd0;
+}
+
+/* Solid grounds, no photos or textures behind sections */
+.sia, .sia.sia-hero, .sia-gap, .sia-final--split, .si-lab, .si-lab__left, .si-lab__right {
+  background: var(--sia-ground);
+  background-image: none;
+}
+.sia::before { background-image: none; }
+.sia.sia-final--split::before { display: none; }
+.sia-header { background: rgba(12, 12, 13, 0.96); background-image: none; }
+
+/* No film grain or lens vignette over the page */
+.sia-film, .sia-film-grain, .sia-vignette { display: none; }
+
+/* Flat type: solid headlines, red-orange accents */
+.sia .sia-display,
+.sia.sia-hero .sia-display, .sia.sia-final--split .sia-display {
+  color: var(--sia-bone);
+  filter: none;
+  text-shadow: none;
+  -webkit-text-fill-color: currentColor;
+  background: none;
+}
+.sia .sia-display em { color: var(--sia-red); -webkit-text-fill-color: var(--sia-red); }
+
+/* Flat cards: a step off the ground, thin line, soft corners */
+.sia-offer, .sia-heard, .sia-letter, .sia-quote, .sia-reel__frame {
+  background: var(--sia-card);
+  background-image: none;
+  border: 1px solid var(--sia-line);
+  border-radius: 18px;
+  box-shadow: none;
+}
+.sia-offer:hover { box-shadow: 0 0 0 1px rgba(255, 74, 28, 0.45); }
+.sia-heard__photo { border-radius: 12px; }
+
+/* More of her: a photo under the FAQ headline, her in red headphones in the last section */
+.sia-faq__photo { margin: 40px 0 0; border-radius: 18px; overflow: hidden; aspect-ratio: 4 / 5; max-width: 420px; }
+.sia-faq__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; display: block; }
+@media (min-width: 861px) { .sia-faq__grid > div:first-child { position: sticky; top: 110px; align-self: start; } }
+@media (max-width: 860px) { .sia-faq__photo { max-width: none; aspect-ratio: 4 / 3; } }
+.sia-final__photo { aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; }
+.sia-final__photo img {
+  -webkit-mask-image: none; mask-image: none;
+  filter: none !important;
+  object-position: center 25%;
+}
+
+/* Guide pages: their FAQ sits on the dark page, so it keeps the dark tokens */
+.sia-article__faq {
+  --sia-black: #0c0c0d;
+  --sia-off: #141414;
+  --sia-line: #262423;
+  --sia-bone: #efe9dc;
+  --sia-dim: #a39d93;
+  --sia-card: #151516;
+  --sia-ground: #0c0c0d;
+}
+
+/* Homepage FAQ goes black so the turns stay even */
+.sia.sia-faq {
+  --sia-black: #0c0c0d;
+  --sia-off: #141414;
+  --sia-line: #262423;
+  --sia-bone: #efe9dc;
+  --sia-dim: #a39d93;
+  --sia-card: #151516;
+  --sia-ground: #0c0c0d;
+}
+/* The gap on beige: body copy back to the section's own colors */
+.sia-gap .sia-body p { color: var(--sia-dim); }
+
+/* Strict rhythm (Nov 2026): dark and gray beige take turns down the page.
+   Hero dark, gap beige, audio lab dark, heard beige, for-her dark, about beige,
+   on set dark, method beige, rights dark, offers beige, FAQ dark, final "Your move" section beige. */
+.sia.sia-gap {
+  --sia-black: #e4ddd0;
+  --sia-off: #dad2c3;
+  --sia-line: #c9c0b0;
+  --sia-bone: #111111;
+  --sia-dim: #5e5850;
+  --sia-card: #ece6db;
+  --sia-ground: #e4ddd0;
+  color: var(--sia-bone);
+}
+.sia-gap .sia-body p { color: var(--sia-dim); }
+.sia-gap .sia-body .sia-lead { color: var(--sia-bone) !important; }
+.sia.sia-faq {
+  --sia-black: #0c0c0d;
+  --sia-off: #141414;
+  --sia-line: #262423;
+  --sia-bone: #efe9dc;
+  --sia-dim: #a39d93;
+  --sia-card: #151516;
+  --sia-ground: #0c0c0d;
+}
+
+/* Header logo (Nov 2026): wordmark in bone, her name in brand red. */
+.sia-header .sia-brand .sia-wordmark { color: #efe9dc !important; }
+.sia-header .sia-brand .sia-tagline { color: var(--sia-red, #ff4a1c) !important; }

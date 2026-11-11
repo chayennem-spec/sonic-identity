@@ -21,8 +21,8 @@ const FAQ_ITEMS: QA[] = [
     a: "Yes. Your signature sound comes with brand-use rights in writing, licensed to your brand alone, and paid ads are on the list, along with content, launches, events, your podcast and your programs. No expiry, no renewals, and I never license your sound to another brand.",
   },
   {
-    q: "Do I have to get on calls?",
-    a: "No. We do it all over email and voice memos. You fill out a short intake, tell me what you think of your first listen in a voice memo, and I build.",
+    q: "Are there any calls?",
+    a: "Only the ones worth your time. The Anthem comes with a 20-minute First Listen call. The Atelier comes with two 30-minute calls: a Live Brand Read at the start and a First Listen call when your first track is ready. Everything else happens over email and voice memos.",
   },
   {
     q: "Where do I start?",
@@ -130,8 +130,9 @@ function Page() {
         </li>
       </ul>
       <p>
-        There are no calls for any of them. You fill out a short intake, send a few voice memos on your
-        own time, and your brand-use rights are spelled out in writing. I never license your sound to another brand.
+        Most of it happens on your own time: a short intake and a few voice memos. The Anthem comes with a
+        20-minute First Listen call, and the Atelier with two 30-minute calls, your Live Brand Read and your
+        First Listen. Your brand-use rights are spelled out in writing. I never license your sound to another brand.
       </p>
 
       <h2>The founder this is for</h2>
