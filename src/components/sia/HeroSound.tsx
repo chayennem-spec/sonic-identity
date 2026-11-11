@@ -158,10 +158,10 @@ export function HeroSound() {
             Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
           </span>
         </h1>
-        <p className="sia-hero__tag">Signature sounds made for your brand, so you’re recognized, remembered and felt everywhere you show up. Even before your face loads.</p>
+        <p className="sia-hero__tag">Signature sounds made for your brand, so you’re recognized, remembered and felt everywhere you show up, sometimes before your face has even loaded.</p>
         <p className="sia-hero__sub">
           You’ve art-directed every photo and rewritten every caption at least twice. And your sound?
-          You used whatever was trending this morning. That’s not a sound. That’s a coin toss.
+          You used whatever was trending this morning, which means your brand’s sound is basically a coin toss.
         </p>
         <div className="sia-hero__ctas">
           <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">
@@ -181,7 +181,7 @@ export function HeroSound() {
           </button>
         </div>
         <p className="sia-final__alt">
-          The audit is free. Nine questions. Zero homework.
+          The audit is free, it’s only nine questions, and there’s zero homework.
         </p>
       </div>
     </section>
