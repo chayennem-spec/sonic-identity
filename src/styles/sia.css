@@ -1303,20 +1303,7 @@
    grain you can feel, and soft light fall-off at the edges.
    Text and buttons stay crisp; this is background only.
 ============================================================= */
-.sia-proof, .sia-about, .sia-sound#method, .sia-reel, .sia-offers, .sia-faq {
-  --sia-black: #e0d4c4;
-  --sia-off: #d6c9b6;
-  --sia-line: #c4b6a1;
-  --sia-dim: #5a5249;
-  background-color: #e0d4c4;
-  background-image:
-    radial-gradient(ellipse 110% 90% at 50% 45%, rgba(60, 40, 20, 0) 60%, rgba(60, 40, 20, 0.16) 100%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .16 0 0 0 0 .11 0 0 0 0 .07 0 0 0 .36 -.12'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
-  background-size: 100% 100%, 240px 240px;
-}
-/* Black sections: lift the blacks a hair warmer, like film stock rather than a screen */
-.sia { --sia-black-film: #0b0a09; }
-body .sia:not(.sia-proof):not(.sia-about):not(.sia-sound#method):not(.sia-reel):not(.sia-offers):not(.sia-faq) { background-color: var(--sia-black-film); }
+/* (Section grounds now come from flat.css: black and gray beige taking turns.) */
 /* On Set photos: colour, film graded like the hero (warm, slightly faded), one frame in black and white */
 .sia .sia-onset__frame img { filter: contrast(1.06) saturate(0.86) sepia(0.12) brightness(0.95); }
 .sia .sia-onset__frame:nth-child(4) img { filter: grayscale(1) sepia(0.1) contrast(1.06); }
@@ -1329,14 +1316,6 @@ body .sia:not(.sia-proof):not(.sia-about):not(.sia-sound#method):not(.sia-reel):
    its own grain instead, so every word stays sharp.
 ============================================================= */
 .sia-film, .sia-film-grain, .sia-vignette { display: none !important; }
-/* Black sections: a fine light grain in the ground itself */
-.sia:not(.sia-hero):not(.sia-gap):not(.sia-final--split):not(.sia-proof):not(.sia-about):not(.sia-reel):not(.sia-offers):not(.sia-faq):not(#method) {
-  background-image:
-    radial-gradient(ellipse 120% 95% at 50% 45%, rgba(0, 0, 0, 0) 62%, rgba(0, 0, 0, 0.35) 100%),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .94 0 0 0 0 .91 0 0 0 0 .86 0 0 0 .22 -.07'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"),
-    var(--sia-paper-grain), var(--sia-relief);
-  background-size: 100% 100%, 240px 240px, 200px 200px, 520px 520px;
-}
 /* Photos: grain sits on the picture, under any caption */
 .sia-onset__frame::after,
 .sia-about__photo::after {
