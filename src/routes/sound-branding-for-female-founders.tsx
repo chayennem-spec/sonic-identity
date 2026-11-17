@@ -74,8 +74,8 @@ function Page() {
           carry home. It plays when the moment matters: your launch, your walk-on, your podcast open.
         </li>
         <li>
-          <strong>Cuts for real life.</strong> Full, 30-second and 15-second versions for reels, stories, ads
-          and your podcast.
+          <strong>Cuts for real life.</strong> A full version and a 30-second cut for reels, stories, ads
+          and your podcast, plus instrumentals for under your voice when you go all in with the Atelier.
         </li>
         <li>
           <strong>A sound guide.</strong> One page that tells your editor which track goes where, so nobody on
