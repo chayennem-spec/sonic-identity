@@ -520,19 +520,19 @@ const OFFERS = [
   {
     tag: "Start here",
     label: "",
-    name: "The Sonic Blueprint",
-    line: "Hear your brand before you invest",
-    desc: "Want to hear it yourself first? That’s totally fair, and honestly, I respect a woman with a vision. The Blueprint looks at your brand and the music you actually love, gives you your archetype and three directions for your sound, and you’ll hear the first sketches that same night.",
+    name: "The Sonic Identity Audit",
+    line: "Meet your Sonic Archetype",
+    desc: "Not sure where your sound stands yet? Start here. Nine quick questions, and you’ll know which of my eight Sonic Archetypes your brand already is, and what your sound has been saying about you without your permission.",
     includes: [
-      "Your Sonic Archetype",
-      "Three sound directions, built from the music you actually love",
-      "Ready-to-paste prompts to hear a first sketch of each, the same night",
-      "Its full price comes off the Atelier within 30 days",
+      "Your Sonic Archetype, one of eight",
+      "What your sound is saying about your brand right now",
+      "Where to start: one song, or your whole sound world",
+      "A personal note from me in your inbox",
     ],
-    because: "You do it on your own time, and the full $297 counts toward the Atelier if you decide to go all in.",
-    plan: "$297 · same day",
-    cta: "Start the Blueprint",
-    href: LINKS.blueprint,
+    because: "It takes a few minutes, and it tells you exactly which way in fits your brand.",
+    plan: "Nine questions · a few minutes",
+    cta: "Take the Audit",
+    href: LINKS.audit,
   },
 ];
 
@@ -626,7 +626,7 @@ export function Offers() {
           <p className="sia-hand">Hear it first.</p>
         </div>
         <p className="sia-offers__apply-note sia-reveal">
-          The Atelier is by application, but you can start the Anthem or the Blueprint today, with no waiting.
+          The Atelier is by application, but you can start the Anthem today, with no waiting.
         </p>
       </div>
     </section>
@@ -892,7 +892,7 @@ export const FAQ = [
   },
   {
     q: "Are there any calls?",
-    a: "Just the good ones. The Atelier comes with two private 30-minute calls: your Live Brand Read at the start, and your First Listen call when your first track is ready. The Anthem comes with a 20-minute First Listen call. Everything else happens over email and voice memos, on your time. The Blueprint is all yours to do whenever you like.",
+    a: "Just the good ones. The Atelier comes with two private 30-minute calls: your Live Brand Read at the start, and your First Listen call when your first track is ready. The Anthem comes with a 20-minute First Listen call. Everything else happens over email and voice memos, on your time.",
   },
   {
     q: "How long does it take?",
@@ -900,11 +900,11 @@ export const FAQ = [
   },
   {
     q: "How much is it?",
-    a: "The Blueprint is $297. The Anthem is $2,500, or 2 payments of $1,300. The Atelier is $8,000, or 3 payments of $2,800. Every price is right here, out in the open.",
+    a: "The Anthem is $2,500, or 2 payments of $1,300. The Atelier is $8,000, or 3 payments of $2,800. Every price is right here, out in the open.",
   },
   {
     q: "Where do I start?",
-    a: "Take the free Sonic Identity Audit first. It takes a few minutes and tells you your Sonic Archetype. If you want to hear sketches tonight, go for the Blueprint. If you want one song made for you, that’s the Anthem. And if you want your whole brand’s sound done for you, apply for the Atelier.",
+    a: "Take the free Sonic Identity Audit first. It takes a few minutes and tells you your Sonic Archetype. If you want one song made for you, that’s the Anthem. And if you want your whole brand’s sound done for you, apply for the Atelier.",
   },
 ];
 

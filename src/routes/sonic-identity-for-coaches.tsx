@@ -103,7 +103,7 @@ function Page() {
         sound that feels like the inside of your world.
       </p>
 
-      <InlineCta line="Hear your coaching brand’s sound directions the same day." />
+      <InlineCta line="Find out what your coaching brand sounds like right now." />
 
       <h2>How it works (on your time)</h2>
       <p>
@@ -120,8 +120,7 @@ function Page() {
       <h2>Where to start</h2>
       <p>
         If you’re curious, take the <a href="https://chayennemallari.eden.so/form/sonic-audit" target="_blank" rel="noreferrer">free Sonic
-        Identity Audit</a> and meet your Sonic Archetype. If you want to hear it first, start with the Sonic
-        Blueprint. Want one song now? Get the Anthem. And if you want the whole brand world built for you, apply
+        Identity Audit</a> and meet your Sonic Archetype. Want one song now? Get the Anthem. And if you want the whole brand world built for you, apply
         for the Atelier. I read every application myself.
       </p>
     </ArticlePage>

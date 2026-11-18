@@ -104,8 +104,8 @@ export function InlineCta({ line }: { line: string }) {
     <aside className="sia-article__cta">
       <p>{line}</p>
       <div className="sia-hero__ctas">
-        <a className="sia-btn sia-btn--red" href={LINKS.blueprint} target="_blank" rel="noreferrer">
-          Start with the Blueprint <span className="sia-arrow" aria-hidden="true">↗</span>
+        <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">
+          Take the Sonic Identity Audit <span className="sia-arrow" aria-hidden="true">↗</span>
         </a>
         <a className="sia-btn sia-btn--ghost" href={LINKS.anthem} target="_blank" rel="noreferrer">
           Get the Anthem <span className="sia-arrow" aria-hidden="true">↗</span>

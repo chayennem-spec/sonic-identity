@@ -26,7 +26,7 @@ const FAQ_ITEMS: QA[] = [
   },
   {
     q: "Where do I start?",
-    a: "Take the free Sonic Identity Audit to meet your Sonic Archetype, or start with the Sonic Blueprint to hear your brand’s sound directions the same day. Want one song now? Get the Anthem. Want the whole brand world done for you? Apply for the Atelier.",
+    a: "Take the free Sonic Identity Audit to meet your Sonic Archetype. Want one song now? Get the Anthem. Want the whole brand world done for you? Apply for the Atelier.",
   },
 ];
 
@@ -105,7 +105,7 @@ function Page() {
         <li>Webinars, masterclass waiting rooms, sales pages and paid ads.</li>
       </ul>
 
-      <InlineCta line="Want to hear what your brand could sound like, tonight?" />
+      <InlineCta line="Want to know what your brand sounds like right now?" />
 
       <h2>How I build it</h2>
       <p>
@@ -114,12 +114,8 @@ function Page() {
         actually are, the outcome your people should feel, the undertone underneath, the narrative your sound
         tells, and how it’s delivered across your platforms.
       </p>
-      <p>There are three ways in:</p>
+      <p>There are two ways in, after your free Sonic Identity Audit:</p>
       <ul>
-        <li>
-          <strong>The Sonic Blueprint.</strong> It’s self-serve and takes about 20 minutes. You get your
-          archetype, three sound directions and prompts so you can hear a first sketch the same day.
-        </li>
         <li>
           <strong>The Instant Recognition Anthem.</strong> One signature song with its cuts, ready when you are.
         </li>

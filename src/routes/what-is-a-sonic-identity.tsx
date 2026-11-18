@@ -100,7 +100,7 @@ function Page() {
         borrowed, the feeling people attach to you is borrowed too.
       </p>
 
-      <InlineCta line="Curious what your brand sounds like? Hear it before you invest in anything bigger." />
+      <InlineCta line="Curious what your brand sounds like right now? Start with your Sonic Archetype." />
 
       <h2>How a sonic identity gets made</h2>
       <p>

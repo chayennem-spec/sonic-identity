@@ -19,10 +19,9 @@ export const ASSETS = {
 };
 
 // Shown only in the inquiry form's error state, so the visitor still has a way to reach Chayenne.
-// Offer links (all live on Eden): the Blueprint and the Anthem are bought directly;
+// Offer links (all live on Eden): the Anthem is bought directly;
 // the Atelier is apply-first through the application form.
 export const LINKS = {
-  blueprint: "https://chayennemallari.eden.so/sonic-blueprint",
   apply: "https://chayennemallari.eden.so/form/apply",
   anthem: "https://chayennemallari.eden.so/signature-anthem",
   audit: "https://chayennemallari.eden.so/form/sonic-audit",
