@@ -470,7 +470,8 @@ const OFFERS = [
       rows: [
         ["4 custom tracks, spend them your way", "$10,000 value"],
         ["Sonic Blueprint: your archetype and full sound direction", "$297 value"],
-        ["A 30-second cut of all 4 tracks, plus an original instrumental for under your voice", "Included"],
+        ["A 30-second cut of all 4 tracks", "Included"],
+        ["An original instrumental, made for under your voice", "Included"],
         ["Live Brand Read: a private 30-minute call with me", "Included"],
         ["First Listen call: a private 30-minute call with me", "Included"],
         ["The First Listen Promise", "Included"],
