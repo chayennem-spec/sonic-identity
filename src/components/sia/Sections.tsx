@@ -455,7 +455,7 @@ const OFFERS = [
     desc: "The photoshoots, the website, the designer who finally got your logo right. You’ve spent thousands on how your brand looks. The Atelier is how it sounds. It’s a full brand soundtrack, so your reels, your launches, your podcast and your stage finally sound like the same woman. It starts with one intake and your Live Brand Read, a private 30-minute call where I read your brand with you, live. Then I disappear into the studio, and we meet again for your First Listen call, because I want to see your face when you hear it. What I build is made for your brand, and licensed to no one else.",
     includes: [
       "4 original tracks, spent your way: offers, anthem, walk-on, reels",
-      "Every track as a full version, an instrumental for under your voice, and a 30-second cut",
+      "Every track with a 30-second cut, plus an instrumental version of the one you choose",
       "Two private 30-minute calls with me: your Live Brand Read and your First Listen",
       "Two refinement rounds, plus a private Telegram line to me for questions and updates",
       "A sound guide, so your team never guesses",
@@ -470,7 +470,7 @@ const OFFERS = [
       rows: [
         ["4 custom tracks, spend them your way", "$10,000 value"],
         ["Sonic Blueprint: your archetype and full sound direction", "$297 value"],
-        ["The full sound family: full version, instrumental and 30-second cut of all 4 tracks", "Included"],
+        ["A 30-second cut of all 4 tracks, plus your choice of one instrumental version", "Included"],
         ["Live Brand Read: a private 30-minute call with me", "Included"],
         ["First Listen call: a private 30-minute call with me", "Included"],
         ["The First Listen Promise", "Included"],
