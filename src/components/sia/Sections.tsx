@@ -513,6 +513,7 @@ const OFFERS = [
     value: {
       title: "Instant Recognition Anthem",
       rows: [
+        ["Up to 12 hours of my hands-on time: listening to your voice memos, going through your brand, then making, listening and refining until it’s you", "Included"],
         ["Your Sonic Blueprint, built by hand from your intake and voice memos: your archetype, sound palette and lyric world", "$297 value"],
         ["Your custom Anthem: 10 to 20 hours of my time, lyrics from your own words, produced, finished and mastered", "$2,500 value"],
         ["A 30-second cut for reels, ads and your podcast", "Included"],
