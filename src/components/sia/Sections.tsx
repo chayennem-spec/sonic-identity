@@ -451,9 +451,10 @@ const OFFERS = [
     tag: "If it were mine...",
     label: "",
     name: "The Instant Recognition Atelier",
-    line: "One intake, one live read, and then I disappear into the studio.",
-    desc: "The photoshoots, the website, the designer who finally got your logo right. You’ve spent thousands on how your brand looks. The Atelier is how it sounds. It’s a full brand soundtrack, so your reels, your launches, your podcast and your stage finally sound like the same woman. It starts with one intake and your Live Brand Read, a private 30-minute call where I read your brand with you, live. Then I disappear into the studio, and we meet again for your First Listen call, because I want to see your face when you hear it. What I build is made for your brand, and licensed to no one else.",
+    line: "One intake, one live read, then your whole sound world, built for you.",
+    desc: "The photoshoots, the website, the designer who finally got your logo right. You’ve spent thousands on how your brand looks. The Atelier is how it sounds. It’s a full brand soundtrack, so your reels, your launches, your podcast and your stage finally sound like the same woman. It starts with one intake and your Live Brand Read, a private 30-minute call where I read your brand with you, live. Then I go build, and we meet again for your First Listen call, because I want to see your face when you hear it. What I build is made for your brand, and licensed to no one else.",
     includes: [
+      "Your Sonic Blueprint: the plan for your sound, before anything is made",
       "4 original tracks, spent your way: offers, anthem, walk-on, reels",
       "Every track with a 30-second cut, plus an original instrumental made for under your voice",
       "Two private 30-minute calls with me: your Live Brand Read and your First Listen",
@@ -492,6 +493,7 @@ const OFFERS = [
     desc: "Want to start with one song? That’s a smart move, and this is it. It’s built from your story and your archetype, so when it plays under your walk-on, your launch video or your podcast open, people know it’s you before you say a word.",
     includes: [
       "One signature song",
+      "Your Sonic Blueprint: the plan your song is built on",
       "A 30-second cut for reels, ads and your podcast",
       "A private 20-minute First Listen call with me",
       "One refinement round",
