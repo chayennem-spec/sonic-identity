@@ -495,7 +495,7 @@ const OFFERS = [
     label: "",
     name: "The Instant Recognition Anthem",
     line: "One signature song that says your name before you do",
-    desc: "Want to start with one song? That’s a smart move, and this is it. It’s built from your story and your archetype, so when it plays under your walk-on, your launch video or your podcast open, people know it’s you before you say a word.",
+    desc: "Want to start with one song? That’s a smart move, and this is it. It’s built from your story and your archetype, so when it plays under your walk-on, your launch video or your podcast open, people know it’s you before you say a word. About 10 hours of my own hands-on time go into every Anthem: reading your intake and voice memos, building your Sonic Blueprint, writing from your words, producing, finishing and cutting.",
     includes: [
       "One signature song",
       "Your Sonic Blueprint: the plan your song is built on",
