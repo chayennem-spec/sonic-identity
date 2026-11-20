@@ -469,7 +469,7 @@ const OFFERS = [
       title: "Instant Recognition Atelier",
       rows: [
         ["4 custom tracks, spend them your way", "$10,000 value"],
-        ["Your sound strategy: your archetype and full sound direction", "Included"],
+        ["Your Sonic Blueprint: your archetype, sound palette and lyric world", "Included"],
         ["A 30-second cut of all 4 tracks", "Included"],
         ["An original instrumental, made for under your voice", "Included"],
         ["Live Brand Read: a private 30-minute call with me", "Included"],
@@ -506,7 +506,7 @@ const OFFERS = [
     value: {
       title: "Instant Recognition Anthem",
       rows: [
-        ["Your sound strategy: your archetype and sound direction", "Included"],
+        ["Your Sonic Blueprint: your archetype, sound palette and lyric world", "Included"],
         ["Your custom anthem, full song, with a 30-second cut", "$2,500 value"],
         ["First Listen call: a private 20-minute call with me", "Included"],
         ["Brand-use rights in writing, licensed to your brand alone", "Included"],
