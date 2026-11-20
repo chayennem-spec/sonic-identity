@@ -474,6 +474,7 @@ const OFFERS = [
     value: {
       title: "Instant Recognition Atelier",
       rows: [
+        ["Up to 10 hours of my hands-on time on every track: up to 50 hours across your 4 tracks and your instrumental", "Included"],
         ["4 custom tracks, spend them your way", "$10,000 value"],
         ["Your Sonic Blueprint: your archetype, sound palette, lyric world and the job of every track", "$297 value"],
         ["A 30-second cut of all 4 tracks", "Included"],
@@ -513,7 +514,7 @@ const OFFERS = [
     value: {
       title: "Instant Recognition Anthem",
       rows: [
-        ["Up to 12 hours of my hands-on time: listening to your voice memos, going through your brand, then making, listening and refining until it’s you", "Included"],
+        ["Up to 10 hours of my hands-on time on your song: listening to your voice memos, going through your brand, then making, listening and refining until it’s you", "Included"],
         ["Your Sonic Blueprint, built by hand from your intake and voice memos: your archetype, sound palette and lyric world", "$297 value"],
         ["Your custom Anthem: 10 to 20 hours of my time, lyrics from your own words, produced, finished and mastered", "$2,500 value"],
         ["A 30-second cut for reels, ads and your podcast", "Included"],
