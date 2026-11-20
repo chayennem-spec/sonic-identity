@@ -474,7 +474,7 @@ const OFFERS = [
     value: {
       title: "Instant Recognition Atelier",
       rows: [
-        ["Up to 10 hours of my hands-on time on every track: up to 50 hours across your 4 tracks and your instrumental", "Included"],
+        ["Up to 10 hours spent on every track: up to 50 hours on your sound world alone", "Included"],
         ["4 custom tracks, spend them your way", "$10,000 value"],
         ["Your Sonic Blueprint: your archetype, sound palette, lyric world and the job of every track", "$297 value"],
         ["A 30-second cut of all 4 tracks", "Included"],
@@ -503,7 +503,7 @@ const OFFERS = [
       "A 30-second cut for reels, ads and your podcast",
       "A private 20-minute First Listen call with me",
       "One refinement round",
-      "First Listen Promise: not her? I rebuild it from a new direction",
+      "First Listen Promise: not you? I rebuild it from a new direction",
       "First listen in about 7 to 10 days, finished in 2 to 4 weeks",
       "Brand-use rights in writing, licensed to your brand alone",
       "On Spotify and in the music libraries, if you want it (with a bonus ad song)",
@@ -514,13 +514,13 @@ const OFFERS = [
     value: {
       title: "Instant Recognition Anthem",
       rows: [
-        ["Up to 10 hours of my hands-on time on your song: listening to your voice memos, going through your brand, then making, listening and refining until it’s you", "Included"],
-        ["Your Sonic Blueprint, built by hand from your intake and voice memos: your archetype, sound palette and lyric world", "$297 value"],
+        ["Up to 10 hours spent on your song alone: your voice memos, your brand, then making, listening and refining until it sounds like you", "Included"],
+        ["Your Sonic Blueprint, made by me from your intake and voice memos: your archetype, sound palette and lyric world", "$297 value"],
         ["Your custom Anthem: 10 to 20 hours of my time, lyrics from your own words, produced, finished and mastered", "$2,500 value"],
         ["A 30-second cut for reels, ads and your podcast", "Included"],
         ["First Listen call: a private 20-minute call with me", "Included"],
         ["One refinement round, in writing and voice notes", "Included"],
-        ["The First Listen Promise: not her? I rebuild it from a new direction", "Included"],
+        ["The First Listen Promise: not you? I rebuild it from a new direction", "Included"],
         ["Brand-use rights in writing, licensed to your brand alone. No licensing fees, ever", "Included"],
         ["A bonus ad song, kept just for your brand, when your Anthem goes into the music libraries", "$1,500 value"],
       ],
