@@ -469,7 +469,7 @@ const OFFERS = [
       title: "Instant Recognition Atelier",
       rows: [
         ["4 custom tracks, spend them your way", "$10,000 value"],
-        ["Sonic Blueprint: your archetype and full sound direction", "$297 value"],
+        ["Your sound strategy: your archetype and full sound direction", "Included"],
         ["A 30-second cut of all 4 tracks", "Included"],
         ["An original instrumental, made for under your voice", "Included"],
         ["Live Brand Read: a private 30-minute call with me", "Included"],
@@ -477,7 +477,7 @@ const OFFERS = [
         ["The First Listen Promise", "Included"],
         ["Brand-use rights in writing, licensed to your brand alone", "Included"],
       ],
-      oneByOne: "$10,297",
+      oneByOne: "$10,000",
       yoursLabel: "Your Atelier",
       yours: "$8,000",
     },
@@ -506,12 +506,12 @@ const OFFERS = [
     value: {
       title: "Instant Recognition Anthem",
       rows: [
-        ["Sonic Blueprint: your archetype and sound direction", "$297 value"],
+        ["Your sound strategy: your archetype and sound direction", "Included"],
         ["Your custom anthem, full song, with a 30-second cut", "$2,500 value"],
         ["First Listen call: a private 20-minute call with me", "Included"],
         ["Brand-use rights in writing, licensed to your brand alone", "Included"],
       ],
-      oneByOne: "$2,797",
+      oneByOne: "$2,500",
       yoursLabel: "Your Anthem",
       yours: "$2,500",
     },
