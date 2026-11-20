@@ -496,9 +496,9 @@ const OFFERS = [
     label: "",
     name: "The Instant Recognition Anthem",
     line: "One signature song that says your name before you do",
-    desc: "Want to start with one song? That’s a smart move, and this is it. It’s built from your story and your archetype, so when it plays under your walk-on, your launch video or your podcast open, people know it’s you before you say a word. 20 to 30 hours of my own time go into every Anthem: reading your intake and voice memos, studying your brand, building your Sonic Blueprint, writing from your words, producing, then listening, refining and listening again until it sounds like you.",
+    desc: "Want to start with one song? That’s a smart move, and this is it. It’s built from your story and your archetype, so when it plays under your walk-on, your launch video or your podcast open, people know it’s you before you say a word. Up to 10 hours go into your song alone: reading your intake and voice memos, studying your brand, building your Sonic Blueprint, shaping your lyrics from your own words, producing, then listening, refining and listening again until it sounds like you.",
     includes: [
-      "One signature song, with 20 to 30 hours of my time behind it",
+      "One signature song, with up to 10 hours spent on it",
       "Your Sonic Blueprint: the plan your song is built on",
       "A 30-second cut for reels, ads and your podcast",
       "A private 20-minute First Listen call with me",
@@ -509,14 +509,14 @@ const OFFERS = [
       "On Spotify and in the music libraries, if you want it (with a bonus ad song)",
       "Its full price comes off the Atelier within 30 days of delivery",
     ],
-    because: "Every Anthem takes 10 to 20 hours of my own time: studying your brand, listening to how you talk, then writing, producing and listening back until it sounds like you. And it’s never licensed to another brand.",
+    because: "Up to 10 hours go into your song alone, from how you talk to how it lands. And it’s never licensed to another brand.",
     plan: "$2,500 · or 2 payments of $1,300",
     value: {
       title: "Instant Recognition Anthem",
       rows: [
         ["Up to 10 hours spent on your song alone: your voice memos, your brand, then making, listening and refining until it sounds like you", "Included"],
         ["Your Sonic Blueprint, made by me from your intake and voice memos: your archetype, sound palette and lyric world", "$297 value"],
-        ["Your custom Anthem: 10 to 20 hours of my time, lyrics from your own words, produced, finished and mastered", "$2,500 value"],
+        ["Your custom Anthem: lyrics from your own words, produced, finished and mastered", "$2,500 value"],
         ["A 30-second cut for reels, ads and your podcast", "Included"],
         ["First Listen call: a private 20-minute call with me", "Included"],
         ["One refinement round, in writing and voice notes", "Included"],
