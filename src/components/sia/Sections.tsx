@@ -508,13 +508,13 @@ const OFFERS = [
       "On Spotify and in the music libraries, if you want it (with a bonus ad song)",
       "Its full price comes off the Atelier within 30 days of delivery",
     ],
-    because: "It’s your brand set to music, and it’ll never be licensed to another brand.",
+    because: "Every Anthem takes 10 to 20 hours of my own time: studying your brand, listening to how you talk, then writing, producing and listening back until it sounds like you. And it’s never licensed to another brand.",
     plan: "$2,500 · or 2 payments of $1,300",
     value: {
       title: "Instant Recognition Anthem",
       rows: [
         ["Your Sonic Blueprint, built by hand from your intake and voice memos: your archetype, sound palette and lyric world", "$297 value"],
-        ["Your custom Anthem: lyrics from your own words, produced, finished and mastered", "$2,500 value"],
+        ["Your custom Anthem: 10 to 20 hours of my time, lyrics from your own words, produced, finished and mastered", "$2,500 value"],
         ["A 30-second cut for reels, ads and your podcast", "Included"],
         ["First Listen call: a private 20-minute call with me", "Included"],
         ["One refinement round, in writing and voice notes", "Included"],
