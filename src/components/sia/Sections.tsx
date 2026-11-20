@@ -108,6 +108,7 @@ export function WhySound() {
               </span>
               <div>
                 <h3>{s.t}</h3>
+                <p className="sia-mono sia-kicker">{s.k}</p>
                 <p>{s.d}</p>
               </div>
             </article>
@@ -190,11 +191,11 @@ export function OnSet() {
 }
 
 const SOUND = [
-  { l: "01", t: "Style", d: "The genre, era and vibe that fit who you actually are, not whatever’s on someone’s For You page." },
-  { l: "02", t: "Outcome", d: "What people feel the second it plays, and the tempo that gets them there: calm, powerful, wanted… or just “wait, who is that?”" },
-  { l: "03", t: "Undertone", d: "The texture underneath, the part people feel but couldn’t name. Is it soft and expensive, or a little dangerous?" },
-  { l: "04", t: "Narrative", d: "The story your sound tells, even when there isn’t a single word in it. And yes, even an instrumental can have a point of view." },
-  { l: "05", t: "Delivery", d: "Voice, mix, length and cuts, made for wherever you show up: reels, podcasts, stages. Then used the same way every time, so people learn it’s you." },
+  { l: "01", t: "Style", k: "The room it belongs in", d: "The genre, era and vibe that fit who you actually are. Not whatever’s trending on someone else’s For You page." },
+  { l: "02", t: "Outcome", k: "The feeling it leaves", d: "What people feel the second it plays, and the tempo that takes them there: calm, powerful, wanted… or just “wait, who is that?”" },
+  { l: "03", t: "Undertone", k: "The part they feel but can’t name", d: "The texture underneath it all. Soft and expensive? Warm and safe? Or just a little bit dangerous?" },
+  { l: "04", t: "Narrative", k: "The story, even without a word", d: "What your sound says about you before you open your mouth. Yes, even an instrumental has a point of view." },
+  { l: "05", t: "Delivery", k: "Everywhere you show up", d: "Voice, mix, length and cuts, made for your reels, your podcast and your stage. Then used the same way every time, so people learn it’s you." },
 ];
 
 export function Method() {
@@ -209,10 +210,11 @@ export function Method() {
             </h2>
           </div>
           <p>
-            You don’t need to know what a minor key is. That’s my job. Your Sonic Archetype tells me
-            who you are, and I turn it into your sound through my S.O.U.N.D. Framework.
-            You talk about your brand, I take it from there. Nothing gets pulled from a stock library,
-            and nothing gets borrowed from someone else’s brand.
+            Five decisions. One sound people know is you. You don’t need to know what a minor key is.
+            That’s my job. Your Sonic Archetype tells me who you are, and the S.O.U.N.D. Framework turns
+            it into your sound: Style, Outcome, Undertone, Narrative, Delivery. You talk about your brand,
+            I take it from there. Nothing gets pulled from a stock library, and nothing gets borrowed
+            from someone else’s brand.
           </p>
         </div>
         <div className="sia-sound__grid sia-reveal">
@@ -223,6 +225,7 @@ export function Method() {
               </span>
               <div>
                 <h3>{s.t}</h3>
+                <p className="sia-mono sia-kicker">{s.k}</p>
                 <p>{s.d}</p>
               </div>
             </article>
@@ -296,10 +299,11 @@ export function MethodReel() {
             </h2>
           </div>
           <p>
-            You don’t need to know what a minor key is. That’s my job. Your Sonic Archetype tells me
-            who you are, and I turn it into your sound through my S.O.U.N.D. Framework.
-            You talk about your brand, I take it from there. Nothing gets pulled from a stock library,
-            and nothing gets borrowed from someone else’s brand.
+            Five decisions. One sound people know is you. You don’t need to know what a minor key is.
+            That’s my job. Your Sonic Archetype tells me who you are, and the S.O.U.N.D. Framework turns
+            it into your sound: Style, Outcome, Undertone, Narrative, Delivery. You talk about your brand,
+            I take it from there. Nothing gets pulled from a stock library, and nothing gets borrowed
+            from someone else’s brand.
           </p>
         </div>
         <p className="sia-mono sia-reel__hint" aria-hidden="true">
@@ -324,6 +328,7 @@ export function MethodReel() {
                   </div>
                   <span className="sia-reel__letter" aria-hidden="true">{LETTERS[i]}</span>
                   <h3 className="sia-reel__word">{s.t}</h3>
+                  <p className="sia-mono sia-kicker">{s.k}</p>
                   <p className="sia-reel__line">{s.d}</p>
                 </article>
               ))}
@@ -470,7 +475,7 @@ const OFFERS = [
       title: "Instant Recognition Atelier",
       rows: [
         ["4 custom tracks, spend them your way", "$10,000 value"],
-        ["Your Sonic Blueprint: your archetype, sound palette and lyric world", "Included"],
+        ["Your Sonic Blueprint: your archetype, sound palette, lyric world and the job of every track", "$297 value"],
         ["A 30-second cut of all 4 tracks", "Included"],
         ["An original instrumental, made for under your voice", "Included"],
         ["Live Brand Read: a private 30-minute call with me", "Included"],
@@ -478,7 +483,7 @@ const OFFERS = [
         ["The First Listen Promise", "Included"],
         ["Brand-use rights in writing, licensed to your brand alone", "Included"],
       ],
-      oneByOne: "$10,000",
+      oneByOne: "$10,297",
       yoursLabel: "Your Atelier",
       yours: "$8,000",
     },
@@ -508,12 +513,16 @@ const OFFERS = [
     value: {
       title: "Instant Recognition Anthem",
       rows: [
-        ["Your Sonic Blueprint: your archetype, sound palette and lyric world", "Included"],
-        ["Your custom anthem, full song, with a 30-second cut", "$2,500 value"],
+        ["Your Sonic Blueprint, built by hand from your intake and voice memos: your archetype, sound palette and lyric world", "$297 value"],
+        ["Your custom Anthem: lyrics from your own words, produced, finished and mastered", "$2,500 value"],
+        ["A 30-second cut for reels, ads and your podcast", "Included"],
         ["First Listen call: a private 20-minute call with me", "Included"],
-        ["Brand-use rights in writing, licensed to your brand alone", "Included"],
+        ["One refinement round, in writing and voice notes", "Included"],
+        ["The First Listen Promise: not her? I rebuild it from a new direction", "Included"],
+        ["Brand-use rights in writing, licensed to your brand alone. No licensing fees, ever", "Included"],
+        ["A bonus ad song, kept just for your brand, when your Anthem goes into the music libraries", "$1,500 value"],
       ],
-      oneByOne: "$2,500",
+      oneByOne: "$4,297",
       yoursLabel: "Your Anthem",
       yours: "$2,500",
     },
