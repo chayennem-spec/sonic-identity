@@ -152,16 +152,15 @@ export function HeroSound() {
       <div className="sia-wrap sia-hero__inner">
         <h1 className="sia-hero__h1">
           <span className="sia-mono sia-kicker sia-hero__eyebrow">
-            Sonic identity &amp; sound branding for female founders
+            A strategy-led sonic identity atelier for female founders
           </span>
-          <span className="sia-display sia-hero__big">
-            Be heard before you’re <span className="sia-nw">even <em>seen</em>.</span>
+          <span className="sia-display sia-hero__big sia-hero__big--wide">
+            Your brand looks expensive. It sounds <span className="sia-nw"><em>borrowed</em>.</span>
           </span>
         </h1>
-        <p className="sia-hero__tag">Signature sounds made for your brand, so you’re recognized, remembered and felt everywhere you show up, sometimes before your face has even loaded.</p>
+        <p className="sia-hero__tag">Signature sounds made for your brand alone, so you’re recognized, remembered and felt everywhere you show up. Be heard before you’re even seen.</p>
         <p className="sia-hero__sub">
-          You’ve art-directed every photo and rewritten every caption at least twice. And your sound?
-          You used whatever was trending this morning, which means your brand’s sound is basically a coin toss.
+          You art-directed every photo and rewrote every caption at least twice. Then you let this morning’s trending audio decide how your brand feels. Let’s fix the one part of your brand you didn’t design.
         </p>
         <div className="sia-hero__ctas">
           <a className="sia-btn sia-btn--red" href={LINKS.audit} target="_blank" rel="noreferrer">

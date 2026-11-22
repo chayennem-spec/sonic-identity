@@ -17,6 +17,7 @@ import {
   ForHer,
   OnSet,
   Ticker,
+  Positioning,
 } from "../components/sia/Sections";
 
 const TITLE = "Sonic Identity & Sound Branding for Female Founders | Chayenne Mallari";
@@ -44,6 +45,7 @@ function HomePage() {
       <main>
         <HeroSound />
         <Ticker />
+        <Positioning />
         <TheGap />
         <MeetTheLab />
         <Proof />

@@ -29,6 +29,41 @@ export function Ticker() {
   );
 }
 
+const PILLARS = [
+  { n: "01", t: "Strategy first", d: "Every sound starts with your Sonic Blueprint: your archetype, your palette, your lyric world. Your sound is planned before a single note is made." },
+  { n: "02", t: "Built to last", d: "A sound that holds up long after the launch. Brand-use rights in writing, licensed to your brand alone, with no expiry and no renewals." },
+  { n: "03", t: "Made for one brand", d: "Never a stock library, never this week’s trend, never licensed to another brand. Up to 10 hours go into every song." },
+];
+
+/** Positioning, right under the hero: what this is, who it's for, why it lasts. */
+export function Positioning() {
+  return (
+    <section className="sia sia-pos" id="atelier">
+      <div className="sia-wrap">
+        <div className="sia-pos__head sia-reveal">
+          <p className="sia-mono sia-kicker">The atelier</p>
+          <h2 className="sia-display">
+            For founders who take their brand <span className="sia-nw"><em>seriously</em>.</span>
+          </h2>
+          <p className="sia-hand">Including how it sounds.</p>
+        </div>
+        <div className="sia-pos__grid sia-reveal">
+          {PILLARS.map((p) => (
+            <article className="sia-pos__item" key={p.n}>
+              <span className="sia-mono sia-pos__n">{p.n}</span>
+              <h3>{p.t}</h3>
+              <p>{p.d}</p>
+            </article>
+          ))}
+        </div>
+        <p className="sia-pos__more sia-reveal">
+          <a className="sia-mono" href="#heard">See the work <span aria-hidden="true">↓</span></a>
+        </p>
+      </div>
+    </section>
+  );
+}
+
 export function TheGap() {
   return (
     <section className="sia sia-gap" id="the-gap">

@@ -117,3 +117,24 @@
 /* Header logo (Nov 2026): wordmark in bone, her name in brand red. */
 .sia-header .sia-brand .sia-wordmark { color: #efe9dc !important; }
 .sia-header .sia-brand .sia-tagline { color: var(--sia-red, #ff4a1c) !important; }
+
+/* Positioning strip under the hero (Nov 2026): what it is, who it's for, why it lasts */
+.sia-hero__big.sia-hero__big--wide { max-width: 12.5ch; font-size: clamp(48px, 7.2vw, 118px); }
+.sia.sia-pos { padding: 120px 0 110px; border-top: 1px solid var(--sia-line); }
+.sia-pos__head h2 { font-size: clamp(42px, 5.6vw, 88px); max-width: 15ch; }
+.sia-pos__head .sia-hand { margin-top: 14px; }
+.sia-pos__grid { margin-top: 64px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--sia-line); }
+.sia-pos__item { padding: 30px 32px 8px 0; }
+.sia-pos__item + .sia-pos__item { padding-left: 32px; border-left: 1px solid var(--sia-line); }
+.sia-pos__n { color: var(--sia-red); font-size: 12px; letter-spacing: 0.14em; }
+.sia-pos__item h3 { margin: 14px 0 10px; font-family: var(--sia-display); font-weight: 700; text-transform: uppercase; font-size: 22px; letter-spacing: -0.01em; color: var(--sia-bone); }
+.sia-pos__item p { color: var(--sia-dim); font-size: 16px; line-height: 1.6; max-width: 30em; }
+.sia-pos__more { margin-top: 44px; }
+.sia-pos__more a { color: var(--sia-bone); text-decoration: none; border-bottom: 1px solid var(--sia-red); padding-bottom: 4px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; }
+@media (max-width: 860px) {
+  .sia.sia-pos { padding: 80px 0; }
+  .sia-pos__grid { grid-template-columns: 1fr; }
+  .sia-pos__item, .sia-pos__item + .sia-pos__item { padding: 26px 0 6px; border-left: 0; }
+  .sia-pos__item + .sia-pos__item { border-top: 1px solid var(--sia-line); }
+}
+.sia-hero .sia-hero__tag { max-width: 30em; }
