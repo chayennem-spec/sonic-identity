@@ -18,6 +18,14 @@ details[open] .plus{transform:rotate(45deg)}
 .glow{background:radial-gradient(ellipse 90% 75% at 50% 0%, #3A1A47 0%, #1A0D20 50%, #0E0812 90%)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;font-weight:700;font-size:14px;letter-spacing:0.12em;text-decoration:none;border:0;cursor:pointer;border-radius:0}
 .chip:has(input:checked){border-color:#A86BF2;background:#22133A}
+.aw-player{display:flex;align-items:center;gap:14px}
+.aw-play{flex:none;width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;color:#fff;background:linear-gradient(135deg,#2F55C8 0%,#6A3CC0 100%);display:flex;align-items:center;justify-content:center;transition:transform .15s,box-shadow .2s}
+.aw-play:hover{transform:scale(1.06);box-shadow:0 0 0 6px rgba(168,107,242,.15)}
+.aw-play .i-pause,.aw-player.on .aw-play .i-play{display:none}.aw-player.on .aw-play .i-pause{display:block}
+.aw-track{flex:1;height:4px;background:#2E1D38;cursor:pointer;position:relative;padding:10px 0;background-clip:content-box}
+.aw-fill{position:absolute;left:0;top:10px;height:4px;width:0;background:linear-gradient(90deg,#4A73E8,#A86BF2)}
+.aw-time{flex:none;font-size:12px;letter-spacing:.08em;color:#A898B0;font-variant-numeric:tabular-nums;min-width:38px;text-align:right}
+.aw-who img{display:block;width:100%;height:auto;filter:grayscale(1) contrast(1.05)}
 </style>
 </head>
 <body>
@@ -31,7 +39,7 @@ details[open] .plus{transform:rotate(45deg)}
 <div style="max-width:1200px; margin:0 auto; padding:56px 6vw 104px; display:flex; flex-wrap:wrap; gap:56px; align-items:center">
 <div style="flex:999 1 520px; min-width:0">
 <p style="display:inline-block; margin:0 0 28px; border:1px solid #3D2648; padding:9px 16px; font-size:11px; letter-spacing:0.18em; color:#CFC4D4">FOR NLP PRACTITIONERS, HYPNOTISTS AND HEALERS</p>
-<h1 style="margin:0; font-weight:300; font-size:clamp(34px, 4.6vw, 62px); line-height:1; letter-spacing:-0.02em">YOUR CLIENT CLOSES ZOOM ON MONDAY FEELING LIKE A NEW WOMAN. <span class="iri" style="font-weight:700">THIS IS FOR WHAT HAPPENS AFTER WEDNESDAY.</span></h1>
+<h1 style="margin:0; font-weight:700; font-size:clamp(34px, 4.6vw, 62px); line-height:1; letter-spacing:-0.03em">YOUR CLIENT CLOSES ZOOM ON MONDAY FEELING LIKE A NEW WOMAN. <span class="iri" style="font-weight:700">THIS IS FOR WHAT HAPPENS AFTER WEDNESDAY.</span></h1>
 <p style="margin:28px 0 0; font-size:clamp(17px, 1.5vw, 20px); font-weight:300; line-height:1.6; max-width:560px; color:#CFC4D4">By midweek, the old self starts creeping back in. After Wednesday is identity-shift music made to sit inside the work you already do, and to give your clients something beautiful to listen to between sessions, easily and effortlessly.</p>
 <div style="margin-top:36px; display:flex; flex-wrap:wrap; gap:14px">
 <a href="https://chayennemallari.eden.so/form/after-wednesday" class="btn" style="background:linear-gradient(90deg,#2F55C8 0%,#6A3CC0 100%); color:#FFFFFF">SAVE MY SPOT</a>
@@ -44,8 +52,8 @@ details[open] .plus{transform:rotate(45deg)}
 <svg width="64" height="64" viewBox="0 0 72 72" style="flex:none" aria-hidden="true"><g fill="none" stroke-width="1"><circle cx="36" cy="36" r="34" stroke="#A86BF2" stroke-dasharray="2 5"></circle><circle cx="36" cy="36" r="24" stroke="#3D2648"></circle><circle cx="36" cy="36" r="14" stroke="#3D2648"></circle></g><circle cx="36" cy="36" r="3" fill="#EDE3EE"></circle><circle cx="36" cy="2" r="2.5" fill="#5B82F0"></circle><circle cx="70" cy="36" r="2.5" fill="#8B9CF5"></circle><circle cx="12" cy="60" r="2.5" fill="#A86BF2"></circle></svg>
 <div><p style="margin:0 0 6px; font-size:11px; letter-spacing:0.18em; color:#A898B0">THE FIRST LISTEN</p><p style="margin:0; font-size:20px; letter-spacing:0.06em">TWO TRACKS</p></div>
 </div>
-<div style="display:flex; flex-direction:column; gap:8px; border-top:1px solid #2E1D38; padding-top:16px"><p style="margin:0; font-size:14px; letter-spacing:0.08em"><span style="color:#5B82F0; margin-right:10px">01</span>I CHOOSE A NEW TIMELINE</p><audio controls="controls" preload="metadata" src="/after-wednesday/audio/i-choose-a-new-timeline.m4a" style="width:100%" aria-label="Play I Choose A New Timeline, a track by Chayenne Mallari"></audio></div>
-<div style="display:flex; flex-direction:column; gap:8px; border-top:1px solid #2E1D38; padding-top:16px"><p style="margin:0; font-size:14px; letter-spacing:0.08em"><span style="color:#8B9CF5; margin-right:10px">02</span>MAHALO ALOHA</p><audio controls="controls" preload="metadata" src="/after-wednesday/audio/mahalo-aloha.m4a" style="width:100%" aria-label="Play Mahalo Aloha, a track by Chayenne Mallari"></audio></div>
+<div style="display:flex; flex-direction:column; gap:8px; border-top:1px solid #2E1D38; padding-top:16px"><p style="margin:0; font-size:14px; letter-spacing:0.08em"><span style="color:#5B82F0; margin-right:10px">01</span>I CHOOSE A NEW TIMELINE</p><div class="aw-player" data-src="/after-wednesday/audio/i-choose-a-new-timeline.m4a"><button type="button" class="aw-play" aria-label="Play I Choose A New Timeline"><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" fill="currentColor"/><rect x="9.5" y="2.5" width="3" height="11" fill="currentColor"/></svg></button><div class="aw-track" role="slider" tabindex="0" aria-label="Seek I Choose A New Timeline" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="aw-fill"></div></div><span class="aw-time">0:00</span><audio preload="metadata" src="/after-wednesday/audio/i-choose-a-new-timeline.m4a"></audio></div></div>
+<div style="display:flex; flex-direction:column; gap:8px; border-top:1px solid #2E1D38; padding-top:16px"><p style="margin:0; font-size:14px; letter-spacing:0.08em"><span style="color:#8B9CF5; margin-right:10px">02</span>MAHALO ALOHA</p><div class="aw-player" data-src="/after-wednesday/audio/mahalo-aloha.m4a"><button type="button" class="aw-play" aria-label="Play Mahalo Aloha"><svg class="i-play" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg><svg class="i-pause" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" fill="currentColor"/><rect x="9.5" y="2.5" width="3" height="11" fill="currentColor"/></svg></button><div class="aw-track" role="slider" tabindex="0" aria-label="Seek Mahalo Aloha" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="aw-fill"></div></div><span class="aw-time">0:00</span><audio preload="metadata" src="/after-wednesday/audio/mahalo-aloha.m4a"></audio></div></div>
 <p style="margin:0; font-size:15px; font-weight:300; color:#CFC4D4; border-top:1px solid #2E1D38; padding-top:16px">hypnosis opens the door. the music keeps her walking through it.</p>
 </div>
 </div>
@@ -92,9 +100,23 @@ details[open] .plus{transform:rotate(45deg)}
 <div style="margin-top:56px; background:#170C1F; border:1px solid #3D2648; padding:32px; display:flex; flex-wrap:wrap; gap:24px 48px; align-items:center; justify-content:space-between">
 <div style="flex:1 1 420px">
 <p style="margin:0 0 8px; font-size:12px; letter-spacing:0.18em; color:#A898B0">A NEW OFFER FOR YOUR PRACTICE</p><p style="margin:0 0 12px; font-size:22px; font-weight:700; letter-spacing:-0.01em">ADD IT TO YOUR PACKAGES, OFFER IT AS AN UPSELL, OR MAKE IT PART OF YOUR COACHING.</p>
-<p style="margin:0; font-size:17px; line-height:1.6; color:#CFC4D4">Each track will come with practitioner rights in writing, licensed for use in your practice, whether that's live with clients, inside your recorded audios, in your courses or with your group containers. <span style="color:#A898B0">[Final terms in progress. The waitlist sees them first.]</span></p>
+<p style="margin:0; font-size:17px; line-height:1.6; color:#CFC4D4">Each track will come with practitioner rights in writing, licensed for use in your practice, whether that's live with clients, inside your recorded audios, in your courses or with your group containers. <span style="color:#A898B0">Final terms are being written now, and the waitlist sees them first.</span></p>
 </div>
 <a href="https://chayennemallari.eden.so/form/after-wednesday" class="btn" style="background:transparent; color:#EDE3EE; border:1px solid #4A3058">HELP SHAPE IT</a>
+</div>
+</section>
+</div>
+
+<div style="background:#0E0812">
+<section class="aw-who" style="max-width:1200px; margin:0 auto; padding:104px 6vw; display:flex; flex-wrap:wrap; gap:48px 72px; align-items:center">
+<div style="flex:1 1 300px; max-width:420px; border:1px solid #3D2648; padding:10px; background:#160D1F"><img src="/images/chayenne-editorial-bw.webp" alt="Chayenne Mallari in a black leather jacket and sunglasses" width="1233" height="1275" loading="lazy"></div>
+<div style="flex:1.4 1 420px">
+<p style="margin:0 0 16px; font-size:12px; letter-spacing:0.18em; color:#A898B0">WHO'S MAKING THIS</p>
+<h2 style="margin:0 0 24px; font-weight:700; font-size:clamp(30px, 3.4vw, 46px); line-height:1; letter-spacing:-0.03em">MADE BY SOMEONE WHO <span class="iri">DOES THIS WORK TOO.</span></h2>
+<p style="margin:0 0 16px; font-size:18px; line-height:1.65; color:#CFC4D4">I'm Chayenne Mallari. For 20 years I did hair for high-net-worth women, and you learn a lot about a woman in that chair: how she wants to be seen, what she'd never say out loud, and who she's becoming.</p>
+<p style="margin:0 0 16px; font-size:18px; line-height:1.65; color:#CFC4D4">Then I became a certified hypnotherapist and NLP trainer, so I know the work you do, and how much of it has to hold after the session ends.</p>
+<p style="margin:0 0 28px; font-size:18px; line-height:1.65; color:#CFC4D4">After Wednesday is the music I'd want every client to go home with.</p>
+<p style="margin:0; font-size:13px; letter-spacing:0.14em; color:#A898B0">CERTIFIED HYPNOTHERAPIST · NLP TRAINER · <a href="https://www.sonicidentityarchitect.com" style="color:#A898B0">SONIC IDENTITY ARCHITECT™</a></p>
 </div>
 </section>
 </div>
@@ -108,10 +130,6 @@ details[open] .plus{transform:rotate(45deg)}
 </div>
 <div style="flex:2 1 520px">
 
-<details style="border-top:1px solid #2E1D38; padding:20px 0">
-<summary style="display:flex; justify-content:space-between; gap:24px; align-items:center; font-size:18px; font-weight:700; min-height:44px"><span>Why is it called After Wednesday?</span><span class="plus" style="font-size:26px; font-weight:300; color:#A86BF2; transition:transform .2s" aria-hidden="true">+</span></summary>
-<p style="margin:12px 0 0; font-size:16px; line-height:1.65; color:#CFC4D4; max-width:640px">Because that’s usually when it happens. Your client logs off lighter and clearer, and by midweek the old pattern starts creeping back in. This music is made for that stretch between sessions, so the shift you created has something to hold onto.</p>
-</details>
 
 <details style="border-top:1px solid #2E1D38; padding:20px 0">
 <summary style="display:flex; justify-content:space-between; gap:24px; align-items:center; font-size:18px; font-weight:700; min-height:44px"><span>Who is it for?</span><span class="plus" style="font-size:26px; font-weight:300; color:#A86BF2; transition:transform .2s" aria-hidden="true">+</span></summary>
@@ -133,20 +151,8 @@ details[open] .plus{transform:rotate(45deg)}
 <p style="margin:12px 0 0; font-size:16px; line-height:1.65; color:#CFC4D4; max-width:640px">I’m writing the final terms now. The plan is for them to cover live sessions, your recorded audios, your courses and group programs, and your retreats, and the waitlist will see them before anyone else.</p>
 </details>
 
-<details style="border-top:1px solid #2E1D38; padding:20px 0">
-<summary style="display:flex; justify-content:space-between; gap:24px; align-items:center; font-size:18px; font-weight:700; min-height:44px"><span>Is it free, or paid?</span><span class="plus" style="font-size:26px; font-weight:300; color:#A86BF2; transition:transform .2s" aria-hidden="true">+</span></summary>
-<p style="margin:12px 0 0; font-size:16px; line-height:1.65; color:#CFC4D4; max-width:640px">Joining the waitlist is free. After Wednesday itself will be a paid product, and I’ll share pricing with the waitlist first, before it opens to anyone else.</p>
-</details>
 
-<details style="border-top:1px solid #2E1D38; padding:20px 0">
-<summary style="display:flex; justify-content:space-between; gap:24px; align-items:center; font-size:18px; font-weight:700; min-height:44px"><span>Can I add it to my own offers?</span><span class="plus" style="font-size:26px; font-weight:300; color:#A86BF2; transition:transform .2s" aria-hidden="true">+</span></summary>
-<p style="margin:12px 0 0; font-size:16px; line-height:1.65; color:#CFC4D4; max-width:640px">That’s the idea, love. It’s designed to sit inside your paid work, whether you add it to your packages, offer it as an upsell or make it part of your coaching programs. The license terms will spell out exactly how.</p>
-</details>
 
-<details style="border-top:1px solid #2E1D38; padding:20px 0">
-<summary style="display:flex; justify-content:space-between; gap:24px; align-items:center; font-size:18px; font-weight:700; min-height:44px"><span>Will it be an app or a membership?</span><span class="plus" style="font-size:26px; font-weight:300; color:#A86BF2; transition:transform .2s" aria-hidden="true">+</span></summary>
-<p style="margin:12px 0 0; font-size:16px; line-height:1.65; color:#CFC4D4; max-width:640px">Honestly, you get a vote. Pick your favorite in the form below, and I’ll build around what practitioners actually want to use.</p>
-</details>
 
 <details style="border-top:1px solid #2E1D38; padding:20px 0">
 <summary style="display:flex; justify-content:space-between; gap:24px; align-items:center; font-size:18px; font-weight:700; min-height:44px"><span>Is this AI music?</span><span class="plus" style="font-size:26px; font-weight:300; color:#A86BF2; transition:transform .2s" aria-hidden="true">+</span></summary>
@@ -171,7 +177,7 @@ details[open] .plus{transform:rotate(45deg)}
 <div style="max-width:1200px; margin:0 auto; padding:112px 6vw; display:flex; flex-wrap:wrap; gap:48px 72px; align-items:flex-start">
 <div style="flex:1 1 360px">
 <p style="margin:0 0 16px; font-size:12px; letter-spacing:0.18em; color:#CFC4D4">THE WAITLIST</p>
-<h2 style="margin:0 0 24px; font-weight:300; font-size:clamp(36px, 4.4vw, 62px); line-height:0.98; letter-spacing:-0.02em">GET THE <span class="iri" style="font-weight:700">FIRST LISTEN.</span></h2>
+<h2 style="margin:0 0 24px; font-weight:700; font-size:clamp(36px, 4.4vw, 62px); line-height:0.98; letter-spacing:-0.02em">GET THE <span class="iri" style="font-weight:700">FIRST LISTEN.</span></h2>
 <p style="margin:0; font-size:18px; line-height:1.6; color:#CFC4D4; max-width:440px">After Wednesday will be a paid product, and the waitlist hears everything first, from the first tracks to the pricing. Tell me a little about how you work, love, and I'll shape the first collection around the sessions you actually run.</p>
 </div>
 <div style="flex:1.2 1 440px; background:#160D1F; border:1px solid #3D2648; padding:32px">
@@ -187,9 +193,22 @@ details[open] .plus{transform:rotate(45deg)}
 <footer style="background:#0B0610; border-top:1px solid #1E1228">
 <div style="max-width:1200px; margin:0 auto; padding:36px 6vw; display:flex; flex-wrap:wrap; gap:16px; justify-content:space-between; font-size:13px; color:#A898B0; line-height:1.6">
 <span>Music designed to support the identity shift you're already creating with your clients, not a replacement for clinical care.</span>
-<span>© 2026 Chayenne Mallari · Sonic Identity Architect™</span>
+<span>© 2026 Chayenne Mallari · <a href="https://www.sonicidentityarchitect.com" style="color:#A898B0">Sonic Identity Architect™</a></span>
 </div>
 </footer>
 </div>
+<script>
+(function(){var ps=[].slice.call(document.querySelectorAll('.aw-player'));function f(s){if(!isFinite(s))return'0:00';s=Math.floor(s);return Math.floor(s/60)+':'+('0'+s%60).slice(-2)}
+ps.forEach(function(p){var a=p.querySelector('audio'),b=p.querySelector('.aw-play'),t=p.querySelector('.aw-track'),fi=p.querySelector('.aw-fill'),tm=p.querySelector('.aw-time');
+a.addEventListener('loadedmetadata',function(){tm.textContent=f(a.duration)});
+b.addEventListener('click',function(){if(a.paused){ps.forEach(function(o){if(o!==p){o.querySelector('audio').pause()}});a.play()}else a.pause()});
+a.addEventListener('play',function(){p.classList.add('on')});a.addEventListener('pause',function(){p.classList.remove('on')});
+a.addEventListener('ended',function(){p.classList.remove('on')});
+a.addEventListener('timeupdate',function(){var r=a.duration?a.currentTime/a.duration:0;fi.style.width=(r*100)+'%';t.setAttribute('aria-valuenow',Math.round(r*100));tm.textContent=f(a.currentTime||a.duration)});
+function seek(x){var r=t.getBoundingClientRect();if(a.duration)a.currentTime=Math.max(0,Math.min(1,(x-r.left)/r.width))*a.duration}
+t.addEventListener('click',function(e){seek(e.clientX)});
+t.addEventListener('keydown',function(e){if(!a.duration)return;if(e.key==='ArrowRight'){a.currentTime=Math.min(a.duration,a.currentTime+5);e.preventDefault()}if(e.key==='ArrowLeft'){a.currentTime=Math.max(0,a.currentTime-5);e.preventDefault()}});
+})})();
+</script>
 </body>
 </html>
