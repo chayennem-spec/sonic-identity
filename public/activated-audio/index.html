@@ -66,6 +66,8 @@ p{text-shadow:0 1px 14px rgba(6,3,10,.9);margin:0;font-size:clamp(15px,1.6vw,18p
 .trk .ic{width:34px;height:34px;flex:none;border-radius:50%;border:1px solid var(--peri);display:flex;align-items:center;justify-content:center}
 .trk .ic svg{width:12px;height:12px;fill:var(--ink)}
 .trk b{font:600 13px var(--mono);letter-spacing:.1em;display:block}
+.trk .tg{display:block;font:600 10px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--peri);margin-top:4px}.trk[aria-pressed=true] .tg{color:#fff}
+.np{font:12px var(--mono);letter-spacing:.06em;color:var(--peri);margin-top:-6px}
 .trk em{font-style:normal;color:var(--mute);font:12px var(--mono)}
 .trk .eq{margin-left:auto;display:flex;gap:3px;align-items:flex-end;height:16px;opacity:0}
 .trk[aria-pressed=true] .eq{opacity:1}
@@ -152,9 +154,10 @@ p{text-shadow:0 1px 14px rgba(6,3,10,.9);margin:0;font-size:clamp(15px,1.6vw,18p
 <section class="step" data-addr="aw://listen" data-label="Listen" data-hue="3">
 <span class="kicker">The first listen</span>
 <h2>Hypnosis opens the door. <span class="g">The music keeps them walking through it.</span></h2>
+<p class="np" id="np">This is what you've been listening to since you walked in.</p>
 <div class="player">
-<button class="trk" type="button" data-track="a1"><span class="ic"><svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg></span><span><b>01 · I CHOOSE A NEW TIMELINE</b><em>7:14</em></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
-<button class="trk" type="button" data-track="a2"><span class="ic"><svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg></span><span><b>02 · MAHALO ALOHA</b><em>(Hoʻoponopono) · 5:53</em></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
+<button class="trk" type="button" data-track="a1"><span class="ic"><svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg></span><span><b>01 · I CHOOSE A NEW TIMELINE</b><em>7:14</em><small class="tg"></small></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
+<button class="trk" type="button" data-track="a2"><span class="ic"><svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg></span><span><b>02 · MAHALO ALOHA</b><em>(Hoʻoponopono) · 5:53</em><small class="tg"></small></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
 </div>
 <button class="btn" data-next type="button">&gt; Where would I use it <span class="cur">_</span></button>
 </section>
@@ -216,7 +219,7 @@ function muffle(on){if(!lp)return;var n=AC.currentTime;lp.frequency.cancelSchedu
 function play(id){initAudio();var el=document.getElementById(id);if(ct&&ct!==id){var o=document.getElementById(ct);o.pause();}ct=id;if(AC&&AC.state==='suspended')AC.resume();el.play().catch(function(){});soundOn=true;fadeTo(.85,2.5);sync();}
 function stop(){if(ct){fadeTo(0,.6);var el=document.getElementById(ct);setTimeout(function(){el.pause();},650);}soundOn=false;sync();}
 var sb=document.getElementById('snd');
-function sync(){sb.textContent=soundOn?'\u275A\u275A Pause':'\u25B6 Play';sb.setAttribute('aria-pressed',soundOn);document.querySelectorAll('.trk').forEach(function(t){var on=soundOn&&t.dataset.track===ct;t.setAttribute('aria-pressed',on);});}
+function sync(){sb.textContent=soundOn?'\u275A\u275A Pause':'\u25B6 Play';sb.setAttribute('aria-pressed',soundOn);document.querySelectorAll('.trk').forEach(function(t){var on=soundOn&&t.dataset.track===ct;t.setAttribute('aria-pressed',on);var g=t.querySelector('.tg');if(g)g.textContent=t.dataset.track===ct?(soundOn?'\u25CF Now playing':'Paused \u00B7 tap to play'):'Up next \u00B7 tap to switch';});var np=document.getElementById('np');if(np)np.textContent=soundOn?(ct==='a1'?'Hear that? This is the song that\u2019s been playing since you walked in.':'Now playing: Mahalo Aloha (Hoʻoponopono).'):'Tap a song to keep listening.';}
 sb.addEventListener('click',function(){soundOn?stop():play(ct||'a1');});
 /* tunnel */
 var c=document.getElementById('c'),x=c.getContext('2d'),W,H,D=Math.min(devicePixelRatio||1,2);
