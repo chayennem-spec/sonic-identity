@@ -92,15 +92,15 @@ p{text-shadow:0 1px 14px rgba(6,3,10,.9);margin:0;font-size:clamp(15px,1.6vw,18p
 <button id="snd" type="button" aria-pressed="false" aria-label="Pause or play the music">Music</button>
 </div>
 
-<audio id="a1" src="/after-wednesday/audio/i-choose-a-new-timeline.m4a" preload="none" loop></audio>
-<audio id="a2" src="/after-wednesday/audio/mahalo-aloha.m4a" preload="none" loop></audio>
+<audio id="a1" src="/after-wednesday/audio/i-choose-a-new-timeline.m4a" preload="none"></audio>
+<audio id="a2" src="/after-wednesday/audio/mahalo-aloha.m4a" preload="none"></audio>
 
 <main class="stage" aria-live="polite">
 
 <section class="step on" data-addr="aw://gate" data-label="Begin" data-hue="0">
-<span class="kicker">You found it early.</span>
+<span class="kicker">Your private invitation</span>
 <h1>What happens to the shift <span class="g">after Wednesday?</span></h1>
-<p>Activated Audio: music for between sessions, made for NLP practitioners, hypnotists and healers. Best with headphones.</p>
+<p>Activated Audio: hypnotic music for between sessions, made for NLP practitioners, hypnotists and healers. Best with headphones.</p>
 <button class="btn" id="enter" type="button">&gt; Put my headphones in <span class="cur">_</span></button>
 </section>
 
@@ -154,7 +154,7 @@ p{text-shadow:0 1px 14px rgba(6,3,10,.9);margin:0;font-size:clamp(15px,1.6vw,18p
 <section class="step" data-addr="aw://listen" data-label="Listen" data-hue="3">
 <span class="kicker">The first listen</span>
 <h2>Hypnosis opens the door. <span class="g">The music keeps them walking through it.</span></h2>
-<p class="np" id="np">This is what you've been listening to since you walked in.</p>
+<p class="np" id="np">This is the song that's been playing since you entered.</p>
 <div class="player">
 <button class="trk" type="button" data-track="a1"><span class="ic"><svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg></span><span><b>01 · I CHOOSE A NEW TIMELINE</b><em>7:14</em><small class="tg"></small></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
 <button class="trk" type="button" data-track="a2"><span class="ic"><svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg></span><span><b>02 · MAHALO ALOHA</b><em>(Hoʻoponopono) · 5:53</em><small class="tg"></small></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
@@ -216,10 +216,11 @@ function initAudio(){
 }
 function fadeTo(v,t){if(!gain)return;var n=AC.currentTime;gain.gain.cancelScheduledValues(n);gain.gain.setValueAtTime(gain.gain.value,n);gain.gain.linearRampToValueAtTime(v,n+(t||1.5));}
 function muffle(on){if(!lp)return;var n=AC.currentTime;lp.frequency.cancelScheduledValues(n);lp.frequency.setValueAtTime(lp.frequency.value,n);lp.frequency.exponentialRampToValueAtTime(on?420:18000,n+2.2);}
-function play(id){initAudio();var el=document.getElementById(id);if(ct&&ct!==id){var o=document.getElementById(ct);o.pause();}ct=id;if(AC&&AC.state==='suspended')AC.resume();el.play().catch(function(){});soundOn=true;fadeTo(.85,2.5);sync();}
+var moved=false;function play(id){initAudio();if(ct&&ct!==id)moved=true;var el=document.getElementById(id);if(ct&&ct!==id){var o=document.getElementById(ct);o.pause();}ct=id;if(AC&&AC.state==='suspended')AC.resume();el.play().catch(function(){});soundOn=true;fadeTo(.85,2.5);sync();}
 function stop(){if(ct){fadeTo(0,.6);var el=document.getElementById(ct);setTimeout(function(){el.pause();},650);}soundOn=false;sync();}
 var sb=document.getElementById('snd');
-function sync(){sb.textContent=soundOn?'\u275A\u275A Pause':'\u25B6 Play';sb.setAttribute('aria-pressed',soundOn);document.querySelectorAll('.trk').forEach(function(t){var on=soundOn&&t.dataset.track===ct;t.setAttribute('aria-pressed',on);var g=t.querySelector('.tg');if(g)g.textContent=t.dataset.track===ct?(soundOn?'\u25CF Now playing':'Paused \u00B7 tap to play'):'Up next \u00B7 tap to switch';});var np=document.getElementById('np');if(np)np.textContent=soundOn?(ct==='a1'?'Hear that? This is the song that\u2019s been playing since you walked in.':'Now playing: Mahalo Aloha (Hoʻoponopono).'):'Tap a song to keep listening.';}
+['a1','a2'].forEach(function(id){document.getElementById(id).addEventListener('ended',function(){if(ct!==id||!soundOn)return;var nx=id==='a1'?'a2':'a1';var el=document.getElementById(nx);try{el.currentTime=0}catch(e){}play(nx);});});
+function sync(){sb.textContent=soundOn?'\u275A\u275A Pause':'\u25B6 Play';sb.setAttribute('aria-pressed',soundOn);document.querySelectorAll('.trk').forEach(function(t){var on=soundOn&&t.dataset.track===ct;t.setAttribute('aria-pressed',on);var g=t.querySelector('.tg');if(g)g.textContent=t.dataset.track===ct?(soundOn?'\u25CF Now playing':'Paused \u00B7 tap to play'):'Up next \u00B7 tap to switch';});var np=document.getElementById('np');if(np)np.textContent=soundOn?(ct==='a1'&&!moved?'Hear that? This is the song that\u2019s been playing since you entered.':(ct==='a1'?'Now playing: I Choose a New Timeline.':'Now playing: Mahalo Aloha (Hoʻoponopono).')):'Tap a song to keep listening.';}
 sb.addEventListener('click',function(){soundOn?stop():play(ct||'a1');});
 /* tunnel */
 var c=document.getElementById('c'),x=c.getContext('2d'),W,H,D=Math.min(devicePixelRatio||1,2);
