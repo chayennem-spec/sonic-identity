@@ -111,7 +111,7 @@ main{position:relative;z-index:5}
 .tile.on .meter{opacity:1}
 .tile.yours:after{content:"YOUR RESULT";position:absolute;top:0;right:0;background:var(--red);color:#0c0c0d;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.18em;padding:3px 8px}
 .grid .tile{opacity:0;transform:translateZ(-120px) translateY(30px)}
-.grid.in .tile{opacity:1;transform:none}
+.grid.shown .tile{opacity:1;transform:none}
 .nowplaying{margin-top:26px;min-height:56px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
 .nowplaying .np{font-size:clamp(16px,1.7vw,20px);color:var(--bone)}
 .genre{margin-top:40px;border-top:1px solid var(--line);padding-top:26px;display:flex;flex-wrap:wrap;gap:16px 40px;align-items:baseline}
@@ -120,7 +120,8 @@ main{position:relative;z-index:5}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips span{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
 .center{text-align:center}
-#cta{overflow:hidden}#cta .in{position:relative}#cta .in:before{content:"";position:absolute;left:50%;top:50%;width:min(120vw,1200px);height:150%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(12,12,13,.86) 0%,rgba(12,12,13,.6) 45%,rgba(12,12,13,0) 72%);z-index:-1}
+#eight{overflow:hidden}#eight .in{position:relative;isolation:isolate}#eight .sub{color:#c9c2b6}#eight .in:before{content:"";position:absolute;left:-10vw;right:-10vw;top:-80px;bottom:-60px;background:radial-gradient(ellipse 70% 60% at 40% 30%,rgba(12,12,13,.86) 0%,rgba(12,12,13,.6) 55%,rgba(12,12,13,.25) 100%);z-index:-1}
+#cta{overflow:hidden}#cta .in{position:relative;isolation:isolate}#cta .in:before{content:"";position:absolute;left:50%;top:50%;width:min(120vw,1200px);height:150%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(12,12,13,.86) 0%,rgba(12,12,13,.6) 45%,rgba(12,12,13,0) 72%);z-index:-1}
 .panel .h,.panel .sub,.panel .fine{text-shadow:0 0 24px rgba(12,12,13,.9)}
 #cta .sub{color:#c9c2b6}#cta .fine{color:#8a847b}
 .fine{margin:56px auto 0;font-size:12px;line-height:1.6;color:#6f6a63;max-width:520px}
@@ -160,10 +161,9 @@ main{position:relative;z-index:5}
 <main>
 <div id="descent">
 <div class="stage">
-<div class="sc" data-s="0" data-sound="drone" data-log="Listening">
-<div class="breath" aria-hidden="true"></div>
-<p class="line breathword lip" id="bw">Breathe in.</p>
-<p class="sub">Follow the circle. Let everything else go quiet.</p>
+<div class="sc" data-s="0" data-sound="drone" data-log="Tuning in">
+<p class="line breathword lip" id="bw">Take a deep breath.</p>
+<p class="sub">Then listen. Notice what each sound makes you feel.</p>
 </div>
 <div class="sc" data-s="1" data-sound="stock" data-log="Playing exhibit A">
 <p class="k"><span class="exhibit mono"><i></i>Now playing · Exhibit A</span></p>
@@ -357,14 +357,14 @@ function frame(now){
  var dt=Math.min(.05,(now-last)/1000);last=now;time+=dt;
  energy=0;if(analyser){analyser.getByteTimeDomainData(td);analyser.getByteFrequencyData(fd);for(var k=2;k<40;k++)energy+=fd[k];energy/=38*255}
  heat+=(heatT-heat)*Math.min(1,dt*2.5);
- cx+=(.5+(mx-.5)*.08-cx)*dt*1.5;cy+=(.5+(my-.5)*.08-cy)*dt*1.5;
+ cx=.5;cy=.5;
  var bpmSpeed=cur&&cur.cfg?cur.cfg.bpm/600:0;
  var v=(speed+bpmSpeed+boost+energy*.25)*(reduce?.25:1);boost*=Math.pow(.04,dt);
- g.fillStyle="rgba(12,12,13,.38)";g.fillRect(0,0,W,H);
+ g.globalCompositeOperation="source-over";g.clearRect(0,0,W,H);
  var X=cx*W,Y=cy*H,base=Math.min(W,H)*.045;
  // spiral arms (hypnotic)
  g.save();g.translate(X,Y);g.rotate(time*.18+(reduce?0:0));
- for(var arm=0;arm<2;arm++){g.beginPath();for(var th=0;th<26;th+=.08){var r=base*.4*Math.exp(.19*th);var a=th+arm*Math.PI;var px=Math.cos(a)*r,py=Math.sin(a)*r*.94;th===0?g.moveTo(px,py):g.lineTo(px,py);if(r>Math.max(W,H))break}
+ for(var arm=0;arm<2;arm++){g.beginPath();for(var th=0;th<26;th+=.08){var r=base*.4*Math.exp(.19*th);var a=th+arm*Math.PI;var px=Math.cos(a)*r,py=Math.sin(a)*r;th===0?g.moveTo(px,py):g.lineTo(px,py);if(r>Math.max(W,H))break}
   g.strokeStyle="rgba(239,233,220,"+(.035+energy*.06)+")";g.lineWidth=dpr;g.stroke()}
  g.restore();
  // rings
@@ -373,15 +373,15 @@ function frame(now){
   var rr=base/R.z;if(rr>Math.max(W,H)*1.3)continue;
   var fade=Math.pow(1-R.z,1.6)*Math.min(1,(1-R.z)*3);
   var front=R.z<.25?1:0;
-  var col=heat>.01?[239+(255-239)*heat,233+(74-233)*heat,220+(28-220)*heat]:[239,233,220];
-  g.strokeStyle="rgba("+(col[0]|0)+","+(col[1]|0)+","+(col[2]|0)+","+(fade*(.22+energy*.7)).toFixed(3)+")";
+  var hot=heat>.5;g.globalCompositeOperation=hot?"lighter":"source-over";
+  g.strokeStyle=hot?"rgba(255,74,28,"+Math.min(1,fade*(.5+energy*1.2)).toFixed(3)+")":"rgba(239,233,220,"+(fade*(.2+energy*.6)).toFixed(3)+")";
   g.lineWidth=Math.max(.6,dpr*(.6+(1-R.z)*1.6+energy*3*(1-R.z)));
   var rot=R.z*5+time*.22,seg=72;g.beginPath();
   for(var s2=0;s2<=seg;s2++){var a2=s2/seg*Math.PI*2+rot;var wob=1;if(analyser&&front){wob=1+((td[(s2*14)%1024]-128)/128)*.022*(1-R.z)*4}
-   var px2=X+Math.cos(a2)*rr*wob,py2=Y+Math.sin(a2)*rr*.9*wob;s2===0?g.moveTo(px2,py2):g.lineTo(px2,py2)}
+   var px2=X+Math.cos(a2)*rr*wob,py2=Y+Math.sin(a2)*rr*wob;s2===0?g.moveTo(px2,py2):g.lineTo(px2,py2)}
   g.stroke()}
  // core glow
- var gr=g.createRadialGradient(X,Y,0,X,Y,base*(3+energy*10));gr.addColorStop(0,"rgba(255,74,28,"+(.1+energy*.28+heat*.16).toFixed(3)+")");gr.addColorStop(1,"rgba(255,74,28,0)");g.fillStyle=gr;g.beginPath();g.arc(X,Y,base*(3+energy*10),0,7);g.fill();
+ g.globalCompositeOperation="lighter";var gR=base*(1.6+energy*5);var gr=g.createRadialGradient(X,Y,0,X,Y,gR);gr.addColorStop(0,"rgba(255,96,48,"+(.55+energy*.4).toFixed(3)+")");gr.addColorStop(.35,"rgba(255,74,28,"+(.18+heat*.2).toFixed(3)+")");gr.addColorStop(1,"rgba(255,74,28,0)");g.fillStyle=gr;g.beginPath();g.arc(X,Y,gR,0,7);g.fill();g.globalCompositeOperation="source-over";
  requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
@@ -411,7 +411,7 @@ ARCH.forEach(function(a,i){
 });
 function mark(){[].forEach.call(grid.children,function(el){var on=el.dataset.id===active;el.classList.toggle("on",on);el.setAttribute("aria-pressed",on?"true":"false")})}
 setInterval(function(){if(!active||!analyser)return;var el=grid.querySelector(".tile.on .meter");if(!el)return;[].forEach.call(el.children,function(x,k){x.style.height=(3+fd[4+k*9]/255*11)+"px"})},70);
-new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)grid.classList.add("in")})},{threshold:.15}).observe(grid);
+new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)grid.classList.add("shown")})},{threshold:.15}).observe(grid);
 
 /* ---------- descent (scroll-driven) ---------- */
 var descent=document.getElementById("descent"),scs=[].slice.call(document.querySelectorAll(".sc")),NS=scs.length;
@@ -444,7 +444,7 @@ addEventListener("scroll",onScroll,{passive:true});addEventListener("resize",onS
 
 /* breathing word synced to the circle (10s: in 4s, out 6s) */
 var bw=document.getElementById("bw"),t0=performance.now();
-setInterval(function(){var ph=((performance.now()-t0)/1000)%10;bw.textContent=ph<4?"Breathe in.":"And let it go."},250);
+setInterval(function(){var ph=((performance.now()-t0)/1000)%10;bw.textContent=ph<4?"Take a deep breath.":"Now, listen."},250);
 
 /* ---------- gate & mute ---------- */
 var gate=document.getElementById("gate");
