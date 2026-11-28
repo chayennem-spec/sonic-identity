@@ -116,6 +116,47 @@ main{position:relative;z-index:5}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chips span{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
 .center{text-align:center}
+/* picks */
+.tile .pick{position:relative;align-self:flex-start;display:none;margin-top:2px;border:1px solid var(--red);background:transparent;color:var(--bone);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:9px 12px;cursor:pointer;min-height:38px}
+.tile .pick:hover{background:var(--red);color:#0c0c0d}
+.tile.on .pick,.tile.picked .pick{display:inline-flex;align-items:center}
+.tile.picked{border-color:var(--red);box-shadow:0 0 0 1px var(--red)}
+.tile.picked .pick{background:var(--red);color:#0c0c0d}
+.tile .badge{position:absolute;top:0;left:0;background:var(--red);color:#0c0c0d;font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.18em;padding:3px 8px;display:none}
+.tile.picked .badge{display:block}
+.tile.heard .n .mono{color:var(--bone)}
+.heardline{margin-top:18px;display:flex;gap:14px;align-items:center}
+.dots{display:flex;gap:6px}.dots i{width:7px;height:7px;border-radius:50%;border:1px solid #4a4440;transition:all .3s}.dots i.on{background:var(--bone);border-color:var(--bone)}.dots i.pk{background:var(--red);border-color:var(--red);box-shadow:0 0 10px rgba(255,74,28,.6)}
+.dock{position:fixed;z-index:40;left:50%;bottom:max(16px,env(safe-area-inset-bottom));transform:translate(-50%,140%);width:min(680px,calc(100% - 32px));background:rgba(18,17,18,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid #3a3532;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 12px 12px 20px;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.dock.up{transform:translate(-50%,0)}
+.dock .dt{font-size:14px;line-height:1.35;color:var(--dim)}.dock .dt b{color:var(--bone);font-weight:600}
+.dock .cta{min-height:48px;padding:0 22px;flex:none;font-size:12px}
+@media (max-width:520px){.dock{flex-direction:column;align-items:stretch;text-align:center;padding:14px}.dock .cta{width:100%}}
+/* reveal */
+#reveal{display:none;overflow:hidden}#reveal.open{display:flex}
+#eight{padding-bottom:170px}
+.chrome{background:linear-gradient(rgba(12,12,13,.92),rgba(12,12,13,0))}
+#reveal .in{position:relative;isolation:isolate;max-width:880px}
+#reveal .in:before{content:"";position:absolute;left:50%;top:40%;width:min(130vw,1300px);height:130%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(12,12,13,.9) 0%,rgba(12,12,13,.66) 45%,rgba(12,12,13,0) 74%);z-index:-1}
+.you{margin:0;font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-weight:400;font-size:clamp(46px,8vw,120px);line-height:.98;letter-spacing:-.005em;text-shadow:0 0 30px rgba(12,12,13,.9)}
+.you span{color:var(--red)}
+.thread{margin:18px 0 0;font-size:clamp(17px,1.8vw,22px);color:#c9c2b6}.thread b{color:var(--bone);font-weight:600}
+.feel{margin:44px 0 0;font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-size:clamp(26px,3.4vw,44px);line-height:1.15;color:var(--bone)}
+.rv-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:44px;text-align:left}
+@media (max-width:760px){.rv-grid{grid-template-columns:1fr}}
+.rv-card{border:1px solid var(--line);background:rgba(18,17,18,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:24px 22px}
+.rv-card.hot{border-color:var(--red);background:rgba(63,22,20,.55)}
+.rv-card p{margin:10px 0 0;font-size:16px;line-height:1.55;color:#c9c2b6}
+.rv-card p b{color:var(--bone);font-weight:600}
+.lives{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.lives li{border:1px solid #4a4440;border-radius:999px;padding:6px 12px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone)}
+.offer{margin-top:56px;border-top:1px solid var(--line);padding-top:48px}
+.offer h3{margin:0;font-weight:700;text-transform:uppercase;font-size:clamp(28px,4vw,52px);line-height:.96;letter-spacing:-.04em}
+.offer h3 em{letter-spacing:0}
+.proof{margin:30px auto 0;font-size:13px;line-height:1.7;color:#8a847b;max-width:560px}
+.proof b{color:var(--dim);font-weight:600}
+.again{background:none;border:0;cursor:pointer;color:var(--dim);font-size:12px;letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid var(--line);min-height:44px;padding:0}
+.again:hover{color:var(--bone)}
 #eight{overflow:hidden}#eight .in{position:relative;isolation:isolate}#eight .sub{color:#c9c2b6}#eight .in:before{content:"";position:absolute;left:-10vw;right:-10vw;top:-80px;bottom:-60px;background:radial-gradient(ellipse 70% 60% at 40% 30%,rgba(12,12,13,.86) 0%,rgba(12,12,13,.6) 55%,rgba(12,12,13,.25) 100%);z-index:-1}
 #cta{overflow:hidden}#cta .in{position:relative;isolation:isolate}#cta .in:before{content:"";position:absolute;left:50%;top:50%;width:min(120vw,1200px);height:150%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(12,12,13,.86) 0%,rgba(12,12,13,.6) 45%,rgba(12,12,13,0) 72%);z-index:-1}
 .panel .h,.panel .sub,.panel .fine{text-shadow:0 0 24px rgba(12,12,13,.9)}
@@ -123,6 +164,8 @@ main{position:relative;z-index:5}
 .fine{margin:56px auto 0;font-size:12px;line-height:1.6;color:#6f6a63;max-width:520px}
 /* custom cursor */
 .cur{position:fixed;z-index:80;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1px solid rgba(239,233,220,.55);pointer-events:none;transition:width .25s,height .25s,margin .25s,border-color .25s,opacity .3s;opacity:0;mix-blend-mode:difference}
+.reveal-in>*{opacity:0;transform:translateY(24px);transition:opacity 1s ease,transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.reveal-in.go>*{opacity:1;transform:none}
 .cur.hot{width:58px;height:58px;margin:-29px 0 0 -29px;border-color:var(--red)}
 @media (hover:none){.cur{display:none}}
 /* reduced motion: no fixed descent */
@@ -183,8 +226,9 @@ main{position:relative;z-index:5}
 <section class="panel" id="eight">
 <div class="in">
 <p class="mono" style="margin:0 0 22px">The eight Sonic Archetypes</p>
-<h2 class="h">Eight ways <em>a brand can sound.</em></h2>
-<p class="sub" style="margin-left:0">Tap one. Then another. Notice which one feels like home.</p>
+<h2 class="h">Which one <em>gives you chills?</em></h2>
+<p class="sub" style="margin-left:0">Tap each one and listen. When one lands in your body, press <b style="color:var(--bone);font-weight:600">That's me</b>. Two pulling at you? Pick both.</p>
+<div class="heardline"><span class="dots" id="dots" aria-hidden="true"></span><span class="mono" id="heard">Heard 0 of 8</span></div>
 <div class="grid" id="grid" role="list"></div>
 <div class="nowplaying" aria-live="polite"><span class="mono" id="npl"></span><span class="np" id="npt"></span></div>
 <div class="genre">
@@ -194,17 +238,31 @@ main{position:relative;z-index:5}
 </div>
 </section>
 
-<section class="panel center" id="cta">
-<div class="in">
-<p class="mono" style="margin:0 0 22px">Your turn</p>
-<h2 class="h">Which one is <em>yours?</em></h2>
-<p class="sub">Nine questions, about two minutes. You'll meet your Sonic Archetype, and find out whether the sound you're using right now is building your brand or borrowing someone else's.</p>
-<div style="margin-top:40px;display:flex;flex-wrap:wrap;gap:18px 32px;justify-content:center;align-items:center">
-<a class="cta" href="https://chayennemallari.eden.so/form/sonic-audit">Find my sound <span aria-hidden="true">→</span></a>
-<a class="ghost" href="https://www.sonicidentityarchitect.com">Explore the studio</a>
+<div class="dock" id="dock" aria-live="polite"><span class="dt" id="dockt"></span><button class="cta" id="revealBtn" type="button">Reveal my sound</button></div>
+
+<section class="panel center" id="reveal" aria-live="polite">
+<div class="in reveal-in" id="rvin">
+<p class="mono" style="margin:0 0 22px">Your Sonic Archetype</p>
+<h2 class="you" id="you"></h2>
+<p class="thread" id="thread"></p>
+<p class="feel" id="feel"></p>
+<div class="rv-grid">
+<div class="rv-card"><p class="mono" style="margin:0">Right now</p><p id="now"></p></div>
+<div class="rv-card hot"><p class="mono" style="margin:0;color:var(--bone)">With your own sound</p><p id="with"></p><ul class="lives" aria-label="Where your sound would live"><li>Reel intros</li><li>Podcast open</li><li>Launch videos</li><li>Stage walk&#8209;on</li><li>Every ad</li></ul></div>
+</div>
+<div class="offer">
+<p class="mono" style="margin:0 0 18px">Imagine this was made for you</p>
+<h3>Not a sketch. <em>Your song.</em></h3>
+<p class="sub">The Instant Recognition Anthem is one signature song built around your archetype, your words and your brand, with brand&#8209;use rights in writing, licensed to your brand alone.</p>
+<div style="margin-top:36px;display:flex;flex-wrap:wrap;gap:18px 32px;justify-content:center;align-items:center">
+<a class="cta" id="anthemBtn" href="https://chayennemallari.eden.so/signature-anthem">I want my Anthem <span aria-hidden="true">→</span></a>
+<a class="ghost" id="readBtn" href="https://chayennemallari.eden.so/form/sonic-audit">Get my full breakdown · 2 min</a>
+</div>
+<p class="proof">Signature songs made for <b>Leanne Lopez&#8209;Mosley</b> (Soft Girl Millions) and <b>Lou Clarke</b> (The Money Medium).</p>
 </div>
 <p class="lip" style="margin:48px 0 0;font-size:clamp(30px,3vw,40px);color:var(--red)">xo, Chayenne</p>
 <p class="fine" style="margin-top:28px">The sounds on this page are sketches of each archetype. Yours would be made for your brand alone.</p>
+<p style="margin-top:22px"><button class="again" id="again" type="button">Listen again</button></p>
 </div>
 </section>
 </main>
@@ -213,14 +271,14 @@ main{position:relative;z-index:5}
 (function(){
 "use strict";
 var ARCH=[
- {id:"power-authority",name:"Power Authority",line:"The room goes quiet.",desc:"Commanding and low. A slow, heavy beat you feel in your chest."},
- {id:"boss-energy",name:"Boss Energy",line:"The room starts leaning in.",desc:"Swagger. Heavy low end, crisp claps, a head-nod bounce."},
- {id:"luxury-icon",name:"Luxury Icon",line:"Everyone straightens up a little.",desc:"Polished and spacious. A rolling bassline, soft keys, a lot of space."},
- {id:"feminine-sovereignty",name:"Feminine Sovereignty",line:"The room falls into your rhythm.",desc:"Slow, sure, impossible to rush. Hand drums and a velvet bass."},
- {id:"magnetic-healer",name:"Magnetic Healer",line:"The whole room exhales.",desc:"Warm and intimate. A pulse like a heartbeat, soft close harmonies."},
- {id:"playful-charisma",name:"Playful Charisma",line:"The room gets up.",desc:"Bouncy and bright. Claps, a bouncing bass, sparkly synths."},
- {id:"rebel-energy",name:"Rebel Energy",line:"The right people grin.",desc:"Raw and high contrast. Grit, a heavy kick, silence where nobody expects it."},
- {id:"visionary-future",name:"Visionary Future",line:"“Wait, what is that?”",desc:"Expansive and rising. Pulsing patterns and a build that keeps climbing."}
+ {id:"power-authority",name:"Power Authority",line:"The room goes quiet.",desc:"Commanding and low. A slow, heavy beat you feel in your chest.",who:"the leader people already defer to",with:"A sound that holds the room before you say a word. People sit up, stop scrolling and take you seriously."},
+ {id:"boss-energy",name:"Boss Energy",line:"The room starts leaning in.",desc:"Swagger. Heavy low end, crisp claps, a head-nod bounce.",who:"the founder who closes",with:"A sound that walks in a step ahead of you. Confident, a little cocky, impossible to ignore. People hear it and want in."},
+ {id:"luxury-icon",name:"Luxury Icon",line:"Everyone straightens up a little.",desc:"Polished and spacious. A rolling bassline, soft keys, a lot of space.",who:"the brand that never discounts",with:"A sound that feels like the door being held open for you. Unhurried, expensive, a lot of space. It reads as expensive before anyone sees a price."},
+ {id:"feminine-sovereignty",name:"Feminine Sovereignty",line:"The room falls into your rhythm.",desc:"Slow, sure, impossible to rush. Hand drums and a velvet bass.",who:"the woman who stopped rushing",with:"A sound that moves at your pace and makes everyone else slow down to match it. Sure of itself. Zero chasing."},
+ {id:"magnetic-healer",name:"Magnetic Healer",line:"The whole room exhales.",desc:"Warm and intimate. A pulse like a heartbeat, soft close harmonies.",who:"the one people tell everything to",with:"A sound that feels safe before they know why. Warm, close, like a hand on the shoulder. They trust you before you speak."},
+ {id:"playful-charisma",name:"Playful Charisma",line:"The room gets up.",desc:"Bouncy and bright. Claps, a bouncing bass, sparkly synths.",who:"the brand people quote back to you",with:"A sound that feels like the best part of their day. Bright, bouncy, a little cheeky. They hum it after the video ends."},
+ {id:"rebel-energy",name:"Rebel Energy",line:"The right people grin.",desc:"Raw and high contrast. Grit, a heavy kick, silence where nobody expects it.",who:"the founder who broke the rules on purpose",with:"A sound with grit and silence where nobody expects it. The wrong people scroll past. The right people stay and grin."},
+ {id:"visionary-future",name:"Visionary Future",line:"“Wait, what is that?”",desc:"Expansive and rising. Pulsing patterns and a build that keeps climbing.",who:"the one building what doesn't exist yet",with:"A sound that keeps climbing. Expansive, pulsing, a little ahead of its time. People hear it and ask, \u201cwait, what is that?\u201d"}
 ];
 /* ---------- audio engine ---------- */
 var AC=window.AudioContext||window.webkitAudioContext, ctx=null, master, comp, analyser, verb, noiseBuf, muted=false;
@@ -390,23 +448,68 @@ if(fine&&!reduce){addEventListener("pointermove",function(e){curEl.style.opacity
 var logEl=document.getElementById("log"),lines=[];
 function log(t){if(!t||lines[lines.length-1]==="› "+t)return;lines.push("› "+t);if(lines.length>4)lines.shift();logEl.innerHTML=lines.map(function(l){return"<span>"+l+"</span>"}).join("")}
 
-/* ---------- grid ---------- */
+/* ---------- grid + picks ---------- */
 var grid=document.getElementById("grid"),npl=document.getElementById("npl"),npt=document.getElementById("npt"),active=null,yours=(location.hash||"").slice(1);
+var heardSet={},picks=[],dots=document.getElementById("dots"),heardEl=document.getElementById("heard"),dock=document.getElementById("dock"),dockt=document.getElementById("dockt");
+function byId(id){for(var i=0;i<ARCH.length;i++)if(ARCH[i].id===id)return ARCH[i]}
+try{var sv=JSON.parse(localStorage.getItem("sia-picks")||"[]");if(Array.isArray(sv))picks=sv.filter(byId).slice(0,2)}catch(e){}
 ARCH.forEach(function(a,i){
- var b=document.createElement("button");b.type="button";b.className="tile";b.setAttribute("role","listitem");b.dataset.id=a.id;b.setAttribute("aria-pressed","false");b.setAttribute("aria-label","Play "+a.name+": "+a.desc);
+ var b=document.createElement("div");b.className="tile";b.setAttribute("role","listitem");b.dataset.id=a.id;
  b.style.transitionDelay=(i*70)+"ms";
- b.innerHTML='<span class="n"><span class="mono">0'+(i+1)+'</span><span class="ico" aria-hidden="true"><svg class="p1" viewBox="0 0 10 10"><path d="M2 1v8l7-4z" fill="currentColor"/></svg><svg class="p2" viewBox="0 0 10 10"><rect x="1.5" y="1" width="2.5" height="8" fill="currentColor"/><rect x="6" y="1" width="2.5" height="8" fill="currentColor"/></svg></span></span><span><h3>'+a.name+'</h3><p>'+a.line+'</p></span><span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>';
+ b.innerHTML='<span class="badge"></span><span class="n"><span class="mono">0'+(i+1)+'</span><span class="ico" aria-hidden="true"><svg class="p1" viewBox="0 0 10 10"><path d="M2 1v8l7-4z" fill="currentColor"/></svg><svg class="p2" viewBox="0 0 10 10"><rect x="1.5" y="1" width="2.5" height="8" fill="currentColor"/><rect x="6" y="1" width="2.5" height="8" fill="currentColor"/></svg></span></span><span><h3>'+a.name+'</h3><p>'+a.line+'</p></span><span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><button type="button" class="pick" aria-pressed="false">That’s me</button>';
+ b.tabIndex=0;b.setAttribute("aria-label","Play "+a.name+": "+a.desc);
  if(a.id===yours)b.classList.add("yours");
  b.addEventListener("pointermove",function(e){var r=b.getBoundingClientRect();b.style.setProperty("--mx",(e.clientX-r.left)+"px");b.style.setProperty("--my",(e.clientY-r.top)+"px")});
- b.addEventListener("click",function(){init();if(ctx.state==="suspended")ctx.resume();started=true;b.style.transitionDelay="0ms";
+ function toggle(){init();if(ctx.state==="suspended")ctx.resume();started=true;b.style.transitionDelay="0ms";
   if(navigator.vibrate)try{navigator.vibrate(12)}catch(e){}
   if(active===a.id){active=null;mark();play(null);heatT=0;npl.textContent="";npt.textContent="";return}
-  active=a.id;mark();play(a.id);heatT=1;boost=.5;npl.textContent="Now playing · "+a.name;npt.textContent=a.desc;log("Playing "+a.name)});
+  active=a.id;heardSet[a.id]=1;mark();play(a.id);heatT=1;boost=.5;npl.textContent="Now playing · "+a.name;npt.textContent=a.desc;log("Playing "+a.name)}
+ b.addEventListener("click",function(e){if(e.target.closest(".pick"))return;toggle()});
+ b.addEventListener("keydown",function(e){if(e.target!==b)return;if(e.key==="Enter"||e.key===" "){e.preventDefault();toggle()}});
+ b.querySelector(".pick").addEventListener("click",function(e){e.stopPropagation();heardSet[a.id]=1;
+  var k=picks.indexOf(a.id);if(k>-1)picks.splice(k,1);else{if(picks.length>=2)picks.shift();picks.push(a.id)}
+  if(navigator.vibrate)try{navigator.vibrate([10,40,18])}catch(e){}
+  if(picks.indexOf(a.id)>-1){boost=1;log("Saved "+a.name)}
+  savePicks();mark()});
  grid.appendChild(b);
 });
-function mark(){[].forEach.call(grid.children,function(el){var on=el.dataset.id===active;el.classList.toggle("on",on);el.setAttribute("aria-pressed",on?"true":"false")})}
+for(var di=0;di<8;di++)dots.appendChild(document.createElement("i"));
+function savePicks(){try{localStorage.setItem("sia-picks",JSON.stringify(picks))}catch(e){}}
+function mark(){[].forEach.call(grid.children,function(el,i){var id=el.dataset.id,on=id===active,pk=picks.indexOf(id);
+  el.classList.toggle("on",on);el.classList.toggle("heard",!!heardSet[id]);el.classList.toggle("picked",pk>-1);
+  el.setAttribute("aria-label",(on?"Pause ":"Play ")+byId(id).name);
+  var pb=el.querySelector(".pick");pb.setAttribute("aria-pressed",pk>-1?"true":"false");pb.textContent=pk>-1?"✓ That’s me":"That’s me";
+  el.querySelector(".badge").textContent=pk===0?"YOURS":(pk===1?"YOUR THREAD":"");
+  dots.children[i].className=pk>-1?"pk":(heardSet[id]?"on":"")});
+ var n=Object.keys(heardSet).length;heardEl.textContent="Heard "+n+" of 8";
+ if(picks.length){var A=byId(picks[0]),B=picks[1]&&byId(picks[1]);dockt.innerHTML=B?"<b>"+A.name+"</b> with a thread of <b>"+B.name+"</b>":"<b>"+A.name+"</b> · pick a second if one more pulls at you";dock.classList.add("up")}else dock.classList.remove("up");
+}
 setInterval(function(){if(!active||!analyser)return;var el=grid.querySelector(".tile.on .meter");if(!el)return;[].forEach.call(el.children,function(x,k){x.style.height=(3+fd[4+k*9]/255*11)+"px"})},70);
 new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)grid.classList.add("shown")})},{threshold:.15}).observe(grid);
+mark();
+
+/* ---------- reveal ---------- */
+var rv=document.getElementById("reveal"),rvin=document.getElementById("rvin"),revealed=false;
+var AUDIT="https://chayennemallari.eden.so/form/sonic-audit";
+function reveal(){if(!picks.length)return;var A=byId(picks[0]),B=picks[1]&&byId(picks[1]);
+ var an=/^[AEIOU]/.test(A.name)?"an":"a";
+ document.getElementById("you").innerHTML="You’re "+an+" <span>"+A.name+".</span>";
+ document.getElementById("thread").innerHTML="Built for "+A.who+(B?", with a thread of <b>"+B.name+"</b> running underneath.":".");
+ document.getElementById("feel").textContent=A.line;
+ document.getElementById("now").innerHTML="Your photos say <b>"+A.name+"</b>. Your sound says whatever was trending the day you posted. Same audio as a hundred other accounts, so people feel the post and forget the person.";
+ document.getElementById("with").textContent=A.with;
+ var q="?archetype="+encodeURIComponent(A.id)+(B?"&thread="+encodeURIComponent(B.id):"");
+ document.getElementById("readBtn").href=AUDIT+q;
+ rv.classList.add("open");revealed=true;dock.classList.remove("up");
+ if(active!==A.id){var t=grid.querySelector('[data-id="'+A.id+'"]');active=A.id;mark();play(A.id);npl.textContent="Now playing · "+A.name;npt.textContent=A.desc}
+ heatT=1;boost=1.8;log("Revealing "+A.name);
+ rvin.classList.remove("go");void rvin.offsetWidth;
+ rv.scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"});
+ setTimeout(function(){rvin.classList.add("go")},reduce?0:350);
+ [].forEach.call(rvin.children,function(c,i){c.style.transitionDelay=(i*140)+"ms"});
+}
+document.getElementById("revealBtn").addEventListener("click",function(){init();if(ctx.state==="suspended")ctx.resume();started=true;reveal()});
+document.getElementById("again").addEventListener("click",function(){document.getElementById("eight").scrollIntoView({behavior:reduce?"auto":"smooth"})});
 
 /* ---------- descent (scroll-driven) ---------- */
 var descent=document.getElementById("descent"),scs=[].slice.call(document.querySelectorAll(".sc")),NS=scs.length;
@@ -425,13 +528,14 @@ function onScroll(){
   if(i===2&&strike)strike.style.setProperty("--s",clamp((l-.2)/.25,0,1).toFixed(3))});
  // which scene "owns" the sound
  var owner=inHole?idx:-1;
- if(y>top+len+innerHeight*.4){var e8=document.getElementById("eight").getBoundingClientRect();owner=e8.top<innerHeight*.5&&e8.bottom>innerHeight*.5?"grid":"cta"}
+ if(y>top+len+innerHeight*.4){owner="grid";if(revealed){var r8=rv.getBoundingClientRect();if(r8.top<innerHeight*.5)owner="reveal"}}
+ if(revealed||!inHole){var r9=rv.getBoundingClientRect();var showDock=picks.length&&!(revealed&&r9.top<innerHeight*.8);dock.classList.toggle("up",!!showDock&&!inHole)}else dock.classList.remove("up");
  if(owner!==curScene){curScene=owner;sceneSound(owner)}
 }
 function sceneSound(o){
  if(!started)return;
  if(o==="grid"){log("Choosing a sound");if(!active){var y2=yours&&grid.querySelector('[data-id="'+yours+'"]');if(y2){y2.click();return}play(null)}return}
- if(o==="cta"){log("Finding yours");heatT=active?.35:0;return}
+ if(o==="reveal"){log("Your sound");heatT=1;if(picks[0]&&active!==picks[0]){active=picks[0];mark();play(picks[0])}return}
  if(active){active=null;mark();npl.textContent="";npt.textContent=""}
  heatT=0;var el=scs[o];if(!el)return;var snd=el.dataset.sound;play(snd||null);log(el.dataset.log);if(snd==="")boost=0;
 }
