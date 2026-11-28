@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Find Your Sound · Sonic Identity Architect</title>
-<meta name="description" content="A 60-second listening experience. Go down the rabbit hole, hear the eight ways a brand can sound, then find yours.">
+<meta name="description" content="A 60-second listening experience. Hear the eight ways a brand can sound, then find yours.">
 <meta name="theme-color" content="#0c0c0d">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Put your headphones in.">
@@ -154,7 +154,7 @@ main{position:relative;z-index:5}
 <a class="brand" href="https://www.sonicidentityarchitect.com"><b>CHAYENNE MALLARI</b><span class="mono" style="font-size:9px">Sonic Identity Architect™</span></a>
 <button id="mute" class="mute" type="button" aria-pressed="false" aria-label="Mute sound"><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span><span class="mono" id="mutelabel" style="color:var(--bone)">Sound on</span></button>
 </div>
-<div class="depth" aria-hidden="true"><span class="mono" id="dlabel">Depth 00</span><span class="rail"><i id="dot"></i></span></div>
+<div class="depth" aria-hidden="true"><span class="mono" id="dlabel">Track 01</span><span class="rail"><i id="dot"></i></span></div>
 <div class="log mono" id="log" aria-hidden="true"></div>
 <div class="scrollcue" aria-hidden="true"><span class="mono">Scroll to keep listening</span><i></i></div>
 
@@ -178,7 +178,7 @@ main{position:relative;z-index:5}
 <h2 class="line"><span class="serif">The biggest brands are known before the logo ever shows up.</span></h2>
 <p class="sub">You know a sound in a second. The right one tells people who walked in before you say a word.</p>
 </div>
-<div class="sc" data-s="4" data-sound="riser" data-log="Going deeper">
+<div class="sc" data-s="4" data-sound="riser" data-log="Turning it up">
 <p class="mono k">Almost there</p>
 <h2 class="line caps">Now let's find <em>yours.</em></h2>
 </div>
@@ -421,7 +421,7 @@ function onScroll(){
  var y=scrollY,dy=y-lastY;lastY=y;if(started&&!reduce)boost=clamp(boost+Math.abs(dy)*.0009,0,1.4);
  var top=descent.offsetTop,len=descent.offsetHeight-innerHeight,p=clamp((y-top)/len,0,1);
  var inHole=y<top+len+innerHeight*.4;document.body.classList.toggle("out-hole",!inHole);
- dot.style.top=(p*100)+"%";dlabel.textContent="Depth "+("0"+Math.min(NS,Math.floor(p*NS)+1)).slice(-2);
+ dot.style.top=(p*100)+"%";dlabel.textContent="Track "+("0"+Math.min(NS,Math.floor(p*NS)+1)).slice(-2);
  var f=p*NS,idx=clamp(Math.floor(f),0,NS-1);
  if(!reduce)scs.forEach(function(el,i){var l=f-i;var o,sc,bl;
   if(i===0&&l<0)l=0;if(l<0||l>1){o=0;sc=l<0?.6:1.8;bl=10}else{var inP=i===0?1:clamp(l/.22,0,1),outP=clamp((l-.72)/.28,0,1);o=inP*(1-outP);sc=.7+inP*.3+outP*.9;bl=(1-inP)*10+outP*14}
