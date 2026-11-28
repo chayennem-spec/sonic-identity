@@ -26,7 +26,7 @@ body.drain canvas#c{filter:saturate(.15) brightness(.7)}
 .week span{color:rgba(138,127,152,.45);transition:color .8s,text-shadow .8s}
 .week span.lit{color:var(--ink);text-shadow:0 0 10px rgba(139,156,245,.8)}
 .week span.now{color:var(--peri);text-shadow:0 0 14px rgba(139,156,245,1)}
-.week span.slip{color:#9A8FA8;text-shadow:none;animation:jit 2.6s infinite steps(1)}
+.week span.slip{color:#9A8FA8;text-shadow:none;opacity:.6}
 .week .s{display:none}
 @media (max-width:560px){.week{gap:7px}.week .l{display:none}.week .s{display:inline}}
 #back,#snd{visibility:hidden}body.deep #back,body.deep #snd{visibility:visible}
@@ -125,7 +125,7 @@ p{text-shadow:0 1px 14px rgba(6,3,10,.9);margin:0;font-size:clamp(15px,1.6vw,18p
 
 <section class="step" data-addr="aw://wednesday" data-label="Wednesday" data-hue="2" data-drain>
 <span class="kicker">Wednesday · 2:04 pm</span>
-<h2 class="glitch">Then the old self clocks back in.</h2>
+<h2>Then the old self clocks back in.</h2>
 <p>Hear that? Everything goes a little far away. When do your clients usually start slipping?</p>
 <div class="chips" data-single data-reply="r1" data-key="slip">
 <button class="chip" type="button" data-say="That's the gap this music is made for." data-echo="a day or two after your sessions">A day or two after</button>
