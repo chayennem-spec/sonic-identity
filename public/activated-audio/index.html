@@ -1,11 +1,17 @@
 <!doctype html>
 <html lang="en">
-<head><meta name="robots" content="noindex">
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Activated Audio · Follow the sound</title>
+<meta name="description" content="Activated Audio: hypnotic identity-shift songs for NLP practitioners, hypnotists, healers and coaches. Music for after Wednesday. Join the waitlist.">
+<meta property="og:title" content="Activated Audio · Music for after Wednesday">
+<meta property="og:description" content="Hypnosis opens the door. The music keeps them walking through it. Join the waitlist.">
+<meta property="og:image" content="https://www.sonicidentityarchitect.com/after-wednesday/after-wednesday-app-preview.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.sonicidentityarchitect.com/activated-audio/">
+<link rel="canonical" href="https://www.sonicidentityarchitect.com/activated-audio/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2214%22 fill=%22none%22 stroke=%22%238B9CF5%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%225%22 fill=%22%238B55DA%22/%3E%3C/svg%3E">
-<meta name="description" content="Identity-shift music for NLP practitioners, hypnotists and healers. Put your headphones in and follow the sound.">
 <style>
 :root{--bg:#06030A;--ink:#EDE3EE;--soft:#BDB2C9;--mute:#8A7F98;--line:rgba(139,85,218,.3);--blue:#4A73E8;--violet:#8B55DA;--peri:#8B9CF5;--mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;--sans:"Helvetica Neue",Helvetica,Arial,sans-serif}
 *{box-sizing:border-box}
@@ -219,7 +225,7 @@ var mx=0,my=0,tmx=0,tmy=0;addEventListener('pointermove',function(e){tmx=(e.clie
 var rings=[],parts=[],speed=1,tSpeed=1,lvl=0,hue=0,tHue=0,t0=0;
 var pal=[[[74,115,232],[139,85,218]],[[96,150,255],[139,156,245]],[[90,80,120],[70,60,90]],[[74,115,232],[168,107,242]],[[110,90,240],[180,110,250]]];
 for(var i=0;i<26;i++)rings.push({z:i/26});
-var dust=[];for(var q=0;q<1600;q++)dust.push({z:Math.random(),a:Math.random()*6.283,j:(Math.random()-.5)*.35,b:Math.random(),w:Math.random()<.35});
+var dust=[];var LN=9;for(var q=0;q<1500;q++){var ln=q%LN;dust.push({z:Math.random(),a:ln*6.283/LN+(Math.random()-.5)*.38,ln:ln,j:(Math.random()-.5)*.12,b:Math.random(),w:Math.random()<.12});}
 var stars=[],rot=0,calm=0,tCalm=0,pull=1,tPull=1;for(var q=0;q<1500;q++){var core=Math.random()<.22,t=core?Math.pow(Math.random(),2)*.18:Math.pow(Math.random(),.75);stars.push({arm:q%3,t:t,j:(Math.random()-.5)*(core?1.2:.55*(.3+t)),s:Math.random()<.06?2.2:(Math.random()<.3?1.4:.9),tw:Math.random()*6.283,w:Math.random()});}
 var gl=['♪','♫','♩','·','·','·','○'];
 for(var j=0;j<180;j++)parts.push(np(true));
@@ -236,14 +242,14 @@ function draw(ts){
   var sx=cx+Math.cos(ang)*rr,sy=cy+Math.sin(ang)*rr*.58;
   var tw=.55+.45*Math.sin(ts/700+st.tw),sc=st.w<.5?[230,232,255]:col(st.t);
   var a=(.35+.65*tw)*(1-st.t*.45)*(1-calm*.8)*.4;x.fillStyle='rgba('+sc+','+a+')';var z=st.s*1.1*D;x.fillRect(sx-z/2,sy-z/2,z,z);}
- var tw2=6.5,vz=.0011*speed*dt/16;
- for(var q=0;q<dust.length;q++){var u=dust[q];var oz=u.z;u.z-=vz;if(u.z<=.012){u.z+=1;oz=u.z;u.a=Math.random()*6.283;}
-  var k1=1/(u.z*4+.15),k0=1/(Math.min(1,oz+vz*2.5)*4+.15),R1=m*.05*k1*(1+u.j)*pull*(1+lvl*.3),R0=m*.05*k0*(1+u.j)*pull*(1+lvl*.3);
-  var a1=u.a+u.z*tw2+rot*3,a0=u.a+Math.min(1,oz+vz*2.5)*tw2+rot*3;
+ var tw2=5.2,vz=.0006*speed*dt/16;
+ for(var q=0;q<dust.length;q++){var u=dust[q];var oz=u.z;u.z-=vz;if(u.z<=.012){u.z+=1;oz=u.z;u.a=u.ln*6.283/LN+(Math.random()-.5)*.38;}
+  var k1=1/(u.z*4+.15),k0=1/(Math.min(1,oz+vz*9)*4+.15),R1=m*.05*k1*(1+u.j)*pull*(1+lvl*.3),R0=m*.05*k0*(1+u.j)*pull*(1+lvl*.3);
+  var a1=u.a+u.z*tw2+rot*1.6,a0=u.a+Math.min(1,oz+vz*9)*tw2+rot*1.6;
   var x1=cx+Math.cos(a1)*R1,y1=cy+Math.sin(a1)*R1*.92,x0=cx+Math.cos(a0)*R0,y0=cy+Math.sin(a0)*R0*.92;
   if(x1<-20||x1>W+20||y1<-20||y1>H+20)continue;
-  var fade=Math.min(1,(1-u.z)*1.6)*Math.min(1,u.z*8),al2=(.25+.75*u.b)*fade*(1-calm*.85),dc=u.w?[225,230,255]:col(u.z);
-  x.strokeStyle='rgba('+dc+','+al2+')';x.lineWidth=Math.min(3.2,.5+k1*.35)*D;x.beginPath();x.moveTo(x0,y0);x.lineTo(x1,y1);x.stroke();}
+  var fade=Math.min(1,(1-u.z)*1.6)*Math.min(1,u.z*8),al2=(.2+.55*u.b)*fade*(1-calm*.85),dc=u.w?[225,230,255]:col(u.z);
+  x.strokeStyle='rgba('+dc+','+al2+')';x.lineWidth=Math.min(2.2,.4+k1*.22)*D;x.lineCap='round';x.beginPath();x.moveTo(x0,y0);x.lineTo(x1,y1);x.stroke();}
  for(var i=0;i<rings.length;i++){var r=rings[i];r.z-=.0009*speed*dt/16;if(r.z<=.01)r.z+=1;
   var k=1/(r.z*4+.15),rad=m*.05*k*(1+lvl*.35),al=Math.min(1,(1-r.z))*.22*(1-calm*.75);var cc=col(r.z);
   x.beginPath();x.ellipse(cx,cy,rad,rad*.92,0,0,6.283);x.strokeStyle='rgba('+cc+','+al+')';x.lineWidth=(1+k*.25)*D;x.stroke();}
@@ -267,7 +273,7 @@ function go(i){if(i<0||i>=S.length||i===cur||lock)return;lock=true;tSpeed=i>cur?
  cur=i;var s=S[cur];setTimeout(function(){s.classList.add('on');},280);
  addr.textContent=s.dataset.label;week(s.dataset.addr);bar.style.width=(cur/(S.length-1)*100)+'%';tHue=+s.dataset.hue;
  document.body.classList.toggle('deep',cur>0);
- var drain=s.hasAttribute('data-drain');document.body.classList.toggle('drain',drain);muffle(drain);
+ var drain=s.hasAttribute('data-drain');document.body.classList.toggle('drain',drain);
  tCalm=s.dataset.addr==='aw://breathe'?1:0;tPull=1;if(s.dataset.addr==='aw://breathe')breathe();
  if(s.dataset.addr==='aw://deeper')countdown();
  if(s.dataset.addr==='aw://offer'&&answers.slip){document.getElementById('echo').textContent='You said your clients start slipping '+answers.slip+'. Activated Audio will be a paid membership for practitioners, made for exactly that stretch. Add it to your packages, offer it as an upsell or make it part of your coaching, with practitioner rights in writing. Final terms are in progress, and the waitlist sees them first.';}
