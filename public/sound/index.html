@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Find Your Sound · Sonic Identity Architect</title>
-<meta name="description" content="A 60-second listening experience. Hear the eight ways a brand can sound, then find yours.">
+<meta name="description" content="A two-minute listening experience. Hear the eight ways a brand can sound, pick the one that gives you chills and meet your Sonic Archetype.">
 <meta name="theme-color" content="#0c0c0d">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Put your headphones in.">
-<meta property="og:description" content="A 60-second listening experience. Hear the eight ways a brand can sound, then find yours.">
+<meta property="og:description" content="A two-minute listening experience. Hear the eight ways a brand can sound, pick the one that gives you chills and meet your Sonic Archetype.">
 <meta property="og:image" content="https://www.sonicidentityarchitect.com/og-image.jpg">
 <link rel="preload" href="/sound/fonts/vogue.otf" as="font" type="font/otf" crossorigin>
 <style>
@@ -25,9 +25,10 @@ a{color:inherit}button{font:inherit;color:inherit}
 .mono{font-family:'Space Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
 @font-face{font-family:'Vogue';font-style:normal;font-weight:400;font-display:swap;src:url('/sound/fonts/vogue.otf') format('opentype')}
 @font-face{font-family:'Style your Lipstick';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/style-your-lipstick.woff2') format('woff2')}
-.serif{font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-style:normal;font-weight:400}
+.serif{font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-style:normal;font-weight:400;word-spacing:-.1em}
 .lip{font-family:'Style your Lipstick','Brush Script MT',cursive!important;font-style:normal!important;font-weight:400;text-transform:none!important;letter-spacing:0!important}
-em{font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-style:normal;font-weight:400;color:var(--red);font-size:1.06em}
+em{font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-style:normal;font-weight:400;color:var(--red);font-size:1.06em;word-spacing:-.12em}
+h1,h2,h3,.line,.you,.feel{text-wrap:balance}.sub,.thread,.rv-card p,.genre p,.proof,.fine{text-wrap:pretty}
 #tunnel{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 75% 70% at 50% 50%,rgba(12,12,13,0) 40%,rgba(12,12,13,.85) 100%)}
 .grain{position:fixed;inset:-50%;z-index:1;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1.2s steps(6) infinite}
@@ -44,10 +45,10 @@ body.playing .mute .bars i{animation:eq .9s ease-in-out infinite}body.playing .m
 .log span{display:block;color:var(--dim)}.log span:last-child{color:var(--bone)}
 .log span:last-child:after{content:"▍";color:var(--red);margin-left:4px;animation:blink 1s steps(2) infinite}
 @keyframes blink{50%{opacity:0}}
-.scrollcue{position:fixed;z-index:30;left:50%;bottom:max(24px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;transition:opacity .5s}
-.scrollcue i{width:1px;height:42px;background:linear-gradient(var(--red),transparent);animation:drip 2s ease-in-out infinite;transform-origin:top}
+.scrollcue{position:fixed;z-index:30;left:50%;bottom:max(14px,env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:10px;transition:opacity .5s}
+.scrollcue i{width:1px;height:30px;background:linear-gradient(var(--red),transparent);animation:drip 2s ease-in-out infinite;transform-origin:top}
 @keyframes drip{0%{transform:scaleY(0);opacity:1}70%{transform:scaleY(1);opacity:1}100%{transform:scaleY(1);opacity:0}}
-body.out-hole .scrollcue{opacity:0;pointer-events:none}
+body.out-hole .scrollcue,body.out-hole .log{opacity:0;pointer-events:none}
 @media (max-width:700px){.log{display:none}}
 /* gate */
 #gate{position:fixed;inset:0;z-index:60;background:radial-gradient(ellipse at center,#141213 0%,var(--ink) 70%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 7vw;transition:opacity 1.4s ease,visibility 1.4s,transform 1.6s cubic-bezier(.7,0,.2,1)}
@@ -57,7 +58,8 @@ body.out-hole .scrollcue{opacity:0;pointer-events:none}
 .portal i:nth-child(2){animation-delay:-1s}.portal i:nth-child(3){animation-delay:-2s}.portal i:nth-child(4){animation-delay:-3s}
 .portal b{position:absolute;left:50%;top:50%;width:8px;height:8px;margin:-4px;border-radius:50%;background:var(--red);box-shadow:0 0 18px 4px rgba(255,74,28,.6)}
 @keyframes sink{0%{transform:scale(1);opacity:0}15%{opacity:.8}100%{transform:scale(.04);opacity:0}}
-#gate h1{margin:0 0 16px;font-size:clamp(42px,6.6vw,88px);line-height:1}
+#gate h1{margin:0 0 18px;font-size:clamp(40px,6.2vw,84px);line-height:1.05;max-width:12ch}
+#gate .sub{color:#c9c2b6}
 .cta{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:56px;padding:0 32px;background:var(--red);color:#0c0c0d;border:0;font-weight:600;font-size:13px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:transform .25s,background .25s,box-shadow .25s}
 .cta:hover{background:var(--bone);transform:translateY(-1px);box-shadow:0 0 40px rgba(255,74,28,.35)}
 #gate .cta{margin-top:38px;min-width:240px}
@@ -72,9 +74,9 @@ main{position:relative;z-index:5}
 .sc .k{margin:0 0 26px}
 .sc:before{content:"";position:absolute;left:50%;top:50%;width:min(110vw,1100px);height:min(80vh,620px);transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(12,12,13,.78) 0%,rgba(12,12,13,.55) 40%,rgba(12,12,13,0) 72%);z-index:-1}
 .sc .line,.sc .sub{text-shadow:0 0 24px rgba(12,12,13,.9),0 0 2px rgba(12,12,13,.8)}
-.sc .sub{color:#c9c2b6}
-.line{margin:0;font-family:'Bodoni Moda',Didot,Georgia,serif;font-weight:400;font-size:clamp(40px,7.6vw,118px);line-height:1.02;letter-spacing:-.01em;max-width:14ch}
-.line.caps{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-.04em;font-size:clamp(42px,8.4vw,132px);line-height:.92;max-width:12ch}
+.sc .sub{color:#d4cdc1;margin-top:28px;max-width:500px}
+.line{margin:0;font-family:'Bodoni Moda',Didot,Georgia,serif;font-weight:400;font-size:clamp(40px,6.8vw,100px);line-height:1.02;letter-spacing:-.01em;max-width:14ch}
+.line.caps{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-.04em;font-size:clamp(42px,7.4vw,112px);line-height:.92;max-width:12ch}
 .line.caps em{letter-spacing:0}
 .breath{width:min(42vw,260px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(239,233,220,.35);display:grid;place-items:center;margin-bottom:34px;position:relative;animation:breathe 10s ease-in-out infinite}
 .breath:after{content:"";width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 24px 6px rgba(255,74,28,.45)}
@@ -99,7 +101,7 @@ main{position:relative;z-index:5}
 .tile .ico{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:all .3s}
 .tile .ico svg{width:10px;height:10px}.tile .ico .p2{display:none}
 .tile h3{margin:0;font-weight:600;font-size:clamp(15px,1.4vw,18px);letter-spacing:.05em;text-transform:uppercase;line-height:1.15;position:relative}
-.tile p{margin:6px 0 0;font-size:14px;line-height:1.35;color:var(--dim);position:relative}
+.tile p{margin:6px 0 0;font-size:14px;line-height:1.4;color:#b5aea3;position:relative}
 .tile .meter{display:flex;gap:3px;height:14px;align-items:flex-end;opacity:0;transition:opacity .3s;position:relative}
 .tile .meter i{flex:1;background:var(--red);height:3px}
 .tile.on{border-color:var(--red);background:rgba(63,22,20,.6);box-shadow:0 0 0 1px var(--red),0 0 60px rgba(255,74,28,.22)}
@@ -117,7 +119,7 @@ main{position:relative;z-index:5}
 .chips span{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
 .center{text-align:center}
 /* picks */
-.tile .pick{position:relative;align-self:flex-start;display:none;margin-top:2px;border:1px solid var(--red);background:transparent;color:var(--bone);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:9px 12px;cursor:pointer;min-height:38px}
+.tile .pick{position:relative;align-self:flex-start;display:none;margin-top:2px;border:1px solid var(--red);background:transparent;color:var(--bone);font-size:11px;letter-spacing:.2em;text-transform:uppercase;padding:0 14px;cursor:pointer;min-height:44px}
 .tile .pick:hover{background:var(--red);color:#0c0c0d}
 .tile.on .pick,.tile.picked .pick{display:inline-flex;align-items:center}
 .tile.picked{border-color:var(--red);box-shadow:0 0 0 1px var(--red)}
@@ -126,7 +128,7 @@ main{position:relative;z-index:5}
 .tile.picked .badge{display:block}
 .tile.heard .n .mono{color:var(--bone)}
 .heardline{margin-top:18px;display:flex;gap:14px;align-items:center}
-.dots{display:flex;gap:6px}.dots i{width:7px;height:7px;border-radius:50%;border:1px solid #4a4440;transition:all .3s}.dots i.on{background:var(--bone);border-color:var(--bone)}.dots i.pk{background:var(--red);border-color:var(--red);box-shadow:0 0 10px rgba(255,74,28,.6)}
+.dots{display:flex;gap:7px}.dots i{width:8px;height:8px;border-radius:50%;border:1px solid #6f6a63;transition:all .3s}.dots i.on{background:var(--bone);border-color:var(--bone)}.dots i.pk{background:var(--red);border-color:var(--red);box-shadow:0 0 10px rgba(255,74,28,.6)}
 .dock{position:fixed;z-index:40;left:50%;bottom:max(16px,env(safe-area-inset-bottom));transform:translate(-50%,140%);width:min(680px,calc(100% - 32px));background:rgba(18,17,18,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid #3a3532;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 12px 12px 20px;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
 .dock.up{transform:translate(-50%,0)}
 .dock .dt{font-size:14px;line-height:1.35;color:var(--dim)}.dock .dt b{color:var(--bone);font-weight:600}
@@ -141,26 +143,27 @@ main{position:relative;z-index:5}
 .you{margin:0;font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-weight:400;font-size:clamp(46px,8vw,120px);line-height:.98;letter-spacing:-.005em;text-shadow:0 0 30px rgba(12,12,13,.9)}
 .you span{color:var(--red)}
 .thread{margin:18px 0 0;font-size:clamp(17px,1.8vw,22px);color:#c9c2b6}.thread b{color:var(--bone);font-weight:600}
-.feel{margin:44px 0 0;font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-size:clamp(26px,3.4vw,44px);line-height:1.15;color:var(--bone)}
+.feel{margin:40px auto 0;max-width:26ch;font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-size:clamp(26px,3.4vw,44px);line-height:1.15;color:var(--bone)}
 .rv-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:44px;text-align:left}
 @media (max-width:760px){.rv-grid{grid-template-columns:1fr}}
-.rv-card{border:1px solid var(--line);background:rgba(18,17,18,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:24px 22px}
+.rv-card{border:1px solid #2f2b29;background:rgba(18,17,18,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:24px 22px}
 .rv-card.hot{border-color:var(--red);background:rgba(63,22,20,.55)}
-.rv-card p{margin:10px 0 0;font-size:16px;line-height:1.55;color:#c9c2b6}
+.rv-card p{margin:12px 0 0;font-size:16px;line-height:1.6;color:#d4cdc1}
 .rv-card p b{color:var(--bone);font-weight:600}
 .lives{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .lives li{border:1px solid #4a4440;border-radius:999px;padding:6px 12px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--bone)}
-.offer{margin-top:56px;border-top:1px solid var(--line);padding-top:48px}
+.offer{margin-top:72px;border-top:1px solid var(--line);padding-top:64px}
+.offer .sub{max-width:560px}
 .offer h3{margin:0;font-weight:700;text-transform:uppercase;font-size:clamp(28px,4vw,52px);line-height:.96;letter-spacing:-.04em}
 .offer h3 em{letter-spacing:0}
-.proof{margin:30px auto 0;font-size:13px;line-height:1.7;color:#8a847b;max-width:560px}
-.proof b{color:var(--dim);font-weight:600}
+.proof{margin:34px auto 0;font-size:14px;line-height:1.7;color:#a39d93;max-width:560px}
+.proof b{color:var(--bone);font-weight:600}
 .again{background:none;border:0;cursor:pointer;color:var(--dim);font-size:12px;letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid var(--line);min-height:44px;padding:0}
 .again:hover{color:var(--bone)}
 #eight{overflow:hidden}#eight .in{position:relative;isolation:isolate}#eight .sub{color:#c9c2b6}#eight .in:before{content:"";position:absolute;left:-10vw;right:-10vw;top:-80px;bottom:-60px;background:radial-gradient(ellipse 70% 60% at 40% 30%,rgba(12,12,13,.86) 0%,rgba(12,12,13,.6) 55%,rgba(12,12,13,.25) 100%);z-index:-1}
 #cta{overflow:hidden}#cta .in{position:relative;isolation:isolate}#cta .in:before{content:"";position:absolute;left:50%;top:50%;width:min(120vw,1200px);height:150%;transform:translate(-50%,-50%);background:radial-gradient(ellipse at center,rgba(12,12,13,.86) 0%,rgba(12,12,13,.6) 45%,rgba(12,12,13,0) 72%);z-index:-1}
 .panel .h,.panel .sub,.panel .fine{text-shadow:0 0 24px rgba(12,12,13,.9)}
-#cta .sub{color:#c9c2b6}#cta .fine{color:#8a847b}
+#reveal .fine{color:#a39d93;font-size:13px}
 .fine{margin:56px auto 0;font-size:12px;line-height:1.6;color:#6f6a63;max-width:520px}
 /* custom cursor */
 .cur{position:fixed;z-index:80;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1px solid rgba(239,233,220,.55);pointer-events:none;transition:width .25s,height .25s,margin .25s,border-color .25s,opacity .3s;opacity:0;mix-blend-mode:difference}
@@ -183,7 +186,7 @@ main{position:relative;z-index:5}
 
 <div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
 <div class="portal" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
-<p class="mono" style="line-height:1.9;margin:0 0 20px">Sonic Identity Architect™<br>A 60&#8209;second listening experience</p>
+<p class="mono" style="line-height:1.9;margin:0 0 20px">Sonic Identity Architect™<br>A two&#8209;minute listening experience</p>
 <h1 id="gate-title" class="lip" style="color:var(--bone)">Put your headphones in.</h1>
 <p class="sub" style="margin-top:4px">Turn the sound up. This one is meant to be heard.</p>
 <button id="begin" class="cta" type="button">Press play</button>
@@ -228,7 +231,7 @@ main{position:relative;z-index:5}
 <p class="mono" style="margin:0 0 22px">The eight Sonic Archetypes</p>
 <h2 class="h">Which one <em>gives you chills?</em></h2>
 <p class="sub" style="margin-left:0">Tap each one and listen. When one lands in your body, press <b style="color:var(--bone);font-weight:600">That's me</b>. Two pulling at you? Pick both.</p>
-<div class="heardline"><span class="dots" id="dots" aria-hidden="true"></span><span class="mono" id="heard">Heard 0 of 8</span></div>
+<div class="heardline"><span class="dots" id="dots" aria-hidden="true"></span><span class="mono" id="heard" style="color:#c9c2b6">Heard 0 of 8</span></div>
 <div class="grid" id="grid" role="list"></div>
 <div class="nowplaying" aria-live="polite"><span class="mono" id="npl"></span><span class="np" id="npt"></span></div>
 <div class="genre">
@@ -403,13 +406,14 @@ if(reduce)document.documentElement.classList.add("static");
 var cv=document.getElementById("tunnel"),g=cv.getContext("2d"),W=0,H=0,dpr=Math.min(window.devicePixelRatio||1,1.5);
 var td=new Uint8Array(1024),fd=new Uint8Array(1024);
 var rings=[],N=46;for(var i=0;i<N;i++)rings.push({z:(i+1)/N,w:Math.random()});
-var cx=.5,cy=.5,mx=.5,my=.5,speed=.06,boost=0,heat=0,heatT=0,time=0,last=performance.now(),energy=0;
+var calm=1,cx=.5,cy=.5,mx=.5,my=.5,speed=.06,boost=0,heat=0,heatT=0,time=0,last=performance.now(),energy=0;
 function size(){W=cv.width=Math.round(innerWidth*dpr);H=cv.height=Math.round(innerHeight*dpr)}size();addEventListener("resize",size);
 addEventListener("pointermove",function(e){mx=e.clientX/innerWidth;my=e.clientY/innerHeight});
 function frame(now){
  var dt=Math.min(.05,(now-last)/1000);last=now;time+=dt;
  energy=0;if(analyser){analyser.getByteTimeDomainData(td);analyser.getByteFrequencyData(fd);for(var k=2;k<40;k++)energy+=fd[k];energy/=38*255}
  heat+=(heatT-heat)*Math.min(1,dt*2.5);
+ calm+=((document.body.classList.contains("out-hole")?.5:1)-calm)*Math.min(1,dt*1.5);
  cx=.5;cy=.5;
  var bpmSpeed=cur&&cur.cfg?cur.cfg.bpm/600:0;
  var v=(speed+bpmSpeed+boost+energy*.25)*(reduce?.25:1);boost*=Math.pow(.04,dt);
@@ -426,7 +430,7 @@ function frame(now){
   var rr=base/R.z;if(rr>Math.max(W,H)*1.3)continue;
   var fade=Math.pow(1-R.z,1.6)*Math.min(1,(1-R.z)*3);
   var front=R.z<.25?1:0;
-  var hot=heat>.5;g.globalCompositeOperation=hot?"lighter":"source-over";
+  var hot=heat>.5;g.globalCompositeOperation=hot?"lighter":"source-over";fade*=calm;
   g.strokeStyle=hot?"rgba(255,74,28,"+Math.min(1,fade*(.5+energy*1.2)).toFixed(3)+")":"rgba(239,233,220,"+(fade*(.2+energy*.6)).toFixed(3)+")";
   g.lineWidth=Math.max(.6,dpr*(.6+(1-R.z)*1.6+energy*3*(1-R.z)));
   var rot=R.z*5+time*.22,seg=72;g.beginPath();
