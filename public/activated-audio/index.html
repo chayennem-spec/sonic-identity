@@ -147,8 +147,8 @@ p{text-shadow:0 1px 14px rgba(6,3,10,.9);margin:0;font-size:clamp(15px,1.6vw,18p
 <section class="step" data-addr="aw://music" data-label="The missing piece" data-hue="3" data-bloom>
 <span class="kicker">Listen. That's the difference.</span>
 <h2 data-words>Music is woven into <span class="g">who we are.</span></h2>
-<p data-words>Every culture on record has made it. Babies respond to rhythm long before they can speak. Words set to a melody tend to stick, melodies replay on their own, and one song can bring a whole feeling back in seconds.</p>
-<button class="btn" data-next type="button">&gt; Let me choose a song <span class="cur">_</span></button>
+<p data-words>Every culture on record has made it. Babies respond to rhythm long before they can speak. Words set to a melody tend to stick, melodies replay on their own, and one song can bring a whole feeling back in seconds. And the right song can slow the breath, help calm the nervous system and bring someone back into their body.</p>
+<button class="btn" data-next type="button">&gt; Show me the songs <span class="cur">_</span></button>
 </section>
 
 <section class="step" data-addr="aw://listen" data-label="Listen" data-hue="3">
@@ -288,7 +288,7 @@ function breathe(){var b=document.getElementById('breath');b.textContent='Hold';
  function down(e){if(S[cur].dataset.addr!=='aw://breathe'||bDone)return;e.preventDefault();try{b.setPointerCapture(e.pointerId)}catch(_){}bHeld=Date.now();b.textContent='Breathe in';b.classList.add('in');tSpeed=.15;tPull=.45;if(navigator.vibrate)navigator.vibrate(12);}
  function up(){if(!bHeld)return;var held=Date.now()-bHeld;bHeld=0;b.classList.remove('in');tSpeed=1;tPull=1;
   if(held<1500){b.textContent='Hold';document.getElementById('bhint').textContent='Slower. Keep holding while you breathe all the way in.';return;}
-  bDone=1;b.textContent='And let go';tSpeed=2.5;tPull=1.25;tCalm=.4;setTimeout(function(){tPull=1;},1400);document.getElementById('bhint').textContent='Good. That\u2019s the first shift.';
+  bDone=1;b.textContent='And let go';tSpeed=2.5;tPull=1.25;tCalm=.4;setTimeout(function(){tPull=1;},1400);document.getElementById('bhint').textContent='Feel that? You\u2019re back in your body. That\u2019s the first shift.';
   clearTimeout(bT);bT=setTimeout(function(){if(S[cur].dataset.addr==='aw://breathe')go(cur+1);},4200);}
  b.addEventListener('pointerdown',down);b.addEventListener('pointerup',up);b.addEventListener('pointercancel',up);b.addEventListener('contextmenu',function(e){e.preventDefault()});
  b.addEventListener('keydown',function(e){if((e.key===' '||e.key==='Enter')&&!e.repeat){down(e)}});b.addEventListener('keyup',function(e){if(e.key===' '||e.key==='Enter')up()});
