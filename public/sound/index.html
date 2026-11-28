@@ -10,7 +10,7 @@
 <meta property="og:title" content="Put your headphones in.">
 <meta property="og:description" content="A 60-second listening experience. Hear the eight ways a brand can sound, then find yours.">
 <meta property="og:image" content="https://www.sonicidentityarchitect.com/og-image.jpg">
-<link rel="preload" href="/fonts/bodoni-moda-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/sound/fonts/vogue.otf" as="font" type="font/otf" crossorigin>
 <style>
 @font-face{font-family:'Bodoni Moda';font-style:italic;font-weight:400;font-display:swap;src:url('/fonts/bodoni-moda-latin-400-italic.woff2') format('woff2')}
 @font-face{font-family:'Bodoni Moda';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/bodoni-moda-latin-400-normal.woff2') format('woff2')}
@@ -23,8 +23,11 @@ body.locked{overflow:hidden}
 a{color:inherit}button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--red);outline-offset:4px}
 .mono{font-family:'Space Mono',ui-monospace,monospace;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
-.serif{font-family:'Bodoni Moda',Didot,Georgia,serif;font-style:italic;font-weight:400}
-em{font-family:'Bodoni Moda',Didot,Georgia,serif;font-style:italic;font-weight:400;color:var(--red)}
+@font-face{font-family:'Vogue';font-style:normal;font-weight:400;font-display:swap;src:url('/sound/fonts/vogue.otf') format('opentype')}
+@font-face{font-family:'Style your Lipstick';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/style-your-lipstick.woff2') format('woff2')}
+.serif{font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-style:normal;font-weight:400}
+.lip{font-family:'Style your Lipstick','Brush Script MT',cursive!important;font-style:normal!important;font-weight:400;text-transform:none!important;letter-spacing:0!important}
+em{font-family:'Vogue',Didot,'Bodoni Moda',Georgia,serif;font-style:normal;font-weight:400;color:var(--red);font-size:1.06em}
 #tunnel{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
 .vignette{position:fixed;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 75% 70% at 50% 50%,rgba(12,12,13,0) 40%,rgba(12,12,13,.85) 100%)}
 .grain{position:fixed;inset:-50%;z-index:1;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1.2s steps(6) infinite}
@@ -76,7 +79,7 @@ main{position:relative;z-index:5}
 .sc .sub{color:#c9c2b6}
 .line{margin:0;font-family:'Bodoni Moda',Didot,Georgia,serif;font-weight:400;font-size:clamp(40px,7.6vw,118px);line-height:1.02;letter-spacing:-.01em;max-width:14ch}
 .line.caps{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:-.04em;font-size:clamp(42px,8.4vw,132px);line-height:.92;max-width:12ch}
-.line.caps em{text-transform:none;letter-spacing:-.02em}
+.line.caps em{letter-spacing:0}
 .breath{width:min(42vw,260px);aspect-ratio:1;border-radius:50%;border:1px solid rgba(239,233,220,.35);display:grid;place-items:center;margin-bottom:34px;position:relative;animation:breathe 10s ease-in-out infinite}
 .breath:after{content:"";width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 24px 6px rgba(255,74,28,.45)}
 @keyframes breathe{0%{transform:scale(.55)}40%{transform:scale(1)}100%{transform:scale(.55)}}
@@ -89,7 +92,7 @@ main{position:relative;z-index:5}
 .panel{position:relative;padding:120px 7vw;min-height:100vh;display:flex;flex-direction:column;justify-content:center}
 .panel .in{max-width:1080px;margin:0 auto;width:100%}
 .h{margin:0;font-weight:700;text-transform:uppercase;font-size:clamp(36px,6vw,88px);line-height:.94;letter-spacing:-.045em}
-.h em{text-transform:none;letter-spacing:-.02em}
+.h em{letter-spacing:0}
 .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px;perspective:900px}
 @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
 .tile{position:relative;text-align:left;background:rgba(18,17,18,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);padding:20px 18px 18px;min-height:178px;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;gap:14px;transition:border-color .3s,background .3s,transform .5s cubic-bezier(.2,.8,.2,1),opacity .8s;overflow:hidden}
@@ -100,7 +103,7 @@ main{position:relative;z-index:5}
 .tile .ico{width:32px;height:32px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:all .3s}
 .tile .ico svg{width:10px;height:10px}.tile .ico .p2{display:none}
 .tile h3{margin:0;font-weight:600;font-size:clamp(15px,1.4vw,18px);letter-spacing:.05em;text-transform:uppercase;line-height:1.15;position:relative}
-.tile p{margin:6px 0 0;font-family:'Bodoni Moda',Didot,Georgia,serif;font-style:italic;font-size:15px;line-height:1.35;color:var(--dim);position:relative}
+.tile p{margin:6px 0 0;font-size:14px;line-height:1.35;color:var(--dim);position:relative}
 .tile .meter{display:flex;gap:3px;height:14px;align-items:flex-end;opacity:0;transition:opacity .3s;position:relative}
 .tile .meter i{flex:1;background:var(--red);height:3px}
 .tile.on{border-color:var(--red);background:rgba(63,22,20,.6);box-shadow:0 0 0 1px var(--red),0 0 60px rgba(255,74,28,.22)}
@@ -110,7 +113,7 @@ main{position:relative;z-index:5}
 .grid .tile{opacity:0;transform:translateZ(-120px) translateY(30px)}
 .grid.in .tile{opacity:1;transform:none}
 .nowplaying{margin-top:26px;min-height:56px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline}
-.nowplaying .serif{font-size:clamp(18px,2vw,24px);color:var(--bone)}
+.nowplaying .np{font-size:clamp(16px,1.7vw,20px);color:var(--bone)}
 .genre{margin-top:40px;border-top:1px solid var(--line);padding-top:26px;display:flex;flex-wrap:wrap;gap:16px 40px;align-items:baseline}
 .genre p{margin:0;max-width:560px;font-size:16px;line-height:1.6;color:var(--dim)}
 .genre p b{color:var(--bone);font-weight:600}
@@ -141,7 +144,7 @@ main{position:relative;z-index:5}
 <div id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
 <div class="portal" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
 <p class="mono" style="line-height:1.9;margin:0 0 20px">Sonic Identity Architect™<br>A 60&#8209;second listening experience</p>
-<h1 id="gate-title" class="serif">Put your headphones in.</h1>
+<h1 id="gate-title" class="lip" style="color:var(--bone)">Put your headphones in.</h1>
 <p class="sub" style="margin-top:4px">Turn the sound up. This one is meant to be heard.</p>
 <button id="begin" class="cta" type="button">Go down the hole <span aria-hidden="true">↓</span></button>
 </div>
@@ -159,7 +162,7 @@ main{position:relative;z-index:5}
 <div class="stage">
 <div class="sc" data-s="0" data-sound="drone" data-log="Listening">
 <div class="breath" aria-hidden="true"></div>
-<p class="line breathword serif" id="bw">Breathe in.</p>
+<p class="line breathword lip" id="bw">Breathe in.</p>
 <p class="sub">Follow the circle. Let everything else go quiet.</p>
 </div>
 <div class="sc" data-s="1" data-sound="stock" data-log="Playing exhibit A">
@@ -188,7 +191,7 @@ main{position:relative;z-index:5}
 <h2 class="h">Eight ways <em>a brand can sound.</em></h2>
 <p class="sub" style="margin-left:0">Tap one. Then another. Notice which one feels like home.</p>
 <div class="grid" id="grid" role="list"></div>
-<div class="nowplaying" aria-live="polite"><span class="mono" id="npl"></span><span class="serif" id="npt"></span></div>
+<div class="nowplaying" aria-live="polite"><span class="mono" id="npl"></span><span class="np" id="npt"></span></div>
 <div class="genre">
 <p><b>Your archetype is the energy, not the genre.</b> Country pop, R&amp;B, house, cinematic, acoustic: any genre can carry any archetype. A Boss Energy brand can sound like a country anthem. A Luxury Icon can live in soft R&amp;B.</p>
 <div class="chips" aria-label="Genres any archetype can live in"><span>Pop</span><span>Country pop</span><span>R&amp;B</span><span>House</span><span>Hip hop</span><span>Cinematic</span><span>Acoustic</span><span>Afrobeats</span></div>
@@ -205,7 +208,8 @@ main{position:relative;z-index:5}
 <a class="cta" href="https://chayennemallari.eden.so/form/sonic-audit">Find my sound <span aria-hidden="true">→</span></a>
 <a class="ghost" href="https://www.sonicidentityarchitect.com">Explore the studio</a>
 </div>
-<p class="fine">The sounds on this page are sketches of each archetype. Yours would be made for your brand alone.</p>
+<p class="lip" style="margin:48px 0 0;font-size:clamp(30px,3vw,40px);color:var(--red)">xo, Chayenne</p>
+<p class="fine" style="margin-top:28px">The sounds on this page are sketches of each archetype. Yours would be made for your brand alone.</p>
 </div>
 </section>
 </main>
@@ -420,7 +424,7 @@ function onScroll(){
  dot.style.top=(p*100)+"%";dlabel.textContent="Depth "+("0"+Math.min(NS,Math.floor(p*NS)+1)).slice(-2);
  var f=p*NS,idx=clamp(Math.floor(f),0,NS-1);
  if(!reduce)scs.forEach(function(el,i){var l=f-i;var o,sc,bl;
-  if(l<0||l>1){o=0;sc=l<0?.6:1.8;bl=10}else{var inP=clamp(l/.22,0,1),outP=clamp((l-.72)/.28,0,1);o=inP*(1-outP);sc=.7+inP*.3+outP*.9;bl=(1-inP)*10+outP*14}
+  if(i===0&&l<0)l=0;if(l<0||l>1){o=0;sc=l<0?.6:1.8;bl=10}else{var inP=i===0?1:clamp(l/.22,0,1),outP=clamp((l-.72)/.28,0,1);o=inP*(1-outP);sc=.7+inP*.3+outP*.9;bl=(1-inP)*10+outP*14}
   if(i===NS-1&&l>1){o=0}
   el.style.opacity=o.toFixed(3);el.style.transform="scale("+sc.toFixed(3)+")";el.style.filter="blur("+bl.toFixed(1)+"px)";
   if(i===2&&strike)strike.style.setProperty("--s",clamp((l-.2)/.25,0,1).toFixed(3))});
