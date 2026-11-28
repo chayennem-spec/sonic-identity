@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head><meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Activated Audio · Follow the sound</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%2214%22 fill=%22none%22 stroke=%22%238B9CF5%22/%3E%3Ccircle cx=%2216%22 cy=%2216%22 r=%225%22 fill=%22%238B55DA%22/%3E%3C/svg%3E">
+<meta name="description" content="Identity-shift music for NLP practitioners, hypnotists and healers. Put your headphones in and follow the sound.">
+<style>
+:root{--bg:#06030A;--ink:#EDE3EE;--soft:#BDB2C9;--mute:#8A7F98;--line:rgba(139,85,218,.3);--blue:#4A73E8;--violet:#8B55DA;--peri:#8B9CF5;--mono:ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;--sans:"Helvetica Neue",Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font-family:var(--sans);overflow:hidden;-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+canvas#c{position:fixed;inset:0;width:100%;height:100%;display:block;transition:filter 1.6s ease}
+body.drain canvas#c{filter:saturate(.15) brightness(.7)}
+.vig{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse 65% 60% at 50% 40%,transparent 0%,rgba(6,3,10,.4) 60%,rgba(6,3,10,.95) 100%)}
+.top{position:fixed;top:0;left:0;right:0;z-index:6;display:flex;justify-content:space-between;align-items:center;padding:14px 16px;font:12px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.top button{background:none;border:0;color:var(--mute);font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer;padding:10px;min-height:44px}
+.top button:hover{color:var(--ink)}
+.week{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:10px;font:11px var(--mono);letter-spacing:.14em;pointer-events:none}.week span b{margin-right:-.14em}
+.week span{color:rgba(138,127,152,.45);transition:color .8s,text-shadow .8s}
+.week span.lit{color:var(--ink);text-shadow:0 0 10px rgba(139,156,245,.8)}
+.week span.now{color:var(--peri);text-shadow:0 0 14px rgba(139,156,245,1)}
+.week span.slip{color:#9A8FA8;text-shadow:none;animation:jit 2.6s infinite steps(1)}
+.week .s{display:none}
+@media (max-width:560px){.week{gap:7px}.week .l{display:none}.week .s{display:inline}}
+#back{visibility:hidden}body.deep #back{visibility:visible}
+.bar{position:fixed;top:0;left:0;height:2px;width:0;background:linear-gradient(90deg,var(--blue),var(--violet));z-index:7;transition:width .9s cubic-bezier(.2,.8,.2,1);box-shadow:0 0 10px var(--violet)}
+.stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:76px 20px 56px;z-index:3}
+.step{position:absolute;width:min(680px,calc(100% - 40px));display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;opacity:0;pointer-events:none;transform:translateY(20px) scale(.97);filter:blur(8px);transition:opacity .9s ease,transform 1.1s cubic-bezier(.2,.8,.2,1),filter .9s ease}
+.step.on{opacity:1;pointer-events:auto;transform:none;filter:none}
+.step.out{opacity:0;transform:translateY(-30px) scale(1.06);filter:blur(10px)}
+.kicker{font:12px var(--mono);letter-spacing:.24em;text-transform:uppercase;color:var(--peri)}
+h1,h2{text-shadow:0 2px 24px rgba(6,3,10,.85);margin:0;font-weight:800;text-transform:uppercase;letter-spacing:-.015em;line-height:1.02;text-wrap:balance}
+h1{font-size:clamp(32px,6.4vw,64px)}h2{font-size:clamp(26px,5vw,48px)}
+.g{text-shadow:none;background:linear-gradient(90deg,var(--blue),var(--violet));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+p{text-shadow:0 1px 14px rgba(6,3,10,.9);margin:0;font-size:clamp(15px,1.6vw,18px);line-height:1.65;color:var(--soft);max-width:520px;text-wrap:pretty}
+.w{display:inline-block;opacity:0;transform:translateY(8px);filter:blur(6px);transition:opacity .6s ease,transform .7s ease,filter .6s ease}
+.on .w{opacity:1;transform:none;filter:none}
+.btn{appearance:none;border:1px solid rgba(139,156,245,.7);background:rgba(74,115,232,.1);color:var(--ink);font:600 13px var(--mono);letter-spacing:.16em;text-transform:uppercase;padding:0 24px;min-height:52px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:background .25s,box-shadow .25s,transform .25s}
+.btn:hover,.btn:focus-visible{background:rgba(74,115,232,.25);box-shadow:0 0 30px rgba(139,85,218,.45);outline:none;transform:translateY(-1px)}
+.btn.solid{background:linear-gradient(90deg,#2F55C8,#6A3CC0);border-color:transparent;color:#fff}
+.link{background:none;border:0;color:var(--mute);font:12px var(--mono);letter-spacing:.12em;text-transform:uppercase;cursor:pointer;padding:10px;text-decoration:underline;text-underline-offset:4px}
+.link:hover{color:var(--ink)}
+.cur{animation:blink 1s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.breath{width:180px;height:180px;border-radius:50%;border:1px solid rgba(139,156,245,.6);display:flex;align-items:center;justify-content:center;font:12px var(--mono);letter-spacing:.2em;text-transform:uppercase;color:var(--peri);box-shadow:0 0 60px rgba(139,85,218,.25) inset,0 0 40px rgba(74,115,232,.2);transform:scale(.6);transition:transform 4s ease-in-out,box-shadow 4s;background:radial-gradient(circle,rgba(8,4,16,.82) 0%,rgba(8,4,16,.55) 70%,rgba(8,4,16,.2) 100%);cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;padding:0}
+.breath.in{box-shadow:0 0 90px rgba(139,85,218,.45) inset,0 0 80px rgba(74,115,232,.45)}
+.breath.in{transform:scale(1)}
+.count{font:800 clamp(80px,16vw,150px) var(--sans);line-height:1}
+.chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;max-width:540px}
+.chip{appearance:none;border:1px solid var(--line);background:rgba(20,10,30,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:var(--soft);font:12px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:14px 10px;min-height:52px;cursor:pointer;transition:all .25s}
+.chip:hover,.chip:focus-visible{border-color:var(--peri);color:var(--ink);outline:none}
+.chip[aria-pressed=true]{border-color:var(--peri);background:rgba(139,85,218,.25);color:#fff;box-shadow:0 0 20px rgba(139,85,218,.3)}
+.reply{min-height:22px;font:13px var(--mono);color:var(--peri)}
+.glitch{position:relative;animation:jit 2.6s infinite steps(1)}
+@keyframes jit{0%,92%,100%{transform:none;text-shadow:none}93%{transform:translate(2px,-1px);text-shadow:-2px 0 rgba(74,115,232,.7),2px 0 rgba(139,85,218,.7)}95%{transform:translate(-2px,1px)}97%{transform:none;text-shadow:1px 0 rgba(139,85,218,.6)}}
+.player{width:100%;max-width:520px;display:flex;flex-direction:column;gap:10px}
+.trk{display:flex;align-items:center;gap:14px;width:100%;padding:14px 16px;border:1px solid var(--line);background:rgba(20,10,30,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);color:var(--ink);cursor:pointer;text-align:left;min-height:60px;transition:border-color .25s,box-shadow .25s}
+.trk:hover,.trk:focus-visible{border-color:var(--peri);outline:none}
+.trk[aria-pressed=true]{border-color:var(--peri);box-shadow:0 0 24px rgba(139,85,218,.35)}
+.trk .ic{width:34px;height:34px;flex:none;border-radius:50%;border:1px solid var(--peri);display:flex;align-items:center;justify-content:center}
+.trk .ic svg{width:12px;height:12px;fill:var(--ink)}
+.trk b{font:600 13px var(--mono);letter-spacing:.1em;display:block}
+.trk em{font-style:normal;color:var(--mute);font:12px var(--mono)}
+.trk .eq{margin-left:auto;display:flex;gap:3px;align-items:flex-end;height:16px;opacity:0}
+.trk[aria-pressed=true] .eq{opacity:1}
+.eq i{width:3px;background:var(--peri);height:4px;animation:eq .9s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:.2s}.eq i:nth-child(3){animation-delay:.4s}
+@keyframes eq{50%{height:16px}}
+.paused .eq i{animation-play-state:paused}
+.foot{max-width:none;margin:0 auto;text-shadow:none;position:fixed;bottom:12px;left:0;right:0;text-align:center;font:11px var(--mono);color:var(--mute);letter-spacing:.05em;z-index:4;padding:0 16px}
+.foot a{color:var(--soft)}
+@media (max-width:560px){.chips{grid-template-columns:1fr 1fr}.breath{width:150px;height:150px}.foot .hide-s{display:none}}
+@media (max-height:700px){.foot{display:none}.step{gap:14px}.chip{min-height:46px;padding:10px}.stage{padding-top:64px;padding-bottom:24px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.step,.w,.breath{transition:opacity .3s!important;transform:none!important;filter:none!important}}
+</style>
+</head>
+<body>
+<canvas id="c" aria-hidden="true"></canvas>
+<div class="vig"></div>
+<div class="bar" id="bar"></div>
+<div class="top">
+<button id="back" type="button">← Back</button>
+<span class="week" id="week" aria-hidden="true"><span data-d="0"><b class="l" style="font-weight:400">MON</b><b class="s" style="font-weight:400">M</b></span><span data-d="1"><b class="l" style="font-weight:400">TUE</b><b class="s" style="font-weight:400">T</b></span><span data-d="2"><b class="l" style="font-weight:400">WED</b><b class="s" style="font-weight:400">W</b></span><span data-d="3"><b class="l" style="font-weight:400">THU</b><b class="s" style="font-weight:400">T</b></span><span data-d="4"><b class="l" style="font-weight:400">FRI</b><b class="s" style="font-weight:400">F</b></span><span data-d="5"><b class="l" style="font-weight:400">SAT</b><b class="s" style="font-weight:400">S</b></span><span data-d="6"><b class="l" style="font-weight:400">SUN</b><b class="s" style="font-weight:400">S</b></span></span><span id="addr" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Activated Audio</span>
+<button id="snd" type="button" aria-pressed="false">Sound off</button>
+</div>
+
+<audio id="a1" src="/after-wednesday/audio/i-choose-a-new-timeline.m4a" preload="none" loop></audio>
+<audio id="a2" src="/after-wednesday/audio/mahalo-aloha.m4a" preload="none" loop></audio>
+
+<main class="stage" aria-live="polite">
+
+<section class="step on" data-addr="aw://gate" data-label="Begin" data-hue="0">
+<span class="kicker">You found it early.</span>
+<h1>What happens to the shift <span class="g">after Wednesday?</span></h1>
+<p>Activated Audio: music for between sessions, made for NLP practitioners, hypnotists and healers. Best with headphones.</p>
+<button class="btn" id="enter" type="button">&gt; Put my headphones in <span class="cur">_</span></button>
+<button class="link" id="quiet" type="button">Continue without sound</button>
+</section>
+
+<section class="step" data-addr="aw://breathe" data-label="Breathe" data-hue="0">
+<span class="kicker">Before we go in</span>
+<button class="breath" id="breath" type="button" aria-label="Press and hold to breathe in, let go to breathe out">Hold</button>
+<p id="bhint">Press and hold the circle as you breathe in. Let go as you breathe out.</p>
+<button class="link" data-next type="button">I'm here →</button>
+</section>
+
+<section class="step" data-addr="aw://deeper" data-label="Deeper" data-hue="0">
+<span class="kicker">Going deeper</span>
+<div class="count g" id="count">3</div>
+</section>
+
+<section class="step" data-addr="aw://monday" data-label="Monday" data-hue="1">
+<span class="kicker">Monday · 7:12 pm</span>
+<h2 data-words>Your client closes Zoom feeling like a <span class="g">whole new person.</span></h2>
+<p data-words>Lighter. Clearer. They can feel it in their body, and you can hear it in their voice.</p>
+<button class="btn" data-next type="button">&gt; Then what <span class="cur">_</span></button>
+</section>
+
+<section class="step" data-addr="aw://wednesday" data-label="Wednesday" data-hue="2" data-drain>
+<span class="kicker">Wednesday · 2:04 pm</span>
+<h2 class="glitch">Then the old self clocks back in.</h2>
+<p>Hear that? Everything goes a little far away. When do your clients usually start slipping?</p>
+<div class="chips" data-single data-reply="r1" data-key="slip">
+<button class="chip" type="button" data-say="That's the gap this music is made for." data-echo="a day or two after your sessions">A day or two after</button>
+<button class="chip" type="button" data-say="Hello, Wednesday. You're in the right place." data-echo="by midweek">By midweek</button>
+<button class="chip" type="button" data-say="So they spend the week waiting for you." data-echo="right before your next session">Right before our next session</button>
+<button class="chip" type="button" data-say="Life gets loud. A song can be the quiet place they come back to." data-echo="when life gets loud">When life gets loud</button>
+</div>
+<div class="reply" id="r1"></div>
+<button class="btn" data-next type="button">&gt; Why does it slip <span class="cur">_</span></button>
+</section>
+
+<section class="step" data-addr="aw://why" data-label="The why" data-hue="2" data-drain>
+<span class="kicker">It isn't your work</span>
+<h2 data-words>One beautiful session vs. <span class="g">years of rehearsal.</span></h2>
+<p data-words>They've been rehearsing the old identity for years, and that's a lot to ask of one hour. Between sessions, a recording of your voice quietly turns into homework, and homework is usually the first thing to go.</p>
+<button class="btn" data-next type="button">&gt; So what holds it <span class="cur">_</span></button>
+</section>
+
+<section class="step" data-addr="aw://music" data-label="The missing piece" data-hue="3" data-bloom>
+<span class="kicker">Listen. That's the difference.</span>
+<h2 data-words>Music is woven into <span class="g">who we are.</span></h2>
+<p data-words>Every culture on record has made it. Babies respond to rhythm long before they can speak. Words set to a melody tend to stick, melodies replay on their own, and one song can bring a whole feeling back in seconds.</p>
+<button class="btn" data-next type="button">&gt; Let me choose a song <span class="cur">_</span></button>
+</section>
+
+<section class="step" data-addr="aw://listen" data-label="Listen" data-hue="3">
+<span class="kicker">The first listen</span>
+<h2>Hypnosis opens the door. <span class="g">The music keeps them walking through it.</span></h2>
+<div class="player">
+<button class="trk" type="button" data-track="a1"><span class="ic"><svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg></span><span><b>01 · I CHOOSE A NEW TIMELINE</b><em>7:14</em></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
+<button class="trk" type="button" data-track="a2"><span class="ic"><svg viewBox="0 0 12 12"><path d="M2 1l9 5-9 5z"/></svg></span><span><b>02 · MAHALO ALOHA</b><em>(Hoʻoponopono) · 5:53</em></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span></button>
+</div>
+<button class="btn" data-next type="button">&gt; Where would I use it <span class="cur">_</span></button>
+</section>
+
+<section class="step" data-addr="aw://practice" data-label="Your practice" data-hue="3">
+<span class="kicker">Where it lives</span>
+<h2>From your Zoom session to <span class="g">their earbuds on a Wednesday.</span></h2>
+<p>Tap everywhere you'd use it.</p>
+<div class="chips" data-reply="r2">
+<button class="chip" type="button">To close a session</button>
+<button class="chip" type="button">In my recordings</button>
+<button class="chip" type="button">At retreats and groups</button>
+<button class="chip" type="button">As take-home listening</button>
+</div>
+<div class="reply" id="r2"></div>
+<button class="btn" data-next type="button">&gt; What is it, exactly <span class="cur">_</span></button>
+</section>
+
+<section class="step" data-addr="aw://offer" data-label="The offer" data-hue="4">
+<span class="kicker">A new offer for your practice</span>
+<h2 data-words>Something your clients take home, <span class="g">and something you can sell.</span></h2>
+<p id="echo">Activated Audio will be a paid membership for practitioners. Add it to your packages, offer it as an upsell or make it part of your coaching, with practitioner rights in writing. Final terms are in progress, and the waitlist sees them first.</p>
+<button class="btn" data-next type="button">&gt; I want in <span class="cur">_</span></button>
+</section>
+
+<section class="step" data-addr="aw://open" data-label="The door" data-hue="4">
+<span class="kicker">The door is open</span>
+<h2>Get the <span class="g">first listen.</span></h2>
+<p>Five quick questions, then your email. You'll hear the first tracks and the pricing before anyone else, and your answers help shape the first collection.</p>
+<a class="btn solid" href="https://chayennemallari.eden.so/form/after-wednesday" target="_top">Save my spot →</a>
+<a class="link" href="details/" target="_top">Read the full details</a>
+</section>
+
+</main>
+
+<p class="foot">Activated Audio, by Chayenne Mallari<span class="hide-s"> · Sonic Identity Architect™ · Custom-made by me, AI included</span> · Not a replacement for clinical care · <a href="https://chayennemallari.eden.so/form/after-wednesday" target="_top">Skip to the waitlist</a></p>
+
+<script>
+(function(){
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+/* words reveal */
+document.querySelectorAll('[data-words]').forEach(function(el){
+ var nodes=[].slice.call(el.childNodes);el.innerHTML='';var i=0;
+ nodes.forEach(function(n){
+  if(n.nodeType===3){n.textContent.split(/(\s+)/).forEach(function(t){if(!t)return;if(/^\s+$/.test(t)){el.appendChild(document.createTextNode(t));return;}var s=document.createElement('span');s.className='w';s.style.transitionDelay=(i++*70)+'ms';s.textContent=t;el.appendChild(s);});}
+  else{n.classList.add('w');n.style.transitionDelay=(i++*70)+'ms';el.appendChild(n);}
+ });
+});
+/* audio graph */
+var AC,an,lp,gain,src={},data,ct=null,soundOn=false;
+function initAudio(){
+ if(AC)return;try{AC=new (window.AudioContext||window.webkitAudioContext)();an=AC.createAnalyser();an.fftSize=256;data=new Uint8Array(an.frequencyBinCount);
+ lp=AC.createBiquadFilter();lp.type='lowpass';lp.frequency.value=18000;gain=AC.createGain();gain.gain.value=0;
+ lp.connect(gain);gain.connect(an);an.connect(AC.destination);
+ ['a1','a2'].forEach(function(id){src[id]=AC.createMediaElementSource(document.getElementById(id));src[id].connect(lp);});}catch(e){AC=null;}
+}
+function fadeTo(v,t){if(!gain)return;var n=AC.currentTime;gain.gain.cancelScheduledValues(n);gain.gain.setValueAtTime(gain.gain.value,n);gain.gain.linearRampToValueAtTime(v,n+(t||1.5));}
+function muffle(on){if(!lp)return;var n=AC.currentTime;lp.frequency.cancelScheduledValues(n);lp.frequency.setValueAtTime(lp.frequency.value,n);lp.frequency.exponentialRampToValueAtTime(on?420:18000,n+2.2);}
+function play(id){initAudio();var el=document.getElementById(id);if(ct&&ct!==id){var o=document.getElementById(ct);o.pause();}ct=id;if(AC&&AC.state==='suspended')AC.resume();el.play().catch(function(){});soundOn=true;fadeTo(.85,2.5);sync();}
+function stop(){if(ct){fadeTo(0,.6);var el=document.getElementById(ct);setTimeout(function(){el.pause();},650);}soundOn=false;sync();}
+var sb=document.getElementById('snd');
+function sync(){sb.textContent=soundOn?'Sound on':'Sound off';sb.setAttribute('aria-pressed',soundOn);document.querySelectorAll('.trk').forEach(function(t){var on=soundOn&&t.dataset.track===ct;t.setAttribute('aria-pressed',on);});}
+sb.addEventListener('click',function(){soundOn?stop():play(ct||'a1');});
+/* tunnel */
+var c=document.getElementById('c'),x=c.getContext('2d'),W,H,D=Math.min(devicePixelRatio||1,2);
+function sz(){W=c.width=innerWidth*D;H=c.height=innerHeight*D;}sz();addEventListener('resize',sz);
+var mx=0,my=0,tmx=0,tmy=0;addEventListener('pointermove',function(e){tmx=(e.clientX/innerWidth-.5);tmy=(e.clientY/innerHeight-.5);},{passive:true});
+var rings=[],parts=[],speed=1,tSpeed=1,lvl=0,hue=0,tHue=0,t0=0;
+var pal=[[[74,115,232],[139,85,218]],[[96,150,255],[139,156,245]],[[90,80,120],[70,60,90]],[[74,115,232],[168,107,242]],[[110,90,240],[180,110,250]]];
+for(var i=0;i<26;i++)rings.push({z:i/26});
+var stars=[],rot=0,calm=0,tCalm=0,pull=1,tPull=1;for(var q=0;q<1500;q++){var core=Math.random()<.22,t=core?Math.pow(Math.random(),2)*.18:Math.pow(Math.random(),.75);stars.push({arm:q%3,t:t,j:(Math.random()-.5)*(core?1.2:.55*(.3+t)),s:Math.random()<.06?2.2:(Math.random()<.3?1.4:.9),tw:Math.random()*6.283,w:Math.random()});}
+var gl=['♪','♫','♩','·','·','·','○'];
+for(var j=0;j<180;j++)parts.push(np(true));
+function np(a){return{a:Math.random()*6.283,z:a?Math.random():1,r:.2+Math.random()*.9,g:gl[Math.random()*gl.length|0]};}
+function mix(a,b,k){return[a[0]+(b[0]-a[0])*k|0,a[1]+(b[1]-a[1])*k|0,a[2]+(b[2]-a[2])*k|0];}
+function col(k){var i=Math.floor(hue),f=hue-i,A=pal[Math.min(i,4)],B=pal[Math.min(i+1,4)];return mix(mix(A[0],B[0],f),mix(A[1],B[1],f),k);}
+function draw(ts){
+ var dt=Math.min(50,ts-(t0||ts));t0=ts;speed+=(tSpeed-speed)*.04;hue+=(tHue-hue)*.02;
+ var e=0;if(an&&soundOn){an.getByteFrequencyData(data);for(var b=0;b<10;b++)e+=data[b];e=e/2550;}lvl+=(e-lvl)*.15;
+ x.fillStyle='rgba(6,3,10,.42)';x.fillRect(0,0,W,H);
+ mx+=(tmx-mx)*.04;my+=(tmy-my)*.04;var cx=W/2-mx*W*.03,cy=H/2-my*H*.03,m=Math.max(W,H),gm=Math.min(W,H)*.62+Math.max(W,H)*.12;
+ rot+=.00005*dt*(.6+speed*.4);calm+=(tCalm-calm)*.03;if(calm>.01){var bE=document.getElementById('breath').getBoundingClientRect();if(bE.width){cx+=((bE.left+bE.width/2)*D-cx)*calm;cy+=((bE.top+bE.height/2)*D-cy)*calm;}}pull+=(tPull-pull)*.025;
+ for(var q=0;q<stars.length;q++){var st=stars[q],ang=st.arm*2.0944+st.t*4.6+rot*(1.4-st.t*.6)+st.j,rr=st.t*gm*(1+lvl*.06)*pull;
+  var sx=cx+Math.cos(ang)*rr,sy=cy+Math.sin(ang)*rr*.58;
+  var tw=.55+.45*Math.sin(ts/700+st.tw),sc=st.w<.5?[230,232,255]:col(st.t);
+  var a=(.35+.65*tw)*(1-st.t*.45)*(1-calm*.8);x.fillStyle='rgba('+sc+','+a+')';var z=st.s*1.5*D;x.fillRect(sx-z/2,sy-z/2,z,z);}
+ for(var i=0;i<rings.length;i++){var r=rings[i];r.z-=.0009*speed*dt/16;if(r.z<=.01)r.z+=1;
+  var k=1/(r.z*4+.15),rad=m*.05*k*(1+lvl*.35),al=Math.min(1,(1-r.z))*.38*(1-calm*.75);var cc=col(r.z);
+  x.beginPath();x.ellipse(cx,cy,rad,rad*.92,0,0,6.283);x.strokeStyle='rgba('+cc+','+al+')';x.lineWidth=(1+k*.25)*D;x.stroke();}
+ x.font=(12*D)+'px ui-monospace,Menlo,monospace';
+ for(var j=0;j<parts.length;j++){var p=parts[j];p.z-=.0016*speed*dt/16;p.a+=.00035*dt*(1/p.z)*.4;if(p.z<=.02){parts[j]=np(false);continue;}
+  var kk=1/p.z,d=p.r*m*.05*kk,px=cx+Math.cos(p.a)*d,py=cy+Math.sin(p.a)*d;if(px<-40||px>W+40||py<-40||py>H+40){parts[j]=np(false);continue;}
+  var s=Math.min(30,(4+5*kk))*D*.6,cc2=col(p.r);x.font=s+'px ui-monospace,Menlo,monospace';x.fillStyle='rgba('+cc2+','+Math.min(1,(1-p.z)*1.4)*.8*(1-calm*.9)+')';x.fillText(p.g,px,py);}
+ var gr=x.createRadialGradient(cx,cy,0,cx,cy,m*.07*(1+lvl*.8));var oc=col(.5);gr.addColorStop(0,'rgba(220,225,255,'+(.32+lvl*.3)*(1-calm*.75)+')');gr.addColorStop(.35,'rgba('+oc+','+(.45*(1-calm*.6))+')');gr.addColorStop(1,'rgba('+oc+',0)');
+ x.fillStyle=gr;x.beginPath();x.arc(cx,cy,m*.07*(1+lvl*.8),0,6.283);x.fill();
+ if(!RM||ts<100)requestAnimationFrame(draw);
+}
+x.fillStyle='#06030A';x.fillRect(0,0,W,H);requestAnimationFrame(draw);
+/* week */
+var DAY={"aw://gate": -1, "aw://breathe": -1, "aw://deeper": -1, "aw://monday": 0, "aw://wednesday": 2, "aw://why": 2, "aw://music": 3, "aw://listen": 4, "aw://practice": 5, "aw://offer": 6, "aw://open": 7};
+function week(a){var d=DAY[a],slip=(a==='aw://wednesday'||a==='aw://why');[].forEach.call(document.querySelectorAll('#week [data-d]'),function(el){var i=+el.dataset.d;el.className='';if(d<0)return;if(d>=7||i<d)el.className='lit';if(i===d)el.className=slip?'slip':'now';if(slip&&i===1)el.className='lit';});}
+/* steps */
+var S=[].slice.call(document.querySelectorAll('.step')),cur=0,lock=false,answers={};
+var addr=document.getElementById('addr'),bar=document.getElementById('bar');
+function go(i){if(i<0||i>=S.length||i===cur||lock)return;lock=true;tSpeed=i>cur?7:-3;
+ var prev=S[cur];prev.classList.remove('on');prev.classList.add('out');setTimeout(function(){prev.classList.remove('out');},1000);
+ cur=i;var s=S[cur];setTimeout(function(){s.classList.add('on');},280);
+ addr.textContent=s.dataset.label;week(s.dataset.addr);bar.style.width=(cur/(S.length-1)*100)+'%';tHue=+s.dataset.hue;
+ document.body.classList.toggle('deep',cur>0);
+ var drain=s.hasAttribute('data-drain');document.body.classList.toggle('drain',drain);muffle(drain);
+ tCalm=s.dataset.addr==='aw://breathe'?1:0;tPull=1;if(s.dataset.addr==='aw://breathe')breathe();
+ if(s.dataset.addr==='aw://deeper')countdown();
+ if(s.dataset.addr==='aw://offer'&&answers.slip){document.getElementById('echo').textContent='You said your clients start slipping '+answers.slip+'. Activated Audio will be a paid membership for practitioners, made for exactly that stretch. Add it to your packages, offer it as an upsell or make it part of your coaching, with practitioner rights in writing. Final terms are in progress, and the waitlist sees them first.';}
+ setTimeout(function(){tSpeed=1;lock=false;},1000);}
+var bHeld=0,bT=0,bDone=0;
+function breathe(){var b=document.getElementById('breath');b.textContent='Hold';b.classList.remove('in');bDone=0;document.getElementById('bhint').textContent='Press and hold the circle as you breathe in. Let go as you breathe out.';}
+(function(){var b=document.getElementById('breath');
+ function down(e){if(S[cur].dataset.addr!=='aw://breathe'||bDone)return;e.preventDefault();try{b.setPointerCapture(e.pointerId)}catch(_){}bHeld=Date.now();b.textContent='Breathe in';b.classList.add('in');tSpeed=.15;tPull=.45;if(navigator.vibrate)navigator.vibrate(12);}
+ function up(){if(!bHeld)return;var held=Date.now()-bHeld;bHeld=0;b.classList.remove('in');tSpeed=1;tPull=1;
+  if(held<1500){b.textContent='Hold';document.getElementById('bhint').textContent='Slower. Keep holding while you breathe all the way in.';return;}
+  bDone=1;b.textContent='And let go';tSpeed=2.5;tPull=1.25;tCalm=.4;setTimeout(function(){tPull=1;},1400);document.getElementById('bhint').textContent='Good. That\u2019s the first shift.';
+  clearTimeout(bT);bT=setTimeout(function(){if(S[cur].dataset.addr==='aw://breathe')go(cur+1);},4200);}
+ b.addEventListener('pointerdown',down);b.addEventListener('pointerup',up);b.addEventListener('pointercancel',up);b.addEventListener('contextmenu',function(e){e.preventDefault()});
+ b.addEventListener('keydown',function(e){if((e.key===' '||e.key==='Enter')&&!e.repeat){down(e)}});b.addEventListener('keyup',function(e){if(e.key===' '||e.key==='Enter')up()});
+})();
+function countdown(){var el=document.getElementById('count'),n=3;el.textContent=n;var t=setInterval(function(){n--;if(S[cur].dataset.addr!=='aw://deeper'){clearInterval(t);return;}if(n>0){el.textContent=n;tSpeed=4;}else{clearInterval(t);go(cur+1);}},900);}
+document.getElementById('enter').addEventListener('click',function(){play('a1');go(1);});
+document.getElementById('quiet').addEventListener('click',function(){go(1);});
+document.addEventListener('click',function(e){if(e.target.closest('[data-next]'))go(cur+1);});
+document.getElementById('back').addEventListener('click',function(){var t=cur-1;while(t>0&&/breathe|deeper/.test(S[t].dataset.addr))t--;go(t);});
+var acc=0;addEventListener('wheel',function(e){acc+=e.deltaY;if(acc>140){acc=0;if(cur>0&&!/breathe|deeper/.test(S[cur].dataset.addr))go(cur+1);}else if(acc<-140){acc=0;var t=cur-1;while(t>0&&/breathe|deeper/.test(S[t].dataset.addr))t--;if(cur>0)go(t);}},{passive:true});
+var ty=null;addEventListener('touchstart',function(e){ty=e.touches[0].clientY;},{passive:true});
+addEventListener('touchend',function(e){if(ty===null)return;var d=ty-e.changedTouches[0].clientY;if(Math.abs(d)>70&&cur>0&&!/breathe|deeper/.test(S[cur].dataset.addr)&&!e.target.closest('.chip,.trk,.btn,.link'))go(cur+(d>0?1:-1));ty=null;},{passive:true});
+addEventListener('keydown',function(e){if(cur===0)return;if(e.key==='ArrowDown'||e.key==='PageDown')go(cur+1);if(e.key==='ArrowUp'||e.key==='PageUp')go(cur-1);});
+/* chips */
+document.querySelectorAll('.chip').forEach(function(b){b.setAttribute('aria-pressed','false');});
+document.querySelectorAll('.chips').forEach(function(g){var single=g.hasAttribute('data-single'),r=document.getElementById(g.dataset.reply);
+ g.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;
+  if(single){g.querySelectorAll('.chip').forEach(function(o){o.setAttribute('aria-pressed','false');});b.setAttribute('aria-pressed','true');r.textContent='> '+b.dataset.say;if(g.dataset.key)answers[g.dataset.key]=b.dataset.echo;}
+  else{b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');var k=g.querySelectorAll('[aria-pressed=true]').length;r.textContent=k?'> '+(k>2?'Your whole practice, then. Love that.':'That’s exactly how it’s meant to be used.'):'';}});});
+/* tracks */
+document.querySelectorAll('.trk').forEach(function(t){t.addEventListener('click',function(){var id=t.dataset.track;if(soundOn&&ct===id){stop();}else{play(id);}});});
+sync();
+})();
+</script>
+</body>
+</html>
