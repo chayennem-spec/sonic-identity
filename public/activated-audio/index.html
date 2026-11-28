@@ -175,8 +175,8 @@ p{text-shadow:0 1px 14px rgba(6,3,10,.9);margin:0;font-size:clamp(15px,1.6vw,18p
 
 <section class="step" data-addr="aw://offer" data-label="The offer" data-hue="4">
 <span class="kicker">A new offer for your practice</span>
-<h2 data-words>Something your clients take home, <span class="g">and something you can sell.</span></h2>
-<p id="echo">Activated Audio will be a paid membership for practitioners. Add it to your packages, offer it as an upsell or make it part of your coaching, with practitioner rights in writing. Final terms are in progress, and the waitlist sees them first.</p>
+<h2 data-words>Something your clients take home, <span class="g">and a new way to grow your practice.</span></h2>
+<p id="echo">Activated Audio will be a membership for practitioners. You share the songs with your clients as part of your packages, programs and sessions, with practitioner rights in writing. Final terms are in progress, and the waitlist sees them first.</p>
 <button class="btn" data-next type="button">&gt; I want in <span class="cur">_</span></button>
 </section>
 
@@ -276,7 +276,7 @@ function go(i){if(i<0||i>=S.length||i===cur||lock)return;lock=true;tSpeed=i>cur?
  var drain=s.hasAttribute('data-drain');document.body.classList.toggle('drain',drain);
  tCalm=s.dataset.addr==='aw://breathe'?1:0;tPull=1;if(s.dataset.addr==='aw://breathe')breathe();
  if(s.dataset.addr==='aw://deeper')countdown();
- if(s.dataset.addr==='aw://offer'&&answers.slip){document.getElementById('echo').textContent='You said your clients start slipping '+answers.slip+'. Activated Audio will be a paid membership for practitioners, made for exactly that stretch. Add it to your packages, offer it as an upsell or make it part of your coaching, with practitioner rights in writing. Final terms are in progress, and the waitlist sees them first.';}
+ if(s.dataset.addr==='aw://offer'&&answers.slip){document.getElementById('echo').textContent='You said your clients start slipping '+answers.slip+'. Activated Audio will be a membership for practitioners, made for exactly that stretch. You share the songs with your clients as part of your packages, programs and sessions, with practitioner rights in writing. Final terms are in progress, and the waitlist sees them first.';}
  setTimeout(function(){tSpeed=1;lock=false;},1000);}
 var bHeld=0,bT=0,bDone=0;
 function breathe(){var b=document.getElementById('breath');b.textContent='Hold';b.classList.remove('in');bDone=0;document.getElementById('bhint').textContent='Press and hold the circle as you breathe in. Let go as you breathe out.';}
